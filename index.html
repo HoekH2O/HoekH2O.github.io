@@ -1,21 +1,135 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html>
+	<!--HEAD-->
+	<head>
+	
+		<meta charset="utf-8">
+		
+		<!--TITLE BEGINS-->
+		<title>Jordan Hoekwater Porfolio</title>
+		<!--TITLE ENDS-->
+		
+	
+	</head>
+	<!--END OF HEAD-->
+	<!--END OF HEAD-->
+	<!--END OF HEAD-->
+	
+	<!--STYLE-->
+	<style>
+		
+		#myBtn {
+  			display: none;
+  			position: fixed;
+ 			bottom: 20px;
+ 			right: 30px;
+  			z-index: 99;
+  			border: none;
+  			outline: none;
+  			background-color: transparent;
+  			cursor: pointer;
+  			padding: 0px;
+  			border-radius: 0px;
+		}
 
-   <head>
+		#myBtn:hover {
+			filter: invert(75%);
+}
+			
+	</style>
+	<!--END OF STYLE-->
+	
+	<!--BODY BEGINS-->
+	<body>
+	
 
-     <meta charset="utf-8">
+		<button onclick="topFunction()" id="myBtn" title="Go to top"> <img src="images/bTop1.png" width="50" height="50"alt="Back to the Top" title="Back to the Top"/> </button>
+		
+		
+<!--SCRIPT STARTS-->
+		<script>
+// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function() {scrollFunction()};
 
-     <title>Jordan Hoekwater</title>
+			function scrollFunction() {
+    			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        			document.getElementById("myBtn").style.display = "block";
+    			} else {
+        			document.getElementById("myBtn").style.display = "none";
+    			}
+			}
 
-   </head>
+// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+    			document.body.scrollTop = 0;
+    			document.documentElement.scrollTop = 0;
+			}
+		</script>
+	<!--SCRIPT ENDS-->
+		
+		<!--HEAD BEGINS-->
+		<header>
+			
+			<!--HEADER NAVIGATOR BEGINS-->
+			<nav id="headerNav">				
+				<!--UNORDERED LIST BEGINS-->
+				<ul>					
+					<!--LIST ITEMS BEGINS-->
+					<li class="index"><a href="index.html">Home</a></li>
+					<li class="index"><a href="remixMontage.html">Remix Montage</a></li>
+					<li class="index"><a href="animation.html">Animation</a></li>
+					<li class="index"><a href="landscape.html">Landscape</a></li>
+					<li class="index"><a href="processingProject.html">ProcessingProject</a></li>
+					<li class="index"><a href="netArt.html">Net Art</a></li>
+					<!--LIST ITEMS ENDS-->				
+				</ul>
+				<!--UNORDERED LIST ENDS-->				
+			</nav>
+			<!--HEADER NAVIGATOR ENDS-->
+			
+			<!--MAIN BEGINS-->
+			<main>
+				<h1>Welcome to My Portfolio</h1>
+				
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			<!--TWO WAYS TO PUT VIDEO IN WEBSITE-->
+				<!--How to imput videos or pictures. The green autoplay and loop mean that the video will autoplay and will loop. You can type in controls and it will give the user the ability to control the video itself-->
+					<video src="video/landscapeDemo.mp4" width="400" height="300" preload="auto" autoplay loop></video>
+				<!--Go to youtube video and press share, then press embed. Copy the iframe code and paste it here-->
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/Ae9hdH_8dC4" frameborder="0" allowfullscreen></iframe>
+			
+			</main>
+			<!--MAIN ENDS-->
+			
+		</header>
+		<!--HEAD ENDS-->
+		
+		
+		<!--FOOTER BEGINS-->
+		<footer>
+			
+			<!--FOOTER NAVIGATOR BEGINS-->
+			<nav id="footerNav">				
+				<!--UNORDERED LIST BEGINS-->
+				<ul>
+					<!--LIST ITEMS BEGINS-->
+					<li><a href="https://www.flickr.com/people/136835283@N02/"><img src="https://www.shareicon.net/data/128x128/2017/03/06/880329_media_512x512.png" width="50" height="50" alt="Flickr logo link" title="Flickr"/></a></li>
+					<li><a href="https://www.facebook.com/jordan.hoekwater.5?ref=bookmarks"><img src="https://image.flaticon.com/icons/png/128/174/174848.png" width="50" height="50" alt="Facebook logo link" title="Facebook"/></a>
+					</li>
+					<li><a href="https://www.instagram.com/jordan_hoekh2o/?hl=en"><img src="https://image.flaticon.com/icons/png/128/174/174855.png" width="50" height="50" alt="Instagram logo link" title="Instagram"/></a></li>
+					<!--LIST ITEMS ENDS-->					
+				</ul>
+				<!--UNORDERED LIST ENDS-->	
+				
 
-   <body>
+			</nav>
+			<!--FOOTER NAVIGATOR ENDS-->
+			
+		</footer>
+		<!--FOOTER ENDS-->
 
-     <h1>Hello World -- This is my website!</h1>
-
-     <p>I'm making this to host my portfolio for free! Boom!</p>
-
-   </body>
-
+	</body>
+	<!--BODY ENDS-->
+	
+	
 </html>
