@@ -1,100 +1,208 @@
-<!doctype html>
 <html>
-	<!--HEAD-->
-	<head>
+
+   <head>
+
+     <meta charset="utf-8">
+
+     <title>Jordan Hoekwater</title>
+	   
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	   
+   </head>
 	
-		<meta charset="utf-8">
-		
-		<!--TITLE BEGINS-->
-		<title>Jordan Hoekwater Porfolio</title>
-		<!--TITLE ENDS-->
-		
-	
-	</head>
-	<!--END OF HEAD-->
-	<!--END OF HEAD-->
-	<!--END OF HEAD-->
-	
-	<!--STYLE-->
+		<!--STYLE-->
 	<style>
 		
-		#myBtn {
-  			display: none;
-  			position: fixed;
- 			bottom: 20px;
- 			right: 30px;
-  			z-index: 99;
-  			border: none;
-  			outline: none;
-  			background-color: transparent;
-  			cursor: pointer;
-  			padding: 0px;
-  			border-radius: 0px;
+		
+		body {
+  			margin: 0;
+		}
+		
+		.header {
+			float: bottom;
+  			display: block;
+  			background-size:cover;
+ 			background-repeat: space;
+			top: 0px;
+			overflow:hidden;
+  			height:200px;
+		}
+		
+		#topnav {
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  			overflow: hidden;
+			min-width: 700px;
+  			background-color: #355666;
 		}
 
-		#myBtn:hover {
-			filter: invert(75%);
-}
+		#topnav a {
+  			float: left;
+  			display: block;
+  			color: #f2f2f2;
+  			text-align: center;
+  			padding: 14px 16px;
+  			text-decoration: none;
+  			font-size: 17px;
+		}
+
+		#topnav a:hover {
+  			background-color: #8193B5;
+  			color: white;
+		}
+
+		#topnav a.active {
+    		background-color: #7C94A6;
+    		color: white;
+		}
+		#topnav a.active:hover {
+			background-color: #ACB8CE;
+		}
+		
+		.content {
+			padding: 60px;
+		}
+		
+		.sticky {
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+		.sticky + .content {
+			padding-top: 120px;
+		}
+		
+		
+		video.bg {
+			/* Set rules to fill background */
+			min-height: 100%;
+			min-width: 1024px;
 			
+			/* Set up proportionate scaling */
+			width: 100%;
+			height: auto;
+			
+			/* Set up positioning */
+			position:relative;
+			top: -200px;
+			left: 0;
+		}
+		
+		@media screen and (max-width: 1024px){
+			video.bg {
+				left: 50%;
+				margin-left: -512px; }
+		}
+		
+		.card {
+			border-radius: 5%;
+			float: left;
+  			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  			max-width: 300px;
+  			margin: auto;
+  			text-align: center;
+  			font-family: arial;
+		}
+		.cardquote {
+			float: right;
+  			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  			max-width: 300px;
+  			margin: auto;
+  			text-align: center;
+  			font-family: arial;
+		}
+		.title {
+  			color: grey;
+  			font-size: 18px;
+		}
+		a {
+  			text-decoration: none;
+  			font-size: 22px;
+  			color: black;
+		}
+		
+		img{
+			border-radius: 70%;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		}
+		
+		
 	</style>
-	<!--END OF STYLE-->
 	
-	<!--BODY BEGINS-->
-	<body>
+   	<body onscroll="myFunction()">
+		
+		
+		<div class="header">
+
+			<video src="video/man.mp4" class="bg" autoplay loop>
+
+		</div>
 	
 
-		<button onclick="topFunction()" id="myBtn" title="Go to top"> <img src="images/bTop1.png" width="50" height="50"alt="Back to the Top" title="Back to the Top"/> </button>
+	
+		<div id="topnav">
+  			<a class="active" href="index.html">Home</a>
+  			<a href="remixMontage.html">Remix Montage</a>
+  			<a href="animation.html">Animation</a>
+  			<a href="landscape.html">Landscape</a>
+			<a href="processingProject.html">Processing Project</a>
+			<a href="netArt.html">Net Art</a>
+		</div>
 		
+		<p>hello</p>
+			<p>hello</p>
 		
+			
+			<div class="card">
+  					<img src="images/profile2.gif" width="280" height="280"></img>
+  					<h1>Jordan Hoekwater</h1>
+  					<p class="title">Art: Concentration in Digital Media</p>
+  					<p>San Jose State University</p>
+  					<div style="margin: 24px 0;">
+    					<a href="https://www.flickr.com/people/136835283@N02/" class="fa fa-flickr"></a> 
+    					<a href="https://www.instagram.com/jordan_hoekh2o/?hl=en" class="fa fa-instagram"></a>  
+    					<a href="https://www.facebook.com/jordan.hoekwater.5?ref=bookmarks" class="fa fa-facebook"></a>  
+     				</div>
+				</div>
+		
+			<div class="cardquote">
+				<h1>animation</h1>
+				<div style="margin: 24px 0;">
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			</div>
+		
+			
 <!--SCRIPT STARTS-->
 		<script>
-// When the user scrolls down 20px from the top of the document, show the button
-			window.onscroll = function() {scrollFunction()};
+			
+			var topnav = document.getElementById("topnav");
+			var sticky = topnav.offsetTop;
 
-			function scrollFunction() {
-    			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        			document.getElementById("myBtn").style.display = "block";
-    			} else {
-        			document.getElementById("myBtn").style.display = "none";
-    			}
+			function myFunction() {
+  				if (window.pageYOffset >= sticky) {
+    		topnav.classList.add("sticky")
+  			} else {
+    			topnav.classList.remove("sticky");
+  				}
 			}
-
-// When the user clicks on the button, scroll to the top of the document
-			function topFunction() {
-    			document.body.scrollTop = 0;
-    			document.documentElement.scrollTop = 0;
-			}
+			
+			
 		</script>
 	<!--SCRIPT ENDS-->
 		
 		<!--HEAD BEGINS-->
 		<header>
 			
-			<!--HEADER NAVIGATOR BEGINS-->
-			<nav id="headerNav">				
-				<!--UNORDERED LIST BEGINS-->
-				<ul>					
-					<!--LIST ITEMS BEGINS-->
-					<li class="index"><a href="index.html">Home</a></li>
-					<li class="index"><a href="remixMontage.html">Remix Montage</a></li>
-					<li class="index"><a href="animation.html">Animation</a></li>
-					<li class="index"><a href="landscape.html">Landscape</a></li>
-					<li class="index"><a href="processingProject.html">ProcessingProject</a></li>
-					<li class="index"><a href="netArt.html">Net Art</a></li>
-					<!--LIST ITEMS ENDS-->				
-				</ul>
-				<!--UNORDERED LIST ENDS-->				
-			</nav>
-			<!--HEADER NAVIGATOR ENDS-->
 			
 			<!--MAIN BEGINS-->
 			<main>
-				<h1>Welcome to My Portfolio</h1>
+				<h1>animation</h1>
 				
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 			<!--TWO WAYS TO PUT VIDEO IN WEBSITE-->
 				<!--How to imput videos or pictures. The green autoplay and loop mean that the video will autoplay and will loop. You can type in controls and it will give the user the ability to control the video itself-->
 					<video src="video/landscapeDemo.mp4" width="400" height="300" preload="auto" autoplay loop></video>
+
 				<!--Go to youtube video and press share, then press embed. Copy the iframe code and paste it here-->
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/Ae9hdH_8dC4" frameborder="0" allowfullscreen></iframe>
 			
@@ -103,33 +211,7 @@
 			
 		</header>
 		<!--HEAD ENDS-->
-		
-		
-		<!--FOOTER BEGINS-->
-		<footer>
-			
-			<!--FOOTER NAVIGATOR BEGINS-->
-			<nav id="footerNav">				
-				<!--UNORDERED LIST BEGINS-->
-				<ul>
-					<!--LIST ITEMS BEGINS-->
-					<li><a href="https://www.flickr.com/people/136835283@N02/"><img src="https://www.shareicon.net/data/128x128/2017/03/06/880329_media_512x512.png" width="50" height="50" alt="Flickr logo link" title="Flickr"/></a></li>
-					<li><a href="https://www.facebook.com/jordan.hoekwater.5?ref=bookmarks"><img src="https://image.flaticon.com/icons/png/128/174/174848.png" width="50" height="50" alt="Facebook logo link" title="Facebook"/></a>
-					</li>
-					<li><a href="https://www.instagram.com/jordan_hoekh2o/?hl=en"><img src="https://image.flaticon.com/icons/png/128/174/174855.png" width="50" height="50" alt="Instagram logo link" title="Instagram"/></a></li>
-					<!--LIST ITEMS ENDS-->					
-				</ul>
-				<!--UNORDERED LIST ENDS-->	
-				
 
-			</nav>
-			<!--FOOTER NAVIGATOR ENDS-->
-			
-		</footer>
-		<!--FOOTER ENDS-->
+   </body>
 
-	</body>
-	<!--BODY ENDS-->
-	
-	
 </html>
