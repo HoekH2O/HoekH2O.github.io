@@ -1,0 +1,247 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+
+<!--STYLE-->
+<style>
+body {
+	margin: 0;
+	padding-bottom: 28px;
+	background-color: aliceblue;
+}
+.header {
+	float: bottom;
+	overflow: hidden;
+	height: 200px;
+	background-color: #355666;
+}
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#topnav {
+	float:left;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	width: 100%;
+	/*min-width: 800px;*/
+	background-color: #355666;
+	z-index: 1;
+}
+#topnav a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 10px 10px;
+	text-decoration: none;
+	font-size: 16px;
+}
+#topnav a:hover {
+	background-color: #8193B5;
+	color: white;
+}
+#topnav a.active {
+	background-color: #7C94A6;
+	color: white;
+}
+#topnav a.active:hover {
+	background-color: #ACB8CE;
+}
+	
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+#topnav .icon {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  #topnav a:not(:first-child) {display: none;}
+  #topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 800px) {
+  #topnav.responsive {position: relative;}
+  #topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  #topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+	
+.content {
+margin-top: 60px;
+}
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.sticky + .content {
+	padding: 60px;
+}
+video.bg {
+	/* Set rules to fill background */
+	min-height: 100%;
+	min-width: 1024px;
+	/* Set up proportionate scaling */
+	width: 100%;
+	height: auto;
+	/* Set up positioning */
+	position: relative;
+	top: -200px;
+	left: 0;
+	color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+}
+
+@media screen and (max-width: 1024px) {
+video.bg {
+	left: 50%;
+	margin-left: -512px;
+}
+}
+img {
+	padding: 10px;
+	position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+	border-radius: 50%;
+}
+	
+	
+
+</style>
+	
+<body>
+<div class="header">
+  <video src="video/skyline.mp4" class="bg" autoplay loop>
+	  <div class="middle">
+    <h1>COMING SOON</h1>
+    <hr>
+    <p>2 Weeks</p>
+  </div>
+</div>
+<div id="topnav">
+	<a href="index.html">Home</a>
+	<a href="remixMontage.html">Remix Montage</a> 
+	<a href="animation.html">Animation</a> 
+	<a href="landscape.html">Landscape</a> 
+	<a href="processingProject.html">Processing Project</a> 
+	<a class="active" href="netArt.html">Net Art</a> 
+	<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+</div>
+<!--MAIN BEGINS-->
+<main>
+  <div class="content">
+    <!-- Page Container -->
+    <div class="w3-content w3-margin-top" style="max-width:1400px;">
+      <!-- The Grid -->
+      <div class="w3-row-padding">
+        <!-- ID Column -->
+        <div class="w3-third">
+          <div class="w3-white w3-text-grey w3-card-4">
+            <div class="w3-display-container"> <img src="images/profile2.gif" style="width:100%" alt="Avatar">
+            </div>
+            <div class="w3-container">
+				<h2>Jordan Hoekwater</h2>
+              <p><i class="fa fa-book fa-fw w3-margin-right w3-large w3-text-teal"></i>San Jose State University</p>
+              <p><i class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-teal"></i>Art: Concentration in Digital Media</p>
+              <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>(530) 902-3290</p>
+              <hr>
+            </div>
+          </div>
+          <br>
+          <!-- End ID Column -->
+        </div>
+        <!-- Right Column -->
+        <div class="w3-twothird">
+          <div class="w3-container w3-card w3-white w3-margin-bottom">
+            <h5 class="w3-text-grey w3-padding-16">"Sometimes it is the people no one imagines anything of who do the things that no one can imagine." ~Alan Turing</h5>
+            <div class="w3-container">
+				<h5 class="w3-opacity"><b>About Me</b></h5>
+				<h4 class="w3-text-grey w3-padding-16">My name is Jordan Hoekwater. I am a student at San Jose State University currently studying Digital Media Art. This website is an online portfolio for my Into to Digital Media class where I will be showcasing my projects that I worked on throughout the semester. This was truly a great experience and hope you enjoy my website.</h4>
+				<h5 class="w3-text-grey w3-padding-14">~Jordan Hoekwater</h5>
+            </div>
+			<hr>
+			  <div class="w3-container">
+			  	<h7 class="w3-text-grey w3-padding-0">Updated: December 3, 2017</h7>
+			  </div>
+			<hr>
+          </div>
+          
+            
+          </div>
+          <!-- End Right Column -->
+        </div>
+        <!-- End Grid -->
+      </div>
+      <!-- End Page Container -->
+    </div>
+  </div>
+  <!--SCRIPT STARTS-->
+  <script>
+			window.onscroll = function() {myFunction()};
+
+			var navbar = document.getElementById("topnav");
+			var sticky = topnav.offsetTop;
+
+			function myFunction() {
+				
+  				if (window.pageYOffset >= sticky) {
+    				topnav.classList.add("sticky");
+					content.offsetTop;
+  				} else {
+    				topnav.classList.remove("sticky");
+  				}
+				var x = document.getElementById("topnav");
+    			if (x.className === "topnav") {
+        			x.className += " responsive";
+    			} else {
+        			x.className = "topnav";
+    			}
+			}
+	  
+			</script>
+  <!--SCRIPT ENDS-->
+</main>
+<!--MAIN ENDS-->
+<!--HEAD ENDS-->
+</body>
+</head>
+</html>
