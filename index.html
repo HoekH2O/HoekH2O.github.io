@@ -107,7 +107,7 @@ margin-top: 60px;
 .sticky + .content {
 	padding: 60px;
 }
-video.bg {
+img.bg {
 	/* Set rules to fill background */
 	min-height: 100%;
 	min-width: 1024px;
@@ -121,17 +121,23 @@ video.bg {
 }
 
 @media screen and (max-width: 1024px) {
-video.bg {
+img.bg {
 	left: 50%;
 	margin-left: -512px;
 }
 }
 img {
+	position: relative;
+    	left: 0px;
+    	top: 0px;
+    	z-index: 0;
+}
+img.profile {
 	padding: 10px;
 	position: relative;
-    left: 0px;
-    top: 0px;
-    z-index: 0;
+    	left: 0px;
+   	 top: 0px;
+    	z-index: 0;
 	border-radius: 50%;
 }
 	
@@ -141,7 +147,7 @@ img {
 	
 <body>
 <div class="header">
-  <video src="vides/takeoff.mp4" class="bg" autoplay loop>
+	<img src="videos/man.gif" class="bg" autoplay loop>
 </div>
 <div id="topnav">
 	<a class="active" href="index.html">Home</a>
@@ -163,7 +169,7 @@ img {
         <!-- ID Column -->
         <div class="w3-third">
           <div class="w3-white w3-text-grey w3-card-4">
-            <div class="w3-display-container"> <img src="images/profile2.gif" style="width:100%" alt="Avatar">
+            <div class="w3-display-container"> <img src="images/profile2.gif" class="profile" style="width:100%" alt="Avatar">
             </div>
             <div class="w3-container">
 				<h2>Jordan Hoekwater</h2>
