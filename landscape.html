@@ -161,68 +161,94 @@ img.profile {
 </div>
 <!--MAIN BEGINS-->
 <main>
-  <div class="content">
+  <div class="content"> 
     <!-- Page Container -->
-    <div class="w3-content w3-margin-top" style="max-width:1400px;">
+    <div class="w3-content w3-margin-top" style="max-width:1400px;"> 
       <!-- The Grid -->
-      <div class="w3-row-padding">
+      <div class="w3-row-padding"> 
         <!-- ID Column -->
         <div class="w3-half">
           <div class="w3-white w3-text-grey w3-card-4">
             <div class="w3-display-container">
-				
-				
-
-				
-				<div class="sketchfab-embed-wrapper"><iframe width="100%" height="500px" src="https://sketchfab.com/models/afaa48c459b24e0fb6a460e540e4ef59/embed?autospin=0.2&amp;autostart=1&amp;preload=1&amp;ui_infos=0&amp;ui_watermark=0&amp;ui_watermark_link=0" frameborder="0" class="canvas"allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
-				</div>
-
-
-			</div>			 	
+              <div class="sketchfab-embed-wrapper">
+                <iframe width="100%" height="500px" src="https://sketchfab.com/models/afaa48c459b24e0fb6a460e540e4ef59/embed?autospin=0.2&amp;autostart=1&amp;preload=1&amp;ui_infos=0&amp;ui_watermark=0&amp;ui_watermark_link=0" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+              </div>
+            </div>
             <div class="w3-container">
-				<h2>Artist Statement</h2>
-              <p>The idea I wanted to convey in my imaginary landscape a design element that i created in 2013. On my free time, I like to make movies. If you look from the top view, you will notice the shape of a bear paw with scratches through it. This was the original design for my logo animation. I wanted to try to incorperate my previous design into this model due to the significance it has had in my life. I wanted to add more to the overall shape to the model so i wanted to impliment the shape of a bear from the side view. So from the top, the shape of a bear paw, and the front, the shape of a bear. This design is significant to me and was a remarkable experience to design and model. In other words, my past has evolved to something bigger.</p>
+              <h2>Artist Statement</h2>
+              <p>This is a continuation of the Remix Montage. Animating different layers from the photo to convey a new generation escaping old ways. With the combination of old and new technology, we take from our past and develop the future. While the future is unknown, and can be quite scary to some, leaving our past to shape the future becomes a distant idea, with unimaginable beauty.</p>
               <hr>
             </div>
           </div>
-		</div>
           <br>
-			
-			<!-- Right Column -->
-        <div class="w3-half">
-          <div class="w3-container w3-card w3-white w3-margin-right">
-            <h5 class="w3-text-grey w3-padding-16">"Sometimes it is the people no one imagines anything of who do the things that no one can imagine." ~Alan Turing</h5>
-            <div class="w3-container">
-				<h5 class="w3-opacity"><b>About Me</b></h5>
-				<h4 class="w3-text-grey w3-padding-16">My name is Jordan Hoekwater. I am a student at San Jose State University currently studying Digital Media Art. This website is an online portfolio for my Into to Digital Media class where I will be showcasing my projects that I worked on throughout the semester. This was truly a great experience and hope you enjoy my website.</h4>
-				<h5 class="w3-text-grey w3-padding-14">~Jordan Hoekwater</h5>
-            </div>
-			<hr>
-			  <div class="w3-container">
-			  	<h7 class="w3-text-grey w3-padding-0">Updated: December 5, 2017</h7>
-			  </div>
-			<hr>
-          </div>
-          
-            
-          </div>
-          <!-- End Right Column -->
-          <!-- End ID Column -->
+          <!-- End ID Column --> 
         </div>
-       </div>
-        <!-- End Grid -->
+        <!-- Right Column -->
+        <div class="w3-half">
+          <div class="w3-container w3-card w3-white w3-margin-bottom">
+            <h5 class="w3-text-grey w3-padding-16">Screenshots</h5>
+            <hr>
+            <div class="w3-display-container">
+              <div style="text-align:center">
+              </div>
+              <!-- The four columns -->
+              <div class="row">
+                <div class="column"> <img src="images/Blender Front.png" alt="Nature" style="width:100%" onclick="openImg('Nature');"> </div>
+                <div class="column"> <img src="images/Blender Top.png" alt="Fjords" style="width:100%" onclick="openImg('Fjords');"> </div>
+                <div class="column"> <img src="images/Blender Side A.png" alt="Mountains" style="width:100%" onclick="openImg('Mountains');"> </div>
+                <div class="column"> <img src="images/Blender Side B.png" alt="Lights" style="width:100%" onclick="openImg('Lights');"> </div>
+              </div>
+				<hr>
+			<div class="row">
+                <div class="column"> <img src="images/Cura Front.png" alt="Nature" style="width:100%" onclick="openImg('Cura Front');"> </div>
+                <div class="column"> <img src="images/Cura Top.png" alt="Fjords" style="width:100%" onclick="openImg('Cura Top');"> </div>
+                <div class="column"> <img src="images/Cura Side A.png" alt="Mountains" style="width:100%" onclick="openImg('Cura A');"> </div>
+                <div class="column"> <img src="images/Cura Side B.png" alt="Lights" style="width:100%" onclick="openImg('Cura B');"> </div>
+              </div>
+            </div>
+            <div class="w3-container">
+              <!-- The expanding image grid (hidden by default) -->
+              <div id="Nature" class="expandedImg"> <hr><img src="images/Blender Front.png" alt="Nature" style="width:100%"> <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <div class="imgtext">Blender - Front View</div>
+              </div>
+              <div id="Fjords" class="expandedImg"> <hr><img src="images/Blender Top.png" alt="Fjords" style="width:100%"> <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <div class="imgtext">Blender - Top View</div>
+              </div>
+              <div id="Mountains" class="expandedImg"> <hr><img src="images/Blender Side A.png" alt="Mountains" style="width:100%"> <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <div class="imgtext">Blender - Side A</div>
+              </div>
+              <div id="Lights" class="expandedImg"> <hr><img src="images/Blender Side B.png" alt="Lights" style="width:100%"> <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <div class="imgtext">Blender - Side B</div>
+              </div>
+			<div id="Cura Front" class="expandedImg"> <hr><img src="images/Cura Front.png" alt="Nature" style="width:100%"> <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <div class="imgtext">Cura - Front View</div>
+              </div>
+              <div id="Cura Top" class="expandedImg"> <hr><img src="images/Cura Top.png" alt="Fjords" style="width:100%"> <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <div class="imgtext">Cura - Top View</div>
+              </div>
+              <div id="Cura A" class="expandedImg"> <hr><img src="images/Cura Side A.png" alt="Mountains" style="width:100%"> <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <div class="imgtext">Cura - Side A</div>
+              </div>
+              <div id="Cura B" class="expandedImg"> <hr><img src="images/Cura Side B.png" alt="Lights" style="width:100%"> <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <div class="imgtext">Cura - Side B</div>
+              </div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <!-- End Right Column --> 
       </div>
-      <!-- End Page Container -->
+      <!-- End Grid --> 
     </div>
+    <!-- End Page Container --> 
   </div>
-  <!--SCRIPT STARTS-->
+  </div>
+  <!--SCRIPT STARTS--> 
   <script>
 	  
 			window.onscroll = function() {myFunction()};
-
 			var navbar = document.getElementById("topnav");
 			var sticky = topnav.offsetTop;
-
 			function myFunction() {
 				
   				if (window.pageYOffset >= sticky) {
@@ -239,8 +265,19 @@ img.profile {
     			}
 			}
 	  
-			</script>
-  <!--SCRIPT ENDS-->
+	  function openImg(imgName) {
+  var i, x;
+  x = document.getElementsByClassName("expandedImg");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  document.getElementById(imgName).style.display = "block";
+}
+
+
+
+</script> 
+  <!--SCRIPT ENDS--> 
 </main>
 <!--MAIN ENDS-->
 <!--HEAD ENDS-->
