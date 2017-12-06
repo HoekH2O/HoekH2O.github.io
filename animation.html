@@ -123,19 +123,101 @@ img.bg {
 }
 img {
 	position: relative;
-    	left: 0px;
-    	top: 0px;
-    	z-index: 0;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
 }
 img.profile {
 	padding: 10px;
 	position: relative;
-    	left: 0px;
-   	 top: 0px;
-    	z-index: 0;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
 	border-radius: 50%;
 }
+img.canvas {
+	padding: 10px;
+	position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+}
 	
+#myImg {
+	padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#myImg:hover {opacity: 0.99;}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+}
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 95%;
+    max-width: 800px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+/* Add Animation */
+}
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
 	
 </style>
 	
@@ -161,41 +243,25 @@ img.profile {
       <!-- The Grid -->
       <div class="w3-row-padding">
         <!-- ID Column -->
-        <div class="w3-third">
+        <div class="w3-cell-middle">
           <div class="w3-white w3-text-grey w3-card-4">
-            <div class="w3-display-container"> <img src="images/profile2.gif" class="profile" style="width:100%" alt="Avatar">
+            <div class="w3-display-container"> <img id="myImg" src="images/montage.jpg" alt="Remix Montage - Jordan Hoekwater"class"canvas" width="100%" >
             </div>
+			 	 <div id="myModal" class="modal">
+  					<span class="close">&times;</span>
+  					<img class="modal-content" id="img01">
+  					<div id="caption"></div>
+				</div>
             <div class="w3-container">
-				<h2>Jordan Hoekwater</h2>
-              <p><i class="fa fa-book fa-fw w3-margin-right w3-large w3-text-teal"></i>San Jose State University</p>
-              <p><i class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-teal"></i>Art: Concentration in Digital Media</p>
-              <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>(530) 902-3290</p>
+				<h2>Artist Statement</h2>
+              <p>For this assignment I wanted to convey a new generation escaping old ways. With the combination of old and new technology, we take from our past and develop the future. While the future is unknown, and can be quite scary to some, leaving our past to shape the future becomes a distant idea, with unimaginable beauty.</p>
               <hr>
             </div>
           </div>
           <br>
           <!-- End ID Column -->
         </div>
-        <!-- Right Column -->
-        <div class="w3-twothird">
-          <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h5 class="w3-text-grey w3-padding-16">"Sometimes it is the people no one imagines anything of who do the things that no one can imagine." ~Alan Turing</h5>
-            <div class="w3-container">
-				<h5 class="w3-opacity"><b>About Me</b></h5>
-				<h4 class="w3-text-grey w3-padding-16">My name is Jordan Hoekwater. I am a student at San Jose State University currently studying Digital Media Art. This website is an online portfolio for my Into to Digital Media class where I will be showcasing my projects that I worked on throughout the semester. This was truly a great experience and hope you enjoy my website.</h4>
-				<h5 class="w3-text-grey w3-padding-14">~Jordan Hoekwater</h5>
-            </div>
-			<hr>
-			  <div class="w3-container">
-			  	<h7 class="w3-text-grey w3-padding-0">Updated: December 3, 2017</h7>
-			  </div>
-			<hr>
-          </div>
-          
-            
-          </div>
-          <!-- End Right Column -->
-        </div>
+       </div>
         <!-- End Grid -->
       </div>
       <!-- End Page Container -->
@@ -203,6 +269,24 @@ img.profile {
   </div>
   <!--SCRIPT STARTS-->
   <script>
+	  // Get the modal
+	  	var modal = document.getElementById('myModal');
+	  // Get the image and insert it inside the modal - use its "alt" text as a caption
+	  	var img = document.getElementById('myImg');
+	  	var modalImg = document.getElementById("img01");
+	  	var captionText = document.getElementById("caption");
+	  	img.onclick = function(){
+    		modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+		}
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+	  // When the user clicks on <span> (x), close the modal
+	  span.onclick = function() { 
+    		modal.style.display = "none";
+	  }
+	  
 			window.onscroll = function() {myFunction()};
 			var navbar = document.getElementById("topnav");
 			var sticky = topnav.offsetTop;
