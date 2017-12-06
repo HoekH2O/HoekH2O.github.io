@@ -164,22 +164,28 @@ img.profile {
       <!-- The Grid -->
       <div class="w3-row-padding">
         <!-- ID Column -->
-        <div class="w3-third">
+        <div class="w3-cell-middle">
           <div class="w3-white w3-text-grey w3-card-4">
-            <div class="w3-display-container"> 
-		<div class="sketchfab-embed-wrapper"><iframe width="100%" height="500px" src="https://sketchfab.com/models/afaa48c459b24e0fb6a460e540e4ef59/embed?autospin=0.2&amp;autostart=1&amp;preload=1&amp;ui_infos=0&amp;ui_watermark=0&amp;ui_watermark_link=0" frameborder="0" class="canvas"allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
-		</div>
-            </div>
+            <div class="w3-display-container">
+				
+				
+
+				
+				<div class="sketchfab-embed-wrapper"><iframe width="100%" height="500px" src="https://sketchfab.com/models/afaa48c459b24e0fb6a460e540e4ef59/embed?autospin=0.2&amp;autostart=1&amp;preload=1&amp;ui_infos=0&amp;ui_watermark=0&amp;ui_watermark_link=0" frameborder="0" class="canvas"allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+				</div>
+
+
+			</div>			 	
             <div class="w3-container">
-				<h2>Jordan Hoekwater</h2>
-              <p>San Jose State University</p>
+				<h2>Artist Statement</h2>
+              <p>This is a continuation of the Remix Montage. Animating different layers from the photo to convey a new generation escaping old ways. With the combination of old and new technology, we take from our past and develop the future. While the future is unknown, and can be quite scary to some, leaving our past to shape the future becomes a distant idea, with unimaginable beauty.</p>
               <hr>
             </div>
           </div>
           <br>
           <!-- End ID Column -->
-	 </div>
         </div>
+       </div>
         <!-- End Grid -->
       </div>
       <!-- End Page Container -->
@@ -187,9 +193,32 @@ img.profile {
   </div>
   <!--SCRIPT STARTS-->
   <script>
+	  // Get the modal
+	  	var modal = document.getElementById('myModal');
+
+	  // Get the image and insert it inside the modal - use its "alt" text as a caption
+	  	var img = document.getElementById('myImg');
+	  	var modalImg = document.getElementById("img01");
+	  	var captionText = document.getElementById("caption");
+	  	img.onclick = function(){
+    		modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+		}
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+	  // When the user clicks on <span> (x), close the modal
+	  span.onclick = function() { 
+    		modal.style.display = "none";
+	  }
+	  
 			window.onscroll = function() {myFunction()};
+
 			var navbar = document.getElementById("topnav");
 			var sticky = topnav.offsetTop;
+
 			function myFunction() {
 				
   				if (window.pageYOffset >= sticky) {
@@ -214,3 +243,4 @@ img.profile {
 </body>
 </head>
 </html>
+
