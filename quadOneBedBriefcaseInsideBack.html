@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="images/logo.png">
 <title>Escape</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -105,7 +104,7 @@ a:hover {
 	
 <body>
 <div class="topnav">
-	<a class="active" href="netArt.html">Exit</a> 
+	<a class="active" href="remixMontage.html">Exit</a> 
 	<a href="quadOneBedBriefcaseBack.html">Back</a>
 </div>
 
@@ -116,9 +115,9 @@ a:hover {
         <div class="card">
 			<div class="container">
 				
-				<img src="videos/escape gifs/Escape/start/quad 1/bed/briefcase/inside briefcase/inside-briefcase-to-briefcase.gif" width="100%" alt="" usemap="#Map" />
+				<img src="video/escape gifs/Escape/start/quad 1/bed/briefcase/inside briefcase/inside-briefcase-to-briefcase.gif" width="100%" alt="" usemap="#Map" />
 				<map name="Map" id="Map">
-    				<area alt="" title="Look in Briefcase" href="quadOneBedBriefcaseInside.html" shape="poly" coords="81,224,86,222,93,223,638,215,829,230,833,232,841,236,845,240,845,247,850,247,849,376,843,376,841,380,837,386,833,388,825,388,641,404,637,408,633,415,627,419,621,423,617,424,406,443,397,443,391,440,385,438,381,434,377,428,373,427,61,451,54,451,50,447,46,444,46,439,41,439,26,268,30,260,33,255,38,251" />
+    				<area onclick="myFunction()"alt="" title="Look in Briefcase" shape="poly" coords="81,224,86,222,93,223,638,215,829,230,833,232,841,236,845,240,845,247,850,247,849,376,843,376,841,380,837,386,833,388,825,388,641,404,637,408,633,415,627,419,621,423,617,424,406,443,397,443,391,440,385,438,381,434,377,428,373,427,61,451,54,451,50,447,46,444,46,439,41,439,26,268,30,260,33,255,38,251" />
 				</map>
 			</div>
 				
@@ -132,10 +131,21 @@ a:hover {
     </div>
   </div>
   <!--SCRIPT STARTS-->
-  <script>
-	  
+<script>
+	  function myFunction() {
+    var code = prompt("I have memories, but none of my own, whatever's on my inside is what is shown. If I'm ever different its because you changed me, I feel like a decoration, here for you to arrange me. Look upon me and you shall see, a clear path that draws this key. Please enter Code", "******");
+    if (code != 528193) {
+        window.location.href = "quadOneBedBriefcaseFrame.html";
+    }
+    else if(code == 528193)
+    {
+    	window.location.href = "quadOneBedBriefcaseInside.html";
+    }
+
+
+}
 			
-			</script>
+</script>
   <!--SCRIPT ENDS-->
 </main>
 <!--MAIN ENDS-->

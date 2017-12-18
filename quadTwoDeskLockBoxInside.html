@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="images/logo.png">
 <title>Escape</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -105,7 +104,7 @@ a:hover {
 	
 <body>
 <div class="topnav">
-	<a class="active" href="netArt.html">Exit</a> 
+	<a class="active" href="remixMontage.html">Exit</a> 
 	<a href="quadTwoDeskLockBoxInsideBack.html">Back</a>
 </div>
 
@@ -115,7 +114,10 @@ a:hover {
     
         <div class="card">
 			<div class="container">		
-				<img src="videos/escape gifs/Escape/start/quad 2/desk/lock drawer/inside lock drawer/lock-drawer-to-inside-lock-drawer.gif" width="100%" alt="" usemap="#Map" />
+				<img src="video/escape gifs/Escape/start/quad 2/desk/lock drawer/inside lock drawer/lock-drawer-to-inside-lock-drawer.gif" width="100%" alt="" usemap="#Map" />
+				<map name="Map" id="Map">
+    				<area onclick="myFunction()"alt="" title="Use" shape="poly" coords="806,0,791,228,999,258,1035,0" />
+				</map>
 				
 			</div>
 				
@@ -134,6 +136,21 @@ a:hover {
 			
 			</script>
   <!--SCRIPT ENDS-->
+	<script>
+	  function myFunction() {
+    var txt = prompt("What turns everything around, but does not move?", "******");
+    if(txt == "mirror")
+    {
+    	window.location.href = "quadTwoDeskLockBoxInsideMirror.html";
+    }
+	else if (txt != "mirror") {
+        window.location.href = "quadTwoDeskLockBoxInsideFrame.html";
+    }
+
+
+}
+			
+</script>
 </main>
 <!--MAIN ENDS-->
 <!--HEAD ENDS-->
