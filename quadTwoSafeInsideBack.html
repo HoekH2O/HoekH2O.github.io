@@ -116,9 +116,9 @@ a:hover {
         <div class="card">
 			<div class="container">
 				
-				<img src="videos/escape gifs/Escape/start/quad 2/safe/inside safe/inside-safe-to-safe.gif" width="100%" alt="" usemap="#Map" />
+				<img src="video/escape gifs/Escape/start/quad 2/safe/inside safe/inside-safe-to-safe.gif" width="100%" alt="" usemap="#Map" />
 				<map name="Map" id="Map">
-    				<area alt="" title="Unlock" href="quadTwoSafeInside.html" shape="poly" coords="425,338,437,337,442,342,517,349,517,361,514,365,441,358,433,351,425,350" />
+    				<area onclick="myFunction()" title="Unlock" shape="poly" coords="425,338,437,337,442,342,517,349,517,361,514,365,441,358,433,351,425,350" />
 				</map>
 			</div>
 				
@@ -133,10 +133,20 @@ a:hover {
   </div>
 
   <!--SCRIPT STARTS-->
-  <script>
-	  
-			
-			</script>
+<script>
+	  function myFunction() {
+    var code = prompt("You answer me, but I never ask you a question. What am I? Please enter Code", "***");
+    if (code != 471) {
+        window.location.href = "quadTwoSafeFrame.html";
+    }
+    else if(code == 471)
+    {
+    	window.location.href = "quadTwoSafeInside.html";
+    }
+
+
+}
+</script>
   <!--SCRIPT ENDS-->
 </main>
 <!--MAIN ENDS-->
