@@ -156,67 +156,50 @@ img.profile {
 </div>
 <!--MAIN BEGINS-->
 <main>
-  <div class="content">
+  <div class="content"> 
     <!-- Page Container -->
-    <div class="w3-content w3-margin-top" style="max-width:1400px;">
+    <div class="w3-content w3-margin-top" style="max-width:1400px;"> 
       <!-- The Grid -->
-      <div class="w3-row-padding">
+      <div class="w3-row-padding"> 
         <!-- ID Column -->
         <div class="w3-half">
           <div class="w3-white w3-text-grey w3-card-4">
-            <div class="w3-display-container"> 
-		    <image src="videos/processingportrait.jpg" width="100%" class="canvas">
-            </div>			 	
-          </div>
-          <br>
-          <!-- End ID Column -->
-		<!-- ID Column -->
-        <div class="w3-half">
-          <div class="w3-white w3-text-grey w3-card-4">
-            <div class="w3-display-container"> 
-		   <video src="videos/bubble.mp4" width="100%" class="canvas" load controls webkitallowfullscreen mozallowfullscreen allowfullscreen>
-            </div>			 	
-            <div class="w3-container">
-          </div>
-          <br>
-          <!-- End ID Column -->
-	<!-- ID Column -->
-        <div class="w3-cell-middle">
-          <div class="w3-white w3-text-grey w3-card-4">			 	
-            <div class="w3-container">
-				<h2>Artist Statement</h2>
-              <p>During our processing module, we completed sets of code. One of which was a self portrait, and the other was a modification of Dan Shiffman's Bouncing Ball exercise. For the self portrait I wanted to do a simple cartoon-themed picture. Simple, and fun to develop. The Bouncing Ball modification was a trip. Starting out with the base code, I researched and figured out how to apply some more character to the project. I wanted to give the user the ability to modify the sizes of the emerging bubbles. How it works: the user clicks the mouse to release ten bubbles of a random size ranging from the 0 to the size to the user's bubble. The user can use the scroll wheel to increse/decrease the size of the bubbles, therefore increasing the size range of the new bubbles.</p>
-              <hr>
+            <div class="w3-display-container">
+              <image src="videos/processingportrait.jpg" width="100%" class="canvas">
             </div>
           </div>
           <br>
-          <!-- End ID Column -->
+          <!-- End ID Column --> 
         </div>
-       </div>
-        <!-- End Grid -->
+		<div class="w3-half">
+          <div class="w3-white w3-text-grey w3-card-4">
+            <div class="w3-display-container">
+              <video src="videos/bubble.mp4" width="100%" class="canvas" load controls webkitallowfullscreen mozallowfullscreen allowfullscreen>
+            </div>
+          </div>
+          <br>
+          <!-- End ID Column --> 
+        </div>
+		<div class="w3-half">
+          <div class="w3-white w3-text-grey w3-card-4">
+            <div class="w3-container">
+              <h2>Artist Statement</h2>
+              <p>During our processing module, we completed sets of code. One of which was a self portrait, and the other was a modification of Dan Shiffman's Bouncing Ball exercise. For the self portrait I wanted to do a simple cartoon-themed picture. Simple, and fun to develop. The Bouncing Ball modification was a trip. Starting out with the base code, I researched and figured out how to apply some more character to the project. I wanted to give the user the ability to modify the sizes of the emerging bubbles. How it works: the user clicks the mouse to release ten bubbles of a random size ranging from the 0 to the size to the user's bubble. The user can use the scroll wheel to increse/decrease the size of the bubbles, therefore increasing the size range of the new bubbles.</p>
+            </div>
+          </div>
+          <br>
+          <!-- End ID Column --> 
+        </div>
+        <!-- Right Column -->
+        
       </div>
-      <!-- End Page Container -->
+      <!-- End Grid --> 
     </div>
+    <!-- End Page Container --> 
   </div>
-  <!--SCRIPT STARTS-->
+  </div>
+  <!--SCRIPT STARTS--> 
   <script>
-	  // Get the modal
-	  	var modal = document.getElementById('myModal');
-	  // Get the image and insert it inside the modal - use its "alt" text as a caption
-	  	var img = document.getElementById('myImg');
-	  	var modalImg = document.getElementById("img01");
-	  	var captionText = document.getElementById("caption");
-	  	img.onclick = function(){
-    		modal.style.display = "block";
-    		modalImg.src = this.src;
-    		captionText.innerHTML = this.alt;
-		}
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-	  // When the user clicks on <span> (x), close the modal
-	  span.onclick = function() { 
-    		modal.style.display = "none";
-	  }
 	  
 			window.onscroll = function() {myFunction()};
 			var navbar = document.getElementById("topnav");
@@ -237,8 +220,16 @@ img.profile {
     			}
 			}
 	  
-			</script>
-  <!--SCRIPT ENDS-->
+	  function openImg(imgName) {
+  var i, x;
+  x = document.getElementsByClassName("expandedImg");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  document.getElementById(imgName).style.display = "block";
+}
+</script> 
+  <!--SCRIPT ENDS--> 
 </main>
 <!--MAIN ENDS-->
 <!--HEAD ENDS-->
