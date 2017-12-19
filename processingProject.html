@@ -162,41 +162,21 @@ img.profile {
       <!-- The Grid -->
       <div class="w3-row-padding">
         <!-- ID Column -->
-        <div class="w3-third">
+        <div class="w3-cell-middle">
           <div class="w3-white w3-text-grey w3-card-4">
-            <div class="w3-display-container"> <img src="images/profile2.gif" class="profile" style="width:100%" alt="Avatar">
-            </div>
+            <div class="w3-display-container"> 
+		   <video src="videos/animation with sound.mp4" width="50%" class="canvas" load controls webkitallowfullscreen mozallowfullscreen allowfullscreen>
+            </div>			 	
             <div class="w3-container">
-				<h2>Jordan Hoekwater</h2>
-              <p><i class="fa fa-book fa-fw w3-margin-right w3-large w3-text-teal"></i>San Jose State University</p>
-              <p><i class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-teal"></i>Art: Concentration in Digital Media</p>
-              <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>(530) 902-3290</p>
+				<h2>Artist Statement</h2>
+              <p>During our processing module, we completed sets of code. One of which was a self portrait, and the other was a modification of Dan Shiffman's Bouncing Ball exercise. For the self portrait I wanted to do a simple cartoon-themed picture. Simple, and fun to develop. The Bouncing Ball modification was a trip. Starting out with the base code, I researched and figured out how to apply some more character to the project. I wanted to give the user the ability to modify the sizes of the emerging bubbles. How it works: the user clicks the mouse to release ten bubbles of a random size ranging from the 0 to the size to the user's bubble. The user can use the scroll wheel to increse/decrease the size of the bubbles, therefore increasing the size range of the new bubbles.</p>
               <hr>
             </div>
           </div>
           <br>
           <!-- End ID Column -->
         </div>
-        <!-- Right Column -->
-        <div class="w3-twothird">
-          <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h5 class="w3-text-grey w3-padding-16">"Sometimes it is the people no one imagines anything of who do the things that no one can imagine." ~Alan Turing</h5>
-            <div class="w3-container">
-				<h5 class="w3-opacity"><b>About Me</b></h5>
-				<h4 class="w3-text-grey w3-padding-16">My name is Jordan Hoekwater. I am a student at San Jose State University currently studying Digital Media Art. This website is an online portfolio for my Into to Digital Media class where I will be showcasing my projects that I worked on throughout the semester. This was truly a great experience and hope you enjoy my website.</h4>
-				<h5 class="w3-text-grey w3-padding-14">~Jordan Hoekwater</h5>
-            </div>
-			<hr>
-			  <div class="w3-container">
-			  	<h7 class="w3-text-grey w3-padding-0">Updated: December 3, 2017</h7>
-			  </div>
-			<hr>
-          </div>
-          
-            
-          </div>
-          <!-- End Right Column -->
-        </div>
+       </div>
         <!-- End Grid -->
       </div>
       <!-- End Page Container -->
@@ -204,6 +184,24 @@ img.profile {
   </div>
   <!--SCRIPT STARTS-->
   <script>
+	  // Get the modal
+	  	var modal = document.getElementById('myModal');
+	  // Get the image and insert it inside the modal - use its "alt" text as a caption
+	  	var img = document.getElementById('myImg');
+	  	var modalImg = document.getElementById("img01");
+	  	var captionText = document.getElementById("caption");
+	  	img.onclick = function(){
+    		modal.style.display = "block";
+    		modalImg.src = this.src;
+    		captionText.innerHTML = this.alt;
+		}
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+	  // When the user clicks on <span> (x), close the modal
+	  span.onclick = function() { 
+    		modal.style.display = "none";
+	  }
+	  
 			window.onscroll = function() {myFunction()};
 			var navbar = document.getElementById("topnav");
 			var sticky = topnav.offsetTop;
