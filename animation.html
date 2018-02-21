@@ -1,4 +1,3 @@
-<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -23,7 +22,6 @@ body {
 	height: 200px;
 	background-color: #355666;
 }
-
 #topnav {
 	float:left;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -57,7 +55,6 @@ body {
   overflow: hidden;
   background-color: #333;
 }
-
 .topnav a {
   float: left;
   display: block;
@@ -67,7 +64,6 @@ body {
   text-decoration: none;
   font-size: 17px;
 }
-
 .topnav a:hover {
   background-color: #ddd;
   color: black;
@@ -94,7 +90,6 @@ body {
     display: block;
     text-align: left;
   }
-
 }
 	
 .content {
@@ -120,7 +115,6 @@ img.bg {
 	top: -200px;
 	left: 0;
 }
-
 @media screen and (max-width: 1024px) {
 img.bg {
 	left: 50%;
@@ -141,20 +135,101 @@ img.profile {
     z-index: 0;
 	border-radius: 50%;
 }
-video.canvas {
+img.canvas {
+	padding: 10px;
+	position: relative;
+    	left: 0px;
+    	top: 0px;
+	max-width: 300px;
+	min-width: 50px;
+    	z-index: 0;
+}
+	
+#myImg {
+	padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#myImg:hover {opacity: 0.99;}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+}
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 95%;
+    max-width: 800px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+/* Add Animation */
+}
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+img.ic{
+	width:24px;
+}	
+img.profile {
 	padding: 10px;
 	position: relative;
     left: 0px;
     top: 0px;
     z-index: 0;
-}
-img.ic{
-	padding:0px;
-	max-height: 200px; 
-	left:0;
-	top: 0;
-	width:20px;
-	z-index: 0;
+	border-radius: 50%;
 }
 </style>
 	
@@ -175,7 +250,6 @@ img.ic{
 	<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 </div>
-<!--MAIN BEGINS-->
 <main>
   <div class="content">
     <!-- Page Container -->
@@ -207,7 +281,6 @@ img.ic{
   <script>
 	  // Get the modal
 	  	var modal = document.getElementById('myModal');
-
 	  // Get the image and insert it inside the modal - use its "alt" text as a caption
 	  	var img = document.getElementById('myImg');
 	  	var modalImg = document.getElementById("img01");
@@ -217,20 +290,16 @@ img.ic{
     		modalImg.src = this.src;
     		captionText.innerHTML = this.alt;
 		}
-
 		// Get the <span> element that closes the modal
 		var span = document.getElementsByClassName("close")[0];
-
 	  // When the user clicks on <span> (x), close the modal
 	  span.onclick = function() { 
     		modal.style.display = "none";
 	  }
 	  
 			window.onscroll = function() {myFunction()};
-
 			var navbar = document.getElementById("topnav");
 			var sticky = topnav.offsetTop;
-
 			function myFunction() {
 				
   				if (window.pageYOffset >= sticky) {
@@ -250,7 +319,6 @@ img.ic{
 			</script>
   <!--SCRIPT ENDS-->
 </main>
-<!--MAIN ENDS-->
 <!--HEAD ENDS-->
 </body>
 </head>
