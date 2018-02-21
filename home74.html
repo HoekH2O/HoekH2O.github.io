@@ -23,6 +23,13 @@ body {
 	height: 200px;
 	background-color: #355666;
 }
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 #topnav {
 	float:left;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -48,6 +55,7 @@ body {
 	background-color: #7C94A6;
 	color: white;
 }
+
 #topnav a.active:hover {
 	background-color: #ACB8CE;
 }
@@ -56,6 +64,7 @@ body {
   overflow: hidden;
   background-color: #333;
 }
+
 .topnav a {
   float: left;
   display: block;
@@ -65,6 +74,7 @@ body {
   text-decoration: none;
   font-size: 17px;
 }
+
 .topnav a:hover {
   background-color: #ddd;
   color: black;
@@ -91,6 +101,7 @@ body {
     display: block;
     text-align: left;
   }
+
 }
 	
 .content {
@@ -104,7 +115,7 @@ margin-top: 60px;
 .sticky + .content {
 	padding: 60px;
 }
-img.bg {
+video.bg {
 	/* Set rules to fill background */
 	min-height: 100%;
 	min-width: 1024px;
@@ -113,38 +124,36 @@ img.bg {
 	height: auto;
 	/* Set up positioning */
 	position: relative;
-	top: -350px;
+	top: -200px;
 	left: 0;
+	color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
 }
+
 @media screen and (max-width: 1024px) {
-img.bg {
+video.bg {
 	left: 50%;
 	margin-left: -512px;
 }
 }
 img {
-	position: relative;
-    	left: 0px;
-    	top: 0px;
-    	z-index: 0;
-}
-img.profile {
 	padding: 10px;
 	position: relative;
-    	left: 0px;
-   	 top: 0px;
-    	z-index: 0;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
 	border-radius: 50%;
 }
+	
 img.ic{
-	padding:0px;
-
+	padding:0;
 	left:0;
 	top: 0;
 	width:24px;
 	z-index: 0;
 }	
-	
+
 </style>
 	
 <body>
