@@ -1,10 +1,9 @@
-<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="images/logo.png">
-<title>Portfolio - Home</title>
+<title>Portfolio - Art 74</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -124,26 +123,114 @@ img.bg {
 }
 img {
 	position: relative;
-    	left: 0px;
-    	top: 0px;
-    	z-index: 0;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
 }
 img.profile {
 	padding: 10px;
 	position: relative;
-    	left: 0px;
-   	 top: 0px;
-    	z-index: 0;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
 	border-radius: 50%;
 }
-img.ic{
-	padding:0;
-	left:0;
-	top: 0;
-	width:20px;
-	z-index: 0;
-}	
+img.canvas {
+	padding: 10px;
+	position: relative;
+    	left: 0px;
+    	top: 0px;
+	max-width: 300px;
+	min-width: 50px;
+    	z-index: 0;
+}
 	
+#myImg {
+	padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#myImg:hover {opacity: 0.99;}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+}
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 95%;
+    max-width: 800px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+/* Add Animation */
+}
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+img.ic{
+	width:24px;
+}	
+img.profile {
+	padding: 10px;
+	position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+	border-radius: 50%;
+}
 </style>
 	
 <body>
@@ -154,7 +241,7 @@ img.ic{
 	<a href="index.html">
 		<img src="images/paw button.png" class="ic" alt="Avatar">
 	</a>
-	<a class="active" href="index.html">Home</a>
+	<a class="active" href="home74.html">Home</a>
 	<a href="remixMontage.html">Remix Montage</a> 
 	<a href="animation.html">Animation</a> 
 	<a href="landscape.html">Landscape</a> 
@@ -163,7 +250,6 @@ img.ic{
 	<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 </div>
-<!--MAIN BEGINS-->
 <main>
   <div class="content">
     <!-- Page Container -->
@@ -173,7 +259,7 @@ img.ic{
         <!-- ID Column -->
         <div class="w3-third">
           <div class="w3-white w3-text-grey w3-card-4">
-            <div class="w3-display-container"> <img src="images/profile2.gif" class="profile" style="width:100%" alt="Avatar">
+            <div class="w3-display-container"> <img src="images/profile2.gif" style="width:100%" class="profile" alt="Avatar">
             </div>
             <div class="w3-container">
 				<h2>Jordan Hoekwater</h2>
@@ -197,7 +283,7 @@ img.ic{
             </div>
 			<hr>
 			  <div class="w3-container">
-			  	<h7 class="w3-text-grey w3-padding-0">Updated: December 18, 2017</h7>
+			  	<h7 class="w3-text-grey w3-padding-0">Updated: February 21, 2018</h7>
 			  </div>
 			<hr>
           </div>
@@ -214,8 +300,10 @@ img.ic{
   <!--SCRIPT STARTS-->
   <script>
 			window.onscroll = function() {myFunction()};
+
 			var navbar = document.getElementById("topnav");
 			var sticky = topnav.offsetTop;
+
 			function myFunction() {
 				
   				if (window.pageYOffset >= sticky) {
@@ -235,7 +323,6 @@ img.ic{
 			</script>
   <!--SCRIPT ENDS-->
 </main>
-<!--MAIN ENDS-->
 <!--HEAD ENDS-->
 </body>
 </head>
