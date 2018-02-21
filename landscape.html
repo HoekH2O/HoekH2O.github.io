@@ -373,6 +373,14 @@ img.profile {
   </div>
   <!--SCRIPT STARTS--> 
   <script>
+	  function openImg(imgName) {
+  var i, x;
+  x = document.getElementsByClassName("expandedImg");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  document.getElementById(imgName).style.display = "block";
+}
 	  
 			window.onscroll = function() {myFunction()};
 			var navbar = document.getElementById("topnav");
@@ -392,15 +400,6 @@ img.profile {
         			x.className = "topnav";
     			}
 			}
-	  
-	  function openImg(imgName) {
-  var i, x;
-  x = document.getElementsByClassName("expandedImg");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  document.getElementById(imgName).style.display = "block";
-}
 </script> 
   <!--SCRIPT ENDS--> 
 </main>
