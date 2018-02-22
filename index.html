@@ -15,13 +15,46 @@ body {
   
     overflow-x: hidden;
 }
-	
-.spinner{
+.logo{
     width: 80px;
     height: 80px;
-    
-    border: 2px solid #f3f3f3;
-    border-top:3px solid #f25a41;
+	position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+}
+.logoAni{
+    width: 100px;
+    height: 100px;
+	position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+	animation-timing-function: ease-out;
+    animation: paw 1s infinite linear;
+}
+@-webkit-keyframes paw {
+    0%   {width: 80px; height: 80px;}
+	50%	{width: 90px; height:90px;}
+    100%  {width:80px; height:80px;}
+}
+
+/* Standard syntax */
+@keyframes paw {
+    0%   {width: 80px; height: 80px;}
+	50%	{width: 90px; height:90px;}
+    100%  {width:80px; height:80px;}
+}
+	
+.spinner{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #191919;
+    border-top:3px solid #4B95E1;
     border-radius: 100%;
     
     position: absolute;
@@ -289,11 +322,14 @@ html {
 <body>
 	
 <div id="overlay">
-<div class="spinner"></div> 
+	<div id="overlay">
+		<div class="logoAni"><img src="images/paw button.png" class="logoAni"></div>
+		<div class="spinner"></div> 
+	</div>
 </div>
 
 <div class="headAni">
-
+	<div class="logo"><img src="images/paw button.png" class="logo"></div>
 </div>	
 <div class="headerbase"></div>
 <div class="header"></div>
@@ -302,7 +338,7 @@ html {
   <div class="row">
   <div class="column">
     <div class="card">
-      <img src="videos/art74web.gif" alt="Art 74 Overview" style="width:100%">
+      <img src="video/art74web.gif" alt="Art 74 Overview" style="width:100%">
       <div class="container">
 		<font size="6">Art 74</font>
 		  <p><font color="#797979"> Introduction to Digital Media</font></p>
@@ -315,7 +351,7 @@ html {
 
   <div class="column">
     <div class="card">
-      <img src="videos/coming-soon.gif" alt="Art 75 Overview" style="width:100%">
+      <img src="video/coming-soon.gif" alt="Art 75 Overview" style="width:100%">
       <div class="container">
         <font size="6">Art 75</font>
 		  <p><font color="#797979"> Introduction to Digital Video Art</font></p>
