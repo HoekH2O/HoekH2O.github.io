@@ -5,13 +5,79 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <style>
 body {
     background: #DDDDDD;
+	font-family: 'Raleway', sans-serif;
+	width: 100%;
+  
+    overflow-x: hidden;
 }
+	
+.spinner{
+    width: 80px;
+    height: 80px;
+    
+    border: 2px solid #f3f3f3;
+    border-top:3px solid #f25a41;
+    border-radius: 100%;
+    
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+    
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+#overlay{
+  height:100%;
+  width:100%;
+  background:rgba(0, 0, 0, 1);
+  position:fixed;
+  left:0;
+  top:0;
+ }
+	
+	
+	
 img {
     border-radius: 5px 5px 0 0;
+}
+.la {
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: auto;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.la-instagram {
+  color: white;
+}
+
+.la-facebook {
+  color: white;
+}
+.la-flickr {
+  color: white;
 }
 .header {
 	padding: 5px;
@@ -26,32 +92,36 @@ img {
 	}
 .headerbase {
 	height: 2px;
-	background-color:#2D86D9;
+	background-color: #FFFFFF;
 }
 .footer {
+	padding: 5px;
+	overflow: hidden;
+	float: bottom;
+	height: 65px;	
+	background-color: #959595;
 	left: 0;
-	bottom: 0;
 	width: 100%;
-	height: 61px;
-	background-color:#84A2C4;
-	overflow:hidden;
+	box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5);
 }
 	.footertop{
 		height: 2px;
-		background: #2D86D9;
+		background: #FFFFFF;
 	}
 .content {
     max-width: 1100px;
 	max-height: inherit;
     margin: auto;
 	padding-top: 20px;
-	background: #EDEDED;
-	box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5);
 }
 .contContain {
 	max-width: 90px;
 	margin: auto;
-	border-radius: 50px;
+	outline: #2D86D9;
+}
+.socialContain {
+	max-width: 100px;
+	margin: auto;
 	outline: #2D86D9;
 }
 .footContain {
@@ -136,7 +206,7 @@ html {
   display: inline-block;
   padding: 8px;
   color: white;
-  background-color: #000;
+  background-color: #161616;
   text-align: center;
   cursor: pointer;
   width: 100%;
@@ -166,6 +236,11 @@ html {
 </style>
 </head>
 <body>
+	
+<div id="overlay">
+<div class="spinner"></div> 
+</div>
+	
 <div class="header">
 	<div class="contContain">
 		<img src="images/paw button.png" class="contentLogo" alt="logo" style="width:100%">
@@ -178,10 +253,10 @@ html {
   <div class="row">
   <div class="column">
     <div class="card">
-      <img src="videos/art74web.gif" alt="Art 74 Overview" style="width:100%">
+      <img src="video/art74web.gif" alt="Art 74 Overview" style="width:100%">
       <div class="container">
-        <h2>Art 74</h2>
-        <p class="title">Introduction to Digital Media</p>
+		<font size="6">Art 74</font>
+		  <p><font color="#797979"> Introduction to Digital Media</font></p>
         <p>Fundamental concepts and methods of Digital Media production. Introduction to visualization software applications and web presentation techniques.</p>
         <p>SJSU - Fall 2017</p>
         <p><a class="btn" href="home74.html"><i class="fa fa-globe"></i> Visit Website Portfolio</a></p>
@@ -191,10 +266,10 @@ html {
 
   <div class="column">
     <div class="card">
-      <img src="videos/coming-soon.gif" alt="Art 75 Overview" style="width:100%">
+      <img src="video/coming-soon.gif" alt="Art 75 Overview" style="width:100%">
       <div class="container">
-        <h2>Art 75</h2>
-        <p class="title">Intorduction to Digital Video Art</p>
+        <font size="6">Art 75</font>
+		  <p><font color="#797979"> Introduction to Digital Video Art</font></p>
         <p>Introduction of the fundamental skills, software and techniques involved in the production of Digital Video. Critical discourse and contemporary art theories will be explored.</p>
         <p>SJSU - Spring 2018</p>
         <p><a class="btn" href="#"><i class="fa fa-globe"></i> Visit Website Portfolio</a></p>
@@ -209,14 +284,21 @@ html {
 </div>
 	
 <div class="footer">
-	<div class="row">
-		<div class="colFoot">
-				<p class="title"><img src="images/initials.png" class="contentLogo" alt="logo" style="width:60px">Hoekwater Development</p>
-		</div>
-		<div class="footDate">
-				<p class="title">2018</p>
-		</div>
+	<div class="socialContain">
+		<a href="#" class="fa fa-instagram"></a>
+		<a href="#" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-flickr"></a>
 	</div>
+</div>
 
+	
+<script>
+	var overlay = document.getElementById("overlay");
+
+window.addEventListener('load', function(){
+  overlay.style.display = 'none';
+})
+</script>
+	
 </body>
 </html>
