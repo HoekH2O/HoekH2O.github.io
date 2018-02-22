@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -31,10 +30,9 @@ body {
     left:0;
     right: 0;
     margin: auto;
-    
+    animation-timing-function: ease-out;
     animation: spin 1s infinite linear;
 }
-
 @keyframes spin {
     from{
         transform: rotate(0deg);
@@ -42,7 +40,6 @@ body {
         transform: rotate(360deg);
     }
 }
-
 #overlay{
   height:100%;
   width:100%;
@@ -50,6 +47,7 @@ body {
   position:fixed;
   left:0;
   top:0;
+  z-index: 1001;
  }
 	
 	
@@ -64,21 +62,48 @@ img {
   text-decoration: none;
   margin: auto;
 }
-
 .fa:hover {
     opacity: 0.7;
 }
-
 .la-instagram {
   color: white;
 }
-
 .la-facebook {
   color: white;
 }
 .la-flickr {
   color: white;
 }
+.headAni {
+	padding: 5px;
+	overflow: hidden;
+	float: bottom;
+	height: 100px;
+	background-color: #363636;
+	left: 0;
+	top: 0;
+	width: 100%;	
+	z-index: 1000;
+    position: fixed;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+	animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+}
+	
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {background-color:black; top:0px; height: 100%;}
+    100%  {background-color:#363636; height:100px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:black; top:0px; height: 100%;}
+    100%  {background-color:#363636; height:100px;}
+}
+	
 .header {
 	padding: 5px;
 	overflow: hidden;
@@ -91,9 +116,37 @@ img {
 	box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5);
 	}
 .headerbase {
-	height: 2px;
-	background-color: #FFFFFF;
+	padding: 5px;
+	overflow: hidden;
+	float: bottom;
+	height: 102px;
+	background-color: white;
+	left: 0;
+	top: 0;
+	width: 100%;
+	box-shadow: 0 12px 20px 0 rgba(0,0,0,0.75);	
+	z-index: 999;
+    position: fixed;
+    -webkit-animation-name: base; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: base;
+	animation-timing-function: ease-in-out;
+    animation-duration: 2.2s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
 }
+
+	/* Safari 4.0 - 8.0 */
+@-webkit-keyframes base {
+    0%   {background-color:lightgrey; top:0px; height: 100%;}
+    100%  {background-color:white; height:102px;}
+}
+
+/* Standard syntax */
+@keyframes base {
+    0%   {background-color:lightgrey; top:0px; height: 100%;}
+    100%  {background-color:white; height:102px;}
+}
+	
 .footer {
 	padding: 5px;
 	overflow: hidden;
@@ -184,7 +237,7 @@ html {
   transition: 0.3s;
   border-radius: 5px;
   max-height: 575px;
-	background: #E1E1E1;
+  background: #E1E1E1;
 }
 .card:hover{
 	box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5);	
@@ -240,15 +293,13 @@ html {
 <div id="overlay">
 <div class="spinner"></div> 
 </div>
-	
-<div class="header">
-	<div class="contContain">
-		<img src="images/paw button.png" class="contentLogo" alt="logo" style="width:100%">
-	  </div>
-</div>
-<div class="headerbase">
-	
-	</div>
+
+<div class="headAni">
+
+</div>	
+<div class="headerbase"></div>
+<div class="header"></div>
+
 <div class="content">
   <div class="row">
   <div class="column">
@@ -294,7 +345,6 @@ html {
 	
 <script>
 	var overlay = document.getElementById("overlay");
-
 window.addEventListener('load', function(){
   overlay.style.display = 'none';
 })
