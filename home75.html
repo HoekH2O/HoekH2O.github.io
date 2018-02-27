@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -28,7 +29,7 @@ body {
     padding-top: 20px;
 }
 .sidenav a {
-    padding: 6px 8px 6px 16px;
+	padding-left: 10px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
@@ -67,13 +68,19 @@ body {
 	margin-left: 80px;
 	padding: 0;
 	min-height: 500px;
-	height: inherit;
+	height: auto;
 	z-index: 0;
 	top:0;
 	left:0;
 	background-color: aqua;
-	outline: 5px dotted green;
 	overflow-y: hidden;
+}
+.contain {
+	width: 100%;
+	padding: 10px;
+	height: inherit;
+	top:0;
+	left:0;
 }
 .bottonGroup {
 	height: 100px;
@@ -89,13 +96,37 @@ body {
 	left:0;
 	background-color: cadetblue;
 }
-.third {
-	padding: 16px;
+.bioImg {
 	display:block;
 	float: left;
 	top: 0;
 	left:0;
-	width: 33.3%;
+	width: 40%;
+	max-height: 300px;
+	height: inherit;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	background-color: white;
+}
+.bioText {
+	margin-top:auto;
+	padding: 16px;
+	display: block;
+	float: left;
+	top: 0;
+	left:0;
+	width: 60%;
+	min-width: 200px;
+	height: 100%;
+	background-color: white;
+	z-index: 5;
+}
+.third {
+	display:block;
+	float: left;
+	top: 0;
+	left:0;
+	width: 40%;
 	height: 100%;
 	background-color: beige;
 }
@@ -105,16 +136,16 @@ body {
 	float: left;
 	top: 0;
 	left:0;
-	width: 66.7%;
+	width: 60%;
 	height: 100%;
 	background-color: blue;
 	z-index: 5;
 }
 img.ic{
-	position: fixed;
+	position: absolute;
 	width: 80px;
-	margin-top: 20px;
-	margin-left: 120px;
+	margin-top: 10px;
+	margin-left: 5px;
 	float: center;
     left: 0px;
     top: 0px;
@@ -169,14 +200,6 @@ img.ic{
 	float: left;
 	width: 100%;
 }
-.column img {
-	opacity: 0.8;
-	cursor: pointer;
-	min-width: 50px;
-}
-.column img:hover {
-	opacity: 1;
-}
 .row:after {
 	content: "";
 	display: table;
@@ -199,7 +222,6 @@ img.ic{
 		top:0;
 		left:0;
 		background-color: aqua;
-		outline: 5px dotted green;
 		overflow-y: hidden;
 	}
 	.content {
@@ -219,7 +241,7 @@ img.ic{
 		background-color: cadetblue;
 	}
 	.third {
-		padding: 16px;
+		padding: 5px;
 		display:block;
 		float: left;
 		top: 0;
@@ -266,7 +288,7 @@ img.ic{
 
 <body>
 	<div class="sidenav">
-		<a href="home.html">Back to Home</a>
+		<a href="home.html"><img src="images/paw button.png" style="width: 60px; "></a>
 	</div>
 	<div class="contentTop">
 			<img src="images/man.gif" width="100%">
@@ -278,7 +300,27 @@ img.ic{
 		<div class="row">
 			<div class="column">
 				<div class="third">
-					<p>title</p>
+					<div class="row">
+						<div class="column">
+							<div class="bioImg">
+								<img src="images/bio2.JPG" style="width:110%; padding: 5px;">
+							</div>
+							<div class="bioText">
+								<font size="4">Jordan Hoekwater</font>
+								<hr>
+								<p><i class="fa fa-book fa-fw w3-margin-right w3-large w3-text-teal"></i>San Jose State University</p>
+              					<p><i class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-teal"></i>Art: Concentration in Digital Media</p>
+							</div>
+						</div>
+						<div class="column">
+							<div class="bioText">
+								<p>"I am an artist. Cinematography has been a huge part of my life ever since I was a kid. I grew up making videos and learning from experiences. Dreams can truly be brought to life, and one day I hope to do just that."</p>
+							</div>
+							<div class="bioImg">
+								<img src="images/bio1.JPG" style="width:110%; padding: 5px;">
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="twoThird">
 					<p>test</p>
