@@ -1,9 +1,9 @@
 <html>
 <head>
 <meta charset="utf-8">
+<title>Portfolio - Art 75</title>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Porfolio Files</title>
-	<link rel="icon" href="images/logo.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
@@ -13,371 +13,362 @@
 body {
     background: #DDDDDD;
 	font-family: 'Raleway', sans-serif;
-	width: 100%;
-  
+	width: 100%;  
     overflow-x: hidden;
 }
-.logo{
+.sidenav {
+    height: 100%;
     width: 80px;
-    height: 80px;
-	position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right: 0;
-    margin: auto;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #323232;
+    overflow-x: hidden;
 }
-.logoAni{
-    width: 100px;
-    height: 100px;
-	position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right: 0;
-    margin: auto;
-	animation-timing-function: ease-out;
-    animation: paw 1s infinite linear;
+.sidenav a {
+	padding-left: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
 }
-@-webkit-keyframes paw {
-    0%   {width: 80px; height: 80px;}
-	50%	{width: 85px; height:85px;}
-    100%  {width:80px; height:80px;}
+
+.sidenav a:hover {
+    color: #f1f1f1;
 }
-/* Standard syntax */
-@keyframes paw {
-    0%   {width: 80px; height: 80px;}
-	50%	{width: 85px; height:85px;}
-    100%  {width:80px; height:80px;}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
 }
-	
-.spinner{
-    width: 100px;
-    height: 100px;
-    border: 2px solid #191919;
-    border-top:3px solid #4B95E1;
-    border-radius: 100%;
-    
-    position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right: 0;
-    margin: auto;
-    animation-timing-function: ease-out;
-    animation: spin 1s infinite linear;
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
 }
-@keyframes spin {
-    from{
-        transform: rotate(0deg);
-    }to{
-        transform: rotate(360deg);
-    }
+.contentTop {
+	width:100%;
+	margin-left: 80px;
+	padding: 0;
+	max-height: 501px;
+	height: inherit;
+	z-index: -1;
+	top:0;
+	left:0;
+	overflow-y: hidden;
 }
-#overlay{
-  height:100%;
-  width:100%;
-  background:rgba(0, 0, 0, 1);
-  position:fixed;
-  left:0;
-  top:0;
-  z-index: 1001;
- }	
-img {
-    border-radius: 5px 5px 0 0;
-}
-.la {
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-  text-decoration: none;
-  margin: auto;
-}
-.fa:hover {
-    opacity: 0.7;
-}
-.la-instagram {
-  color: white;
-}
-.la-facebook {
-  color: white;
-}
-.la-flickr {
-  color: white;
-}
-.headAni {
-	padding: 5px;
-	overflow: hidden;
-	float: bottom;
-	height: 100px;
-	background-color: #363636;
-	left: 0;
-	top: 0;
-	width: 100%;	
-	z-index: 1000;
-    position:absolute;
-    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-    animation-name: example;
-	animation-timing-function: ease-in-out;
-    animation-duration: 2s;
-}
-	
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes example {
-    0%   {background-color:black; top:0px; height: 100%;}
-    100%  {background-color:#363636; height:100px;}
-}
-/* Standard syntax */
-@keyframes example {
-    0%   {background-color:black; top:0px; height: 100%;}
-    100%  {background-color:#363636; height:100px;}
-}
-	
-.header {
-	padding: 5px;
-	overflow: hidden;
-	float: bottom;
-	height: 100px;
-	background-color: #363636;
-	left: 0;
-	top: 0;
-	width: 100%;
-	}
-.headerbase {
-	padding: 5px;
-	overflow: hidden;
-	float: bottom;
-	height: 102px;
-	background-color: white;
-	left: 0;
-	top: 0;
-	width: 100%;
-	box-shadow: 0 12px 20px 0 rgba(0,0,0,0.45);	
-	z-index: 999;
-    position: absolute;
-    -webkit-animation-name: base; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-    animation-name: base;
-	animation-timing-function: ease-in-out;
-    animation-duration: 2.2s;
-}
-	/* Safari 4.0 - 8.0 */
-@-webkit-keyframes base {
-    0%   {background-color:lightgrey; top:0px; height: 100%;}
-    100%  {background-color:white; height:102px;}
-}
-/* Standard syntax */
-@keyframes base {
-    0%   {background-color:lightgrey; top:0px; height: 100%;}
-    100%  {background-color:white; height:102px;}
-}
-	
-.footer {
-	padding: 5px;
-	overflow: hidden;
-	float: bottom;
-	height: 65px;	
-	background-color: #959595;
-	left: 0;
-	width: 100%;
-	box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5);
-}
-	.footertop{
-		height: 2px;
-		background: #FFFFFF;
-	}
 .content {
-    max-width: 1100px;
-	max-height: inherit;
-    margin: auto;
-	padding-top: 20px;
+	width:100%;
+	margin-left: 80px;
+	padding: 0;
+	height: auto;
+	z-index: 0;
+	top:0;
+	left:0;
+	background-color: #E4E4E4;
+	overflow-y: hidden;
 }
-.contContain {
-	max-width: 90px;
-	margin: auto;
-	outline: #2D86D9;
+.contain {
+	width: 100%;
+	padding: 10px;
+	height: inherit;
+	top:0;
+	left:0;
 }
-.socialContain {
-	max-width: 100px;
-	margin: auto;
-	outline: #2D86D9;
+.bottonGroup {
+	height: 100px;
+	background-color: firebrick;
+	top:0;
+	left:0;
 }
-.footContain {
-	padding-top: 0;
-	max-width: 100%;
-	margin-left: 5%;
-}
-.contentLogo {
-	max-height: 100%;
-	max-width: auto;
-	border-radius: 50px;
-	outline: #2D86D9;
-}
-	
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-.column {
-  display: block;
-  float: left;
-  width: 50%;
-  margin-bottom: 20px;
-  padding: 0 20px;
-}
-@media (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
-.colFoot {
-  display: block;
-  float: left;
-  width: 50%;
-	margin-top: 0;
-	max-width: 100%;
-	padding-left: 16px;
-	text-align: left;
-}
-.footDate {
-  display: block;
-  float: right;
-  width: 50%;
-  margin-bottom: 0;
-  text-align: right;
-  padding-right: 16px;
-  max-width: 100%;
-}
-@media (max-width: 650px) {
-  .colFoot {
-    width: 100%;
-    display: block;
-  }
+.footer {
+	width: 100%;
+	height: 100px;
+	z-index: 0;
+	top:0;
+	left:0;
+	background-color: cadetblue;
 }
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+  padding: 5px;
   transition: 0.3s;
   border-radius: 5px;
-  max-height: 575px;
-  background: #E1E1E1;
+  background: #CACACA;
 }
 .card:hover{
-	box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5);	
+	border-style: solid;
+	border-width: 1px;
+	border-color: #323232;
+}
+.bioImg {
+	border-radius: 5px;
+	height: auto;
+	float: left;
+	top: 0;
+	left:0;
+	width: 33.3%;
+	overflow-x: hidden;
+}
+.bioText {
+	border-radius: 5px;
+	margin-top:auto;
+	padding: 16px;
+	display: block;
+	float: left;
+	top: 0;
+	left:0;
+	width: 66.7%;
+	height: inherit;
+	max-height: 300px; 
+	z-index: 5;
+}
+.third {
+	display:block;
+	float: left;
+	top: 0;
+	left:0;
+	width: 33.3%;
+	height: 100%;
+	background-color:#E4E4E4;
+}
+.twoThird {
+	padding: 16px;
+	display: block;
+	float: left;
+	top: 0;
+	left:0;
+	width: 66.7%;
+	height: 100%;
+	background-color: blue;
+	z-index: 5;
+}
+img.ic{
+	position: absolute;
+	width: 80px;
+	margin-top: 10px;
+	margin-left: 5px;
+	float: center;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+}
+img.bio{
+	display:block;
+	float: left;
+	top: 0;
+	left:0;
+	width: 100%;
+	min-height: 100px;
+	height: inherit;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+img.paw {
+	width: 60px;
+	margin-top: 20px;
 }
 .container {
-  padding: 0 16px;
+	position: relative;
+	text-align: center;
+	color: white;
+	outline: 5px dotted green;
 }
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
+.bottom-left {
+	position: absolute;
+	bottom: 8px;
+	left: 16px;
 }
-.title {
-  color: grey;
+.top-left {
+	position: absolute;
+	top: 8px;
+	left: 96px;
 }
-.btn {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #161616;
-  text-align: center;
-  cursor: pointer;
+.top-right{
+	position: absolute;
+	top: 8px;
+	right: 16px;
+}
+.bottom-right {
+	position: absolute;
+	bottom: 8px;
+	right: 16px;
+}
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%)
+}
+.column {
+	padding: 2px;
+  display: block;
+  float: left;
+  width: 50%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.column {
+  float: left;
   width: 100%;
-  transition: 0.3s;
-  border-radius: 5px;
-  text-decoration: none;
 }
-.navbtn {
-  float: right;
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 5%;
-  transition: 0.3s;
-  border-radius: 5px;
-  text-decoration: none;	
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
 }
-.btn:hover {
-  background-color: #555;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+@media (max-width: 650px)
+{
+	.bioImg {
+		display:block;
+		float: left;
+		top: 0;
+		left:0;
+		width: 40%;
+		height: auto;
+		overflow-y: hidden;
+		overflow-x: hidden;
+	}
+	.bioText {
+		font-size: 12px;
+		padding: 10px;
+		display: block;
+		float: left;
+		top: 0;
+		left:0;
+		width: 60%;
+		height: inherit;
+		z-index: 5;
+	}
+	.column {
+    	width: 100%;
+    	display: block;
+  	}
+	.contentTop {
+		margin-left: 0;
+		width:100%;
+		margin-top: 50px;
+		padding: 0;
+		max-height: 200px;
+		height: inherit;
+		z-index: 0;
+		top:0;
+		left:0;
+		background-color: aqua;
+		overflow-y: hidden;
+	}
+	.content {
+		width: 100%;
+		margin-left: 0;
+		height: auto;
+		z-index: 0;
+		top:0;
+		left:0;
+		background: #E4E4E4;
+	}
+	.footer {
+		width: 100%;
+		height: 50px;
+		z-index: 0;
+		top:0;
+		left:0;
+		background-color: cadetblue;
+	}
+	.third {
+		width: 100%;
+		height: inherit;
+	}
+	.twoThird {
+		padding: 16px;
+		width: 100%;
+		height: inherit;
+		z-index: 5;
+	}
+	.sidenav {
+    	height: 50px;
+    	width: 100%;
+    	position: fixed;
+    	z-index: 2;
+    	top: 0;
+    	left: 0;
+    	background-color:#323232;
+    	overflow-x: hidden;
+	}
+	img.ic{
+		display: none;
+	}
+	img.paw {
+		width: 30px;
+		margin-top: 10px;
+		margin-left: 5px;
+	}
 }
 </style>
 </head>
+
 <body>
-	
-<div id="overlay">
-	<div id="overlay">
-		<div class="logoAni"><img src="images/paw button.png" class="logoAni"></div>
-		<div class="spinner"></div> 
+	<div class="sidenav">
+		<a href="home.html"><img src="images/paw button.png" class="paw"></a>
 	</div>
-</div>
-
-<div class="headAni">
-	<div class="logo"><img src="images/paw button.png" class="logo"></div>
-</div>	
-<div class="headerbase"></div>
-<div class="header"></div>
-
-<div class="content">
-  <div class="row">
-  <div class="column">
-    <div class="card">
-      <img src="videos/art74web.gif" alt="Art 74 Overview" style="width:100%">
-      <div class="container">
-		<font size="6">Art 74</font>
-		  <p><font color="#797979"> Introduction to Digital Media</font></p>
-        <p>Fundamental concepts and methods of Digital Media production. Introduction to visualization software applications and web presentation techniques.</p>
-        <p>SJSU - Fall 2017</p>
-        <p><a class="btn" href="home74.html"><i class="fa fa-globe"></i> Visit Website Portfolio</a></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-      <img src="videos/coming-soon.gif" alt="Art 75 Overview" style="width:100%">
-      <div class="container">
-        <font size="6">Art 75</font>
-		  <p><font color="#797979"> Introduction to Digital Video Art</font></p>
-        <p>Introduction of the fundamental skills, software and techniques involved in the production of Digital Video. Critical discourse and contemporary art theories will be explored.</p>
-        <p>SJSU - Spring 2018</p>
-        <p><a class="btn" href="home75.html"><i class="fa fa-globe"></i> Visit Website Portfolio</a></p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-	
-<div class="footertop">
-	
-</div>
-	
-<div class="footer">
-	<div class="socialContain">
-		<a href="#" class="fa fa-instagram"></a>
-		<a href="#" class="fa fa-facebook"></a>
-		<a href="#" class="fa fa-flickr"></a>
+	<div class="contentTop">
+			<img src="images/bg.jpg" width="100%">
+			<div class="top-left">
+				<img src="images/initials.png" class="ic">
+				
+			</div>
 	</div>
-</div>
-
-	
-<script>
-	var overlay = document.getElementById("overlay");
-window.addEventListener('load', function(){
-  overlay.style.display = 'none';
-})
-</script>
-	
+	<div class="content">
+		<div class="row">
+			<div class="column">
+				<div class="third">						
+							<div class="row">
+								<div class="column card">									
+										<div class="bioImg">
+											<img src="images/bio2.JPG" class="bio">
+										</div>
+										<div class="bioText">
+											<font size="4">Jordan Hoekwater</font>
+											<p><i class="fa fa-book fa-fw w3-margin-right w3-large w3-text-black"></i>San Jose State University</p>
+											<p><i class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-black"></i>Art: Concentration in Digital Media</p>
+										</div>									
+								</div>
+								<div class="column card">
+									<div class="bioText">
+										<p>"I am an artist. Cinematography has been a huge part of my life ever since I was a kid. I grew up making videos and learning from experiences. Dreams can truly be brought to life, and one day I hope to do just that."</p>
+									</div>
+									<div class="bioImg">
+										<img src="images/bio1.JPG" class="bio">
+									</div>
+								</div>
+								<div class="column card">
+									<div class="contain">
+										<p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-black"></i>(530) 902-3290</p>
+										<p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-black"></i>jordanhoekwater12@gmail.com</p>
+									</div>
+								</div>
+							</div>
+				</div>
+				<div class="twoThird">
+					<font size="5">Art 75 - Cinematography Portfolio</font>
+					<p>Fundamental theories and methods for the production of video in the age of digital media.  Including: web video, narrative / non-narratives, surveillance, post-production, special effects, augmented reality and network distribution. The course emphasizes experimental approaches to video creation, production with the Internet being the means of context, distribution, and discourse.</p>
+					<p>The class focuses on experimentation with digital video techniques and processes informed by digital networks, personal audio/video recording and mobile computing. The course will address development of appropriate conceptual strategies for artistic production. A contemporary critical and theoretical perspective will be stressed.  Projects will be presented using the Internet as the primary means of documentation as a rapidly evolving medium of video.</p>
+					<hr>
+					<div class="bottonGroup">
+						<div class="container">
+							<p>test</p>
+							<a href="projectOne.html">Project 1</a>
+							<a href="projectTwo.html">Project 2</a>
+							<a href="projectThree.html">Project 3</a>
+							<a href="projectFour">Project 4</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>test</p>
+	</div>
 </body>
 </html>
