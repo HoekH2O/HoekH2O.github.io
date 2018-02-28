@@ -206,7 +206,7 @@ img.paw {
   display: block;
   float: left;
   width: 50%;
-  margin-top: 5px;
+  margin-top: 2px;
   margin-bottom: 5px;
 }
 .column {
@@ -246,20 +246,18 @@ img.paw {
     	display: block;
   	}
 	.contentTop {
-		margin-left: 0;
 		width:100%;
 		margin-top: 50px;
-		padding: 0;
-		max-height: 200px;
+		margin-left: 0;
+		max-height: 150px;
 		height: inherit;
-		z-index: 0;
-		top:0;
-		left:0;
-		background-color: aqua;
 		overflow-y: hidden;
 	}
 	.content {
+		padding: 0;
+		width: 100%;
 		margin-left: 0;
+		margin-top: 0;
 		height: auto;
 		z-index: 0;
 		top:0;
@@ -275,24 +273,13 @@ img.paw {
 		background-color: cadetblue;
 	}
 	.third {
-		padding: 5px;
-		display:block;
-		float: left;
-		top: 0;
-		left:0;
 		width: 100%;
-		height: inherit;
-		background-color: beige;
+		height: inherit; 
 	}
 	.twoThird {
 		padding: 16px;
-		display: block;
-		float: left;
-		top: 0;
-		left:0;
 		width: 100%;
 		height: inherit;
-		background-color: blue;
 		z-index: 5;
 	}
 	.sidenav {
@@ -313,6 +300,9 @@ img.paw {
 		margin-top: 10px;
 		margin-left: 5px;
 	}
+	.card:hover{
+		border-style: none;
+	}
 }
 </style>
 </head>
@@ -325,6 +315,7 @@ img.paw {
 			<img src="images/bg.jpg" width="100%">
 			<div class="top-left">
 				<img src="images/initials.png" class="ic">
+				
 			</div>
 	</div>
 	<div class="content">
