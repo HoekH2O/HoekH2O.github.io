@@ -53,7 +53,7 @@ body {
 	width:100%;
 	margin-left: 80px;
 	padding: 0;
-	max-height: 500px;
+	max-height: 501px;
 	height: inherit;
 	z-index: 0;
 	top:0;
@@ -71,7 +71,7 @@ body {
 	z-index: 0;
 	top:0;
 	left:0;
-	background-color: aqua;
+	background-color: #E1E1E1;
 	overflow-y: hidden;
 }
 .contain {
@@ -95,29 +95,40 @@ body {
 	left:0;
 	background-color: cadetblue;
 }
+.card {
+  padding: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+  border-radius: 5px;
+  background: #CACACA;
+}
+.card:hover{
+	box-shadow: 0 12px 20px 0 rgba(0,0,0,0.25);	
+}
 .bioImg {
+	border-radius: 5px;
 	display:block;
 	float: left;
 	top: 0;
 	left:0;
-	width: 40%;
-	max-height: 300px;
+	width: 33.3%;
+	max-height:258px;
 	height: inherit;
 	overflow-y: hidden;
 	overflow-x: hidden;
-	background-color: white;
 }
 .bioText {
+	border-radius: 5px;
 	margin-top:auto;
 	padding: 16px;
 	display: block;
 	float: left;
 	top: 0;
 	left:0;
-	width: 60%;
+	width: 66.7%;
 	height: 100%;
-	max-height: 
-	background-color: white;
+	max-height: 300px; 
+	background-color: #E1E1E1;
 	z-index: 5;
 }
 .third {
@@ -125,9 +136,9 @@ body {
 	float: left;
 	top: 0;
 	left:0;
-	width: 40%;
+	width: 33.3%;
 	height: 100%;
-	background-color: beige;
+	background-color: #E1E1E1;
 }
 .twoThird {
 	padding: 16px;
@@ -135,7 +146,7 @@ body {
 	float: left;
 	top: 0;
 	left:0;
-	width: 60%;
+	width: 66.7%;
 	height: 100%;
 	background-color: blue;
 	z-index: 5;
@@ -149,6 +160,18 @@ img.ic{
     left: 0px;
     top: 0px;
     z-index: 10;
+}
+img.bio{
+	display:block;
+	float: left;
+	top: 0;
+	left:0;
+	width: 100%;
+	max-height:258px;
+	min-height: 100px;
+	height: inherit;
+	overflow-y: hidden;
+	overflow-x: hidden;
 }
 .container {
 	position: relative;
@@ -186,18 +209,11 @@ img.ic{
   display: block;
   float: left;
   width: 50%;
-  margin-bottom: 20px;
-}
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
-  transition: 0.3s;
-  border-radius: 5px;
-  max-height: 575px;
-  background: #E1E1E1;
+  margin-bottom: 10px;;
 }
 .column {
-	float: left;
-	width: 100%;
+  float: left;
+  width: 100%;
 }
 .row:after {
 	content: "";
@@ -212,8 +228,7 @@ img.ic{
 		top: 0;
 		left:0;
 		width: 40%;
-		max-height: 300px;
-		height: inherit;
+		height: 100%;
 		overflow-y: hidden;
 		overflow-x: hidden;
 		background-color: white;
@@ -322,28 +337,27 @@ img.ic{
 	<div class="content">
 		<div class="row">
 			<div class="column">
-				<div class="third">
-					<div class="row">
-						<div class="column">
-							<div class="bioImg">
-								<img src="images/bio2.JPG" style="width:110%; padding: 5px;">
+				<div class="third">						
+							<div class="row">
+								<div class="column card">									
+										<div class="bioImg">
+											<img src="images/bio2.JPG" class="bio">
+										</div>
+										<div class="bioText">
+											<font size="4">Jordan Hoekwater</font>
+											<p><i class="fa fa-book fa-fw w3-margin-right w3-large w3-text-teal"></i>San Jose State University</p>
+											<p><i class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-teal"></i>Art: Concentration in Digital Media</p>
+										</div>									
+								</div>
+								<div class="column card">
+									<div class="bioText">
+										<p>"I am an artist. Cinematography has been a huge part of my life ever since I was a kid. I grew up making videos and learning from experiences. Dreams can truly be brought to life, and one day I hope to do just that."</p>
+									</div>
+									<div class="bioImg">
+										<img src="images/bio1.JPG" class="bio">
+									</div>
+								</div>
 							</div>
-							<div class="bioText">
-								<font size="4">Jordan Hoekwater</font>
-								<hr>
-								<p><i class="fa fa-book fa-fw w3-margin-right w3-large w3-text-teal"></i>San Jose State University</p>
-              					<p><i class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-teal"></i>Art: Concentration in Digital Media</p>
-							</div>
-						</div>
-						<div class="column">
-							<div class="bioText">
-								<p>"I am an artist. Cinematography has been a huge part of my life ever since I was a kid. I grew up making videos and learning from experiences. Dreams can truly be brought to life, and one day I hope to do just that."</p>
-							</div>
-							<div class="bioImg">
-								<img src="images/bio1.JPG" style="width:110%; padding: 5px;">
-							</div>
-						</div>
-					</div>
 				</div>
 				<div class="twoThird">
 					<p>test</p>
