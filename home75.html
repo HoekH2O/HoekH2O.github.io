@@ -25,7 +25,6 @@ body {
     left: 0;
     background-color: #323232;
     overflow-x: hidden;
-    padding-top: 20px;
 }
 .sidenav a {
 	padding-left: 10px;
@@ -166,6 +165,10 @@ img.bio{
 	overflow-y: hidden;
 	overflow-x: hidden;
 }
+img.paw {
+	width: 60px;
+	margin-top: 20px;
+}
 .container {
 	position: relative;
 	text-align: center;
@@ -245,7 +248,7 @@ img.bio{
 	.contentTop {
 		margin-left: 0;
 		width:100%;
-		margin-top: 80px;
+		margin-top: 50px;
 		padding: 0;
 		max-height: 200px;
 		height: inherit;
@@ -293,7 +296,7 @@ img.bio{
 		z-index: 5;
 	}
 	.sidenav {
-    	height: 80px;
+    	height: 50px;
     	width: 100%;
     	position: fixed;
     	z-index: 2;
@@ -301,17 +304,14 @@ img.bio{
     	left: 0;
     	background-color:#323232;
     	overflow-x: hidden;
-    	padding-top: 20px;
 	}
 	img.ic{
-		position: fixed;
-		width: 60px;
+		display: none;
+	}
+	img.paw {
+		width: 30px;
 		margin-top: 10px;
-		margin-left: 30px;
-		float: center;
-    	left: 0px;
-    	top: 0px;
-    	z-index: 11;
+		margin-left: 5px;
 	}
 }
 </style>
@@ -319,7 +319,7 @@ img.bio{
 
 <body>
 	<div class="sidenav">
-		<a href="home.html"><img src="images/paw button.png" style="width: 60px; "></a>
+		<a href="home.html"><img src="images/paw button.png" class="paw"></a>
 	</div>
 	<div class="contentTop">
 			<img src="images/man.gif" width="100%">
@@ -365,6 +365,7 @@ img.bio{
 					<hr>
 					<div class="bottonGroup">
 						<div class="container">
+							<p>test</p>
 							<a href="projectOne.html">Project 1</a>
 							<a href="projectTwo.html">Project 2</a>
 							<a href="projectThree.html">Project 3</a>
