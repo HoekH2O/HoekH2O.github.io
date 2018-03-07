@@ -1,0 +1,815 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Portfolio - Art 75</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel=”stylesheet” href=”css/font-awesome.min.css” >
+<style TYPE="text/css">
+body {
+	background: #DDDDDD;
+	font-family: 'Raleway', sans-serif;
+	width: 100%;
+	overflow-x: hidden;
+}
+.sidenav {
+	height: 100%;
+	width: 80px;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	background-color: #323232;
+	overflow-x: hidden;
+}
+.sidenav a {
+	padding-left: 10px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+}
+.sidenav a:hover {
+	color: #f1f1f1;
+}
+.main {
+	margin-left: 160px; /* Same as the width of the sidenav */
+	font-size: 28px; /* Increased text to enable scrolling */
+	padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {
+	padding-top: 15px;
+}
+.sidenav a {
+	font-size: 18px;
+}
+}
+.contentTop {
+	width: 100%;
+	margin-left: 80px;
+	padding: 0;
+	max-height: 200px;
+	height: inherit;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	overflow-y: hidden;
+}
+.content {
+	max-width: 100%;
+	margin-left: 80px;
+	padding: 0;
+	height: inherit;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	background-color: #E4E4E4;
+}
+.contain {
+	width: 100%;
+	padding: 10px;
+	height: inherit;
+	top: 0;
+	left: 0;
+}
+.bottonGroup {
+	height: 100px;
+	background-color: firebrick;
+	top: 0;
+	left: 0;
+}
+.footer {
+	width: 100%;
+	height: 100px;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	background-color: cadetblue;
+}
+.card {
+	width: 100%;
+	padding: 5px;
+	transition: 0.3s;
+	border-radius: 5px;
+	background: #CACACA;
+}
+.card:hover {
+}
+.btn {
+	width: 50px;
+	height: 50px;
+	background: #3B61FF;
+	border-radius: 5px;
+}
+.btn:hover {
+	background: #6482FF;
+}
+.bioImg {
+	border-radius: 5px;
+	height: auto;
+	float: left;
+	top: 0;
+	left: 0;
+	width: 33.3%;
+	overflow-x: hidden;
+}
+.bioText {
+	border-radius: 5px;
+	margin-top: auto;
+	padding: 16px;
+	display: block;
+	float: left;
+	top: 0;
+	left: 0;
+	width: 66.7%;
+	height: inherit;
+	max-height: 300px;
+	z-index: 5;
+}
+.third {
+	display: block;
+	float: left;
+	top: 0;
+	left: 0;
+	width: 33.3%;
+	height: 100%;
+	background-color: #E4E4E4;
+}
+.half {
+	display: block;
+	float: left;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: auto;
+	background-color: #E4E4E4;
+}
+.twoThird {
+	padding: 16px;
+	display: block;
+	float: left;
+	top: 0;
+	left: 0;
+	width: 66.7%;
+	height: 100%;
+	background-color: blue;
+	z-index: 5;
+}
+img.ic {
+	position: absolute;
+	width: 80px;
+	margin-top: 10px;
+	margin-left: 5px;
+	float: center;
+	left: 0px;
+	top: 0px;
+	z-index: 10;
+}
+img.bio {
+	display: block;
+	float: left;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100px;
+	height: inherit;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+img.paw {
+	width: 60px;
+	margin-top: 20px;
+}
+.container {
+	position: relative;
+	text-align: center;
+	color: white;
+	outline: 5px dotted green;
+}
+.bottom-left {
+	position: absolute;
+	bottom: 8px;
+	left: 16px;
+	z-index: 100;
+}
+.top-left {
+	position: absolute;
+	top: 8px;
+	left: 96px;
+}
+.top-right {
+	position: absolute;
+	top: 8px;
+	right: 16px;
+}
+.bottom-right {
+	position: absolute;
+	bottom: 8px;
+	right: 16px;
+}
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%)
+}
+.column {
+	padding: 2px;
+	display: block;
+	float: left;
+	width: 50%;
+	margin-top: 2px;
+	margin-bottom: 5px;
+}
+.column {
+	float: left;
+	width: 100%;
+}
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+@media (max-width: 650px) {
+.bioImg {
+	display: block;
+	float: left;
+	top: 0;
+	left: 0;
+	width: 40%;
+	height: auto;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+.bioText {
+	font-size: 12px;
+	padding: 10px;
+	display: block;
+	float: left;
+	top: 0;
+	left: 0;
+	width: 60%;
+	height: inherit;
+	z-index: 5;
+}
+.column {
+	width: 100%;
+	display: block;
+}
+.contentTop {
+	width: 100%;
+	margin-top: 50px;
+	margin-left: 0;
+	max-height: 150px;
+	height: inherit;
+	overflow-y: hidden;
+}
+.content {
+	padding: 0;
+	width: 100%;
+	margin-left: 0;
+	margin-top: 0;
+	height: auto;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	background: #E4E4E4;
+}
+.footer {
+	width: 100%;
+	height: 50px;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	background-color: cadetblue;
+}
+.third {
+	width: 100%;
+	height: inherit;
+}
+.twoThird {
+	padding: 16px;
+	width: 100%;
+	height: inherit;
+	z-index: 5;
+}
+.sidenav {
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	background-color: #323232;
+	overflow-x: hidden;
+}
+img.ic {
+	display: none;
+}
+img.paw {
+	width: 30px;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+.card:hover {
+	border-style: none;
+}
+.display {
+	width: 95%;
+	border-radius: 5px;
+}	
+.half {
+	display: block;
+	float: left;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	background-color: #E4E4E4;
+}
+	
+}
+.dispPanel {
+	width: 100%;
+	height: auto;
+	display: none;
+}
+.dispPanels {
+	width: 100%;
+	height: auto;
+	display: none;
+}
+.dispPanelz {
+	width: 100%;
+	height: auto;
+	display: none;
+}
+.display {
+	width: 100%;
+	border-radius: 5px;
+	transition: 0.3s;
+}
+.display:hover{
+		
+}
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.pagination a.active {
+    background-color: dodgerblue;
+    color: white;
+}     
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+</style>
+</head>
+<body onLoad="togglePanel(PANELS[0]), togglePanels(PAN[0]), togglePanelz(PANZ[0]), togglePaneled(PAND[0])">
+<div class="sidenav"> <a href="home.html"><img src="images/paw button.png" class="paw"></a> </div>
+<div class="contentTop"> <img src="images/bg.jpg" width="100%">
+  <div class="top-left"> <img src="images/initials.png" class="ic"> </div>
+</div>
+<div class="content">
+  <div class="row">
+      <div class="column card">	
+            <div CLASS="dispPanel" ID="pn_1">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+						  <div id="video-wrapper">
+							   <video id="v" src="videos/art75/project 1/Teamshoot 1.mp4" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"></video>
+							</div>
+					  	
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>Choose Option</p><p></p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[1])">Start</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+            <div CLASS="dispPanel" ID="pn_2">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+					  	<video src="videos/art75/project 1/Video Intro 1-1 Rough.mp4" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"></video>
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>What city do you want to film in?</p><p>You have one singular goal in mind: Complete Project One. The task may seem simple but you can't always film in the same place. Where are you going to go?</p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[0])">back</a>
+								<a href="javascript:togglePanel(PANELS[2])">Dixon, CA</a>
+								<a href="javascript:togglePanel(PANELS[10])">Vacaville, CA</a>
+								<a href="javascript:togglePanel(PANELS[13])">San Jose, CA</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+            <div CLASS="dispPanel" ID="pn_3">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+					  	<video src="videos/art75/project 1/cloud.mp4" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"></video>
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>Welcome to Dixon</p><p>I could sit here and tell you about my childhood in this city and we would really share a bonding moment, but this project is almost due so there isn't enough time for small talk. What are you going to film here?</p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[1])">Back</a>
+								<a href="javascript:togglePanel(PANELS[9])">Introductions</a>
+								<a href="javascript:togglePanel(PANELS[3])">Interview</a>
+								<a href="javascript:togglePanel(PANELS[6])">Action Sequence</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+		  <div CLASS="dispPanel" ID="pn_4">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+					  	<video src="videos/art75/project 1/Transitions Final.mp4" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"></video>
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>Who will you interview?</p><p>While I do have other siblings that we could interview we will ask to see who is willing.</p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[2])">Back</a>
+								<a href="javascript:togglePanel(PANELS[5])">Sienna</a>
+								<a href="javascript:togglePanel(PANELS[5])">Ashley</a>
+								<a href="javascript:togglePanel(PANELS[5])">Justin</a>
+								<a href="javascript:togglePanel(PANELS[4])">Dad</a>
+								<a href="javascript:togglePanel(PANELS[5])">Taylor</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+		  <div CLASS="dispPanel" ID="pn_5">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+					  	<video src="videos/art75/project 1/Interview.mp4" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"></video>
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>The interview went well!</p><p>My Dad was able to give us a good interview! </p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[1])">Back</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+		  <div CLASS="dispPanel" ID="pn_6">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+					  	<video src="videos/art75/project 1/IMG_5092.mp4" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"></video>
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>Find someone else</p><p>Unfortunately they aren't able to do the interview. you will have to select another person.</p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[3])">Back</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+		  <div CLASS="dispPanel" ID="pn_7">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+					  	<video src="videos/art75/project 1/IMG_5057.mp4" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"></video>
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>Oh so your feeling like an action movie?</p><p>Alright I admire your enthusiasm. We will film the action sequence, but you need to find a place to film, somewhere open and public.</p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[2])">Back</a>
+								<a href="javascript:togglePanel(PANELS[7])">House</a>
+								<a href="javascript:togglePanel(PANELS[8])">Wal-Mart</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+		  <div CLASS="dispPanel" ID="pn_8">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+					  	<video src="videos/art75/project 1/IMG_5089.mov" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"></video>
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>House</p><p>So, I kinda had this idea for the action sequence and I'm not sure that we can do it here...</p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[6])">Back</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+		  <div CLASS="dispPanel" ID="pn_9">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+					  	<video src="videos/art75/project 1/War of Isles.mp4" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"webkitallowfullscreen mozallowfullscreen allowfullscreen></video>
+
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>This will do!</p><p>After several hours of shooting and being followed around by security, we managed to finish the action sequence!</p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[1])">Back</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+		  <div CLASS="dispPanel" ID="pn_10">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+					  	<video src="videos/art75/project 1/IMG_5043.mp4" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"></video>
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>Introductions</p><p>The sun set quicker than I imagined, I don't think we will be able to film our introductions without any daylight, it's unfortunate but we will have to film another day.</p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[2])">Back</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+		  <div CLASS="dispPanel" ID="pn_11">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+					  	<video src="videos/art75/project 1/711437900_1.mp4" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"></video>
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>Welcome to Vacaville</p><p>This city is where I spent most of my time growing up. We will have to go get coffee there sometime, but not now. We really do have to finish this project. What are we filming?</p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[1])">Back</a>
+								<a href="javascript:togglePanel(PANELS[12])">Introductions</a>
+								<a href="javascript:togglePanel(PANELS[11])">Interview</a>
+								<a href="javascript:togglePanel(PANELS[6])">Action Sequence</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+		  <div CLASS="dispPanel" ID="pn_12">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+					  	<video src="videos/art75/project 1/Video Intro 1-1 Final.mp4" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"></video>
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>So...</p><p>We could find someone to interview but now's not really the best time. Everyone I had in mind is busy with other work.</p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[10])">Back</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+		  <div CLASS="dispPanel" ID="pn_13">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+					  	<video src="videos/art75/project 1/Video Intro 1-1 Final.mp4" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"></video>
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>Unfortunately...</p><p>Vacaville doesn't have any interesting enough places to film at. Well at least in my opinion, we'd have better luck filming somewhere else.</p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[10])">Back</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+		  
+		  <div CLASS="dispPanel" ID="pn_14">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+					  	<video src="videos/art75/project 1/Video Intro 1-1 Final.mp4" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"></video>
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>Welcome to San Jose</p><p>This is my newest adventure! The start of college drew me to this city and I will...imediately stop going off subject because I am a responsible adult who will push you to finish your projects. What should we film?</p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[1])">Back</a>
+								<a href="javascript:togglePanel(PANELS[14])">Introductions</a>
+								<a href="javascript:togglePanel(PANELS[15])">Interview</a>
+								<a href="javascript:togglePanel(PANELS[16])">Action Sequence</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+		  <div CLASS="dispPanel" ID="pn_15">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+					  	<video src="videos/art75/project 1/Video Intro 1-1 Final.mp4" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"></video>
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>Introductions</p><p>San Jose is full of interesting places to film our introductions,</p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[13])">Back</a>
+								<a href="javascript:togglePanel(PANELS[17])">Railroad</a>
+								<a href="javascript:togglePanel(PANELS[18])">City Hall</a>
+								<a href="javascript:togglePanel(PANELS[19])">Saint James Park</a>
+								<a href="javascript:togglePanel(PANELS[20])">San Pedro Square</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+		  <div CLASS="dispPanel" ID="pn_16">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+					  	<video src="videos/art75/project 1/Video Intro 1-1 Final.mp4" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"></video>
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>Oops...</p><p>Turns out we weren't able to find anyone we could interview outside of school.</p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[13])">Back</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+		  <div CLASS="dispPanel" ID="pn_17">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+					  	<video src="videos/art75/project 1/Video Intro 1-1 Final.mp4" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"></video>
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>Couldn't make it...</p><p>While the action sequence would have been awesome to make here, we couldn't get our actors down for the shoot. And since we are on a tight schedule, you will need to find a location more accessable for your actors.</p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[13])">Back</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+		  <div CLASS="dispPanel" ID="pn_18">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+					  	<video src="videos/art75/project 1/track.mp4" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"></video>
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>Railroad</p><p>Stubbled upon a nice railroad. Poses a unique location for one of our introduction shots.</p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[14])">Back</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+		  <div CLASS="dispPanel" ID="pn_19">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+					  	<video src="videos/art75/project 1/city.mp4" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"></video>
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>City Hall</p><p>Right outside San Jose State, City Hall stands proud. Unique architecture gives the shot an abstract feel definitely worth capturing.</p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[14])">Back</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+		  <div CLASS="dispPanel" ID="pn_20">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+					  	<video src="videos/art75/project 1/park.mp4" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"></video>
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>Saint James Park</p><p>Very large park on 3rd street. Beautiful grass and various buildings surrounding it, giving the shots multiple angles to work with.</p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[14])">Back</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+		  <div CLASS="dispPanel" ID="pn_21">
+			  <div class="contain">
+			  	  <div class="half">
+					  <div class="contain">
+					  	<video src="videos/art75/project 1/sanpedro.mp4" class="display" onmouseout="this.pause()" onClick="this.paused?this.play():this.pause()"></video>
+					  </div>
+				  	
+				  </div>
+					<div class="half">
+						<div class="contain">
+							<p>San Pedro Square</p><p>Beautiful plaza with retro atmosphere. Was ideal for conveying that mood.</p>
+							<div class="pagination">
+								<a href="javascript:togglePanel(PANELS[14])">Back</a>
+							</div>
+						</div>
+					</div>
+			  </div>
+          </div>
+    </div>
+	</div>
+  </div>
+</div>
+<div class="footer">
+  <p>test</p>
+</div>
+<script language="JavaScript">
+
+<!--
+var PANELS = new Array("pn_1", "pn_2", "pn_3", "pn_4", "pn_5", "pn_6", "pn_7", "pn_8", "pn_9", "pn_10", "pn_11", "pn_12", "pn_13", "pn_14", "pn_15", "pn_16", "pn_17", "pn_18", "pn_19", "pn_20", "pn_21");
+
+
+// toggle to one of our panels
+function togglePanel (pnl) {
+	for (var p=0; p < PANELS.length; p++) {
+		document.getElementById(PANELS[p]).style.display = (PANELS[p] == pnl) ? "block" : "none";
+    }
+}
+</script>
+</body>
+</html>
