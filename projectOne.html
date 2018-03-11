@@ -1,4 +1,3 @@
-<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -6,16 +5,15 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-<link rel=”stylesheet” href=”css/font-awesome.min.css” >
-<style TYPE="text/css">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+<style>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 body {
 	background: #CACACA;
-	font-family: 'Raleway', sans-serif;
 	width: 100%;
+	font-family: 'Raleway', sans-serif;
+	margin-bottom: 0;
 }
 .sidenav {
 	height: 100%;
@@ -24,12 +22,11 @@ body {
 	z-index: 2;
 	top: 0;
 	left: 0;
-	background-color: #EFEFEF;
+	background-color:#E4E4E4;
 	transition: 1s;
 	border-style: solid;
     border-width: 1px;
     border-color: #EFEFEF;
-	box-shadow: 0 12px 20px 0 rgba(0,0,0,0.1);
 }
 .sidenav a {
 	padding-left: 10px;
@@ -39,10 +36,6 @@ body {
 	display: block;
 }
 .sidenav:hover {
-	color: #f1f1f1;
-	border-style: solid;
-    border-width: 1px;
-    border-color:#E4E4E4;
 }
 
 
@@ -68,13 +61,35 @@ body {
 .content {
 	max-width: 100%;
 	margin-left: 80px;
-	padding-left: 70px;
-	padding-right: 70px;
+	padding-left: 0;
+	padding-right: 0;
 	height: inherit;
 	z-index: 0;
 	top: 0;
 	left: 0;
-	background:#D4D4D4;
+	background:;
+}
+.contentWhite {
+	max-width: 100%;
+	margin-left: 80px;
+	padding-left: 70px;
+	padding-right: 70px;
+	height: inherit;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color:#F5F5F5;
+}
+.contentBlack {
+	max-width: 100%;
+	margin-left: 80px;
+	padding-left: 70px;
+	padding-right: 70px;
+	height: inherit;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	background-color:#F6F6F6;
 }
 .contain {
 	max-width: 100%;
@@ -91,12 +106,25 @@ body {
 	left: 0;
 }
 .footer {
+	font-family: 'Raleway', sans-serif;
+	margin-left:80px;
+	padding-right: 20px;
+	padding-top: 10px;
+	max-width: 100%;
+	height: 70px;
+	z-index: 20;
+	top: 0;
+	left: 0;
+	background-color:#2A2A2A;
+}
+.divide {
+	margin-left:80px;
 	width: 100%;
-	height: 100px;
+	height: 5px;
 	z-index: 0;
 	top: 0;
 	left: 0;
-	background-color: cadetblue;
+	background-color:#2A2A2A;
 }
 .card {
 	width: 100%;
@@ -152,6 +180,7 @@ body {
 	background-color: #E4E4E4;
 }
 .half {
+	font-family: 'Raleway', sans-serif;
 	display: block;
 	float: left;
 	top: 0;
@@ -159,6 +188,15 @@ body {
 	width: 50%;
 	height: auto;
 	background-color:#E4E4E4;
+}
+.halfText {
+	display: block;
+	float: left;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: auto;
+	background-color:#048ECB;
 }
 .twoThird {
 	padding: 16px;
@@ -205,9 +243,11 @@ img.paw {
 	outline: 5px dotted green;
 }
 .bottom-left {
+	font-family: 'Raleway', sans-serif;
+	font-size: 10px;
 	position: absolute;
-	bottom: 8px;
-	left: 16px;
+	bottom: 0px;
+	left: 0;
 	z-index: 100;
 }
 .top-left {
@@ -221,13 +261,22 @@ img.paw {
 	right: 16px;
 }
 .bottom-right {
-	position: absolute;
+	z-index: 100;
+	position: static;
 	bottom: 8px;
 	right: 16px;
 }
 .centered {
+	font-family: 'Amatic SC', cursive;
 	position: absolute;
-	top: 50%;
+	top: 80px;
+	left: 40%;
+	transform: translate(-50%, -50%)
+}
+.offCentered {
+	font-family: 'Amatic SC', cursive;
+	position: absolute;
+	top: 120px;
 	left: 50%;
 	transform: translate(-50%, -50%)
 }
@@ -384,16 +433,62 @@ img.paw {
 }
 
 .pagination a:hover:not(.active) {background-color: #ddd;}
+	
+.contains {
+	margin-top: 30px;
+	margin-left: 22px;
+    display: inline-block;
+    cursor: pointer;
+}
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+.vertical-text {
+	float: bottom;
+	bottom:0;
+	margin-left: 30px;
+	width: 500px;
+	transform: rotate(-90deg);
+	transform-origin: left top 0;
+}
 </style>
 </head>
 <body onLoad="togglePanel(PANELS[0]), togglePanels(PAN[0]), togglePanelz(PANZ[0]), togglePaneled(PAND[0])">
-<div class="sidenav"> <a href="home.html"><img src="images/paw button.png" class="paw"></a> </div>
-<div class="contentTop"> <video src="videos/whiteBG.mp4" autoplay loop class="display" style="position:static; z-index: -1;"></video>
+<div class="sidenav"> 
+	<a href="home.html"><img src="images/paw button.png" class="paw"></a>
+	<div class="contains" onclick="myFunction(this)">
+	  <div class="bar1"></div>
+	  <div class="bar2"></div>
+	  <div class="bar3"></div>
+	</div>
+	<div class="bottom-left"><p class="vertical-text">Hoekwater Development - 2018</p></div>
+</div>
+<div class="contentTop"> 
+	<div class="centered"><font size="72" style="font-size:3.5vw;">Project One</font></div>
+	<div class="offCentered"><font size="6" style="font-size:3vw;">Non-Narrative Video</font></div>
+	<video src="video/whiteBG.mp4" autoplay loop class="display" style="position:static; z-index: -1;"></video>
   <div class="top-left"> <img src="images/initials.png" class="ic"> </div>
 </div>
-<div class="content">
+<div class="divide"></div>
+<div class="contentWhite">
   <div class="row">
-      <div class="column card">	
+        <div class="column card">	
             <div CLASS="dispPanel" ID="pn_1">
 			  <div class="contain">
 			  	  <div class="half">
@@ -407,12 +502,13 @@ img.paw {
 				  </div>
 					<div class="half">
 						<div class="contain">
-							<p>Video 1: Team Shoot</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer blandit. Quisque laoreet, turpis vitae elementum facilisis, mauris ligula posuere enim, vel viverra massa mi in dui. Donec eget tortor. Etiam vitae lorem at tellus ornare vestibulum. Praesent placerat quam sit amet orci. Nullam orci. Ut vel ligula. Mauris rutrum dignissim urna. Aenean orci. Phasellus scelerisque. Integer blandit. Pellentesque interdum, nunc at ornare vestibulum, mauris velit accumsan orci, sed tincidunt elit enim vel felis. Fusce ut erat.</p>
-							<div class="pagination">
-								<a href="javascript:togglePanel(PANELS[0])">1</a>
-								<a href="javascript:togglePanel(PANELS[1])">1-1</a>
-								<a href="javascript:togglePanel(PANELS[2])">1-1</a>
-							</div>
+							<font size="4" style="font-size:1vw;">Video 1: Team Shoot</font><p style="font-size:1vw;">This project was an immersive experience. Give a timesheet we were tasked with following the instructions and making a video in one take. It was interesting to see how much harder it ended up being. Having to constantly follow the timesheet and translate it into video all at the same time was definitelyinteresting. This video was a great start to this class.</p>
+							<hr>
+								<div class="pagination">
+									<a href="javascript:togglePanel(PANELS[0])" style="font-size:1vw;">1</a>
+									<a href="javascript:togglePanel(PANELS[1])"style="font-size:1vw;">1-1</a>
+									<a href="javascript:togglePanel(PANELS[2])"style="font-size:1vw;">1-1</a>
+								</div>
 						</div>
 					</div>
 			  </div>
@@ -427,7 +523,8 @@ img.paw {
 				  </div>
 					<div class="half">
 						<div class="contain">
-							<p>Video 1-1: Introductions Rough Cut</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer blandit. Quisque laoreet, turpis vitae elementum facilisis, mauris ligula posuere enim, vel viverra massa mi in dui. Donec eget tortor. Etiam vitae lorem at tellus ornare vestibulum. Praesent placerat quam sit amet orci. Nullam orci. Ut vel ligula. Mauris rutrum dignissim urna. Aenean orci. Phasellus scelerisque. Integer blandit. Pellentesque interdum, nunc at ornare vestibulum, mauris velit accumsan orci, sed tincidunt elit enim vel felis. Fusce ut erat.</p>
+							<p>Video 1-1: Introductions Rough Cut</p><p>This video focused on us. We had to introduce ourselves by conveying four different moods relative to a location that compliments it at the same time. This video was fairly easy but trying to convey different moods was tricky. The rough cut was soley supposed to be our full introductions combined into a video.</p>
+							<hr>
 							<div class="pagination">
 								<a href="javascript:togglePanel(PANELS[0])">1</a>
 								<a href="javascript:togglePanel(PANELS[1])">1-1</a>
@@ -447,7 +544,9 @@ img.paw {
 				  </div>
 					<div class="half">
 						<div class="contain">
-							<p>Video 1-1: Introductions Final Cut</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer blandit. Quisque laoreet, turpis vitae elementum facilisis, mauris ligula posuere enim, vel viverra massa mi in dui. Donec eget tortor. Etiam vitae lorem at tellus ornare vestibulum. Praesent placerat quam sit amet orci. Nullam orci. Ut vel ligula. Mauris rutrum dignissim urna. Aenean orci. Phasellus scelerisque. Integer blandit. Pellentesque interdum, nunc at ornare vestibulum, mauris velit accumsan orci, sed tincidunt elit enim vel felis. Fusce ut erat.</p>
+							<p>Video 1-1: Introductions Final Cut</p>
+							<p>Now for the final cut we were asked to breakdown the time to around 10-15 seconds. So during editing, I basically switched between the different locations I filmed at. This video was fun due the the amount of exploration we did to find the locations.</p>
+							<hr>
 							<div class="pagination">
 								<a href="javascript:togglePanel(PANELS[0])">1</a>
 								<a href="javascript:togglePanel(PANELS[1])">1-1</a>
@@ -457,13 +556,18 @@ img.paw {
 					</div>
 			  </div>
           </div>
-    </div>
+		</div>
+  </div>
+</div>
+<div class="contentBlack">
+  <div class="row">
 	  	<div class="column card">	
           <div CLASS="dispPanels" ID="pns_1">
 			  <div class="contain">
 					<div class="half">
 						<div class="contain">
-							<p>Video 1-2: Interview Rough Cut</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer blandit. Quisque laoreet, turpis vitae elementum facilisis, mauris ligula posuere enim, vel viverra massa mi in dui. Donec eget tortor. Etiam vitae lorem at tellus ornare vestibulum. Praesent placerat quam sit amet orci. Nullam orci. Ut vel ligula. Mauris rutrum dignissim urna. Aenean orci. Phasellus scelerisque. Integer blandit. Pellentesque interdum, nunc at ornare vestibulum, mauris velit accumsan orci, sed tincidunt elit enim vel felis. Fusce ut erat.</p>
+							<p>Video 1-2: Interview Rough Cut</p><p>For this project we were asked to interview someone as they tell us a unique story they experienced. It was great to be able to move out of our confort zone and find an interviewee.</p>
+							<hr>
 							<div class="pagination">
 								<a href="javascript:togglePanels(PAN[0])">1-2</a>
 								<a href="javascript:togglePanels(PAN[1])">1-2</a>
@@ -482,7 +586,8 @@ img.paw {
 			  <div class="contain">
 					<div class="half">
 						<div class="contain">
-							<p>Video 1-2: Interview Final Cut</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer blandit. Quisque laoreet, turpis vitae elementum facilisis, mauris ligula posuere enim, vel viverra massa mi in dui. Donec eget tortor. Etiam vitae lorem at tellus ornare vestibulum. Praesent placerat quam sit amet orci. Nullam orci. Ut vel ligula. Mauris rutrum dignissim urna. Aenean orci. Phasellus scelerisque. Integer blandit. Pellentesque interdum, nunc at ornare vestibulum, mauris velit accumsan orci, sed tincidunt elit enim vel felis. Fusce ut erat.</p>
+							<p>Video 1-2: Interview Final Cut</p><p>The final cut gave us the opportunity to revisit or perhaps reshoot our interview. I gained a lot of feedback during the rough cut critique, and wished I was able to transfer that into a reshoot but unfortunately was unable to schedule a day with my interviewee. The feedback was great and the experience helped.</p>
+							<hr>
 							<div class="pagination">
 								<a href="javascript:togglePanels(PAN[0])">1-2</a>
 								<a href="javascript:togglePanels(PAN[1])">1-2</a>
@@ -498,7 +603,11 @@ img.paw {
 			  </div>
           </div>
     </div>
-	  <div class="column card">	
+  </div>
+</div>
+<div class="contentWhite">
+  <div class="row">
+	    <div class="column card">	
             <div CLASS="dispPanelz" ID="pnz_1">
 			  <div class="contain">
 			  	  <div class="half">
@@ -512,7 +621,8 @@ img.paw {
 				  </div>
 					<div class="half">
 						<div class="contain">
-							<p>Video 1-3: Action Sequence Rough Cut</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer blandit. Quisque laoreet, turpis vitae elementum facilisis, mauris ligula posuere enim, vel viverra massa mi in dui. Donec eget tortor. Etiam vitae lorem at tellus ornare vestibulum. Praesent placerat quam sit amet orci. Nullam orci. Ut vel ligula. Mauris rutrum dignissim urna. Aenean orci. Phasellus scelerisque. Integer blandit. Pellentesque interdum, nunc at ornare vestibulum, mauris velit accumsan orci, sed tincidunt elit enim vel felis. Fusce ut erat.</p>
+							<p>Video 1-3: Action Sequence Rough Cut</p><p>This video was an adventure to make. We came up with this idea while eating dinner and filmed it right afterwards. It took a while to shoot but ended up being my favorite video to film due to the fun we were having while making it.</p>
+							<hr>
 							<div class="pagination">
 								<a href="javascript:togglePanelz(PANZ[0])">1</a>
 								<a href="javascript:togglePanelz(PANZ[1])">1-1</a>
@@ -531,7 +641,8 @@ img.paw {
 				  </div>
 					<div class="half">
 						<div class="contain">
-							<p>Video 1-3: Action Sequence Final Cut</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer blandit. Quisque laoreet, turpis vitae elementum facilisis, mauris ligula posuere enim, vel viverra massa mi in dui. Donec eget tortor. Etiam vitae lorem at tellus ornare vestibulum. Praesent placerat quam sit amet orci. Nullam orci. Ut vel ligula. Mauris rutrum dignissim urna. Aenean orci. Phasellus scelerisque. Integer blandit. Pellentesque interdum, nunc at ornare vestibulum, mauris velit accumsan orci, sed tincidunt elit enim vel felis. Fusce ut erat.</p>
+							<p>Video 1-3: Action Sequence Final Cut</p><p>We gained a lot of feedback during the critique. I did the best I could at transfering it over to screen while retaining the purity of the roough cut. The video gave me a lot of insight on how much planning goes into making an action movie. It was a great experience.</p>
+							<hr>
 							<div class="pagination">
 								<a href="javascript:togglePanelz(PANZ[0])">1</a>
 								<a href="javascript:togglePanelz(PANZ[1])">1-1</a>
@@ -541,12 +652,17 @@ img.paw {
 			  </div>
           </div>
     </div>
+  </div>
+</div>
+<div class="contentBlack">
+  <div class="row">
 	    <div class="column card">	
             <div CLASS="dispPanelz" ID="pnd_1">
 			  <div class="contain">
 					<div class="half">
 						<div class="contain">
-							<p>Video 1-4: Non-Narrative Transition Rough Cut</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer blandit. Quisque laoreet, turpis vitae elementum facilisis, mauris ligula posuere enim, vel viverra massa mi in dui. Donec eget tortor. Etiam vitae lorem at tellus ornare vestibulum. Praesent placerat quam sit amet orci. Nullam orci. Ut vel ligula. Mauris rutrum dignissim urna. Aenean orci. Phasellus scelerisque. Integer blandit. Pellentesque interdum, nunc at ornare vestibulum, mauris velit accumsan orci, sed tincidunt elit enim vel felis. Fusce ut erat.</p>
+							<p>Video 1-4: Non-Narrative Transition Rough Cut</p><p>This video was short and simple. We were tasked with seraching for found footage that we could intertwine with our own footage to make fluent transitions. It was hard finding the footage and planning a way to make them come together, but was fun to film and see it come together in the end.</p>
+							<hr>
 							<div class="pagination">
 								<a href="javascript:togglePaneled(PAND[0])">1</a>
 								<a href="javascript:togglePaneled(PAND[1])">1-1</a>
@@ -568,7 +684,8 @@ img.paw {
 			  <div class="contain">
 					<div class="half">
 						<div class="contain">
-							<p>Video 1-4: Non-Narrative Transition Final Cut</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer blandit. Quisque laoreet, turpis vitae elementum facilisis, mauris ligula posuere enim, vel viverra massa mi in dui. Donec eget tortor. Etiam vitae lorem at tellus ornare vestibulum. Praesent placerat quam sit amet orci. Nullam orci. Ut vel ligula. Mauris rutrum dignissim urna. Aenean orci. Phasellus scelerisque. Integer blandit. Pellentesque interdum, nunc at ornare vestibulum, mauris velit accumsan orci, sed tincidunt elit enim vel felis. Fusce ut erat.</p>
+							<p>Video 1-4: Non-Narrative Transition Final Cut</p><p>After the critique, I did some minor changes to how the video switches to each shot. I added some subtle interactivity with the music playing in the backgound. The video was fun to make and was worth seeing how it all came together in the end.</p>
+							<hr>
 							<div class="pagination">
 								<a href="javascript:togglePaneled(PAND[0])">1</a>
 								<a href="javascript:togglePaneled(PAND[1])">1-1</a>
@@ -584,11 +701,10 @@ img.paw {
 			  </div>
           </div>
     </div>
-	</div>
   </div>
 </div>
 <div class="footer">
-  <p>test</p>
+		<p style="font-size:0.75vw; text-align: right; color:#E4E4E4;">Version: 2.01</p>
 </div>
 <script language="JavaScript">
 
@@ -622,6 +738,9 @@ function togglePaneled (pnd) {
 	for (var e=0; e < PAND.length; e++) {
 		document.getElementById(PAND[e]).style.display = (PAND[e] == pnd) ? "block" : "none";
     }
+}
+function myFunction(x) {
+    x.classList.toggle("change");
 }
 </script>
 </body>
