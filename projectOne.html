@@ -123,6 +123,81 @@ body {
     opacity: 0.51473;
   }
 }
+.topContain {
+  background: #121010;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  position: relative;
+  overflow: hidden;
+}
+.topContain::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.topContain::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+.proDisplay {
+  padding: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #2E2E2E;
+  background: ;
+  border-radius: 5px;
+  z-index: 0;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #666;
+}
+.proDisplay::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.proDisplay::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
 .container {
   background: #121010;
   border-radius: 30px;
@@ -131,7 +206,7 @@ body {
   margin-top: 10px;
   position: relative;
   overflow: hidden;
-  border: 2px solid #666;
+  border: 1px solid #666;
 }
 .container::after {
   content: " ";
@@ -381,6 +456,7 @@ span {
 .contain {
 	max-width: 100%;
 	padding: 10px;
+	padding-bottom: 30px;
 	background: #E4E4E4;
 	height: inherit;
 	top: 0;
@@ -424,7 +500,7 @@ span {
 .card:hover {
 	border-style: solid;
     border-width: 1px;
-    border-color: white;
+    border-color: #2E2E2E;
 }
 .btn {
 	width: 50px;
@@ -709,15 +785,16 @@ img.paw {
     padding: 8px 16px;
     text-decoration: none;
     transition: background-color .3s;
-	background-color: #E4E4E4
+	background-color: #E4E4E4;
 }
 
 .pagination a.active {
-    background-color: dodgerblue;
-    color: white;
+	border: 1px solid #2E2E2E;
+    transition: background-color .3s;
+	background-color: #E4E4E4;
 }
 
-.pagination a:hover:not(.active) {background-color: #ddd;}
+.pagination a:hover{background-color: #ddd;}
 	
 .contains {
 	margin-top: 30px;
@@ -761,10 +838,11 @@ img.paw {
   background-color: #363636;
   text-align: center;
   cursor: pointer;
-	margin-left: 25%;
+  margin:30px;
+  margin-left: 25%;
   width: 50%;
   transition: 0.3s;
-  border-radius: 5px;
+  border-radius: 10px;
   text-decoration: none;
 }
 .btn:hover {
@@ -916,37 +994,36 @@ iframe {
 	<div class="centered">
 
 		<h1>
-		  <a href="" class="typewrite" data-period="2000" data-type='[ "Hello.", "This is Project One.", "Non-Narrative Video.", "Check out my work!" ]'>
+		  <a class="typewrite" data-period="2000" data-type='[ "Hello.", "This is Project One.", "Non-Narrative Video.", "Check out my work!" ]'>
 			<span class="wrap"></span>
 		  </a>
 		</h1>
 	</div>
-	<video src="videos/whiteBG.mp4" autoplay loop class="display" style="position:static; z-index: -1;"></video>
+	<div class="topContain"><video src="videos/whiteBG.mp4" autoplay loop class="display" style="position:static; z-index: -1;"></video></div>
   <div class="top-left"> <img src="images/initials.png" class="ic"> </div>
 </div>
 <div class="divide"></div>
 <div class="contentWhite">
   <div class="row">
-        <div class="column card">	
+        <div class="column card">
             <div CLASS="dispPanel" ID="pn_1">
 			  <div class="contain">
 			  	  <div class="half">
 					  <div class="contain">
-						  <div id="video-wrapper">
-							   <style>.embed-container { margin-bottom: 10px;  border-radius: 5px;  position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/252566370?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-							</div>
-					  	
+						  <div class="proDisplay">
+							   <style>.embed-container { margin-bottom: 10px;  border-radius: 5;  position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/252566370?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+						  </div>
 					  </div>
 				  	
 				  </div>
 					<div class="half">
 						<div class="contain">
-							<font size="4" style="font-size:1vw;">Video 1: Team Shoot</font><p style="font-size:1vw;">This project was an immersive experience. Give a timesheet we were tasked with following the instructions and making a video in one take. It was interesting to see how much harder it ended up being. Having to constantly follow the timesheet and translate it into video all at the same time was definitelyinteresting. This video was a great start to this class.</p>
+							<font style="font-size:1.5vw;">Video 1: Team Shoot</font><p style="font-size:1vw;">This project was an immersive experience. Give a timesheet we were tasked with following the instructions and making a video in one take. It was interesting to see how much harder it ended up being. Having to constantly follow the timesheet and translate it into video all at the same time was definitelyinteresting. This video was a great start to this class.</p>
 							<hr>
 								<div class="pagination">
-									<a href="javascript:togglePanel(PANELS[0])" style="font-size:1vw;">1</a>
-									<a href="javascript:togglePanel(PANELS[1])"style="font-size:1vw;">1-1</a>
-									<a href="javascript:togglePanel(PANELS[2])"style="font-size:1vw;">1-1</a>
+									<a href="javascript:togglePanel(PANELS[0])" class="active" style="font-size:1vw;">Team Shoot</a>
+									<a href="javascript:togglePanel(PANELS[1])" style="font-size:1vw;">Rough Cut</a>
+									<a href="javascript:togglePanel(PANELS[2])" style="font-size:1vw;">Final Cut</a>
 								</div>
 						</div>
 					</div>
@@ -956,18 +1033,20 @@ iframe {
 			  <div class="contain">
 			  	  <div class="half">
 					  <div class="contain">
-					  	<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/254638899?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+						<div class="proDisplay">
+					  		<style>.embed-container {margin-bottom: 10px;border-radius: 5px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/254638899?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+						</div>
 					  </div>
 				  	
 				  </div>
 					<div class="half">
 						<div class="contain">
-							<p>Video 1-1: Introductions Rough Cut</p><p>This video focused on us. We had to introduce ourselves by conveying four different moods relative to a location that compliments it at the same time. This video was fairly easy but trying to convey different moods was tricky. The rough cut was soley supposed to be our full introductions combined into a video.</p>
+							<p style="font-size:1.5vw;">Video 1-1: Introductions Rough Cut</p><p style="font-size:1vw;">This video focused on us. We had to introduce ourselves by conveying four different moods relative to a location that compliments it at the same time. This video was fairly easy but trying to convey different moods was tricky. The rough cut was soley supposed to be our full introductions combined into a video.</p>
 							<hr>
 							<div class="pagination">
-								<a href="javascript:togglePanel(PANELS[0])">1</a>
-								<a href="javascript:togglePanel(PANELS[1])">1-1</a>
-								<a href="javascript:togglePanel(PANELS[2])">1-1</a>
+								<a href="javascript:togglePanel(PANELS[0])" style="font-size:1vw;">Team Shoot</a>
+								<a href="javascript:togglePanel(PANELS[1])" class="active" style="font-size:1vw;">Rough Cut</a>
+								<a href="javascript:togglePanel(PANELS[2])" style="font-size:1vw;">Final Cut</a>
 							</div>
 						</div>
 					</div>
@@ -977,19 +1056,21 @@ iframe {
 			  <div class="contain">
 			  	  <div class="half">
 					  <div class="contain">
-					  	<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/254638786?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+						  <div class="proDisplay">
+					  		<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/254638786?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+						  </div>
 					  </div>
 				  	
 				  </div>
 					<div class="half">
 						<div class="contain">
-							<p>Video 1-1: Introductions Final Cut</p>
-							<p>Now for the final cut we were asked to breakdown the time to around 10-15 seconds. So during editing, I basically switched between the different locations I filmed at. This video was fun due the the amount of exploration we did to find the locations.</p>
+							<p style="font-size:1.5vw;">Video 1-1: Introductions Final Cut</p>
+							<p style="font-size:1vw;">Now for the final cut we were asked to breakdown the time to around 10-15 seconds. So during editing, I basically switched between the different locations I filmed at. This video was fun due the the amount of exploration we did to find the locations.</p>
 							<hr>
 							<div class="pagination">
-								<a href="javascript:togglePanel(PANELS[0])">1</a>
-								<a href="javascript:togglePanel(PANELS[1])">1-1</a>
-								<a href="javascript:togglePanel(PANELS[2])">1-1</a>
+								<a href="javascript:togglePanel(PANELS[0])" style="font-size:1vw;">Team Shoot</a>
+								<a href="javascript:togglePanel(PANELS[1])" style="font-size:1vw;">Rough Cut</a>
+								<a href="javascript:togglePanel(PANELS[2])" class="active" style="font-size:1vw;">Final Cut</a>
 							</div>
 						</div>
 					</div>
@@ -1005,17 +1086,19 @@ iframe {
 			  <div class="contain">
 					<div class="half">
 						<div class="contain">
-							<p>Video 1-2: Interview Rough Cut</p><p>For this project we were asked to interview someone as they tell us a unique story they experienced. It was great to be able to move out of our confort zone and find an interviewee.</p>
+							<p style="font-size:1.5vw;">Video 1-2: Interview Rough Cut</p><p style="font-size:1vw;">For this project we were asked to interview someone as they tell us a unique story they experienced. It was great to be able to move out of our confort zone and find an interviewee.</p>
 							<hr>
 							<div class="pagination">
-								<a href="javascript:togglePanels(PAN[0])">1-2</a>
-								<a href="javascript:togglePanels(PAN[1])">1-2</a>
+								<a href="javascript:togglePanels(PAN[0])" class="active" style="font-size:1vw;">Rough Cut</a>
+								<a href="javascript:togglePanels(PAN[1])" style="font-size:1vw;">Final Cut</a>
 							</div>
 						</div>
 					</div>
 				  <div class="half">
 					  <div class="contain">
-					  	<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/255391881?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+						  <div class="proDisplay">
+					  		<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/255391881?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+						  </div>
 					  </div>
 				  	
 				  </div>
@@ -1025,17 +1108,19 @@ iframe {
 			  <div class="contain">
 					<div class="half">
 						<div class="contain">
-							<p>Video 1-2: Interview Final Cut</p><p>The final cut gave us the opportunity to revisit or perhaps reshoot our interview. I gained a lot of feedback during the rough cut critique, and wished I was able to transfer that into a reshoot but unfortunately was unable to schedule a day with my interviewee. The feedback was great and the experience helped.</p>
+							<p style="font-size:1.5vw;">Video 1-2: Interview Final Cut</p><p style="font-size:1vw;">The final cut gave us the opportunity to revisit or perhaps reshoot our interview. I gained a lot of feedback during the rough cut critique, and wished I was able to transfer that into a reshoot but unfortunately was unable to schedule a day with my interviewee. The feedback was great and the experience helped.</p>
 							<hr>
 							<div class="pagination">
-								<a href="javascript:togglePanels(PAN[0])">1-2</a>
-								<a href="javascript:togglePanels(PAN[1])">1-2</a>
+								<a href="javascript:togglePanels(PAN[0])" style="font-size:1vw;">Rough Cut</a>
+								<a href="javascript:togglePanels(PAN[1])" class="active" style="font-size:1vw;">Final Cut</a>
 							</div>
 						</div>
 					</div>
 				  <div class="half">
 					  <div class="contain">
-					  	<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/255391881?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+						  <div class="proDisplay">
+					  		<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/255391881?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+						  </div>
 					  </div>
 				  	
 				  </div>
@@ -1051,7 +1136,7 @@ iframe {
 			  <div class="contain">
 			  	  <div class="half">
 					  <div class="contain">
-						  <div id="video-wrapper">
+						  <div class="proDisplay">
 					  			<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/255378632?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
 							</div>
 					  	
@@ -1060,11 +1145,11 @@ iframe {
 				  </div>
 					<div class="half">
 						<div class="contain">
-							<p>Video 1-3: Action Sequence Rough Cut</p><p>This video was an adventure to make. We came up with this idea while eating dinner and filmed it right afterwards. It took a while to shoot but ended up being my favorite video to film due to the fun we were having while making it.</p>
+							<p style="font-size:1.5vw;">Video 1-3: Action Sequence Rough Cut</p><p style="font-size:1vw;">This video was an adventure to make. We came up with this idea while eating dinner and filmed it right afterwards. It took a while to shoot but ended up being my favorite video to film due to the fun we were having while making it.</p>
 							<hr>
 							<div class="pagination">
-								<a href="javascript:togglePanelz(PANZ[0])">1</a>
-								<a href="javascript:togglePanelz(PANZ[1])">1-1</a>
+								<a href="javascript:togglePanelz(PANZ[0])" class="active" style="font-size:1vw;">Rough Cut</a>
+								<a href="javascript:togglePanelz(PANZ[1])" style="font-size:1vw;">Final Cut</a>
 							</div>
 						</div>
 					</div>
@@ -1074,17 +1159,19 @@ iframe {
 			  <div class="contain">
 			  	  <div class="half">
 					  <div class="contain">
-					  	<style>.embed-container {margin-bottom: 10px; border-radius: 5px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/255378632?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+						  <div class="proDisplay">
+					  		<style>.embed-container {margin-bottom: 10px; border-radius: 5px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/255378632?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+						  </div>
 					  </div>
 				  	
 				  </div>
 					<div class="half">
 						<div class="contain">
-							<p>Video 1-3: Action Sequence Final Cut</p><p>We gained a lot of feedback during the critique. I did the best I could at transfering it over to screen while retaining the purity of the roough cut. The video gave me a lot of insight on how much planning goes into making an action movie. It was a great experience.</p>
+							<p style="font-size:1.5vw;">Video 1-3: Action Sequence Final Cut</p><p style="font-size:1vw;">We gained a lot of feedback during the critique. I did the best I could at transfering it over to screen while retaining the purity of the roough cut. The video gave me a lot of insight on how much planning goes into making an action movie. It was a great experience.</p>
 							<hr>
 							<div class="pagination">
-								<a href="javascript:togglePanelz(PANZ[0])">1</a>
-								<a href="javascript:togglePanelz(PANZ[1])">1-1</a>
+								<a href="javascript:togglePanelz(PANZ[0])" style="font-size:1vw;">Rough Cut</a>
+								<a href="javascript:togglePanelz(PANZ[1])" class="active" style="font-size:1vw;">Final Cut</a>
 							</div>
 						</div>
 					</div>
@@ -1100,17 +1187,17 @@ iframe {
 			  <div class="contain">
 					<div class="half">
 						<div class="contain">
-							<p>Video 1-4: Non-Narrative Transition Rough Cut</p><p>This video was short and simple. We were tasked with seraching for found footage that we could intertwine with our own footage to make fluent transitions. It was hard finding the footage and planning a way to make them come together, but was fun to film and see it come together in the end.</p>
+							<p style="font-size:1.5vw;">Video 1-4: Non-Narrative Transition Rough Cut</p><p style="font-size:1vw;">This video was short and simple. We were tasked with seraching for found footage that we could intertwine with our own footage to make fluent transitions. It was hard finding the footage and planning a way to make them come together, but was fun to film and see it come together in the end.</p>
 							<hr>
 							<div class="pagination">
-								<a href="javascript:togglePaneled(PAND[0])">1</a>
-								<a href="javascript:togglePaneled(PAND[1])">1-1</a>
+								<a href="javascript:togglePaneled(PAND[0])" class="active" style="font-size:1vw;">Rough Cut</a>
+								<a href="javascript:togglePaneled(PAND[1])" style="font-size:1vw;">Final Cut</a>
 							</div>
 						</div>
 					</div>
 				  <div class="half">
 					  <div class="contain">
-						  <div id="video-wrapper">
+						  <div class="proDisplay">
 					  			<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/257635618?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
 							</div>
 					  	
@@ -1123,17 +1210,19 @@ iframe {
 			  <div class="contain">
 					<div class="half">
 						<div class="contain">
-							<p>Video 1-4: Non-Narrative Transition Final Cut</p><p>After the critique, I did some minor changes to how the video switches to each shot. I added some subtle interactivity with the music playing in the backgound. The video was fun to make and was worth seeing how it all came together in the end.</p>
+							<p style="font-size:1.5vw;">Video 1-4: Non-Narrative Transition Final Cut</p><p style="font-size:1vw;">After the critique, I did some minor changes to how the video switches to each shot. I added some subtle interactivity with the music playing in the backgound. The video was fun to make and was worth seeing how it all came together in the end.</p>
 							<hr>
 							<div class="pagination">
-								<a href="javascript:togglePaneled(PAND[0])">1</a>
-								<a href="javascript:togglePaneled(PAND[1])">1-1</a>
+								<a href="javascript:togglePaneled(PAND[0])" style="font-size:1vw;">Rough Cut</a>
+								<a href="javascript:togglePaneled(PAND[1])" class="active" style="font-size:1vw;">Final Cut</a>
 							</div>
 						</div>
 					</div>
 				  <div class="half">
 					  <div class="contain">
-					  	<style>.embed-container {margin-bottom: 10px; border-radius: 5px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/257635649?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+						  <div class="proDisplay">
+					  		<style>.embed-container {margin-bottom: 10px; border-radius: 5px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/257635649?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+						  </div>
 					  </div>
 				  	
 				  </div>
@@ -1147,8 +1236,7 @@ iframe {
 		<div class="column card">
 			<div class="half">
 				
-				
-					<button data-modal="#modal-vimeo" class="btn">Vimeo</button>
+					<button data-modal="#modal-vimeo" class="btn">Launch Assemblage</button>
 					<div class="modal" data-modal-window id="modal-vimeo">
 						<span class="close" data-modal-close>&times;</span>
 						<div class="row">
@@ -1156,11 +1244,11 @@ iframe {
 								<div class="tvScreen">
 									<div class="tv">
 										<div class="container">
-															  <div id="video-wrapper">
-																		<style>.embed-container {margin-bottom: 0; border-radius: 20px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/259715185?loop=1&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-																	</div>
-															  <div class="overlay">AV-TV</div>
-															</div>
+											<div id="video-wrapper">
+												<style>.embed-container {margin-bottom: 0; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/259715185?loop=1&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+											</div>
+											<div class="overlay">AV-TV</div>
+										</div>
 									</div>
 								</div>
 								<div class="tvText">
@@ -1177,7 +1265,7 @@ iframe {
 				
 			</div>
 			<div class="half">
-				<p>Project One Assemblage</p><p>This button opens up my project one video assemblage. It is a showcase of my work in a non-lineaner narrative.</p>
+				<p style="font-size:1.5vw;">Project One Assemblage</p><p style="font-size:1vw;">This button opens up my project one video assemblage. It is a showcase of my work in a non-lineaner narrative.</p>
 			</div>
 		</div>
 	</div>	
@@ -1186,49 +1274,50 @@ iframe {
 		<p style="font-size:0.75vw; text-align: right; color:#E4E4E4;">Version: 2.01</p>
 </div>
 <script language="JavaScript">
+var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
 
-<!--
-var PANELS = new Array("pn_1", "pn_2", "pn_3");
-<!--
-var PAN = new Array("pns_1", "pns_2");
-<!--
-var PANZ = new Array("pnz_1", "pnz_2");
-<!--
-var PAND = new Array("pnd_1", "pnd_2");
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
 
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
 
-// toggle to one of our panels
-function togglePanel (pnl) {
-	for (var p=0; p < PANELS.length; p++) {
-		document.getElementById(PANELS[p]).style.display = (PANELS[p] == pnl) ? "block" : "none";
-    }
-}
-function togglePanels (pn) {
-	for (var q=0; q < PAN.length; q++) {
-		document.getElementById(PAN[q]).style.display = (PAN[q] == pn) ? "block" : "none";
-    }
-}
-function togglePanelz (pnz) {
-	for (var i=0; i < PANZ.length; i++) {
-		document.getElementById(PANZ[i]).style.display = (PANZ[i] == pnz) ? "block" : "none";
-    }
-}
-function togglePaneled (pnd) {
-	for (var e=0; e < PAND.length; e++) {
-		document.getElementById(PAND[e]).style.display = (PAND[e] == pnd) ? "block" : "none";
-    }
-}
-function myFunction(x) {
-    x.classList.toggle("change");
-}
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
+        var that = this;
+        var delta = 200 - Math.random() * 100;
 
+        if (this.isDeleting) { delta /= 2; }
 
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
 
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
 
-
-
-/*! Modals v10.1.2 | (c) 2017 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/modals */
+   
+	
+	/*! Modals v10.1.2 | (c) 2017 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/modals */
 !(function(e,t){"function"==typeof define&&define.amd?define([],t(e)):"object"==typeof exports?module.exports=t(e):e.modals=t(e)})("undefined"!=typeof global?global:this.window||this.global,(function(e){"use strict";var t,o,n,l={},c="querySelector"in document&&"addEventListener"in e&&"classList"in document.createElement("_"),r="closed",d={selectorToggle:"[data-modal]",selectorWindow:"[data-modal-window]",selectorClose:"[data-modal-close]",modalActiveClass:"active",modalBGClass:"modal-bg",preventBGScroll:!0,preventBGScrollHtml:!0,preventBGScrollBody:!0,backspaceClose:!0,stopVideo:!0,callbackOpen:function(){},callbackClose:function(){}},a=function(){var e={},t=!1,o=0,n=arguments.length;"[object Boolean]"===Object.prototype.toString.call(arguments[0])&&(t=arguments[0],o++);for(;o<n;o++){var l=arguments[o];!(function(o){for(var n in o)Object.prototype.hasOwnProperty.call(o,n)&&(t&&"[object Object]"===Object.prototype.toString.call(o[n])?e[n]=a(!0,e[n],o[n]):e[n]=o[n])})(l)}return e},s=function(e,t){for(Element.prototype.matches||(Element.prototype.matches=Element.prototype.matchesSelector||Element.prototype.mozMatchesSelector||Element.prototype.msMatchesSelector||Element.prototype.oMatchesSelector||Element.prototype.webkitMatchesSelector||function(e){for(var t=(this.document||this.ownerDocument).querySelectorAll(e),o=t.length;--o>=0&&t.item(o)!==this;);return o>-1});e&&e!==document;e=e.parentNode)if(e.matches(t))return e;return null},i=function(e,t){if(t.stopVideo&&e.classList.contains(t.modalActiveClass)){var o=e.querySelector("iframe"),n=e.querySelector("video");if(o){var l=o.src;o.src=l}n&&n.pause()}},u=function(){var e=document.createElement("div");e.style.visibility="hidden",e.style.width="100px",e.style.msOverflowStyle="scrollbar",document.body.appendChild(e);var t=e.offsetWidth;e.style.overflow="scroll";var o=document.createElement("div");o.style.width="100%",e.appendChild(o);var n=o.offsetWidth;return e.parentNode.removeChild(e),t-n},m=function(){if(!document.querySelector("[data-modal-bg]")){var e=document.createElement("div");e.setAttribute("data-modal-bg",!0),e.classList.add(n.modalBGClass),document.body.appendChild(e)}},p=function(){var e=document.querySelector("[data-modal-bg]");e&&document.body.removeChild(e)};l.closeModal=function(e){var t=a(n||d,e||{}),l=document.querySelector(t.selectorWindow+"."+t.modalActiveClass);l&&(i(l,t),l.classList.remove(t.modalActiveClass),p(),r="closed",t.preventBGScroll&&(document.documentElement.style.overflowY="",document.body.style.overflowY="",document.body.style.paddingRight=""),t.callbackClose(o,l),o&&(o.focus(),o=null))},l.openModal=function(e,c,s){var i=a(n||d,s||{}),u=document.querySelector(c);"open"===r&&l.closeModal(i),e&&(o=e),u.classList.add(i.modalActiveClass),m(),r="open",u.setAttribute("tabindex","-1"),u.focus(),i.preventBGScroll&&(i.preventBGScrollHtml&&(document.documentElement.style.overflowY="hidden"),i.preventBGScrollBody&&(document.body.style.overflowY="hidden"),document.body.style.paddingRight=t+"px"),i.callbackOpen(e,u)};var v=function(e,t,o){if(o)return e.removeEventListener("touchstart",a,!1),e.removeEventListener("touchend",s,!1),void e.removeEventListener("click",i,!1);if(t&&"function"==typeof t){var n,l,c,r,d,a=function(e){n=!0,l=e.changedTouches[0].pageX,c=e.changedTouches[0].pageY},s=function(e){r=e.changedTouches[0].pageX-l,d=e.changedTouches[0].pageY-c,Math.abs(r)>=7||Math.abs(d)>=10||t(e)},i=function(e){if(n)return void(n=!1);t(e)};e.addEventListener("touchstart",a,!1),e.addEventListener("touchend",s,!1),e.addEventListener("click",i,!1)}},f=function(e){var t=e.target,o=s(t,n.selectorToggle),c=s(t,n.selectorClose),d=s(t,n.selectorWindow),a=e.keyCode;if(a&&"open"===r)(27===a||n.backspaceClose&&(8===a||46===a))&&l.closeModal();else if(t){if(d&&!c)return;!o||a&&13!==a?"open"===r&&(e.preventDefault(),l.closeModal()):(e.preventDefault(),l.openModal(o,o.getAttribute("data-modal"),n))}};return l.destroy=function(){n&&(v(document,null,!0),document.removeEventListener("keydown",f,!1),document.documentElement.style.overflowY="",document.body.style.overflowY="",document.body.style.paddingRight="",t=null,o=null,n=null)},l.init=function(e){c&&(l.destroy(),n=a(d,e||{}),t=u(),v(document,f),document.addEventListener("keydown",f,!1))},l}));
 
 /**
@@ -1288,49 +1377,8 @@ modals.init({
 		stopVideo(modal);
 	}
 });
-	
-var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
 
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
 
-        if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-        var that = this;
-        var delta = 200 - Math.random() * 100;
-
-        if (this.isDeleting) { delta /= 2; }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-        }
-
-        setTimeout(function() {
-        that.tick();
-        }, delta);
-    };
-
-    window.onload = function() {
         var elements = document.getElementsByClassName('typewrite');
         for (var i=0; i<elements.length; i++) {
             var toRotate = elements[i].getAttribute('data-type');
@@ -1344,7 +1392,41 @@ var TxtType = function(el, toRotate, period) {
         css.type = "text/css";
         css.innerHTML = ".typewrite > .wrap {border-right: 0.03em solid black}";
         document.body.appendChild(css);
-    };
+<!--
+var PANELS = new Array("pn_1", "pn_2", "pn_3");
+<!--
+var PAN = new Array("pns_1", "pns_2");
+<!--
+var PANZ = new Array("pnz_1", "pnz_2");
+<!--
+var PAND = new Array("pnd_1", "pnd_2");
+// toggle to one of our panels
+function togglePanel (pnl) {
+	for (var p=0; p < PANELS.length; p++) {
+		document.getElementById(PANELS[p]).style.display = (PANELS[p] == pnl) ? "block" : "none";
+    }
+}
+function togglePanels (pn) {
+	for (var q=0; q < PAN.length; q++) {
+		document.getElementById(PAN[q]).style.display = (PAN[q] == pn) ? "block" : "none";
+    }
+}
+function togglePanelz (pnz) {
+	for (var i=0; i < PANZ.length; i++) {
+		document.getElementById(PANZ[i]).style.display = (PANZ[i] == pnz) ? "block" : "none";
+    }
+}
+function togglePaneled (pnd) {
+	for (var e=0; e < PAND.length; e++) {
+		document.getElementById(PAND[e]).style.display = (PAND[e] == pnd) ? "block" : "none";
+    }
+}
+function myFunction(x) {
+    x.classList.toggle("change");
+}
+	
+	
+
 </script>
 
 	
