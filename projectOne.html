@@ -339,7 +339,7 @@ body {
 	height: 100%;
 	width: 80px;
 	position: fixed;
-	z-index: 2;
+	z-index: 100;
 	top: 0;
 	left: 0;
 	background-color:#E4E4E4;
@@ -981,13 +981,87 @@ iframe {
 		opacity:.8;
 		right:0;
 		top:0;z-index:1}.close{color:gray;cursor:pointer;float:right;font-weight:700;font-size:1.5em;text-decoration:none}.close:hover{color:#5a5a5a;cursor:pointer}
+
+/* Site Wrapper - Everything that isn't navigation */
+.site-wrap {
+  /* Critical position and size styles */
+  min-height: 100%;
+  width: 100%;
+  background-color: white; /* Needs a background or else the nav will show through */
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 0;
+  
+  /* non-critical apperance styles */
+  padding: 0;
+  background-image: linear-gradient(135deg, rgb(254,255,255) 0%,rgb(221,241,249) 35%,rgb(160,216,239) 100%);
+  background-size: 200%;
+}
+
+.sidenavBar {
+    height: 100%;
+    width: 0;
+    position:fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+	font-family: 'Raleway', sans-serif;
+	overflow-x: hidden;
+}
+
+.sidenavBar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+	overflow-x: hidden;
+}
+
+.sidenavBar a:hover {
+    color: #f1f1f1;
+}
+
+.sidenavBar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 	
 </style>
 </head>
 <body onLoad="togglePanel(PANELS[0]), togglePanels(PAN[0]), togglePanelz(PANZ[0]), togglePaneled(PAND[0])">
+<div id="mySidenav" class="sidenavBar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#"style="font-size:1.5vw;">Home</a>
+	<hr>
+  <a href="projectOne.html" style="font-size:1vw;">Project One</a>
+  <a href="projectTwo.html"style="font-size:1vw;">Project Two</a>
+  <a href="projectThree.html"style="font-size:1vw;">Project Three</a>
+  <a href="projectFour.html"style="font-size:1vw;">Project Four</a>
+</div>
 <div class="sidenav"> 
 	<a href="home.html"><img src="images/paw button.png" class="paw"></a>
-	<div class="contains" onclick="myFunction(this)">
+	<div class="contains" onclick=" openNav();myFunction(this);">
 	  <div class="bar1"></div>
 	  <div class="bar2"></div>
 	  <div class="bar3"></div>
@@ -995,7 +1069,7 @@ iframe {
 	<div class="bottom-left"><p class="vertical-text">Hoekwater Development - 2018</p></div>
 </div>
 <div class="contentTop"> 
-	<div class="centered">
+  <div class="centered">
 
 		<h1>
 		  <a class="typewrite" data-period="2000" data-type='[ "Hello.", "This is Project One.", "Non-Narrative Video.", "Check out my work!" ]'>
@@ -1003,7 +1077,7 @@ iframe {
 		  </a>
 		</h1>
 	</div>
-	<div class="topContain"><video src="videos/whiteBG.mp4" autoplay loop class="display" style="position:static; z-index: -1;"></video></div>
+	<div class="topContain"><video src="video/whiteBG.mp4" autoplay loop class="display" style="position:static; z-index: -1;"></video></div>
   <div class="top-left"> <img src="images/initials.png" class="ic"> </div>
 </div>
 <div class="divide"></div>
@@ -1247,7 +1321,7 @@ iframe {
 							<div class="column">
 								<div class="tvScreen">
 									<div class="tv">
-										<div class="container">
+									  <div class="container">
 											<div id="video-wrapper">
 												<style>.embed-container {margin-bottom: 0; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/259715185?loop=1&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
 											</div>
@@ -1278,6 +1352,15 @@ iframe {
 		<p style="font-size:0.75vw; text-align: right; color:#E4E4E4;">Version: 2.01</p>
 </div>
 <script language="JavaScript">
+function openNav() {
+    document.getElementById("mySidenav").style.width = "200px";
+    document.getElementById("body").style.marginLeft = "200px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("body").style.marginLeft= "0";
+}
 var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
@@ -1427,6 +1510,7 @@ function togglePaneled (pnd) {
 }
 function myFunction(x) {
     x.classList.toggle("change");
+	x.openNav();
 }
 	
 	
