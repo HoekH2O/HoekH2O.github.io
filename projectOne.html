@@ -10,10 +10,255 @@
 <style>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 body {
-	background: #CACACA;
+	background: #111;
+	color:white;
 	width: 100%;
 	font-family: 'Raleway', sans-serif;
 	margin-bottom: 0;
+}
+* {text-decoration: none;}
+#switch {
+  display: none;
+}
+
+.switch-label {
+  display: inline-block;
+  cursor: pointer;
+  background: #fff;
+  color: #111;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 0 2px #666;
+}
+.switch-label::after {
+  content: "on";
+}
+.switch-label::before {
+  content: " ";
+  display: inline-block;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  background: #003321;
+  margin-right: 10px;
+  border: 1px solid #111;
+}
+.switch-label:active {
+  box-shadow: none;
+  transform: translate3d(0, 2px, 0);
+}
+
+#switch:checked + .switch-label::before {
+  background: #22ff55;
+}
+#switch:checked + .switch-label::after {
+  content: "off";
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.85548;
+  }
+  5% {
+    opacity: 0.87598;
+  }
+  10% {
+    opacity: 0.91202;
+  }
+  15% {
+    opacity: 0.46935;
+  }
+  20% {
+    opacity: 0.74122;
+  }
+  25% {
+    opacity: 0.35185;
+  }
+  30% {
+    opacity: 0.97488;
+  }
+  35% {
+    opacity: 0.78567;
+  }
+  40% {
+    opacity: 0.75919;
+  }
+  45% {
+    opacity: 0.90333;
+  }
+  50% {
+    opacity: 0.27215;
+  }
+  55% {
+    opacity: 0.91457;
+  }
+  60% {
+    opacity: 0.30449;
+  }
+  65% {
+    opacity: 0.39179;
+  }
+  70% {
+    opacity: 0.02031;
+  }
+  75% {
+    opacity: 0.52077;
+  }
+  80% {
+    opacity: 0.10155;
+  }
+  85% {
+    opacity: 0.61035;
+  }
+  90% {
+    opacity: 0.36249;
+  }
+  95% {
+    opacity: 0.98424;
+  }
+  100% {
+    opacity: 0.51473;
+  }
+}
+.container {
+  background: #121010;
+  border-radius: 30px;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #666;
+}
+.container::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.container::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+#switch:checked ~ .container::after {
+  animation: flicker 0.15s infinite;
+}
+
+@keyframes turn-on {
+  0% {
+    transform: scale(1, 0.8) translate3d(0, 0, 0);
+    -webkit-filter: brightness(30);
+    filter: brightness(30);
+    opacity: 1;
+  }
+  3.5% {
+    transform: scale(1, 0.8) translate3d(0, 100%, 0);
+  }
+  3.6% {
+    transform: scale(1, 0.8) translate3d(0, -100%, 0);
+    opacity: 1;
+  }
+  9% {
+    transform: scale(1.3, 0.6) translate3d(0, 100%, 0);
+    -webkit-filter: brightness(30);
+    filter: brightness(30);
+    opacity: 0;
+  }
+  11% {
+    transform: scale(1, 1) translate3d(0, 0, 0);
+    -webkit-filter: contrast(0) brightness(0);
+    filter: contrast(0) brightness(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1, 1) translate3d(0, 0, 0);
+    -webkit-filter: contrast(1) brightness(1.2) saturate(1.3);
+    filter: contrast(1) brightness(1.2) saturate(1.3);
+    opacity: 1;
+  }
+}
+@keyframes turn-off {
+  0% {
+    transform: scale(1, 1.3) translate3d(0, 0, 0);
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1.3, 0.001) translate3d(0, 0, 0);
+    -webkit-filter: brightness(10);
+    filter: brightness(10);
+  }
+  100% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: scale(0, 0.0001) translate3d(0, 0, 0);
+    -webkit-filter: brightness(50);
+    filter: brightness(50);
+  }
+}
+.screen {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#switch ~ .container > .screen {
+  animation: turn-off 0.55s cubic-bezier(0.23, 1, 0.32, 1);
+  animation-fill-mode: forwards;
+}
+
+#switch:checked ~ .container > .screen {
+  animation: turn-on 4s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes overlay-anim {
+  0% {
+    visibility: hidden;
+  }
+  20% {
+    visibility: hidden;
+  }
+  21% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+.overlay {
+  color: #00FF00;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 60px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#switch:checked ~ .container .overlay {
+  animation: overlay-anim 5s linear;
+  animation-fill-mode: forwards;
 }
 .sidenav {
 	height: 100%;
@@ -68,6 +313,48 @@ body {
 	top: 0;
 	left: 0;
 	background:;
+}
+.tv {
+	max-width: 100%;
+	margin: 50px;
+	padding-left: 0;
+	padding-right: 0;
+	height: inherit;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	background:;
+}
+.tvScreen{
+	display: block;
+	float: left;
+	top: 0;
+	left: 0;
+	width: 75%;
+	height: auto;
+	background-color:#E4E4E4;
+}
+.tvText{
+	display: block;
+	float: left;
+	top: 0;
+	left: 0;
+	width: 25%;
+	height:100%;
+	height: auto;
+	background-color:#171717;
+}
+
+
+span {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
 }
 .contentWhite {
 	max-width: 100%;
@@ -236,12 +523,6 @@ img.paw {
 	-webkit-filter: invert(1);
     filter: invert(1);
 }
-.container {
-	position: relative;
-	text-align: center;
-	color: white;
-	outline: 5px dotted green;
-}
 .bottom-left {
 	font-family: 'Raleway', sans-serif;
 	font-size: 10px;
@@ -269,9 +550,13 @@ img.paw {
 .centered {
 	font-family: 'Amatic SC', cursive;
 	position: absolute;
-	top: 80px;
-	left: 40%;
+	top: 100px;
+	left: 50%;
 	transform: translate(-50%, -50%)
+}
+.typewrite{
+	font-family: 'Amatic SC', cursive;	
+	font-size: 7vw;
 }
 .offCentered {
 	font-family: 'Amatic SC', cursive;
@@ -467,6 +752,154 @@ img.paw {
 	transform: rotate(-90deg);
 	transform-origin: left top 0;
 }
+.btn {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 14px;
+  color: white;
+  background-color: #363636;
+  text-align: center;
+  cursor: pointer;
+	margin-left: 25%;
+  width: 50%;
+  transition: 0.3s;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.btn:hover {
+  background-color: #B0B0B0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+}
+.modalVideo {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    height: 100%;
+	overflow-x: hidden;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+	
+	
+	
+	
+.button {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  &:hover {
+    fill: white; 
+  }
+}
+
+.defs {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+.buttons {
+  padding: 1rem;
+  background: #f06d06;
+  float: left;
+}
+iframe {
+  float: left;
+  width: 350px;
+  height: 200px;
+}
+	
+	
+	
+	
+	
+/*! Modals v10.1.2 | (c) 2017 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/modals */
+.modal{
+	margin-left: 80px;
+	background-color:aqua;
+	border-radius:5px;
+	box-shadow:0 10px 5px rgba(0,0,0,.3);
+	display:none;
+	max-width:100%;
+	padding:5px;
+	visibility:hidden;
+	z-index:2
+	}
+	.modal.active{
+		transition: 2s;
+		margin-left: 80px;
+		display:block;
+		max-width: 70%;
+		height:100%;
+		left:0;
+		max-height:100%;
+		overflow:auto;
+		position:fixed;
+		right:0;
+		top:0;
+		visibility: visible;
+	}
+	@media (min-width:30em){
+		.modal.active{height:auto;
+			left:3%;
+			margin-left:auto;
+			margin-right:auto;
+			right:3%;top:50px}
+	}@media (min-width:40em){
+		.modal.active{
+			left:8%
+			;right:8%
+		}
+		.modal.active.modal-medium{width:35em}
+		.modal.active.modal-small{width:25em}
+	}
+	.modal:focus{outline:none}
+	.modal-bg{
+		transition: 1s;
+		background-color:#272727;
+		bottom:0;
+		position:fixed;
+		left:0;
+		opacity:.8;
+		right:0;
+		top:0;z-index:1}.close{color:gray;cursor:pointer;float:right;font-weight:700;font-size:1.5em;text-decoration:none}.close:hover{color:#5a5a5a;cursor:pointer}
+	
 </style>
 </head>
 <body onLoad="togglePanel(PANELS[0]), togglePanels(PAN[0]), togglePanelz(PANZ[0]), togglePaneled(PAND[0])">
@@ -480,9 +913,15 @@ img.paw {
 	<div class="bottom-left"><p class="vertical-text">Hoekwater Development - 2018</p></div>
 </div>
 <div class="contentTop"> 
-	<div class="centered"><font size="72" style="font-size:3.5vw;">Project One</font></div>
-	<div class="offCentered"><font size="6" style="font-size:3vw;">Non-Narrative Video</font></div>
-	<video src="video/whiteBG.mp4" autoplay loop class="display" style="position:static; z-index: -1;"></video>
+	<div class="centered">
+
+		<h1>
+		  <a href="" class="typewrite" data-period="2000" data-type='[ "Hello.", "This is Project One.", "Non-Narrative Video.", "Check out my work!" ]'>
+			<span class="wrap"></span>
+		  </a>
+		</h1>
+	</div>
+	<video src="videos/whiteBG.mp4" autoplay loop class="display" style="position:static; z-index: -1;"></video>
   <div class="top-left"> <img src="images/initials.png" class="ic"> </div>
 </div>
 <div class="divide"></div>
@@ -703,6 +1142,46 @@ img.paw {
     </div>
   </div>
 </div>
+<div class="contentWhite">
+ 	<div class="row">
+		<div class="column card">
+			<div class="half">
+				
+				
+					<button data-modal="#modal-vimeo" class="btn">Vimeo</button>
+					<div class="modal" data-modal-window id="modal-vimeo">
+						<span class="close" data-modal-close>&times;</span>
+						<div class="row">
+							<div class="column">
+								<div class="tvScreen">
+									<div class="tv">
+										<div class="container">
+															  <div id="video-wrapper">
+																		<style>.embed-container {margin-bottom: 0; border-radius: 20px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/259715185?loop=1&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+																	</div>
+															  <div class="overlay">AV-TV</div>
+															</div>
+									</div>
+								</div>
+								<div class="tvText">
+										<a href="" class="typewrite" data-period="2000" data-type='[ "Hello?", "Is anyone there?"]'>
+											<span class="wrap"></span>
+										  </a>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+				
+				
+				
+			</div>
+			<div class="half">
+				<p>Project One Assemblage</p><p>This button opens up my project one video assemblage. It is a showcase of my work in a non-lineaner narrative.</p>
+			</div>
+		</div>
+	</div>	
+</div>
 <div class="footer">
 		<p style="font-size:0.75vw; text-align: right; color:#E4E4E4;">Version: 2.01</p>
 </div>
@@ -742,6 +1221,135 @@ function togglePaneled (pnd) {
 function myFunction(x) {
     x.classList.toggle("change");
 }
+
+
+
+
+
+
+
+/*! Modals v10.1.2 | (c) 2017 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/modals */
+!(function(e,t){"function"==typeof define&&define.amd?define([],t(e)):"object"==typeof exports?module.exports=t(e):e.modals=t(e)})("undefined"!=typeof global?global:this.window||this.global,(function(e){"use strict";var t,o,n,l={},c="querySelector"in document&&"addEventListener"in e&&"classList"in document.createElement("_"),r="closed",d={selectorToggle:"[data-modal]",selectorWindow:"[data-modal-window]",selectorClose:"[data-modal-close]",modalActiveClass:"active",modalBGClass:"modal-bg",preventBGScroll:!0,preventBGScrollHtml:!0,preventBGScrollBody:!0,backspaceClose:!0,stopVideo:!0,callbackOpen:function(){},callbackClose:function(){}},a=function(){var e={},t=!1,o=0,n=arguments.length;"[object Boolean]"===Object.prototype.toString.call(arguments[0])&&(t=arguments[0],o++);for(;o<n;o++){var l=arguments[o];!(function(o){for(var n in o)Object.prototype.hasOwnProperty.call(o,n)&&(t&&"[object Object]"===Object.prototype.toString.call(o[n])?e[n]=a(!0,e[n],o[n]):e[n]=o[n])})(l)}return e},s=function(e,t){for(Element.prototype.matches||(Element.prototype.matches=Element.prototype.matchesSelector||Element.prototype.mozMatchesSelector||Element.prototype.msMatchesSelector||Element.prototype.oMatchesSelector||Element.prototype.webkitMatchesSelector||function(e){for(var t=(this.document||this.ownerDocument).querySelectorAll(e),o=t.length;--o>=0&&t.item(o)!==this;);return o>-1});e&&e!==document;e=e.parentNode)if(e.matches(t))return e;return null},i=function(e,t){if(t.stopVideo&&e.classList.contains(t.modalActiveClass)){var o=e.querySelector("iframe"),n=e.querySelector("video");if(o){var l=o.src;o.src=l}n&&n.pause()}},u=function(){var e=document.createElement("div");e.style.visibility="hidden",e.style.width="100px",e.style.msOverflowStyle="scrollbar",document.body.appendChild(e);var t=e.offsetWidth;e.style.overflow="scroll";var o=document.createElement("div");o.style.width="100%",e.appendChild(o);var n=o.offsetWidth;return e.parentNode.removeChild(e),t-n},m=function(){if(!document.querySelector("[data-modal-bg]")){var e=document.createElement("div");e.setAttribute("data-modal-bg",!0),e.classList.add(n.modalBGClass),document.body.appendChild(e)}},p=function(){var e=document.querySelector("[data-modal-bg]");e&&document.body.removeChild(e)};l.closeModal=function(e){var t=a(n||d,e||{}),l=document.querySelector(t.selectorWindow+"."+t.modalActiveClass);l&&(i(l,t),l.classList.remove(t.modalActiveClass),p(),r="closed",t.preventBGScroll&&(document.documentElement.style.overflowY="",document.body.style.overflowY="",document.body.style.paddingRight=""),t.callbackClose(o,l),o&&(o.focus(),o=null))},l.openModal=function(e,c,s){var i=a(n||d,s||{}),u=document.querySelector(c);"open"===r&&l.closeModal(i),e&&(o=e),u.classList.add(i.modalActiveClass),m(),r="open",u.setAttribute("tabindex","-1"),u.focus(),i.preventBGScroll&&(i.preventBGScrollHtml&&(document.documentElement.style.overflowY="hidden"),i.preventBGScrollBody&&(document.body.style.overflowY="hidden"),document.body.style.paddingRight=t+"px"),i.callbackOpen(e,u)};var v=function(e,t,o){if(o)return e.removeEventListener("touchstart",a,!1),e.removeEventListener("touchend",s,!1),void e.removeEventListener("click",i,!1);if(t&&"function"==typeof t){var n,l,c,r,d,a=function(e){n=!0,l=e.changedTouches[0].pageX,c=e.changedTouches[0].pageY},s=function(e){r=e.changedTouches[0].pageX-l,d=e.changedTouches[0].pageY-c,Math.abs(r)>=7||Math.abs(d)>=10||t(e)},i=function(e){if(n)return void(n=!1);t(e)};e.addEventListener("touchstart",a,!1),e.addEventListener("touchend",s,!1),e.addEventListener("click",i,!1)}},f=function(e){var t=e.target,o=s(t,n.selectorToggle),c=s(t,n.selectorClose),d=s(t,n.selectorWindow),a=e.keyCode;if(a&&"open"===r)(27===a||n.backspaceClose&&(8===a||46===a))&&l.closeModal();else if(t){if(d&&!c)return;!o||a&&13!==a?"open"===r&&(e.preventDefault(),l.closeModal()):(e.preventDefault(),l.openModal(o,o.getAttribute("data-modal"),n))}};return l.destroy=function(){n&&(v(document,null,!0),document.removeEventListener("keydown",f,!1),document.documentElement.style.overflowY="",document.body.style.overflowY="",document.body.style.paddingRight="",t=null,o=null,n=null)},l.init=function(e){c&&(l.destroy(),n=a(d,e||{}),t=u(),v(document,f),document.addEventListener("keydown",f,!1))},l}));
+
+/**
+ * Autoplay a YouTube, Vimeo, or HTML5 video
+ * @param  {Node} modal  The modal to search inside
+ */
+var autoplayVideo = function (modal) {
+
+	// Look for a YouTube, Vimeo, or HTML5 video in the modal
+	var video = modal.querySelector('iframe[src*="www.youtube.com"], iframe[src*="player.vimeo.com"], video');
+
+	// Bail if the modal doesn't have a video
+	if (!video) return;
+
+	// If an HTML5 video, play it
+	if (video.tagName.toLowerCase() === 'video') {
+		video.play();
+		return;
+	}
+
+	// Add autoplay to video src
+	// video.src: the current video `src` attribute
+	// (video.src.indexOf('?') < 0 ? '?' : '&'): if the video.src already has query string parameters, add an "&". Otherwise, add a "?".
+	// 'autoplay=1': add the autoplay parameter
+	video.src = video.src + (video.src.indexOf('?') < 0 ? '?' : '&') + 'autoplay=1';
+	
+};
+
+/**
+ * Stop a YouTube, Vimeo, or HTML5 video
+ * @param  {Node} modal  The modal to search inside
+ */
+var stopVideo = function (modal) {
+
+	// Look for a YouTube, Vimeo, or HTML5 video in the modal
+	var video = modal.querySelector('iframe[src*="www.youtube.com"], iframe[src*="player.vimeo.com"], video');
+
+	// Bail if the modal doesn't have a video
+	if (!video) return;
+
+	// If an HTML5 video, pause it
+	if (video.tagName.toLowerCase() === 'video') {
+		video.pause();
+		return;
+	}
+
+	// Remove autoplay from video src
+	video.src = video.src.replace('&autoplay=1', '').replace('?autoplay=1', '');
+
+};
+
+modals.init({
+	callbackOpen: function ( toggle, modal ) {
+		autoplayVideo(modal);
+	},
+	callbackClose: function ( toggle, modal ) {
+		stopVideo(modal);
+	}
+});
+	
+var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap {border-right: 0.03em solid black}";
+        document.body.appendChild(css);
+    };
 </script>
+
+	
+	
+	
+
 </body>
 </html>
