@@ -1,8 +1,6 @@
-<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="icon" href="images/logo.png">
 <title>Art 75 - Project Two</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -298,6 +296,7 @@ body {
   height: 100%;
   border: none;
 }
+
 #switch ~ .container > .screen {
   animation: turn-off 0.55s cubic-bezier(0.23, 1, 0.32, 1);
   animation-fill-mode: forwards;
@@ -486,7 +485,7 @@ span {
 }
 .divide {
 	margin-left:80px;
-	max-width: 100%;
+	width: 100%;
 	height: 5px;
 	z-index: 0;
 	top: 0;
@@ -777,6 +776,11 @@ img.paw {
 	height: auto;
 	display: none;
 }
+.dispPant {
+	width: 100%;
+	height: auto;
+	display: none;
+}
 .display {
 	width: 100%;
 	transition: 0.3s;
@@ -1027,9 +1031,10 @@ iframe {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+.tab { margin-left: 40px; }
 </style>
 </head>
-<body onLoad="togglePanel(PANELS[0]), togglePanels(PAN[0]), togglePanelz(PANZ[0]), togglePaneled(PAND[0])">
+<body onLoad="togglePanel(PANELS[0]), togglePanels(PAN[0]), togglePanelz(PANZ[0]), togglePaneled(PAND[0]), togglePant(PANT[0])">
 <div id="mySidenav" class="sidenavBar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="home75.html"style="font-size:1.5vw;">Home</a>
@@ -1202,7 +1207,7 @@ iframe {
 				  </div>
 					<div class="half">
 						<div class="contain">
-							<p style="font-size:1.5vw;">Video 2-3: Phase 1 - Creative Question and Scouting Mission Mind Map</p><p style="font-size:1vw;">For this part of the assignment we had to, with a partner, come up with a creative question and answer that question through the video. Phase 1 starts out with a mind map where we come up with all of our ideas. Second, we took our test video.</p><p style="font-size:1vw;">Creative Question: How much noise can you hear in a library?</p>
+							<p style="font-size:1.5vw;">Video 2-3: Phase 1 - Creative Question and Scouting Mission Mind Map</p><p style="font-size:1vw;">For this part of the assignment we had to, with a partner, come up with a creative question and answer that question through the video. Phase 1 starts out with a mind map where we come up with all of our ideas. Second, we took our test video.</p>
 							<hr>
 							<div class="pagination">
 								<a href="javascript:togglePanelz(PANZ[0])" class="active" style="font-size:1vw;">Mind Map</a>
@@ -1244,19 +1249,28 @@ iframe {
 			  <div class="contain">
 					<div class="half">
 						<div class="contain">
-							<p style="font-size:1.5vw;">Video 2-3: Phase 2 -- Final Surveillance Video Presentation</p><p style="font-size:1vw;">Content Coming Soon.</p>
+							<p style="font-size:1.5vw;">Video 2-3: Phase 2 - Rough Cut Surveillance Video Presentation</p>
+							<div class="dispPant" ID="pnt_1">
+								<p style="font-size:1vw;">Artist Statement:</p><p style="font-size:1vw;">How much noise can you hear in the library? We asked this question to understand the different levels within each floor of the library here at SJSU. We are told that each floor is supposed to be more quiet as we reach the top, and we set out to examine how each floor varies in sound. We found that the floors don't necessarily get louder as we go lower, but rather vary due to population and often popularity. The forth floor or "Spartan Floor" has the most students and it is the loudest floor in the library, mostly due to the amount of students and the volume they communicate at... <a href="javascript:togglePant(PANT[1])" class="tab" style="font-size:1vw;color:#898989;">Continue Reading</a>
+								</p>
+							</div>
+							<div class="dispPant" ID="pnt_2">
+								<p style="font-size:1vw;">Artist Statement:</p><p style="font-size:1vw;">While the students aren't intentionally being loud, the amount of students decides how loud the overall floor becomes. We continue down and come to find that the next floors aren't at all louder in any sense. That the constant traffic of people and movement from one point to the next is the only distinguishing sound. We came to understand the theory of volume controlled floors, ultimately drawing the conclusion that each floor may have a suggested volume, but is inconsistent due to the population of students and the amount of sounds they make during that time of day. <a href="javascript:togglePant(PANT[0])" class="tab" style="font-size:1vw;color:#898989;">Back</a>
+								</p>
+							</div>
 							<hr>
 							<div class="pagination">
 								<a href="javascript:togglePaneled(PAND[0])" class="active" style="font-size:1vw;">Rough Cut</a>
 								<a href="javascript:togglePaneled(PAND[1])" style="font-size:1vw;">Final Cut</a>
+								<a href="javascript:togglePaneled(PAND[2])" style="font-size:1vw;">Set-Up</a>
 							</div>
 						</div>
 					</div>
 				  <div class="half">
 					  <div class="contain">
 						  <div class="proDisplay">
-					  			<img src="videos/coming-soon.gif" style="width:100%;">
-							</div>
+					  		<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/261066390?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+						  </div>
 					  	
 					  </div>
 				  	
@@ -1267,18 +1281,42 @@ iframe {
 			  <div class="contain">
 					<div class="half">
 						<div class="contain">
-							<p style="font-size:1.5vw;">Video 2-3: Phase 2 -- Final Surveillance Video Presentation</p><p style="font-size:1vw;">Content Coming Soon.</p>
+							<p style="font-size:1.5vw;">Video 2-3: Phase 2 - Final Cut Surveillance Video Presentation</p><p style="font-size:1vw;">Process:</p><p style="font-size:1vw;">To demonstrate our creative question, we took it upon ourselves to film every floor in the library and record video and audio to ultimately distinguish the audio differences on each floor. We used the elevator shot and numbers to present the floor location, and the "middle" of each room for our main shot. After the critique, we applied the advice of our peers and shortened the clip. It originally stood at around 2:39, I sped up the clips to make more efficient use of the audience's time. Less time in the elevator and more time on the floor.</p>
 							<hr>
 							<div class="pagination">
 								<a href="javascript:togglePaneled(PAND[0])" style="font-size:1vw;">Rough Cut</a>
 								<a href="javascript:togglePaneled(PAND[1])" class="active" style="font-size:1vw;">Final Cut</a>
+								<a href="javascript:togglePaneled(PAND[2])" style="font-size:1vw;">Set-Up</a>
 							</div>
 						</div>
 					</div>
 				  <div class="half">
 					  <div class="contain">
 						  <div class="proDisplay">
-					  		<img src="videos/coming-soon.gif" style="width:100%;">
+					  		<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/261105316?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+						  </div>
+					  </div>
+				  	
+				  </div>
+			  </div>
+          </div>
+			<div CLASS="dispPanelz" ID="pnd_3">
+			  <div class="contain">
+					<div class="half">
+						<div class="contain">
+							<p style="font-size:1.5vw;">Video 2-3: Phase 2 - Camera Set-Up</p><p style="font-size:1vw;">We had a basic set-up for the camera. I hooked up my Rode VideoMic Pro and we recorded raw audio to place over each clip. It was composed of quick pans and stationary shots from a student's perspective.</p>
+							<hr>
+							<div class="pagination">
+								<a href="javascript:togglePaneled(PAND[0])" style="font-size:1vw;">Rough Cut</a>
+								<a href="javascript:togglePaneled(PAND[1])" style="font-size:1vw;">Final Cut</a>
+								<a href="javascript:togglePaneled(PAND[2])" class="active" style="font-size:1vw;">Set-Up</a>
+							</div>
+						</div>
+					</div>
+				  <div class="half">
+					  <div class="contain">
+						  <div class="proDisplay">
+					  		<img src="images/setup.jpg" style="width: 100%">
 						  </div>
 					  </div>
 				  	
@@ -1428,7 +1466,9 @@ var PAN = new Array("pns_1", "pns_2", "pns_3");
 <!--
 var PANZ = new Array("pnz_1", "pnz_2");
 <!--
-var PAND = new Array("pnd_1", "pnd_2");
+var PAND = new Array("pnd_1", "pnd_2", "pnd_3");
+<!--
+var PANT = new Array("pnt_1", "pnt_2");
 // toggle to one of our panels
 function togglePanel (pnl) {
 	for (var p=0; p < PANELS.length; p++) {
@@ -1448,6 +1488,11 @@ function togglePanelz (pnz) {
 function togglePaneled (pnd) {
 	for (var e=0; e < PAND.length; e++) {
 		document.getElementById(PAND[e]).style.display = (PAND[e] == pnd) ? "block" : "none";
+    }
+}
+function togglePant (pnt) {
+	for (var o=0; o < PANT.length; o++) {
+		document.getElementById(PANT[o]).style.display = (PANT[o] == pnt) ? "block" : "none";
     }
 }
 function myFunction(x) {
