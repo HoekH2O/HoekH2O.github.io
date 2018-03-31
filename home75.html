@@ -1,5 +1,4 @@
 <html><head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 <title>Art 75 - Portfolio</title>
 <meta charset="utf-8">
@@ -30,9 +29,9 @@ hr{
 
 
 .page{
-  position: fixed;
-  max-width: 100%;
-  overflow-y: scroll;
+  position: sticky;
+  width: 100%;
+  overflow: inherit;
 }
 	
 
@@ -54,18 +53,22 @@ hr{
 #p2 {
   background: white;
   margin-left: 80px;
+  max-width: 100%;
 }
 #p3 {
   background:;
   margin-left: 80px;
+  max-width: 100%;
 }
 #p4 {
   background: white;
   margin-left: 80px;
+  max-width: 100%;
 }
 #p5 {
   background: white;
   margin-left: 80px;
+  max-width: 100%;
 }
 
 #t2:target #p2,
@@ -745,6 +748,13 @@ img.paw {
 
 
 @media (max-width: 980px) {
+.page{
+  position: sticky;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: inherit;
+	
+}
 #p2{margin-left:0}
 #p3{margin-left:0}
 #p4{margin-left:0}
