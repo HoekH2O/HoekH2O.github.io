@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
-<title>Untitled Document</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 	html,
 body,
@@ -27,7 +27,7 @@ hr{
 	color: #2A2A2A;
 }
 .page{
-  position: sticky;
+  position: relative;
   width: 100%;
   overflow: inherit;
 }
@@ -241,7 +241,6 @@ a {
 	
 	
 	
-<meta name="viewport" content="width=device-width, initial-scale=1">
 * {text-decoration: none;}
 .topContain {
   background: #121010;
@@ -406,6 +405,7 @@ a {
 	height: 100%;
 	width: 80px;
 	position: fixed;
+	display: block;
 	z-index: 2;
 	top: 0;
 	left: 0;
@@ -433,7 +433,7 @@ a {
 	height: 50px;
 	width: 100%;
 	position: sticky;
-	z-index: 3;
+	z-index: 50;
 	top: 0;
 	left: 0;
 	background-color:;
@@ -450,16 +450,6 @@ a {
 }
 .sidenavMobile:hover {
 	
-}
-
-
-@media screen and (max-height: 450px) {
-.sidenav {
-	padding-top: 15px;
-}
-.sidenav a {
-	font-size: 18px;
-}
 }
 .contentTop {
 	transform: translateX(-80px);
@@ -575,7 +565,7 @@ span {
 }
 .divide {
 	max-width: calc(100% - 80px);
-	height: 2px;
+	height: 1px;
 	z-index: 0;
 	top: 0;
 	left: 0;
@@ -746,13 +736,6 @@ img.paw {
 
 
 @media (max-width: 980px) {
-.page{
-  position: sticky;
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: inherit;
-	
-}
 #p2{margin-left:0}
 #p3{margin-left:0}
 #p4{margin-left:0}
@@ -914,11 +897,7 @@ img.paw {
 	position: fixed;	
 }
 .divide{
-	margin-left: 0;
-	max-width: 100%;
-	height: 52px;
-	position: inherit;
-	z-index: 3;
+	display:none;
 }
 img.ic {
 	display: none;
@@ -947,10 +926,10 @@ img.paw {
 #t3:target #tres,
 #t4:target #cuatro,
 #t5:target #cinco {
-  transform: scale(.8) !important;
-  -webkit-transform: scale(.8) !important;
-  -moz-transform: scale(.8) !important;
-  -o-transform: scale(.8) !important;
+  transform: scale(1) !important;
+  -webkit-transform: scale(1) !important;
+  -moz-transform: scale(1) !important;
+  -o-transform: scale(1) !important;
 }
 	
 }
@@ -1281,13 +1260,13 @@ iframe {
 </style>
 </head>
 
-<body onLoad="togglePanelP2(PANELSP2[0]), togglePanelsP2(PANP2[0]), togglePanelzP2(PANZP2[0]), togglePaneledP2(PANDP2[0]), togglePantP2(PANTP2[0]), togglePanelMobileP2(PANELSMP2[0]), togglePanelsMobileP2(PANMP2[0]), togglePanelzMobileP2(PANZMP2[0])">
+<body onLoad="togglePanelP2(PANELSP2[0]), togglePanelsP2(PANP2[0]), togglePanelzP2(PANZP2[0]), togglePaneledP2(PANDP2[0]), togglePantP2(PANTP2[0]), togglePanelMobileP2(PANELSMP2[0]), togglePanelsMobileP2(PANMP2[0]), togglePanelzMobileP2(PANZMP2[0]), togglePaneledMobileP2(PANDMP2[0]), togglePantMobileP2(PANTMP2[0])">
 <div class="ct" id="t1">
   <div class="ct" id="t2">
     <div class="ct" id="t3">
       <div class="ct" id="t4">
          <div class="ct" id="t5">
-		  <input type="checkbox" id="myCheck" onclick="myFunction()">
+		  <input type="checkbox" id="myCheck" style="display: none" onclick="myFunction()">
 		  <div class="sidenav"> 
 				<a href="home.html"><img src="images/paw button.png" class="paw"></a>
 				<div class="content" id="test" style="margin-left:0; height: auto;">
@@ -1334,17 +1313,8 @@ iframe {
 							  </div>
 						</div>
 			</div>
+			 
           <div class="page" id="p1">
-			  <div class="sidenavMobile" style="position: sticky; background-color:#E4E4E4; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color="black";"> 
-			  <div class="centered">
-
-				<h1>
-				  <a class="typewrite" data-period="2000" data-type='[ "Hello.", "This is My Portfolio.", "For Art 75.", "Check out my work!" ]'>
-					<span class="wrap"></span>
-				  </a>
-				</h1>
-			</div>
-			</div>
              <section class="icon fa fa-bolt"><span class="title">Bolt</span><span class="hint">Like this pen to see the magic!...<br> Just kidding, it won't happen anything but I'll be really happy If you do so.</span></section>  
           </div> 
 			 
@@ -1353,16 +1323,17 @@ iframe {
           </div>
 			 
           <div class="page" id="p3" onmouseover="closeNav()">
-			  <div class="sidenavMobile" style="position: sticky; background-color:#E4E4E4; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color="black";"> 
-			  <div class="centered">
+			  
+			<div class="sidenavMobile" style="position: sticky; background-color:#E4E4E4; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color="black";"> 
+				  <div class="centered">
 
-				<h1>
-				  <a class="typewrite" data-period="2000" data-type='[ "Hello.", "This is Project Two.", "Experimental Narratives.", "Check out my work!" ]'>
-					<span class="wrap"></span>
-				  </a>
-				</h1>
-			</div>
-			</div>
+					<h1>
+					  <a class="typewrite" data-period="2000" data-type='[ "Hello.", "This is Project Two.", "Experimental Narratives.", "Check out my work!" ]'>
+						<span class="wrap"></span>
+					  </a>
+					</h1>
+				</div>
+				</div>
 			<div class="contentTop"> 
 				<div class="centered">
 
@@ -1642,6 +1613,10 @@ iframe {
 					<div class="column card">
 						<div CLASS="dispPanel" ID="pnmp2_1">
 						  <div class="contain">
+							  <div class="pagination">
+											<a href="javascript:togglePanelP2(PANELSP2[0]), togglePanelMobileP2(PANELSMP2[0])" class="active">Rough Cut</a>
+											<a href="javascript:togglePanelP2(PANELSP2[1]), togglePanelMobileP2(PANELSMP2[1])">Final Cut</a>
+										</div>
 							  <div class="half">
 									  <div class="proDisplay">
 										   <style>.embed-container { margin-bottom: 0px;  border-radius: 5;  position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/258645629?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
@@ -1651,17 +1626,16 @@ iframe {
 								<div class="half">
 									<div class="contain">
 										<font>Video 2-1: Timelapse Rough Cut</font><p>For this project we had to film two timelapses of the same location. We learned about the different types of timelapses, such as a hyperlapse. I wanted to thake the opportunity to try and film a hyperlapse. This rough cut was only composed of one hyperlapse while I was supposed to film two.</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelP2(PANELSP2[0]), togglePanelMobileP2(PANELSMP2[0])" class="active">Rough Cut</a>
-											<a href="javascript:togglePanelP2(PANELSP2[1]), togglePanelMobileP2(PANELSMP2[1])">Final Cut</a>
-										</div>
 									</div>
 								</div>
 						  </div>
 					  </div>
 						<div CLASS="dispPanel" ID="pnmp2_2">
 						  <div class="contain">
+							  <div class="pagination">
+											<a href="javascript:togglePanelP2(PANELSP2[0]), togglePanelMobileP2(PANELSMP2[0])">Rough Cut</a>
+											<a href="javascript:togglePanelP2(PANELSP2[1]), togglePanelMobileP2(PANELSMP2[1])" class="active">Final Cut</a>
+										</div>
 							  <div class="half">
 									<div class="proDisplay">
 										<style>.embed-container {margin-bottom: 0px;border-radius: 5px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/259715185?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
@@ -1670,11 +1644,6 @@ iframe {
 								<div class="half">
 									<div class="contain">
 										<p>Video 2-1: Timelapse Final Cut</p><p>After the critique, I took my feedback and filmed another hyperlapse over the weekend. It took about two hours to film and forty-five minutes to edit. Although it was a very tedious process, I enjoyed seeing how it all turned out.</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelP2(PANELSP2[0]), togglePanelMobileP2(PANELSMP2[0])">Rough Cut</a>
-											<a href="javascript:togglePanelP2(PANELSP2[1]), togglePanelMobileP2(PANELSMP2[1])" class="active">Final Cut</a>
-										</div>
 									</div>
 								</div>
 						  </div>
@@ -1687,6 +1656,11 @@ iframe {
 					<div class="column card">
 						<div CLASS="dispPanel" ID="pnsmp2_1">
 						  <div class="contain">
+							  <div class="pagination">
+												<a href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])" class="active">Rough Cut</a>
+												<a href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])">Final Cut</a>
+												<a href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])">Mount</a>
+											</div>
 							  <div class="half">
 									  <div class="proDisplay">
 										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/259014372?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
@@ -1696,18 +1670,17 @@ iframe {
 								<div class="half">
 									<div class="contain">
 										<font>Video 2-2: Where Cameras Don't Belong Rough Cut</font><p>I like the idea of filming unique points of view. So, for this project I thought what it would be like to film an earbud from its point of view. It took some planning, but I was eventually able to think of a mount that just might work with what I had in mind. Check out the screenshots as well!</p>
-										<hr>
-											<div class="pagination">
-												<a href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])" class="active">Rough Cut</a>
-												<a href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])">Final Cut</a>
-												<a href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])">Mount</a>
-											</div>
 									</div>
 								</div>
 						  </div>
 					  </div>
 						<div CLASS="dispPanel" ID="pnsmp2_2">
 						  <div class="contain">
+							  <div class="pagination">
+											<a href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])">Rough Cut</a>
+											<a href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])" class="active">Final Cut</a>
+											<a href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])">Mount</a>
+										</div>
 							  <div class="half">
 									<div class="proDisplay">
 										<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/259719910?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
@@ -1716,18 +1689,17 @@ iframe {
 								<div class="half">
 									<div class="contain">
 										<p>Video 2-2: Where Cameras Don't Belong Final Cut</p><p>So during the critique, it came to my attention that I forgot to put music in the video. Luckily it wasn't too hard to fix. During post I edited an audio clip to make it sound muffled then, when it reaches the ear, it becomes clear. This project was unique. I enjoyed the planning and imagination aspects that went behind this video.</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])">Rough Cut</a>
-											<a href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])" class="active">Final Cut</a>
-											<a href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])">Mount</a>
-										</div>
 									</div>
 								</div>
 						  </div>
 					  </div>
 						<div CLASS="dispPanel" ID="pnsmp2_3">
 						  <div class="contain">
+							 <div class="pagination">
+											<a href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])">Rough Cut</a>
+											<a href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])">Final Cut</a>
+											<a href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])" class="active">Mount</a>
+										</div>
 							  <div class="half">
 									<div class="proDisplay">
 										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/260033499?loop=1&title=0&byline=0&portrait=0" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
@@ -1736,12 +1708,6 @@ iframe {
 								<div class="half">
 									<div class="contain">
 										<p>Video 2-2: Where Cameras Don't Belong Mount System</p><p>This mount took some planning. I started with my camera case. I knew I wanted to use a fish eye lens, so using the camera case was already a final choice. Figuring out how to mount the ear bud was another issue. I ended up using about 10 rubber bands, one paper clip, two pieces of clear tape, and three pens. I created a ledge for the paper clip to rest on with the pens as i taped it down. I eased the earbud on the paper clip concealing the metal behind the chord. Lastly, I squeezed my hand in the rubber bands as they acted as my handle, then with some awkward arms movements, the mount looked somewhat convincing.</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])">Rough Cut</a>
-											<a href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])">Final Cut</a>
-											<a href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])" class="active">Mount</a>
-										</div>
 									</div>
 								</div>
 						  </div>
@@ -1749,50 +1715,113 @@ iframe {
 					</div>
 			  </div>
 			</div>
-			<div class="contentWhite">
+			<div class="contentBlack">
 			  <div class="row">
 					<div class="column card">	
 						<div CLASS="dispPanelz" ID="pnzmp2_1">
 						  <div class="contain">
+							  <div class="pagination">
+											<a href="javascript:togglePanelzMobileP2(PANZMP2[0])" class="active">Mind Map</a>
+											<a href="javascript:togglePanelzMobileP2(PANZMP2[1])">Test Footage</a>
+										</div>
 							  <div class="half">
-								  <div class="contain">
 									  <div class="proDisplay">
 											<img src="images/mindmap.png" style="width:100%;">
 									</div>
-
-								  </div>
-
 							  </div>
 								<div class="half">
 									<div class="contain">
-										<p style="font-size:1.5vw;">Video 2-3: Phase 1 - Creative Question and Scouting Mission Mind Map</p><p style="font-size:1vw;">For this part of the assignment we had to, with a partner, come up with a creative question and answer that question through the video. Phase 1 starts out with a mind map where we come up with all of our ideas. Second, we took our test video.</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelzMobileP2(PANZMP2[0])" class="active" style="font-size:1vw;">Mind Map</a>
-											<a href="javascript:togglePanelzMobileP2(PANZMP2[1])" style="font-size:1vw;">Test Footage</a>
-										</div>
+										<p>Video 2-3: Phase 1 - Creative Question and Scouting Mission Mind Map</p><p>For this part of the assignment we had to, with a partner, come up with a creative question and answer that question through the video. Phase 1 starts out with a mind map where we come up with all of our ideas. Second, we took our test video.</p>
 									</div>
 								</div>
 						  </div>
 					  </div>
 						<div CLASS="dispPanelz" ID="pnzmp2_2">
 						  <div class="contain">
+							  <div class="pagination">
+											<a href="javascript:togglePanelzMobileP2(PANZMP2[0])">Mind Map</a>
+											<a href="javascript:togglePanelzMobileP2(PANZMP2[1])" class="active">Test Footage</a>
+										</div>
 							  <div class="half">
-								  <div class="contain">
 									  <div class="proDisplay">
 										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/260066395?title=0&byline=0&portrait=0" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
 									  </div>
-								  </div>
-
 							  </div>
 								<div class="half">
 									<div class="contain">
-										<p style="font-size:1.5vw;">Video 2-3: Phase 1 - Creative Question and Scouting Mission Test Footage</p><p style="font-size:1vw;">For our test footage we went to the library at San Jose State University and filmed the ground floor as well as the eighth floor. The goal was to find the noise difference between each floor. While for our final video we plan on recording more floors, the test footage was good for us to get an assumption of how our creative question pans out.</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelzMobileP2(PANZMP2[0])" style="font-size:1vw;">Mind Map</a>
-											<a href="javascript:togglePanelzMobileP2(PANZMP2[1])" class="active" style="font-size:1vw;">Test Footage</a>
+										<p>Video 2-3: Phase 1 - Creative Question and Scouting Mission Test Footage</p><p>For our test footage we went to the library at San Jose State University and filmed the ground floor as well as the eighth floor. The goal was to find the noise difference between each floor. While for our final video we plan on recording more floors, the test footage was good for us to get an assumption of how our creative question pans out.</p>
+									</div>
+								</div>
+						  </div>
+					  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="contentBlack">
+			  <div class="row">
+					<div class="column card">	
+						<div CLASS="dispPanelzMobile" ID="pndmp2_1">
+						  <div class="contain">
+							  <div class="pagination">
+											<a href="javascript:togglePaneledMobileP2(PANDMP2[0])" class="active">Rough Cut</a>
+											<a href="javascript:togglePaneledMobileP2(PANDMP2[1])">Final Cut</a>
+											<a href="javascript:togglePaneledMobileP2(PANDMP2[2])">Set-Up</a>
 										</div>
+							    <div class="half">
+									  <div class="proDisplay">
+										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/261066390?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+									  </div>
+							  </div>
+								<div class="half">
+									<div class="contain">
+										<p>Video 2-3: Phase 2 - Rough Cut Surveillance Video Presentation</p>
+										<div class="dispPant" ID="pntmp2_1">
+											<p>Artist Statement:</p><p>How much noise can you hear in the library? We asked this question to understand the different levels within each floor of the library here at SJSU. We are told that each floor is supposed to be more quiet as we reach the top, and we set out to examine how each floor varies in sound. We found that the floors don't necessarily get louder as we go lower, but rather vary due to population and often popularity. The forth floor or "Spartan Floor" has the most students and it is the loudest floor in the library, mostly due to the amount of students and the volume they communicate at... <br><br><a href="javascript:togglePantMobileP2(PANTMP2[1])"style="color:#898989;">Continue Reading</a>
+											</p>
+										</div>
+										<div class="dispPantMobile" ID="pntmp2_2">
+											<pArtist Statement:</p><p>While the students aren't intentionally being loud, the amount of students decides how loud the overall floor becomes. We continue down and come to find that the next floors aren't at all louder in any sense. That the constant traffic of people and movement from one point to the next is the only distinguishing sound. We came to understand the theory of volume controlled floors, ultimately drawing the conclusion that each floor may have a suggested volume, but is inconsistent due to the population of students and the amount of sounds they make during that time of day. <br><br><a href="javascript:togglePantMobileP2(PANTMP2[0])" style="color:#898989;">Back</a>
+											</p>
+										</div>
+									</div>
+								</div>
+						  </div>
+					  </div>
+						<div CLASS="dispPanelzMobile" ID="pndmp2_2">
+						  <div class="contain">
+							  <div class="pagination">
+											<a href="javascript:togglePaneledMobileP2(PANDMP2[0])">Rough Cut</a>
+											<a href="javascript:togglePaneledMobileP2(PANDMP2[1])" class="active">Final Cut</a>
+											<a href="javascript:togglePaneledMobileP2(PANDMP2[2])">Set-Up</a>
+										</div>
+							    <div class="half">
+									  <div class="proDisplay">
+										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/261105316?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+									  </div>
+							  </div>
+								<div class="half">
+									<div class="contain">
+										<p>Video 2-3: Phase 2 - Final Cut Surveillance Video Presentation</p><p>Process:</p><p>To demonstrate our creative question, we took it upon ourselves to film every floor in the library and record video and audio to ultimately distinguish the audio differences on each floor. We used the elevator shot and numbers to present the floor location, and the "middle" of each room for our main shot. After the critique, we applied the advice of our peers and shortened the clip. It originally stood at around 2:39, I sped up the clips to make more efficient use of the audience's time. Less time in the elevator and more time on the floor.</p>
+									</div>
+								</div>
+						  </div>
+					  </div>
+						<div CLASS="dispPanelzMobile" ID="pndmp2_3">
+						  <div class="contain">
+							  <div class="pagination">
+											<a href="javascript:togglePaneledMobileP2(PANDMP2[0])">Rough Cut</a>
+											<a href="javascript:togglePaneledMobileP2(PANDMP2[1])">Final Cut</a>
+											<a href="javascript:togglePaneledMobileP2(PANDMP2[2])" class="active">Set-Up</a>
+										</div>
+							    <div class="half">
+									  <div class="proDisplay">
+										<img src="images/setup.jpg" style="width: 100%">
+									  </div>
+							  </div>
+							  <hr>
+								<div class="half">
+									<div class="contain">
+										<p>Video 2-3: Phase 2 - Camera Set-Up</p><p>We had a basic set-up for the camera. I hooked up my Rode VideoMic Pro and we recorded raw audio to place over each clip. It was composed of quick pans and stationary shots from a student's perspective.</p>
 									</div>
 								</div>
 						  </div>
@@ -1807,7 +1836,7 @@ iframe {
           </div>
 			 
 		  <div class="page" id="p4">
-            <section class="icon fa fa-circle-thin" style="filter: invert(100)"><p>Project Three</p></section>
+            <section class="icon fa fa-circle-thin" style="filter: invert(100)"><p>Project Four</p></section>
           </div>
 			 
 		  <div class="page" id="p5">
@@ -1984,7 +2013,11 @@ var PANZMP2 = new Array("pnzmp2_1", "pnzmp2_2");
 <!--
 var PANDP2 = new Array("pndp2_1", "pndp2_2", "pndp2_3");
 <!--
+var PANDMP2 = new Array("pndmp2_1", "pndmp2_2", "pndmp2_3");
+<!--
 var PANTP2 = new Array("pntp2_1", "pntp2_2");
+<!--
+var PANTMP2 = new Array("pntmp2_1", "pntmp2_2");
 // toggle to one of our panels
 function togglePanelP2 (pnl) {
 	for (var p=0; p < PANELSP2.length; p++) {
@@ -2024,10 +2057,20 @@ function togglePaneledP2 (pndp2) {
 		document.getElementById(PANDP2[e]).style.display = (PANDP2[e] == pndp2) ? "block" : "none";
     }
 }
+function togglePaneledMobileP2 (pndmp2) {
+	for (var l=0; l < PANDMP2.length; l++) {
+		document.getElementById(PANDMP2[l]).style.display = (PANDMP2[l] == pndmp2) ? "block" : "none";
+    }
+}
 	
 function togglePantP2 (pntp2) {
 	for (var o=0; o < PANTP2.length; o++) {
 		document.getElementById(PANTP2[o]).style.display = (PANTP2[o] == pntp2) ? "block" : "none";
+    }
+}
+function togglePantMobileP2 (pntmp2) {
+	for (var k=0; k < PANTMP2.length; k++) {
+		document.getElementById(PANTMP2[k]).style.display = (PANTMP2[k] == pntmp2) ? "block" : "none";
     }
 }
 </script>
