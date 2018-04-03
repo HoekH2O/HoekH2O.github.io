@@ -430,8 +430,8 @@ a {
 	display: none;
 	height: 50px;
 	width: 100%;
-	position: sticky;
-	z-index: 0;
+	position: fixed;
+	z-index: 999;
 	top: 0;
 	left: 0;
 	background-color:;
@@ -719,6 +719,7 @@ img.paw {
 	font-family: 'Amatic SC', cursive;	
 	font-size: 7vw;
 	transition: 1s;
+	transform: translateX(-5px);
 }
 .offCentered {
 	min-width: 150px;
@@ -761,6 +762,11 @@ img.paw {
 	display: none;
 }
 .dispPant {
+	width: 100%;
+	height: auto;
+	display: none;
+}
+.displayMenu {
 	width: 100%;
 	height: auto;
 	display: none;
@@ -852,13 +858,11 @@ img.paw {
   padding: 0px;
   color: white;
   background-color: #363636;
-  text-align: center;
-  cursor: pointer;
-  margin-top:30px;
-  margin-left: 1em;
-  width: auto;
+  text-align: left;
+  margin: 30px 1em 0 1em;
   transition: 0.3s;
   text-decoration: none;
+  transform: translateX(-12px);
 }
 /* The Modal (background) */
 .modal {
@@ -907,6 +911,9 @@ img.paw {
 }
 
 .button {
+  margin-top: 25px;
+  margin-left: 3vw; 
+  margin-right: 3vw;
   width: 0;
   height: 0;
   &:hover {
@@ -1060,6 +1067,7 @@ iframe {
 	transform: translate(-50%, -120px);
 	display: hidden;
 	cursor: context-menu;
+	z-index: 1050;
 }
 .btn-group button {
 	max-height: 0;
@@ -1074,6 +1082,7 @@ iframe {
 	min-width: 200px;
 	-webkit-transform: translate(-50%, -75px);
 	transform: translate(-50%, -75px);
+	z-index: 1050;
 }
 
 
@@ -1124,6 +1133,7 @@ iframe {
 		transform: translateX(-15px);
 		display: block;
 		cursor: pointer;
+		z-index: 5000;
 	}
 
 	.bar4, .bar5, .bar6 {
@@ -1278,6 +1288,7 @@ iframe {
 		margin-top: 0px;
 		margin-left: 11px;
 		transform: translateY(-5px);
+		z-index: 5000;
 	}
 	.display {
 		width: 95%;
