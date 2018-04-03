@@ -1356,10 +1356,10 @@ iframe {
 		margin-left: 26px;
 	}
 	.divide {
-		max-width: calc(100% - 80px);
+		max-width: 100%;
 	}
 	.footer {
-		max-width: calc(100% - 80px);
+		max-width: 100%;
 	}
 	.reveil .navBox{
 		-webkit-transform: translateX(0px);
