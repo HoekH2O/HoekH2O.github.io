@@ -1,1368 +1,832 @@
-@charset "utf-8";
-/* CSS Document */
-html,
-body,
-	.page {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
-  -webkit-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
-  -moz-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
-  -o-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);  
-  color: #2A2A2A;
-  overflow-x: hidden; 
-  overflow-y: auto;
-	font-family: 'Raleway', sans-serif;
-	margin-bottom: 0;
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>Art 75 - Portfolio</title>
+<link rel="icon" href="images/logo.png">
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/art-75.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body onLoad="togglePanelP2(PANELSP2[0]), togglePanelsP2(PANP2[0]), togglePanelzP2(PANZP2[0]), togglePaneledP2(PANDP2[0]), togglePantP2(PANTP2[0]), togglePanelMobileP2(PANELSMP2[0]), togglePanelsMobileP2(PANMP2[0]), togglePanelzMobileP2(PANZMP2[0]), togglePaneledMobileP2(PANDMP2[0]), togglePantMobileP2(PANTMP2[0])">
+<div class="ct" id="t1">
+  <div class="ct" id="t2">
+    <div class="ct" id="t3">
+      <div class="ct" id="t4">
+         <div class="ct" id="t5">
+		  <input type="checkbox" id="myCheck" style="display: none" onclick="myFunction()">
+		  <div class="sidenav"> 
+				<a href="home.html"><img src="images/paw button.png" class="paw"></a>
+				<div class="content" id="test" style="margin-left:0; height: auto;">
+					<label class="contains" id="text"for="myCheck">
+			      <div class="bar1"></div>
+				  <div class="bar2"></div>
+				  <div class="bar3"></div>
+					</label>
+					<ul id="text" class="navBox" style="z-index: 500; padding-top: 100px; display: hidden;" for="myCheck">
+						<a href="#t1"><li class="icon fa fa-home" style="filter: invert(100); margin-bottom: 10px; transform: scale(1);" id="uno"></li></a>
+						<a href="#t2"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="dos"></li></a>
+						<a href="#t3"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="tres"></li></a>
+						<a href="#t4"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="cuatro"></li></a>
+						<a href="#t5"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="cinco"></li></a>
+					  </ul>
+				</div>
+				<div class="bottom-left"><p class="vertical-text">Hoekwater Development - 2018</p></div>
+		   </div>
+		  <div class="sidenavMobile"> 
+					<div class="top-left">
+						<a href="home.html"><img src="images/paw button.png" class="paw"></a>
+					</div>
+			<div class="contains" id="tests">
+							<label class="top-right" id="texts"for="myCheck" data-modal-close>
+								  <div class="bar4"></div>
+								  <div class="bar5"></div>
+			  					  <div class="bar6"></div>
+							</label>
+
+
+			  <div id="texts" class="btn-group" style="z-index: 500; display: hidden;" for="myCheck">
+				<div class="offCentered mobileNav">
+								  <button class="btn"><a class="button" href="#t1"><i class="icon fa fa-home" style="filter: invert(100); margin-bottom: 30px; transform: scale(.8);" id="uno"></i></a></button>
+									
+								  <button class="btn"><a class="button" href="#t2"><i class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 30px; transform: scale(.8);" id="dos"></i></a></button>
+								
+								  <button class="btn"><a class="button" href="#t3"><i class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 30px; transform: scale(.8);" id="tres"></i></a></button>
+								 
+							      <button class="btn"><a class="button" href="#t4"><i class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 30px; transform: scale(.8);" id="cuatro"></i></a></button>
+									
+								  <button class="btn"><a class="button" href="#t5"><i class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 30px; transform: scale(.8);" id="cinco"></i></a></button>
+								  
+								</div>
+							  </div>
+						</div>
+			</div>
+			 
+          <div class="page" id="p1">
+             <section class="icon fa fa-bolt"><span class="title">Bolt</span><span class="hint">Like this pen to see the magic!...<br> Just kidding, it won't happen anything but I'll be really happy If you do so.</span></section>  
+          </div> 
+			 
+		  <div class="page" id="p2">
+             <section class="icon fa fa-bolt"><span class="title">Bolt</span><span class="hint">Like this pen to see the magic!...<br> Just kidding, it won't happen anything but I'll be really happy If you do so.</span></section>  
+          </div>
+			 
+          <div class="page" id="p3" onmouseover="closeNav()">
+			  
+			<div class="sidenavMobile" style="position: sticky; background-color:#E4E4E4; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color="black";"> 
+				  <div class="centered">
+
+					<h1>
+					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "Hello.", "This is Project Two.", "Experimental Narratives.", "Check out my work!" ]'>
+						<span class="wrap"></span>
+					  </a>
+					</h1>
+				</div>
+				</div>
+			<div class="contentTop"> 
+				<div class="centered">
+
+				<h1>
+				  <a class="typewrite" data-period="2000" data-type='[ "Hello.", "This is Project Two.", "Experimental Narratives.", "Check out my work!" ]'>
+					<span class="wrap"></span>
+				  </a>
+				</h1>
+			</div>
+				<div class="topContain"><video src="video/whiteBG.mp4" autoplay loop class="display" style="position:static; z-index: -1;"></video></div>
+			  <div class="top-left"> <img src="images/initials.png" class="ic"> </div>
+			</div>
+			  <div class="divide"></div>
+			<div class="contentWhite">
+						  <div class="row">
+								<div class="column card">
+									<div CLASS="dispPanel" ID="pnp2_1">
+									  <div class="contain">
+										  <div class="half">
+											  <div class="contain">
+												  <div class="proDisplay">
+													   <style>.embed-container { margin-bottom: 0px;  border-radius: 5;  position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/258645629?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+												  </div>
+											  </div>
+
+										  </div>
+											<div class="half">
+												<div class="contain">
+													<font style="font-size:1.5vw;">Video 2-1: Timelapse Rough Cut</font><p style="font-size:1vw;">For this project we had to film two timelapses of the same location. We learned about the different types of timelapses, such as a hyperlapse. I wanted to thake the opportunity to try and film a hyperlapse. This rough cut was only composed of one hyperlapse while I was supposed to film two.</p>
+													<hr>
+														<div class="pagination">
+															<a href="javascript:togglePanelP2(PANELSP2[0]),togglePanelMobileP2(PANELSMP2[0])" class="active" style="font-size:1vw;">Rough Cut</a>
+															<a href="javascript:togglePanelP2(PANELSP2[1]),togglePanelMobileP2(PANELSMP2[1])" style="font-size:1vw;">Final Cut</a>
+														</div>
+												</div>
+											</div>
+									  </div>
+								  </div>
+									<div CLASS="dispPanel" ID="pnp2_2">
+									  <div class="contain">
+										  <div class="half">
+											  <div class="contain">
+												<div class="proDisplay">
+													<style>.embed-container {margin-bottom: 0px;border-radius: 5px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/259715185?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+												</div>
+											  </div>
+
+										  </div>
+											<div class="half">
+												<div class="contain">
+													<p style="font-size:1.5vw;">Video 2-1: Timelapse Final Cut</p><p style="font-size:1vw;">After the critique, I took my feedback and filmed another hyperlapse over the weekend. It took about two hours to film and forty-five minutes to edit. Although it was a very tedious process, I enjoyed seeing how it all turned out.</p>
+													<hr>
+													<div class="pagination">
+														<a href="javascript:togglePanelP2(PANELSP2[0]),togglePanelMobileP2(PANELSMP2[0])" style="font-size:1vw;">Rough Cut</a>
+														<a href="javascript:togglePanelP2(PANELSP2[1]),togglePanelMobileP2(PANELSMP2[1])" class="active" style="font-size:1vw;">Final Cut</a>
+													</div>
+												</div>
+											</div>
+									  </div>
+								  </div>
+								</div>
+						  </div>
+						</div>
+			<div class="contentWhite">
+			  <div class="row">
+					<div class="column card">	
+					  <div CLASS="dispPanels" ID="pnsp2_1">
+						  <div class="contain">
+								<div class="half">
+									<div class="contain">
+										<p style="font-size:1.5vw;">Video 2-2: Where Cameras Don't Belong Rough Cut</p><p style="font-size:1vw;">I like the idea of filming unique points of view. So, for this project I thought what it would be like to film an earbud from its point of view. It took some planning, but I was eventually able to think of a mount that just might work with what I had in mind. Check out the screenshots as well!</p>
+										<hr>
+										<div class="pagination">
+												<a href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])" class="active" style="font-size:1vw;">Rough Cut</a>
+												<a href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])" style="font-size:1vw;">Final Cut</a>
+												<a href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])" style="font-size:1vw;">Mount</a>
+									  </div>
+									</div>
+								</div>
+							  <div class="half">
+								  <div class="contain">
+									  <div class="proDisplay">
+										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/259014372?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+									  </div>
+								  </div>
+
+							  </div>
+						  </div>
+					  </div>
+						<div CLASS="dispPanels" ID="pnsp2_2">
+						  <div class="contain">
+								<div class="half">
+									<div class="contain">
+										<p style="font-size:1.5vw;">Video 2-2: Where Cameras Don't Belong Final Cut</p><p style="font-size:1vw;">So during the critique, it came to my attention that I forgot to put music in the video. Luckily it wasn't too hard to fix. During post I edited an audio clip to make it sound muffled then, when it reaches the ear, it becomes clear. This project was unique. I enjoyed the planning and imagination aspects that went behind this video.</p>
+										<hr>
+										<div class="pagination">
+												<a href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])">Rough Cut</a>
+												<a href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])" class="active">Final Cut</a>
+												<a href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])">Mount</a>
+									  </div>
+									</div>
+								</div>
+							  <div class="half">
+								  <div class="contain">
+									  <div class="proDisplay">
+										<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/259719910?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+									  </div>
+								  </div>
+
+							  </div>
+						  </div>
+					  </div>
+					  <div CLASS="dispPanels" ID="pnsp2_3">
+						  <div class="contain">
+								<div class="half">
+									<div class="contain">
+										<p style="font-size:1.5vw;">Video 2-2: Where Cameras Don't Belong Mount System</p><p style="font-size:1vw;">This mount took some planning. I started with my camera case. I knew I wanted to use a fish eye lens, so using the camera case was already a final choice. Figuring out how to mount the ear bud was another issue. I ended up using about 10 rubber bands, one paper clip, two pieces of clear tape, and three pens. I created a ledge for the paper clip to rest on with the pens as i taped it down. I eased the earbud on the paper clip concealing the metal behind the chord. Lastly, I squeezed my hand in the rubber bands as they acted as my handle, then with some awkward arms movements, the mount looked somewhat convincing.</p>
+										<hr>
+										<div class="pagination">
+												<a href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])">Rough Cut</a>
+												<a href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])">Final Cut</a>
+												<a href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])" class="active">Mount</a>
+									  </div>
+									</div>
+								</div>
+							  <div class="half">
+								  <div class="contain">
+									  <div class="proDisplay">
+										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/260033499?loop=1&title=0&byline=0&portrait=0" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+									  </div>
+								  </div>
+
+							  </div>
+						  </div>
+					  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="contentWhite">
+			  <div class="row">
+					<div class="column card">	
+						<div CLASS="dispPanelz" ID="pnzp2_1">
+						  <div class="contain">
+							  <div class="half">
+								  <div class="contain">
+									  <div class="proDisplay">
+											<img src="images/mindmap.png" style="width:100%;">
+									</div>
+
+								  </div>
+
+							  </div>
+								<div class="half">
+									<div class="contain">
+										<p style="font-size:1.5vw;">Video 2-3: Phase 1 - Creative Question and Scouting Mission Mind Map</p><p style="font-size:1vw;">For this part of the assignment we had to, with a partner, come up with a creative question and answer that question through the video. Phase 1 starts out with a mind map where we come up with all of our ideas. Second, we took our test video.</p>
+										<hr>
+										<div class="pagination">
+											<a href="javascript:togglePanelzP2(PANZP2[0])" class="active" style="font-size:1vw;">Mind Map</a>
+											<a href="javascript:togglePanelzP2(PANZP2[1])" style="font-size:1vw;">Test Footage</a>
+										</div>
+									</div>
+								</div>
+						  </div>
+					  </div>
+						<div CLASS="dispPanelz" ID="pnzp2_2">
+						  <div class="contain">
+							  <div class="half">
+								  <div class="contain">
+									  <div class="proDisplay">
+										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/260066395?title=0&byline=0&portrait=0" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+									  </div>
+								  </div>
+
+							  </div>
+								<div class="half">
+									<div class="contain">
+										<p style="font-size:1.5vw;">Video 2-3: Phase 1 - Creative Question and Scouting Mission Test Footage</p><p style="font-size:1vw;">For our test footage we went to the library at San Jose State University and filmed the ground floor as well as the eighth floor. The goal was to find the noise difference between each floor. While for our final video we plan on recording more floors, the test footage was good for us to get an assumption of how our creative question pans out.</p>
+										<hr>
+										<div class="pagination">
+											<a href="javascript:togglePanelzP2(PANZP2[0])" style="font-size:1vw;">Mind Map</a>
+											<a href="javascript:togglePanelzP2(PANZP2[1])" class="active" style="font-size:1vw;">Test Footage</a>
+										</div>
+									</div>
+								</div>
+						  </div>
+					  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="contentWhite">
+			  <div class="row">
+					<div class="column card">	
+						<div CLASS="dispPanelz" ID="pndp2_1">
+						  <div class="contain">
+								<div class="half">
+									<div class="contain">
+										<p style="font-size:1.5vw;">Video 2-3: Phase 2 - Rough Cut Surveillance Video Presentation</p>
+										<div class="dispPant" ID="pntp2_1">
+											<p style="font-size:1vw;">Artist Statement:</p><p style="font-size:1vw;">How much noise can you hear in the library? We asked this question to understand the different levels within each floor of the library here at SJSU. We are told that each floor is supposed to be more quiet as we reach the top, and we set out to examine how each floor varies in sound. We found that the floors don't necessarily get louder as we go lower, but rather vary due to population and often popularity. The forth floor or "Spartan Floor" has the most students and it is the loudest floor in the library, mostly due to the amount of students and the volume they communicate at... <a href="javascript:togglePantP2(PANTP2[1])" class="tab" style="font-size:1vw;color:#898989;">Continue Reading</a>
+											</p>
+										</div>
+										<div class="dispPant" ID="pntp2_2">
+											<p style="font-size:1vw;">Artist Statement:</p><p style="font-size:1vw;">While the students aren't intentionally being loud, the amount of students decides how loud the overall floor becomes. We continue down and come to find that the next floors aren't at all louder in any sense. That the constant traffic of people and movement from one point to the next is the only distinguishing sound. We came to understand the theory of volume controlled floors, ultimately drawing the conclusion that each floor may have a suggested volume, but is inconsistent due to the population of students and the amount of sounds they make during that time of day. <a href="javascript:togglePantP2(PANTP2[0])" class="tab" style="font-size:1vw;color:#898989;">Back</a>
+											</p>
+										</div>
+										<hr>
+										<div class="pagination">
+											<a href="javascript:togglePaneledP2(PANDP2[0])" class="active" style="font-size:1vw;">Rough Cut</a>
+											<a href="javascript:togglePaneledP2(PANDP2[1])" style="font-size:1vw;">Final Cut</a>
+											<a href="javascript:togglePaneledP2(PANDP2[2])" style="font-size:1vw;">Set-Up</a>
+										</div>
+									</div>
+								</div>
+							  <div class="half">
+								  <div class="contain">
+									  <div class="proDisplay">
+										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/261066390?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+									  </div>
+
+								  </div>
+
+							  </div>
+						  </div>
+					  </div>
+						<div CLASS="dispPanelz" ID="pndp2_2">
+						  <div class="contain">
+								<div class="half">
+									<div class="contain">
+										<p style="font-size:1.5vw;">Video 2-3: Phase 2 - Final Cut Surveillance Video Presentation</p><p style="font-size:1vw;">Process:</p><p style="font-size:1vw;">To demonstrate our creative question, we took it upon ourselves to film every floor in the library and record video and audio to ultimately distinguish the audio differences on each floor. We used the elevator shot and numbers to present the floor location, and the "middle" of each room for our main shot. After the critique, we applied the advice of our peers and shortened the clip. It originally stood at around 2:39, I sped up the clips to make more efficient use of the audience's time. Less time in the elevator and more time on the floor.</p>
+										<hr>
+										<div class="pagination">
+											<a href="javascript:togglePaneledP2(PANDP2[0])" style="font-size:1vw;">Rough Cut</a>
+											<a href="javascript:togglePaneledP2(PANDP2[1])" class="active" style="font-size:1vw;">Final Cut</a>
+											<a href="javascript:togglePaneledP2(PANDP2[2])" style="font-size:1vw;">Set-Up</a>
+										</div>
+									</div>
+								</div>
+							  <div class="half">
+								  <div class="contain">
+									  <div class="proDisplay">
+										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/261105316?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+									  </div>
+								  </div>
+
+							  </div>
+						  </div>
+					  </div>
+						<div CLASS="dispPanelz" ID="pndp2_3">
+						  <div class="contain">
+								<div class="half">
+									<div class="contain">
+										<p style="font-size:1.5vw;">Video 2-3: Phase 2 - Camera Set-Up</p><p style="font-size:1vw;">We had a basic set-up for the camera. I hooked up my Rode VideoMic Pro and we recorded raw audio to place over each clip. It was composed of quick pans and stationary shots from a student's perspective.</p>
+										<hr>
+										<div class="pagination">
+											<a href="javascript:togglePaneledP2(PANDP2[0])" style="font-size:1vw;">Rough Cut</a>
+											<a href="javascript:togglePaneledP2(PANDP2[1])" style="font-size:1vw;">Final Cut</a>
+											<a href="javascript:togglePaneledP2(PANDP2[2])" class="active" style="font-size:1vw;">Set-Up</a>
+										</div>
+									</div>
+								</div>
+							  <div class="half">
+								  <div class="contain">
+									  <div class="proDisplay">
+										<img src="images/setup.jpg" style="width: 100%">
+									  </div>
+								  </div>
+
+							  </div>
+						  </div>
+					  </div>
+				</div>
+			  </div>
+			</div>
+
+			<div class="contentBlack" style="padding-top: 15px;">
+			  <div class="row">
+					<div class="column card">
+						<div CLASS="dispPanel" ID="pnmp2_1">
+						  <div class="contain">
+							  <div class="pagination">
+											<a href="javascript:togglePanelP2(PANELSP2[0]), togglePanelMobileP2(PANELSMP2[0])" class="active">Rough Cut</a>
+											<a href="javascript:togglePanelP2(PANELSP2[1]), togglePanelMobileP2(PANELSMP2[1])">Final Cut</a>
+										</div>
+							  <div class="half">
+									  <div class="proDisplay">
+										   <style>.embed-container { margin-bottom: 0px;  border-radius: 5;  position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/258645629?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+									  </div>
+
+							  </div>
+								<div class="half">
+									<div class="contain">
+										<font>Video 2-1: Timelapse Rough Cut</font><p>For this project we had to film two timelapses of the same location. We learned about the different types of timelapses, such as a hyperlapse. I wanted to thake the opportunity to try and film a hyperlapse. This rough cut was only composed of one hyperlapse while I was supposed to film two.</p>
+									</div>
+								</div>
+						  </div>
+					  </div>
+						<div CLASS="dispPanel" ID="pnmp2_2">
+						  <div class="contain">
+							  <div class="pagination">
+											<a href="javascript:togglePanelP2(PANELSP2[0]), togglePanelMobileP2(PANELSMP2[0])">Rough Cut</a>
+											<a href="javascript:togglePanelP2(PANELSP2[1]), togglePanelMobileP2(PANELSMP2[1])" class="active">Final Cut</a>
+										</div>
+							  <div class="half">
+									<div class="proDisplay">
+										<style>.embed-container {margin-bottom: 0px;border-radius: 5px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/259715185?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+									</div>				  	
+							  </div>
+								<div class="half">
+									<div class="contain">
+										<p>Video 2-1: Timelapse Final Cut</p><p>After the critique, I took my feedback and filmed another hyperlapse over the weekend. It took about two hours to film and forty-five minutes to edit. Although it was a very tedious process, I enjoyed seeing how it all turned out.</p>
+									</div>
+								</div>
+						  </div>
+					  </div>
+					</div>
+			  </div>
+			</div>
+			<div class="contentBlack">
+			  <div class="row">
+					<div class="column card">
+
+						<div CLASS="dispPanel" ID="pnsmp2_1">
+						  <div class="contain">
+							  <div class="pagination">
+												<a href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])" class="active">Rough Cut</a>
+												<a href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])">Final Cut</a>
+												<a href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])">Mount</a>
+											</div>
+							  <div class="half">
+									  <div class="proDisplay">
+										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/259014372?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+									  </div>
+
+							  </div>
+								<div class="half">
+									<div class="contain">
+										<font>Video 2-2: Where Cameras Don't Belong Rough Cut</font><p>I like the idea of filming unique points of view. So, for this project I thought what it would be like to film an earbud from its point of view. It took some planning, but I was eventually able to think of a mount that just might work with what I had in mind. Check out the screenshots as well!</p>
+									</div>
+								</div>
+						  </div>
+					  </div>
+						<div CLASS="dispPanel" ID="pnsmp2_2">
+						  <div class="contain">
+							  <div class="pagination">
+											<a href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])">Rough Cut</a>
+											<a href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])" class="active">Final Cut</a>
+											<a href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])">Mount</a>
+										</div>
+							  <div class="half">
+									<div class="proDisplay">
+										<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/259719910?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+							    </div>			  	
+							  </div>
+								<div class="half">
+									<div class="contain">
+										<p>Video 2-2: Where Cameras Don't Belong Final Cut</p><p>So during the critique, it came to my attention that I forgot to put music in the video. Luckily it wasn't too hard to fix. During post I edited an audio clip to make it sound muffled then, when it reaches the ear, it becomes clear. This project was unique. I enjoyed the planning and imagination aspects that went behind this video.</p>
+									</div>
+								</div>
+						  </div>
+					  </div>
+						<div CLASS="dispPanel" ID="pnsmp2_3">
+						  <div class="contain">
+							 <div class="pagination">
+											<a href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])">Rough Cut</a>
+											<a href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])">Final Cut</a>
+											<a href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])" class="active">Mount</a>
+										</div>
+							  <div class="half">
+									<div class="proDisplay">
+										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/260033499?loop=1&title=0&byline=0&portrait=0" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+							    </div>		  	
+							  </div>
+								<div class="half">
+									<div class="contain">
+										<p>Video 2-2: Where Cameras Don't Belong Mount System</p><p>This mount took some planning. I started with my camera case. I knew I wanted to use a fish eye lens, so using the camera case was already a final choice. Figuring out how to mount the ear bud was another issue. I ended up using about 10 rubber bands, one paper clip, two pieces of clear tape, and three pens. I created a ledge for the paper clip to rest on with the pens as i taped it down. I eased the earbud on the paper clip concealing the metal behind the chord. Lastly, I squeezed my hand in the rubber bands as they acted as my handle, then with some awkward arms movements, the mount looked somewhat convincing.</p>
+									</div>
+								</div>
+						  </div>
+					  </div>
+					</div>
+			  </div>
+			</div>
+			<div class="contentBlack">
+			  <div class="row">
+					<div class="column card">	
+						<div CLASS="dispPanelz" ID="pnzmp2_1">
+						  <div class="contain">
+							  <div class="pagination">
+											<a href="javascript:togglePanelzMobileP2(PANZMP2[0])" class="active">Mind Map</a>
+											<a href="javascript:togglePanelzMobileP2(PANZMP2[1])">Test Footage</a>
+										</div>
+							  <div class="half">
+									  <div class="proDisplay">
+											<img src="images/mindmap.png" style="width:100%;">
+									</div>
+							  </div>
+								<div class="half">
+									<div class="contain">
+										<p>Video 2-3: Phase 1 - Creative Question and Scouting Mission Mind Map</p><p>For this part of the assignment we had to, with a partner, come up with a creative question and answer that question through the video. Phase 1 starts out with a mind map where we come up with all of our ideas. Second, we took our test video.</p>
+									</div>
+								</div>
+						  </div>
+					  </div>
+						<div CLASS="dispPanelz" ID="pnzmp2_2">
+						  <div class="contain">
+							  <div class="pagination">
+											<a href="javascript:togglePanelzMobileP2(PANZMP2[0])">Mind Map</a>
+											<a href="javascript:togglePanelzMobileP2(PANZMP2[1])" class="active">Test Footage</a>
+										</div>
+							  <div class="half">
+									  <div class="proDisplay">
+										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/260066395?title=0&byline=0&portrait=0" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+									  </div>
+							  </div>
+								<div class="half">
+									<div class="contain">
+										<p>Video 2-3: Phase 1 - Creative Question and Scouting Mission Test Footage</p><p>For our test footage we went to the library at San Jose State University and filmed the ground floor as well as the eighth floor. The goal was to find the noise difference between each floor. While for our final video we plan on recording more floors, the test footage was good for us to get an assumption of how our creative question pans out.</p>
+									</div>
+								</div>
+						  </div>
+					  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="contentBlack">
+			  <div class="row">
+					<div class="column card">	
+						<div CLASS="dispPanelzMobile" ID="pndmp2_1">
+						  <div class="contain">
+							  <div class="pagination">
+											<a href="javascript:togglePaneledMobileP2(PANDMP2[0])" class="active">Rough Cut</a>
+											<a href="javascript:togglePaneledMobileP2(PANDMP2[1])">Final Cut</a>
+											<a href="javascript:togglePaneledMobileP2(PANDMP2[2])">Set-Up</a>
+										</div>
+							    <div class="half">
+									  <div class="proDisplay">
+										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/261066390?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+									  </div>
+							  </div>
+								<div class="half">
+									<div class="contain">
+										<p>Video 2-3: Phase 2 - Rough Cut Surveillance Video Presentation</p>
+										<div class="dispPant" ID="pntmp2_1">
+											<p>Artist Statement:</p><p>How much noise can you hear in the library? We asked this question to understand the different levels within each floor of the library here at SJSU. We are told that each floor is supposed to be more quiet as we reach the top, and we set out to examine how each floor varies in sound. We found that the floors don't necessarily get louder as we go lower, but rather vary due to population and often popularity. The forth floor or "Spartan Floor" has the most students and it is the loudest floor in the library, mostly due to the amount of students and the volume they communicate at... <br><br><a href="javascript:togglePantMobileP2(PANTMP2[1])"style="color:#898989;">Continue Reading</a>
+											</p>
+										</div>
+										<div class="dispPantMobile" ID="pntmp2_2">
+											<pArtist Statement:</p><p>While the students aren't intentionally being loud, the amount of students decides how loud the overall floor becomes. We continue down and come to find that the next floors aren't at all louder in any sense. That the constant traffic of people and movement from one point to the next is the only distinguishing sound. We came to understand the theory of volume controlled floors, ultimately drawing the conclusion that each floor may have a suggested volume, but is inconsistent due to the population of students and the amount of sounds they make during that time of day. <br><br><a href="javascript:togglePantMobileP2(PANTMP2[0])" style="color:#898989;">Back</a>
+											</p>
+										</div>
+									</div>
+								</div>
+						  </div>
+					  </div>
+						<div CLASS="dispPanelzMobile" ID="pndmp2_2">
+						  <div class="contain">
+							  <div class="pagination">
+											<a href="javascript:togglePaneledMobileP2(PANDMP2[0])">Rough Cut</a>
+											<a href="javascript:togglePaneledMobileP2(PANDMP2[1])" class="active">Final Cut</a>
+											<a href="javascript:togglePaneledMobileP2(PANDMP2[2])">Set-Up</a>
+										</div>
+							    <div class="half">
+									  <div class="proDisplay">
+										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/261105316?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+									  </div>
+							  </div>
+								<div class="half">
+									<div class="contain">
+										<p>Video 2-3: Phase 2 - Final Cut Surveillance Video Presentation</p><p>Process:</p><p>To demonstrate our creative question, we took it upon ourselves to film every floor in the library and record video and audio to ultimately distinguish the audio differences on each floor. We used the elevator shot and numbers to present the floor location, and the "middle" of each room for our main shot. After the critique, we applied the advice of our peers and shortened the clip. It originally stood at around 2:39, I sped up the clips to make more efficient use of the audience's time. Less time in the elevator and more time on the floor.</p>
+									</div>
+								</div>
+						  </div>
+					  </div>
+						<div CLASS="dispPanelzMobile" ID="pndmp2_3">
+						  <div class="contain">
+							  <div class="pagination">
+											<a href="javascript:togglePaneledMobileP2(PANDMP2[0])">Rough Cut</a>
+											<a href="javascript:togglePaneledMobileP2(PANDMP2[1])">Final Cut</a>
+											<a href="javascript:togglePaneledMobileP2(PANDMP2[2])" class="active">Set-Up</a>
+										</div>
+							    <div class="half">
+									  <div class="proDisplay">
+										<img src="images/setup.jpg" style="width: 100%">
+									  </div>
+							  </div>
+							  <hr>
+								<div class="half">
+									<div class="contain">
+										<p>Video 2-3: Phase 2 - Camera Set-Up</p><p>We had a basic set-up for the camera. I hooked up my Rode VideoMic Pro and we recorded raw audio to place over each clip. It was composed of quick pans and stationary shots from a student's perspective.</p>
+									</div>
+								</div>
+						  </div>
+					  </div>
+				</div>
+			  </div>
+			</div>
+
+			<div class="footer">
+					<p style="font-size:0.75vw; text-align: right; color:#E4E4E4;">Version: 2.50</p>
+			</div>
+          </div>
+			 
+		  <div class="page" id="p4">
+            <section class="icon fa fa-circle-thin" style="filter: invert(100)"><p>Project Four</p></section>
+          </div>
+			 
+		  <div class="page" id="p5">
+            <section class="icon fa fa-rocket" style="filter: invert(100)"><p>Project Three</p></section>
+          </div>
+        </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script language="JavaScript">
+function myFunction() {
+    var checkBox = document.getElementById("myCheck");
+    var text = document.getElementById("text");
+	var test = document.getElementById("test");
+	var texts = document.getElementById("texts");
+	var tests = document.getElementById("tests");
+    if (checkBox.checked == true){
+		test.classList.add("reveil");
+		text.classList.add("change");
+		tests.classList.add("open");
+		tests.classList.add("change");
+    } else {
+		test.classList.remove("reveil");
+		text.classList.remove("change");
+		tests.classList.remove("open");
+		tests.classList.remove("change");
+    }
 }
-hr{
-	color: #2A2A2A;
+function closeNav(){
+	var checkBox = document.getElementById("myCheck");
+    var text = document.getElementById("text");
+	var test = document.getElementById("test");
+	var texts = document.getElementById("texts");
+	var tests = document.getElementById("tests");
+	if (checkBox.checked == true){
+		test.classList.remove("reveil");
+		text.classList.remove("change");
+		tests.classList.remove("open");
+		tests.classList.remove("change");
+	}
 }
-.page{
-  position: absolute;
-  overflow: scroll;
+
+var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+   
+
 	
+	/*! Modals v10.1.2 | (c) 2017 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/modals */
+!(function(e,t){"function"==typeof define&&define.amd?define([],t(e)):"object"==typeof exports?module.exports=t(e):e.modals=t(e)})("undefined"!=typeof global?global:this.window||this.global,(function(e){"use strict";var t,o,n,l={},c="querySelector"in document&&"addEventListener"in e&&"classList"in document.createElement("_"),r="closed",d={selectorToggle:"[data-modal]",selectorWindow:"[data-modal-window]",selectorClose:"[data-modal-close]",modalActiveClass:"active",modalBGClass:"modal-bg",preventBGScroll:!0,preventBGScrollHtml:!0,preventBGScrollBody:!0,backspaceClose:!0,stopVideo:!0,callbackOpen:function(){},callbackClose:function(){}},a=function(){var e={},t=!1,o=0,n=arguments.length;"[object Boolean]"===Object.prototype.toString.call(arguments[0])&&(t=arguments[0],o++);for(;o<n;o++){var l=arguments[o];!(function(o){for(var n in o)Object.prototype.hasOwnProperty.call(o,n)&&(t&&"[object Object]"===Object.prototype.toString.call(o[n])?e[n]=a(!0,e[n],o[n]):e[n]=o[n])})(l)}return e},s=function(e,t){for(Element.prototype.matches||(Element.prototype.matches=Element.prototype.matchesSelector||Element.prototype.mozMatchesSelector||Element.prototype.msMatchesSelector||Element.prototype.oMatchesSelector||Element.prototype.webkitMatchesSelector||function(e){for(var t=(this.document||this.ownerDocument).querySelectorAll(e),o=t.length;--o>=0&&t.item(o)!==this;);return o>-1});e&&e!==document;e=e.parentNode)if(e.matches(t))return e;return null},i=function(e,t){if(t.stopVideo&&e.classList.contains(t.modalActiveClass)){var o=e.querySelector("iframe"),n=e.querySelector("video");if(o){var l=o.src;o.src=l}n&&n.pause()}},u=function(){var e=document.createElement("div");e.style.visibility="hidden",e.style.width="100px",e.style.msOverflowStyle="scrollbar",document.body.appendChild(e);var t=e.offsetWidth;e.style.overflow="scroll";var o=document.createElement("div");o.style.width="100%",e.appendChild(o);var n=o.offsetWidth;return e.parentNode.removeChild(e),t-n},m=function(){if(!document.querySelector("[data-modal-bg]")){var e=document.createElement("div");e.setAttribute("data-modal-bg",!0),e.classList.add(n.modalBGClass),document.body.appendChild(e)}},p=function(){var e=document.querySelector("[data-modal-bg]");e&&document.body.removeChild(e)};l.closeModal=function(e){var t=a(n||d,e||{}),l=document.querySelector(t.selectorWindow+"."+t.modalActiveClass);l&&(i(l,t),l.classList.remove(t.modalActiveClass),p(),r="closed",t.preventBGScroll&&(document.documentElement.style.overflowY="",document.body.style.overflowY="",document.body.style.paddingRight=""),t.callbackClose(o,l),o&&(o.focus(),o=null))},l.openModal=function(e,c,s){var i=a(n||d,s||{}),u=document.querySelector(c);"open"===r&&l.closeModal(i),e&&(o=e),u.classList.add(i.modalActiveClass),m(),r="open",u.setAttribute("tabindex","-1"),u.focus(),i.preventBGScroll&&(i.preventBGScrollHtml&&(document.documentElement.style.overflowY="hidden"),i.preventBGScrollBody&&(document.body.style.overflowY="hidden"),document.body.style.paddingRight=t+"px"),i.callbackOpen(e,u)};var v=function(e,t,o){if(o)return e.removeEventListener("touchstart",a,!1),e.removeEventListener("touchend",s,!1),void e.removeEventListener("click",i,!1);if(t&&"function"==typeof t){var n,l,c,r,d,a=function(e){n=!0,l=e.changedTouches[0].pageX,c=e.changedTouches[0].pageY},s=function(e){r=e.changedTouches[0].pageX-l,d=e.changedTouches[0].pageY-c,Math.abs(r)>=7||Math.abs(d)>=10||t(e)},i=function(e){if(n)return void(n=!1);t(e)};e.addEventListener("touchstart",a,!1),e.addEventListener("touchend",s,!1),e.addEventListener("click",i,!1)}},f=function(e){var t=e.target,o=s(t,n.selectorToggle),c=s(t,n.selectorClose),d=s(t,n.selectorWindow),a=e.keyCode;if(a&&"open"===r)(27===a||n.backspaceClose&&(8===a||46===a))&&l.closeModal();else if(t){if(d&&!c)return;!o||a&&13!==a?"open"===r&&(e.preventDefault(),l.closeModal()):(e.preventDefault(),l.openModal(o,o.getAttribute("data-modal"),n))}};return l.destroy=function(){n&&(v(document,null,!0),document.removeEventListener("keydown",f,!1),document.documentElement.style.overflowY="",document.body.style.overflowY="",document.body.style.paddingRight="",t=null,o=null,n=null)},l.init=function(e){c&&(l.destroy(),n=a(d,e||{}),t=u(),v(document,f),document.addEventListener("keydown",f,!1))},l}));
+
+/**
+ * Autoplay a YouTube, Vimeo, or HTML5 video
+ * @param  {Node} modal  The modal to search inside
+ */
+var autoplayVideo = function (modal) {
+
+	// Look for a YouTube, Vimeo, or HTML5 video in the modal
+	var video = modal.querySelector('iframe[src*="www.youtube.com"], iframe[src*="player.vimeo.com"], video');
+
+	// Bail if the modal doesn't have a video
+	if (!video) return;
+
+	// If an HTML5 video, play it
+	if (video.tagName.toLowerCase() === 'video') {
+		video.play();
+		return;
+	}
+	// Add autoplay to video src
+	// video.src: the current video `src` attribute
+	// (video.src.indexOf('?') < 0 ? '?' : '&'): if the video.src already has query string parameters, add an "&". Otherwise, add a "?".
+	// 'autoplay=1': add the autoplay parameter
+	video.src = video.src + (video.src.indexOf('?') < 0 ? '?' : '&') + 'autoplay=1';
+	
+};
+
+/**
+ * Stop a YouTube, Vimeo, or HTML5 video
+ * @param  {Node} modal  The modal to search inside
+ */
+var stopVideo = function (modal) {
+
+	// Look for a YouTube, Vimeo, or HTML5 video in the modal
+	var video = modal.querySelector('iframe[src*="www.youtube.com"], iframe[src*="player.vimeo.com"], video');
+
+	// Bail if the modal doesn't have a video
+	if (!video) return;
+
+	// If an HTML5 video, pause it
+	if (video.tagName.toLowerCase() === 'video') {
+		video.pause();
+		return;
+	}
+
+	// Remove autoplay from video src
+	video.src = video.src.replace('&autoplay=1', '').replace('?autoplay=1', '');
+
+};
+
+modals.init({
+	callbackOpen: function ( toggle, modal ) {
+		autoplayVideo(modal);
+	},
+	callbackClose: function ( toggle, modal ) {
+		stopVideo(modal);
+	}
+});
+
+
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap {border-right: 0.03em solid black}";
+        document.body.appendChild(css);
+<!--
+var PANELSP2 = new Array("pnp2_1", "pnp2_2");
+<!--
+var PANELSMP2 = new Array("pnmp2_1", "pnmp2_2");
+<!--
+var PANP2 = new Array("pnsp2_1", "pnsp2_2", "pnsp2_3");
+<!--
+var PANMP2 = new Array("pnsmp2_1", "pnsmp2_2", "pnsmp2_3");
+<!--
+var PANZP2 = new Array("pnzp2_1", "pnzp2_2");
+<!--
+var PANZMP2 = new Array("pnzmp2_1", "pnzmp2_2");
+<!--
+var PANDP2 = new Array("pndp2_1", "pndp2_2", "pndp2_3");
+<!--
+var PANDMP2 = new Array("pndmp2_1", "pndmp2_2", "pndmp2_3");
+<!--
+var PANTP2 = new Array("pntp2_1", "pntp2_2");
+<!--
+var PANTMP2 = new Array("pntmp2_1", "pntmp2_2");
+// toggle to one of our panels
+function togglePanelP2 (pnl) {
+	for (var p=0; p < PANELSP2.length; p++) {
+		document.getElementById(PANELSP2[p]).style.display = (PANELSP2[p] == pnl) ? "block" : "none";
+    }
+}
+function togglePanelMobileP2 (pnlm) {
+	for (var t=0; t < PANELSMP2.length; t++) {
+		document.getElementById(PANELSMP2[t]).style.display = (PANELSMP2[t] == pnlm) ? "block" : "none";
+    }
+}
+
+function togglePanelsP2 (pnp2) {
+	for (var q=0; q < PANP2.length; q++) {
+		document.getElementById(PANP2[q]).style.display = (PANP2[q] == pnp2) ? "block" : "none";
+    }
+}
+function togglePanelsMobileP2 (pnsmp2) {
+	for (var r=0; r < PANMP2.length; r++) {
+		document.getElementById(PANMP2[r]).style.display = (PANMP2[r] == pnsmp2) ? "block" : "none";
+    }
 }
 	
-
-
-#p1 {
-  left: 0;
+function togglePanelzP2 (pnzp2) {
+	for (var i=0; i < PANZP2.length; i++) {
+		document.getElementById(PANZP2[i]).style.display = (PANZP2[i] == pnzp2) ? "block" : "none";
+    }
 }
-
-#p2,
-#p3,
-#p4,
-#p5 {
-  left: 200%;
-}
-
-#p1 {
-  background: #2E2E2E;
-}
-#p2 {
-  background: white;
-  margin-left: 80px;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-#p3 {
-  background: aqua;
-  margin-left: 0px;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-#p4 {
-  background: white;
-  margin-left: 80px;
-  max-width: 100%;
-}
-#p5 {
-  background: white;
-  margin-left: 80px;
-  max-width: 100%;
-}
-
-#t2:target #p2,
-#t3:target #p3,
-#t4:target #p4,
-#t5:target #p5 {
-  transform: translateX(-200%);
-  -webkit-transform: translateX(-200%);
-  -moz-transform: translateX(-200%);
-  -o-transform: translateX(-200%);
-  transition-delay: 0.4s !important;
-	-webkit-filter: blur(0);
-}
-#t2:target #p1,
-#t3:target #p1,
-#t4:target #p1,
-#t5:target #p1 {
-  background: #2E2E2E;
-}
-
-#t2:target #p1 .icon,
-#t3:target #p1 .icon,
-#t4:target #p1 .icon,
-#t5:target #p1 .icon {
-  -webkit-filter: blur(3px);
-}
-.icon {
-width:inherit;
-  color: #fff;
-  font-size: 15px;
-  display: block;
-}
-
-ul .icon:hover {
-  opacity: 0.5;
-}
-
-.page .icon .title {
-  line-height: 2;
-}
-
-#t2:target .icon,
-#t3:target .icon,
-#t4:target .icon,
-#t5:target .icon {
-  transform: scale(1);
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -o-transform: scale(1);
-	transition:1s;
-}
-
-#t2:target #dos,
-#t3:target #tres,
-#t4:target #cuatro,
-#t5:target #cinco {
-  transform: scale(.9) !important;
-  -webkit-transform: scale(.9) !important;
-  -moz-transform: scale(.9) !important;
-  -o-transform: scale(.9) !important;
-	transition:1s;
-}
-
-ul {
-  position: relative;
-  z-index: 1;
-  display:block;
-  top: 0;
-  bottom: 0;
-  left: -5px;
-  margin: auto;
-  height: 280px;
-  width: 0;
-  padding: 0;
-  text-align:center;
-}
-
-#menu .icon {
-  margin: 30px 0;
-  transition: all 0.5s ease-out !important;
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-}
-
-a {
-  text-decoration: none;
-}
-
-.title,
-.hint {
-  display: block;
-}
-
-.title {
-  font-size: 38px;
-}
-
-.hint {
-  font-size: 13px;
-}
-
-#p4 .hint {
-
-  display: inherit !important;
-}
-
-.hint a {
-  color: yellow;
-  transition: all 250ms ease-out;
-  -webkit-transition: all 250ms ease-out;
-  -moz-transition: all 250ms ease-out;
-  -o-transition: all 250ms ease-out;
-}
-
-.hint a:hover {
-  color: #fff;
-}
-
-.line-trough {
-  text-decoration: line-through;
-}
-
-.page .icon {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 10%;
-  left: 0;
-  width: 100%;
-  height: 170px;
-  margin: auto;
-  text-align: center;
-  font-size: 80px;
-  line-height: 1.3;
-  transform: translateX(360%);
-  -webkit-transform: translateX(360%);
-  -moz-transform: translateX(360%);
-  -o-transform: translateX(360%);
-  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1.25);
-  -webkit-transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1.25);
-  -moz-transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1.25);
-  -o-transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1.25);
-}
-
-.page#p1 .icon {
-  height: 220px;
-}
-
-.page#p1 .icon {
-  transform: translateX(80px) !important;
-}
-
-#t2:target .page#p2 .icon,
-#t3:target .page#p3 .icon,
-#t4:target .page#p4 .icon,
-#t5:target .page#p5 .icon {
-  transform: translateX(0) !important;
-  -webkit-transform: translateX(0) !important;
-  -moz-transform: translateX(0) !important;
-  -o-transform: translateX(0) !important;
-  transition-delay: 1s;
-}	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-* {text-decoration: none;}
-.topContain {
-  background: #121010;
-  width: 100%;
-
-  height: auto;
-  z-index: -1;
-  position: relative;
-  overflow: hidden;
-}
-.topContain::after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(18, 16, 16, 0.1);
-  opacity: 0;
-  z-index: 2;
-  pointer-events: none;
-}
-.topContain::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-  z-index: 2;
-  background-size: 100% 2px, 3px 100%;
-  pointer-events: none;
-}
-.proDisplay {
-  padding: 7px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #2E2E2E;
-  background: ;
-  border-radius: 5px;
-  z-index: 0;
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #666;
-}
-.proDisplay::after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(18, 16, 16, 0.1);
-  opacity: 0;
-  z-index: 2;
-  pointer-events: none;
-}
-.proDisplay::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-  z-index: 2;
-  background-size: 100% 2px, 3px 100%;
-  pointer-events: none;
-}
-.container {
-  background: #121010;
-  border-radius: 30px;
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #666;
-}
-.container::after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(18, 16, 16, 0.1);
-  opacity: 0;
-  z-index: 2;
-  pointer-events: none;
-}
-.container::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-  z-index: 2;
-  background-size: 100% 2px, 3px 100%;
-  pointer-events: none;
-}
-
-#switch:checked ~ .container::after {
-  animation: flicker 0.15s infinite;
-}
-.screen {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-#switch ~ .container > .screen {
-  animation: turn-off 0.55s cubic-bezier(0.23, 1, 0.32, 1);
-  animation-fill-mode: forwards;
-}
-
-#switch:checked ~ .container > .screen {
-  animation: turn-on 4s linear;
-  animation-fill-mode: forwards;
-}
-
-@keyframes overlay-anim {
-  0% {
-    visibility: hidden;
-  }
-  20% {
-    visibility: hidden;
-  }
-  21% {
-    visibility: visible;
-  }
-  100% {
-    visibility: hidden;
-  }
-}
-.overlay {
-  color: #00FF00;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 60px;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-#switch:checked ~ .container .overlay {
-  animation: overlay-anim 5s linear;
-  animation-fill-mode: forwards;
-}
-.sidenav {
-	height: 100%;
-	width: 80px;
-	position: fixed;
-	display: block;
-	z-index: 2;
-	top: 0;
-	left: 0;
-	background-color:#E4E4E4;
-	transition: 1s;
-	border-right-style: solid;
-    border-right-width: 1px;
-    border-right-color: #E4E4E4;
-}
-.sidenav a {
-	padding-left: 10px;
-	text-decoration: none;
-	font-size: 25px;
-	color: #818181;
-	display: block;
-}
-.sidenav:hover {
-	border-right-style: solid;
-    border-right-width: 1px;
-    border-right-color: #2E2E2E;
+function togglePanelzMobileP2 (pnzmp2) {
+	for (var u=0; u < PANZMP2.length; u++) {
+		document.getElementById(PANZMP2[u]).style.display = (PANZMP2[u] == pnzmp2) ? "block" : "none";
+    }
 }
 	
-.sidenavMobile {
-	display: none;
-	height: 50px;
-	width: 100%;
-	position: sticky;
-	z-index: 50;
-	top: 0;
-	left: 0;
-	background-color:;
-	transition: 1s;
+function togglePaneledP2 (pndp2) {
+	for (var e=0; e < PANDP2.length; e++) {
+		document.getElementById(PANDP2[e]).style.display = (PANDP2[e] == pndp2) ? "block" : "none";
+    }
 }
-
-.sidenavMobile a {
-	padding-left: 10px;
-	text-decoration: none;
-	font-size: 30px;
-	color: black;
-	display: block;
-	text-align: center;
+function togglePaneledMobileP2 (pndmp2) {
+	for (var l=0; l < PANDMP2.length; l++) {
+		document.getElementById(PANDMP2[l]).style.display = (PANDMP2[l] == pndmp2) ? "block" : "none";
+    }
 }
-.sidenavMobile:hover {
 	
-
-}
-.content {
-	max-width: 100%;
-	margin-left: 80px;
-	padding-left: 0;
-	padding-right: 0;
-	height: inherit;
-	z-index: 0;
-	top: 0;
-	left: 0;
-	background:;
-}
-.tv {
-	max-width: 100%;
-	margin: 50px;
-	padding-left: 0;
-	padding-right: 0;
-	height: inherit;
-	z-index: 0;
-	top: 0;
-	left: 0;
-	background:;
-}
-.tvScreen{
-	display: block;
-	float: left;
-	top: 0;
-	left: 0;
-	width: 75%;
-	height: auto;
-	background-color:#E4E4E4;
-}
-.tvText{
-	display: block;
-	float: left;
-	top: 0;
-	left: 0;
-	width: 25%;
-	height:100%;
-	height: auto;
-	background-color:#171717;
-}
-
-
-span {
-  border-right: .05em solid;
-  animation: caret 1s steps(1) infinite;
-}
-
-@keyframes caret {
-  50% {
-    border-color: transparent;
-  }
-}
-.contentTop {
-	max-width: 100%;
-	padding: 0;
-	max-height: 200px;
-	height: inherit;
-	z-index: -1;
-	top: 0;
-	left: 0;
-	overflow-y: hidden;
-	transition: 1s;
-}
-.contentWhite {
-	display:block;
-	transform: translateX(80px);
-	max-width: calc(100% - 80px);
-	padding-left: 70px;
-	padding-right: 70px;
-	height: auto;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	background-color:#F5F5F5;
-	transition: 1s;
-}
-.contentBlack {
-	display: none;
-	max-width: calc(100% - 80px);
-	padding-left: 70px;
-	padding-right: 70px;
-	height: inherit;
-	z-index: 2;
-	top: 0;
-	left: 0;
-	background-color:#F6F6F6;
-}
-.contain {
-	max-width: 100%;
-	padding: 10px;
-	padding-bottom: 30px;
-	background: #E4E4E4;
-	height: inherit;
-	top: 0;
-	left: 0;
-}
-.bottonGroup {
-	height: 100px;
-	background-color: firebrick;
-	top: 0;
-	left: 0;
-}
-.footer {
-	font-family: 'Raleway', sans-serif;
-	transform: translateX(80px);
-	padding-right: 20px;
-	padding-top: 10px;
-	max-width: calc(100% - 80px);
-	height: 70px;
-	z-index: 20;
-	top: 0;
-	left: 0;
-	background-color:#2A2A2A;
-	transition: 1s;
-}
-.divide {
-	max-width: calc(100% - 80px);
-	transform: translateX(80px);
-	height: 1px;
-	z-index: 0;
-	top: 0;
-	left: 0;
-	background-color:#2A2A2A;
-	transition: 1s;
-}
-.card {
-	width: 100%;
-	transition: 0.3s;
-	background: #E4E4E4;
-	border-style: solid;
-    border-width: 1px;
-    border-color:#E4E4E4;
-	padding-bottom: 10px;
-}
-.card:hover {
-	border-style: solid;
-    border-width: 1px;
-    border-color: #2E2E2E;
-}
-.bioImg {
-	border-radius: 5px;
-	height: auto;
-	float: left;
-	top: 0;
-	left: 0;
-	width: 33.3%;
-	overflow-x: hidden;
-}
-.bioText {
-	border-radius: 5px;
-	margin-top: auto;
-	padding: 16px;
-	display: block;
-	float: left;
-	top: 0;
-	left: 0;
-	width: 66.7%;
-	height: inherit;
-	max-height: 300px;
-	z-index: 5;
-}
-.third {
-	display: block;
-	float: left;
-	top: 0;
-	left: 0;
-	width: 33.3%;
-	height: 100%;
-	background-color: #E4E4E4;
-}
-.half {
-	font-family: 'Raleway', sans-serif;
-	display: block;
-	float: left;
-	top: 0;
-	left: 0;
-	width: 50%;
-	height: auto;
-	background-color:#E4E4E4;
-}
-.halfText {
-	display: block;
-	float: left;
-	top: 0;
-	left: 0;
-	width: 50%;
-	height: auto;
-	background-color:#048ECB;
-}
-.twoThird {
-	padding: 16px;
-	display: block;
-	float: left;
-	top: 0;
-	left: 0;
-	width: 66.7%;
-	height: 100%;
-	background-color: blue;
-	z-index: 5;
-}
-img.ic {
-	position: absolute;
-	width: 80px;
-	margin-top: 10px;
-	margin-left: 5px;
-	float: center;
-	left: 79px;
-	top: -10px;
-	z-index: 10;
-	transition: 1s;
-}
-img.bio {
-	display: block;
-	float: left;
-	top: 0;
-	left: 0;
-	width: 100%;
-	min-height: 100px;
-	height: inherit;
-	overflow-y: hidden;
-	overflow-x: hidden;
-}
-img.paw {
-	width: 60px;
-	margin-top: 20px;
-	-webkit-filter: invert(1);
-    filter: invert(1);
-	transition: 1s;
-}
-.bottom-left {
-	font-family: 'Raleway', sans-serif;
-	font-size: 10px;
-	position: absolute;
-	bottom: 0px;
-	left: 0;
-	z-index: 100;
-}
-.top-left {
-	position: absolute;
-	top: 3px;
-	left: 5px;
-}
-.top-right {
-	position: absolute;
-	top: 13px;
-	right: 20px;
-	cursor: pointer;
-}
-.bottom-right {
-	z-index: 100;
-	position: static;
-	bottom: 8px;
-	right: 16px;
-}
-.centered {
-	font-family: 'Amatic SC', cursive;
-	margin-left: 40px;
-	position: absolute;
-	top: 100px;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 150;
-	transition: 1s;
-}
-.typewrite{
-	font-family: 'Amatic SC', cursive;	
-	font-size: 7vw;
-	transition: 1s;
-}
-.offCentered {
-	min-width: 270px;
-	position: absolute;
-	top: 50px;
-	left: 50%;
-	transform: translate(-50%, -50%)
-}
-.column {
-	display: block;
-	float: left;
-	width: 50%;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	transition: 1s;
-}
-.column {
-	float: left;
-	width: 100%;
-}
-.row:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-.dispPanel {
-	width: 100%;
-	height: auto;
-	display: none;
-}
-.dispPanels {
-	width: 100%;
-	height: auto;
-	display: none;
-}
-.dispPanelz {
-	width: 100%;
-	height: auto;
-	display: none;
-}
-.dispPant {
-	width: 100%;
-	height: auto;
-	display: none;
-}
-.display {
-	width: 100%;
-	transition: 0.3s;
-}
-.display:hover{
-}
-.pagination a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-    transition: 1s, background-color .3s;
-	background-color: #E4E4E4;
-}
-
-.pagination a.active {
-	border: 1px solid #2E2E2E;
-    transition: background-color .3s;
-	background-color: #E4E4E4;
-}
-
-.pagination a:hover{background-color: #ddd;}
-	
-.contains {
-	margin-top: 30px;
-	margin-left: 22px;
-    display: inline-block;
-    cursor: pointer;
-	z-index: 301;
-	transition: 1s;
-}
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color:#000000;
-    margin: 6px 0;
-    transition: .4s;
-	border-radius: 3px;
-}
-
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-.change .bar2 {opacity: 0;}
-
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-}
-.navBox{
-	width: 70px;
-	margin: 5px;
-	height:0;
-	background-color:;
-	transition: 1s;
-	-webkit-transform: translateX(-80px);
-    transform: translateX(-80px);
-	opacity: .0;
-	display: hidden;
-	
-}
-.reveil .navBox{
-	display: block;
-	height: auto;
-	-webkit-transform: translateX(0px);
-    transform: translateX(0px);
-	opacity: 1;
-}
-.vertical-text {
-	float: bottom;
-	bottom:0;
-	margin-left: 30px;
-	width: 500px;
-	transform: rotate(-90deg);
-	transform-origin: left top 0;
-}
-.btn {
-  width: 0;
-  height: 0;
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 0px;
-  color: white;
-  background-color: #363636;
-  text-align: center;
-  cursor: pointer;
-  margin:30px;
-  margin-left: 10px;
-  width: auto;
-  transition: 0.3s;
-  text-decoration: none;
-}
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 90%;
-}
-.modalVideo {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    height: 100%;
-	overflow-x: hidden;
-}
-
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.button {
-  width: 0;
-  height: 0;
-  &:hover {
-    fill: white; 
-  }
-}
-
-.defs {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
-.buttons {
-  padding: 0;
-  background: #f06d06;
-  float: center;
-}
-iframe {
-  float: left;
-  width: 350px;
-  height: 200px;
-}
-		
-/*! Modals v10.1.2 | (c) 2017 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/modals */
-.modal{
-	margin-left: 80px;
-	background-color:aqua;
-	border-radius:5px;
-	box-shadow:0 10px 5px rgba(0,0,0,.3);
-	display:none;
-	max-width:100%;
-	padding:5px;
-	visibility:hidden;
-	z-index:2
-	}
-.modal.active{
-		transition: 2s;
-		margin-left: 80px;
-		display:block;
-		max-width: 70%;
-		height:100%;
-		left:0;
-		max-height:100%;
-		overflow:auto;
-		position:fixed;
-		right:0;
-		top:0;
-		visibility: visible;
-	}
-@media (min-width:30em){
-		.modal.active{height:auto;
-			left:3%;
-			margin-left:auto;
-			margin-right:auto;
-			right:3%;top:50px}
-}
-@media (min-width:40em){
-	.modal.active{
-			left:8%
-			;right:8%
-	}
-	.modal.active.modal-medium{width:35em}
-	.modal.active.modal-small{width:25em}
-}
-.modal:focus{outline:none}
-.modal-bg{
-	transition: 1s;
-	background-color:#272727;
-	bottom:0;
-	position:fixed;
-	left:0;
-	opacity:.8;
-	right:0;
-	top:0;z-index:1;
-}
-.close{
-	color:gray;
-	cursor:pointer;
-	float:right;
-	font-weight:700;
-	font-size:1.5em;
-	text-decoration:none;
-}
-.close:hover{
-	color:#5a5a5a;
-	cursor:pointer
-}
-.sidenavBar {
-    height: 100%;
-    width: 0;
-    position:fixed;
-    z-index: 200;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-	font-family: 'Raleway', sans-serif;
-	overflow-x: hidden;
-}
-
-.sidenavBar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-	overflow-x: hidden;
-	font-family: 'Raleway', sans-serif;
-}
-
-.sidenavBar a:hover {
-    color: #f1f1f1;
-}
-
-.sidenavBar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-	#href{
-		max-width: inherit;
-	}
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-.tab { margin-left: 40px; }
-#myCheck {
-  position: absolute;
-  left: -100%;
-  top: -100%;
-}
-.mobileNav{
-	width: auto;
-	background-color: #E4E4E4;
-	min-width: 272px;
-	transition: .3s;
-	-webkit-transform: translate(-50%, -120px);
-	transform: translate(-50%, -120px);
-	display: hidden;
-	cursor: context-menu;
-}
-.btn-group button {
-	max-height: 0;
-    color: white; /* White text */
-    padding: 0px; /* Some padding */
-    float: center; /* Float the buttons side by side */
-}
-.open .mobileNav{
-	display: inline-block;
-	height: auto;
-	min-width: 272px;
-	-webkit-transform: translate(-50%, -75px);
-	transform: translate(-50%, -75px);
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    #p2{margin-left:0}
-	#p3{margin-left:0}
-	#p4{margin-left:0}
-	#p5{margin-left:0}
-	.vertical-text{display: none;}
-	.centered{
-		top: 25px;
-		margin-left:0;
-	}
-	.contains{
-		margin-top: 0;
-		margin-left: 0;
-		transform: translateX(-15px);
-		display: block;
-		cursor: pointer;
-	}
-
-	.bar4, .bar5, .bar6 {
-		width: 25px;
-		height: 3px;
-		background-color:#000000;
-		margin: 5px 0 0 0;
-		transition: 0.4s;
-		border-radius: 3px;
-	}
-
-	.change .bar4 {
-		-webkit-transform: rotate(-45deg) translate(-6px, 6px);
-		transform: rotate(-45deg) translate(-6px, 6px);
-	}
-
-	.change .bar5 {opacity: 0;}
-
-	.change .bar6 {
-		-webkit-transform: rotate(45deg) translate(-6px, -6px);
-		transform: rotate(45deg) translate(-6px, -6px);
-	}
-	.sidenavBar {
-		height: 0;
-		width: 100%;
-		position:fixed;
-		z-index: 200;
-		top: 0;
-		left: 0;
-		background-color: #111;
-		overflow-x: hidden;
-		transition: 0.5s;
-		padding-top: 60px;
-		font-family: 'Raleway', sans-serif;
-		overflow-x: hidden;
-	}
-
-	.sidenavBar a {
-		padding: 8px 8px 8px 32px;
-		text-decoration: none;
-		color: #818181;
-		display: block;
-		transition: 0.3s;
-		overflow-x: hidden;
-	}
-
-	.sidenavBar a:hover {
-		color: #f1f1f1;
-	}
-
-	.sidenavBar .closebtn {
-		position: absolute;
-		top: 0;
-		right: 25px;
-		font-size: 36px;
-		margin-left: 50px;
-	}
-	.contentBlack{
-		height: auto;
-		display: block;
-		margin-left: 0;
-		padding-left: 10px;
-		padding-right: 10px;
-		max-width: 100%;
-	}
-	.contentWhite{
-		display: none;	
-	}
-	.bioImg {
-		display: block;
-		float: left;
-		top: 0;
-		left: 0;
-		width: 40%;
-		height: auto;
-		overflow-y: hidden;
-		overflow-x: hidden;
-	}
-	.bioText {
-		font-size: 12px;
-		padding: 10px;
-		display: block;
-		float: left;
-		top: 0;
-		left: 0;
-		width: 60%;
-		height: inherit;
-		z-index: 5;
-	}
-	.column {
-		width: 100%;
-		display: block;
-	}
-	.contentTop {
-		max-width: 100%;
-		margin-top: 50px;
-		margin-left: 0;
-		max-height: 0;
-		display: none;
-	}
-	.content {
-		padding: 0;
-		margin:0;
-		width: 100%;
-		margin-left: 0;
-		margin-top: 0;
-		height: auto;
-		z-index: 0;
-		top: 0;
-		left: 0;
-		background:#A2AEB6;
-	}
-	.footer {
-		max-width: 100%;
-		transform: translateX(0px);
-		margin-left: 0;
-		height: 50px;
-		z-index: 0;
-		top: 0;
-		left: 0;
-	}
-	.third {
-		width: 50%;
-		height: inherit;
-	}
-	.twoThird {
-		padding: 16px;
-		width: 100%;
-		height: inherit;
-		z-index: 5;
-	}
-	.sidenav {
-		display: none;
-	}
-	.sidenavMobile{
-		display:block;
-		position: fixed;	
-	}
-	.divide{
-		display:none;
-	}
-	img.ic {
-		display: none;
-	}
-	img.paw {
-		width: 30px;
-		margin-top: 0;
-		margin-left: 5px;
-		transform: translateY(-5px);
-	}
-	.display {
-		width: 95%;
-	}	
-	.half {
-		display: block;
-		float: left;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: auto;
-		background-color: #E4E4E4;
-	}
-	.card{
-		padding-bottom: 20px;	
-	}
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 600px) {
-	.contentWhite {
-		padding: 10px;
-		max-width: calc(100% - 60px);
-		transform: translateX(60px);
-	}
-	.sidenav {
-		width: 60px;
-	}
-	.contentTop{
-		max-height: 100px;
-	}
-	.centered {
-		top: 50px;
-	}
-	.typewrite {
-		font-size: 5vw;
-	}
-	img.ic {
-		width: 60px;
-		left: 59px;
-	}
-	img.paw {
-		width: 45px;
-		margin-left: 2px;
-		margin-top: 10px;
-	}
-	.column {
-		margin-top:5px;
-		margin-bottom: 0px;
-	}
-	.contains {
-		margin-left: 16px;
-	}
-	.divide {
-		max-width: calc(100% - 60px);
-		transform: translateX(60px);
-		
-	}
-	.footer {
-		max-width: calc(100% - 60px);
-		transform: translateX(60px);
-	}
-	.reveil .navBox{
-		-webkit-transform: translateX(-6px);
-		transform: translateX(-6px);
-	}
-} 
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 992px) {
-	.typewrite {
-		font-size: 6vw;
-	}
-	img.ic {
-		width: 80px;
-		left: 79px;
-	}
-	img.paw {
-		width: 60px;
-		margin-top: 15px;
-	}
-	.sidenav {
-		width: 80px;
-	}
-	.contentWhite{
-		padding-left: 100px;
-		padding-right: 70px;
-	}
-	.contentTop {
-		max-height: 200px;
-	}
-	.centered {
-		top: 100px;
-	}
-	.column {
-		margin-top:15px;
-		margin-bottom: 15px;
-	}
-	.bar1, .bar2, .bar3 {
-		width: 35px;
-		margin: 6px 0;
-		border-radius: 3px;
-	}
-	.contains {
-		margin-left: 26px;
-	}
-	.divide {
-		max-width: 100%;
-	}
-	.footer {
-		max-width: 100%;
-	}
-	.reveil .navBox{
-		-webkit-transform: translateX(0px);
-		transform: translateX(0px);
-	}
-}
+function togglePantP2 (pntp2) {
+	for (var o=0; o < PANTP2.length; o++) {
+		document.getElementById(PANTP2[o]).style.display = (PANTP2[o] == pntp2) ? "block" : "none";
+    }
+}
+function togglePantMobileP2 (pntmp2) {
+	for (var k=0; k < PANTMP2.length; k++) {
+		document.getElementById(PANTMP2[k]).style.display = (PANTMP2[k] == pntmp2) ? "block" : "none";
+    }
+}
+</script>
+</html>
