@@ -1,4 +1,3 @@
-<!doctype html>
 <html><head>
 <meta charset="utf-8">
 <title>Art 75 - Portfolio</title>
@@ -13,7 +12,7 @@
 
 </head>
 
-<body onLoad="togglePanelP2(PANELSP2[0]), togglePanelsP2(PANP2[0]), togglePanelzP2(PANZP2[0]), togglePaneledP2(PANDP2[0]), togglePantP2(PANTP2[0]), togglePanelMobileP2(PANELSMP2[0]), togglePanelsMobileP2(PANMP2[0]), togglePanelzMobileP2(PANZMP2[0]), togglePaneledMobileP2(PANDMP2[0]), togglePantMobileP2(PANTMP2[0])">
+<body onLoad="toggleMenuType(MENUTYPE[0]), togglePanelP2(PANELSP2[0]), togglePanelsP2(PANP2[0]), togglePanelzP2(PANZP2[0]), togglePaneledP2(PANDP2[0]), togglePantP2(PANTP2[0]), togglePanelMobileP2(PANELSMP2[0]), togglePanelsMobileP2(PANMP2[0]), togglePanelzMobileP2(PANZMP2[0]), togglePaneledMobileP2(PANDMP2[0]), togglePantMobileP2(PANTMP2[0])">
 <div class="ct" id="t1">
   <div class="ct" id="t2">
     <div class="ct" id="t3">
@@ -29,11 +28,11 @@
 				  <div class="bar3"></div>
 					</label>
 					<ul id="text" class="navBox" style="z-index: 500; padding-top: 100px; display: hidden;" for="myCheck">
-						<a href="#t1"><li class="icon fa fa-home" style="filter: invert(100); margin-bottom: 10px; transform: scale(1);" id="uno"></li></a>
-						<a href="#t2"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="dos"></li></a>
-						<a href="#t3"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="tres"></li></a>
-						<a href="#t4"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="cuatro"></li></a>
-						<a href="#t5"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="cinco"></li></a>
+						<a href="#t1"><li href="javascript:toggleMenuType(MENUTYPE[0])" class="icon fa fa-home" style="filter: invert(100); margin-bottom: 10px; transform: scale(1);" id="uno"></li></a>
+						<a href="#t2"><li href="javascript:toggleMenuType(MENUTYPE[1])" class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="dos"></li></a>
+						<a href="#t3"><li href="javascript:toggleMenuType(MENUTYPE[2])" class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="tres"></li></a>
+						<a href="#t4"><li href="javascript:toggleMenuType(MENUTYPE[3])" class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="cuatro"></li></a>
+						<a href="#t5"><li href="javascript:toggleMenuType(MENUTYPE[4])" class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="cinco"></li></a>
 					  </ul>
 				</div>
 				<div class="bottom-left"><p class="vertical-text">Hoekwater Development - 2018</p></div>
@@ -52,23 +51,74 @@
 
 			  <div id="texts" class="btn-group" style="z-index: 500; display: hidden;" for="myCheck">
 				<div class="offCentered mobileNav">
-								  <button class="btn"><a class="button" href="#t1"><i class="icon fa fa-home" style="filter: invert(100);transform: scale(.6);" id="uno"></i></a></button>
-									
-								  <button class="btn"><a class="button" href="#t2"><i class="icon fa fa-circle-thin" style="filter: invert(100);transform: scale(.4);" id="dos"></i></a></button>
+								  <button class="btn"><a href="#t1" onClick="javascript:toggleMenuType(MENUTYPE[0])"><i class="icon fa fa-home" style="filter: invert(100);transform: scale(.6);"></i></a></button>									
+								  <button class="btn"><a href="#t2" onClick="javascript:toggleMenuType(MENUTYPE[1])"><i class="icon fa fa-circle-thin" style="filter: invert(100);transform: scale(.4);"></i></a></button>
 								
-								  <button class="btn"><a class="button" href="#t3"><i class="icon fa fa-circle-thin" style="filter: invert(100);transform: scale(.4);" id="tres"></i></a></button>
+								  <button class="btn"><a href="#t3" onClick="javascript:toggleMenuType(MENUTYPE[2])"><i class="icon fa fa-circle-thin" style="filter: invert(100);transform: scale(.4);"></i></a></button>
 								 
-							      <button class="btn"><a class="button" href="#t4"><i class="icon fa fa-circle-thin" style="filter: invert(100);transform: scale(.4);" id="cuatro"></i></a></button>
+							      <button class="btn"><a href="#t4" onClick="javascript:toggleMenuType(MENUTYPE[3])"><i class="icon fa fa-circle-thin" style="filter: invert(100);transform: scale(.4);"></i></a></button>
 									
-								  <button class="btn"><a class="button" href="#t5"><i class="icon fa fa-circle-thin" style="filter: invert(100); transform: scale(.4);" id="cinco"></i></a></button>
+								  <button class="btn"><a href="#t5" onClick="javascript:toggleMenuType(MENUTYPE[4])"><i class="icon fa fa-circle-thin" style="filter: invert(100);transform: scale(.4);"></i></a></button>
 								  
 								</div>
 							  </div>
 						</div>
 			</div>
+			 <div class="sidenavMobile" style="background-color:#E4E4E4; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color="black";">
+			 	<div CLASS="displayMenu" ID="menu_1">
+				  <div class="centered">
+
+					<h1>
+					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "1Hello.", "This is My Portfolio.", "Art 75.", "Check out my work!" ]'>
+						<span class="wrap"></span>
+					  </a>
+					</h1>
+				  </div>			  
+			 </div>
+			 <div CLASS="displayMenu" ID="menu_2"> 
+				  <div class="centered">
+
+					<h1>
+					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "2Hello.", "This is Project One.", "Art 75.", "Check out my work!" ]'>
+						<span class="wrap"></span>
+					  </a>
+					</h1>
+				  </div>			  
+			 </div>
+			 <div CLASS="displayMenu" ID="menu_3">
+				  <div class="centered">
+					<h1>
+					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "3Hello.", "This is Project Two.", "Experimental Narratives.", "Check out my work!" ]'>
+						<span class="wrap"></span>
+					  </a>
+					</h1>
+				  </div>			  
+			 </div>
+			 <div CLASS="displayMenu" ID="menu_4">
+				  <div class="centered">
+
+					<h1>
+					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "4Hello.", "This is Project Three.", "Art 75.", "Check out my work!" ]'>
+						<span class="wrap"></span>
+					  </a>
+					</h1>
+				  </div>				  
+			 </div>
+			 <div CLASS="displayMenu" ID="menu_5">
+				  <div class="centered">
+
+					<h1>
+					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "5Hello.", "This is Project Four.", "Art 75.", "Check out my work!" ]'>
+						<span class="wrap"></span>
+					  </a>
+					</h1>
+				  </div>				  
+			 </div>
+			 </div>
 			 
-          <div class="page" id="p3">
-             <section class="icon fa fa-bolt"><span class="title">Bolt</span><span class="hint">Like this pen to see the magic!...<br> Just kidding, it won't happen anything but I'll be really happy If you do so.</span></section>  
+          <div class="page" id="p1">
+			  
+			  
           </div> 
 			 
 		  <div class="page" id="p2">
@@ -77,16 +127,6 @@
 			 
           <div class="page" id="p3" onmouseover="closeNav()">
 			  
-			<div class="sidenavMobile" style="background-color:#E4E4E4; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color="black";"> 
-				  <div class="centered">
-
-					<h1>
-					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "Hello.", "This is Project Two.", "Experimental Narratives.", "Check out my work!" ]'>
-						<span class="wrap"></span>
-					  </a>
-					</h1>
-				</div>
-				</div>
 			<div class="contentTop"> 
 				<div class="centered">
 
@@ -183,9 +223,9 @@
 										<p style="font-size:1.5vw;">Video 2-2: Where Cameras Don't Belong Final Cut</p><p style="font-size:1vw;">So during the critique, it came to my attention that I forgot to put music in the video. Luckily it wasn't too hard to fix. During post I edited an audio clip to make it sound muffled then, when it reaches the ear, it becomes clear. This project was unique. I enjoyed the planning and imagination aspects that went behind this video.</p>
 										<hr>
 										<div class="pagination">
-												<a href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])">Rough Cut</a>
-												<a href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])" class="active">Final Cut</a>
-												<a href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])">Mount</a>
+												<a href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])" style="font-size:1vw;">Rough Cut</a>
+												<a href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])" class="active" style="font-size:1vw;">Final Cut</a>
+												<a href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])" style="font-size:1vw;">Mount</a>
 									  </div>
 									</div>
 								</div>
@@ -206,9 +246,9 @@
 										<p style="font-size:1.5vw;">Video 2-2: Where Cameras Don't Belong Mount System</p><p style="font-size:1vw;">This mount took some planning. I started with my camera case. I knew I wanted to use a fish eye lens, so using the camera case was already a final choice. Figuring out how to mount the ear bud was another issue. I ended up using about 10 rubber bands, one paper clip, two pieces of clear tape, and three pens. I created a ledge for the paper clip to rest on with the pens as i taped it down. I eased the earbud on the paper clip concealing the metal behind the chord. Lastly, I squeezed my hand in the rubber bands as they acted as my handle, then with some awkward arms movements, the mount looked somewhat convincing.</p>
 										<hr>
 										<div class="pagination">
-												<a href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])">Rough Cut</a>
-												<a href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])">Final Cut</a>
-												<a href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])" class="active">Mount</a>
+												<a href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])" style="font-size:1vw;">Rough Cut</a>
+												<a href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])" style="font-size:1vw;">Final Cut</a>
+												<a href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])" class="active" style="font-size:1vw;">Mount</a>
 									  </div>
 									</div>
 								</div>
@@ -244,8 +284,8 @@
 										<p style="font-size:1.5vw;">Video 2-3: Phase 1 - Creative Question and Scouting Mission Mind Map</p><p style="font-size:1vw;">For this part of the assignment we had to, with a partner, come up with a creative question and answer that question through the video. Phase 1 starts out with a mind map where we come up with all of our ideas. Second, we took our test video.</p>
 										<hr>
 										<div class="pagination">
-											<a href="javascript:togglePanelzP2(PANZP2[0])" class="active" style="font-size:1vw;">Mind Map</a>
-											<a href="javascript:togglePanelzP2(PANZP2[1])" style="font-size:1vw;">Test Footage</a>
+											<a href="javascript:togglePanelzP2(PANZP2[0]), togglePanelzMobileP2(PANZMP2[0])" class="active" style="font-size:1vw;">Mind Map</a>
+											<a href="javascript:togglePanelzP2(PANZP2[1]), togglePanelzMobileP2(PANZMP2[1])" style="font-size:1vw;">Test Footage</a>
 										</div>
 									</div>
 								</div>
@@ -266,8 +306,8 @@
 										<p style="font-size:1.5vw;">Video 2-3: Phase 1 - Creative Question and Scouting Mission Test Footage</p><p style="font-size:1vw;">For our test footage we went to the library at San Jose State University and filmed the ground floor as well as the eighth floor. The goal was to find the noise difference between each floor. While for our final video we plan on recording more floors, the test footage was good for us to get an assumption of how our creative question pans out.</p>
 										<hr>
 										<div class="pagination">
-											<a href="javascript:togglePanelzP2(PANZP2[0])" style="font-size:1vw;">Mind Map</a>
-											<a href="javascript:togglePanelzP2(PANZP2[1])" class="active" style="font-size:1vw;">Test Footage</a>
+											<a href="javascript:togglePanelzP2(PANZP2[0]), togglePanelzMobileP2(PANZMP2[0])" style="font-size:1vw;">Mind Map</a>
+											<a href="javascript:togglePanelzP2(PANZP2[1]), togglePanelzMobileP2(PANZMP2[1])" class="active" style="font-size:1vw;">Test Footage</a>
 										</div>
 									</div>
 								</div>
@@ -285,18 +325,18 @@
 									<div class="contain">
 										<p style="font-size:1.5vw;">Video 2-3: Phase 2 - Rough Cut Surveillance Video Presentation</p>
 										<div class="dispPant" ID="pntp2_1">
-											<p style="font-size:1vw;">Artist Statement:</p><p style="font-size:1vw;">How much noise can you hear in the library? We asked this question to understand the different levels within each floor of the library here at SJSU. We are told that each floor is supposed to be more quiet as we reach the top, and we set out to examine how each floor varies in sound. We found that the floors don't necessarily get louder as we go lower, but rather vary due to population and often popularity. The forth floor or "Spartan Floor" has the most students and it is the loudest floor in the library, mostly due to the amount of students and the volume they communicate at... <a href="javascript:togglePantP2(PANTP2[1])" class="tab" style="font-size:1vw;color:#898989;">Continue Reading</a>
+											<p style="font-size:1vw;">Artist Statement:</p><p style="font-size:1vw;">How much noise can you hear in the library? We asked this question to understand the different levels within each floor of the library here at SJSU. We are told that each floor is supposed to be more quiet as we reach the top, and we set out to examine how each floor varies in sound. We found that the floors don't necessarily get louder as we go lower, but rather vary due to population and often popularity. The forth floor or "Spartan Floor" has the most students and it is the loudest floor in the library, mostly due to the amount of students and the volume they communicate at... <a href="javascript:togglePantP2(PANTP2[1]),togglePantMobileP2(PANTMP2[1])" class="tab" style="font-size:1vw;color:#898989;">Continue Reading</a>
 											</p>
 										</div>
 										<div class="dispPant" ID="pntp2_2">
-											<p style="font-size:1vw;">Artist Statement:</p><p style="font-size:1vw;">While the students aren't intentionally being loud, the amount of students decides how loud the overall floor becomes. We continue down and come to find that the next floors aren't at all louder in any sense. That the constant traffic of people and movement from one point to the next is the only distinguishing sound. We came to understand the theory of volume controlled floors, ultimately drawing the conclusion that each floor may have a suggested volume, but is inconsistent due to the population of students and the amount of sounds they make during that time of day. <a href="javascript:togglePantP2(PANTP2[0])" class="tab" style="font-size:1vw;color:#898989;">Back</a>
+											<p style="font-size:1vw;">Artist Statement:</p><p style="font-size:1vw;">While the students aren't intentionally being loud, the amount of students decides how loud the overall floor becomes. We continue down and come to find that the next floors aren't at all louder in any sense. That the constant traffic of people and movement from one point to the next is the only distinguishing sound. We came to understand the theory of volume controlled floors, ultimately drawing the conclusion that each floor may have a suggested volume, but is inconsistent due to the population of students and the amount of sounds they make during that time of day. <a href="javascript:togglePantP2(PANTP2[0]),togglePantMobileP2(PANTMP2[0])" class="tab" style="font-size:1vw;color:#898989;">Back</a>
 											</p>
 										</div>
 										<hr>
 										<div class="pagination">
-											<a href="javascript:togglePaneledP2(PANDP2[0])" class="active" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePaneledP2(PANDP2[1])" style="font-size:1vw;">Final Cut</a>
-											<a href="javascript:togglePaneledP2(PANDP2[2])" style="font-size:1vw;">Set-Up</a>
+											<a href="javascript:togglePaneledP2(PANDP2[0]), togglePaneledMobileP2(PANDMP2[0])" class="active" style="font-size:1vw;">Rough Cut</a>
+											<a href="javascript:togglePaneledP2(PANDP2[1]), togglePaneledMobileP2(PANDMP2[1])" style="font-size:1vw;">Final Cut</a>
+											<a href="javascript:togglePaneledP2(PANDP2[2]), togglePaneledMobileP2(PANDMP2[2])" style="font-size:1vw;">Set-Up</a>
 										</div>
 									</div>
 								</div>
@@ -318,9 +358,9 @@
 										<p style="font-size:1.5vw;">Video 2-3: Phase 2 - Final Cut Surveillance Video Presentation</p><p style="font-size:1vw;">Process:</p><p style="font-size:1vw;">To demonstrate our creative question, we took it upon ourselves to film every floor in the library and record video and audio to ultimately distinguish the audio differences on each floor. We used the elevator shot and numbers to present the floor location, and the "middle" of each room for our main shot. After the critique, we applied the advice of our peers and shortened the clip. It originally stood at around 2:39, I sped up the clips to make more efficient use of the audience's time. Less time in the elevator and more time on the floor.</p>
 										<hr>
 										<div class="pagination">
-											<a href="javascript:togglePaneledP2(PANDP2[0])" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePaneledP2(PANDP2[1])" class="active" style="font-size:1vw;">Final Cut</a>
-											<a href="javascript:togglePaneledP2(PANDP2[2])" style="font-size:1vw;">Set-Up</a>
+											<a href="javascript:togglePaneledP2(PANDP2[0]), togglePaneledMobileP2(PANDMP2[0])" style="font-size:1vw;">Rough Cut</a>
+											<a href="javascript:togglePaneledP2(PANDP2[1]), togglePaneledMobileP2(PANDMP2[1])" class="active" style="font-size:1vw;">Final Cut</a>
+											<a href="javascript:togglePaneledP2(PANDP2[2]), togglePaneledMobileP2(PANDMP2[2])" style="font-size:1vw;">Set-Up</a>
 										</div>
 									</div>
 								</div>
@@ -341,9 +381,9 @@
 										<p style="font-size:1.5vw;">Video 2-3: Phase 2 - Camera Set-Up</p><p style="font-size:1vw;">We had a basic set-up for the camera. I hooked up my Rode VideoMic Pro and we recorded raw audio to place over each clip. It was composed of quick pans and stationary shots from a student's perspective.</p>
 										<hr>
 										<div class="pagination">
-											<a href="javascript:togglePaneledP2(PANDP2[0])" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePaneledP2(PANDP2[1])" style="font-size:1vw;">Final Cut</a>
-											<a href="javascript:togglePaneledP2(PANDP2[2])" class="active" style="font-size:1vw;">Set-Up</a>
+											<a href="javascript:togglePaneledP2(PANDP2[0]), togglePaneledMobileP2(PANDMP2[0])" style="font-size:1vw;">Rough Cut</a>
+											<a href="javascript:togglePaneledP2(PANDP2[1]), togglePaneledMobileP2(PANDMP2[1])" style="font-size:1vw;">Final Cut</a>
+											<a href="javascript:togglePaneledP2(PANDP2[2]), togglePaneledMobileP2(PANDMP2[2])" class="active" style="font-size:1vw;">Set-Up</a>
 										</div>
 									</div>
 								</div>
@@ -361,7 +401,7 @@
 			  </div>
 			</div>
 
-			<div class="contentBlack" style="padding-top: 15px;">
+			<div class="contentBlack" style="padding-top: 50px;">
 			  <div class="row">
 					<div class="column card">
 						<div CLASS="dispPanel" ID="pnmp2_1">
@@ -589,10 +629,14 @@
 			</div>
           </div>
 			 
-		  <div class="page" id="p3">
-            <section class="icon fa fa-circle-thin" style="filter: invert(100)"><p>Project Four</p></section>
+		  <div class="page" id="p4">
+            
           </div>
-</div> 
+		
+		  <div class="page" id="p5">
+             <section class="icon fa fa-bolt"><span class="title">Bolt</span><span class="hint">Like this pen to see the magic!...<br> Just kidding, it won't happen anything but I'll be really happy If you do so.</span></section>  
+          </div>
+		  </div> 
         </div>
       </div>
     </div>
@@ -749,6 +793,10 @@ modals.init({
         css.type = "text/css";
         css.innerHTML = ".typewrite > .wrap {border-right: 0.03em solid black}";
         document.body.appendChild(css);
+
+<!--
+var MENUTYPE = new Array("menu_1", "menu_2", "menu_3", "menu_4", "menu_5");
+
 <!--
 var PANELSP2 = new Array("pnp2_1", "pnp2_2");
 <!--
@@ -769,6 +817,14 @@ var PANDMP2 = new Array("pndmp2_1", "pndmp2_2", "pndmp2_3");
 var PANTP2 = new Array("pntp2_1", "pntp2_2");
 <!--
 var PANTMP2 = new Array("pntmp2_1", "pntmp2_2");
+	
+function toggleMenuType (menu) {
+	for (var m=0; m < MENUTYPE.length; m++) {
+		document.getElementById(MENUTYPE[m]).style.display = (MENUTYPE[m] == menu) ? "block" : "none";
+    }
+}
+	
+	
 // toggle to one of our panels
 function togglePanelP2 (pnl) {
 	for (var p=0; p < PANELSP2.length; p++) {
