@@ -16,14 +16,14 @@ body,
   overflow-y: auto;
 	font-family: 'Raleway', sans-serif;
 	margin-bottom: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 hr{
 	color: #2A2A2A;
 }
 .page{
   position: absolute;
-  overflow-y: auto;
 }
 	
 
@@ -431,7 +431,7 @@ a {
 	height: 50px;
 	width: 100%;
 	position: sticky;
-	z-index: 50;
+	z-index: 0;
 	top: 0;
 	left: 0;
 	background-color:;
@@ -721,7 +721,7 @@ img.paw {
 	transition: 1s;
 }
 .offCentered {
-	min-width: 270px;
+	min-width: 150px;
 	position: absolute;
 	top: 50px;
 	left: 50%;
@@ -854,8 +854,8 @@ img.paw {
   background-color: #363636;
   text-align: center;
   cursor: pointer;
-  margin:30px;
-  margin-left: 10px;
+  margin-top:30px;
+  margin-left: 1em;
   width: auto;
   transition: 0.3s;
   text-decoration: none;
@@ -1050,9 +1050,11 @@ iframe {
   top: -100%;
 }
 .mobileNav{
-	width: auto;
+	padding-left: 10px;
+	margin-left: 10px;
+	min-width: 200px;
 	background-color: #E4E4E4;
-	min-width: 272px;
+	width: auto;
 	transition: .3s;
 	-webkit-transform: translate(-50%, -120px);
 	transform: translate(-50%, -120px);
@@ -1066,9 +1068,10 @@ iframe {
     float: center; /* Float the buttons side by side */
 }
 .open .mobileNav{
+	margin-left: 10px;
 	display: inline-block;
 	height: auto;
-	min-width: 272px;
+	min-width: 200px;
 	-webkit-transform: translate(-50%, -75px);
 	transform: translate(-50%, -75px);
 }
@@ -1085,6 +1088,27 @@ iframe {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+	#t2:target .icon,
+	#t3:target .icon,
+	#t4:target .icon,
+	#t5:target .icon {
+	  transform: scale(.7);
+	  -webkit-transform: scale(.7);
+	  -moz-transform: scale(.7);
+	  -o-transform: scale(.7);
+		transition:1s;
+	}
+
+	#t2:target #dos,
+	#t3:target #tres,
+	#t4:target #cuatro,
+	#t5:target #cinco {
+	  transform: scale(.4) !important;
+	  -webkit-transform: scale(.4) !important;
+	  -moz-transform: scale(.4) !important;
+	  -o-transform: scale(.4) !important;
+		transition:1s;
+	}
     #p2{margin-left:0}
 	#p3{margin-left:0}
 	#p4{margin-left:0}
@@ -1236,7 +1260,12 @@ iframe {
 	}
 	.sidenavMobile{
 		display:block;
-		position: fixed;	
+		position: sticky;	
+	}
+	.sidenavMobileMenu{
+		display:block;
+		position:fixed;	
+		z-index: 1000;
 	}
 	.divide{
 		display:none;
@@ -1246,8 +1275,8 @@ iframe {
 	}
 	img.paw {
 		width: 30px;
-		margin-top: 0;
-		margin-left: 5px;
+		margin-top: 0px;
+		margin-left: 11px;
 		transform: translateY(-5px);
 	}
 	.display {
@@ -1375,3 +1404,4 @@ iframe {
 		transform: translateX(0px);
 	}
 }
+
