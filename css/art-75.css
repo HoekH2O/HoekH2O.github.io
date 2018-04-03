@@ -25,6 +25,8 @@ hr{
 .page{
   position: absolute;
 }
+	
+
 
 #p1 {
   left: 0;
@@ -1257,8 +1259,8 @@ iframe {
 		display: none;
 	}
 	.sidenavMobile{
-		display:block;
-		position: sticky;	
+		display: block;
+		position: fixed;
 	}
 	.sidenavMobileMenu{
 		display:block;
@@ -1402,4 +1404,3 @@ iframe {
 		transform: translateX(0px);
 	}
 }
-
