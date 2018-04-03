@@ -1320,7 +1320,7 @@ iframe {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 992px) {
 	.typewrite {
-		font-size: 7vw;
+		font-size: 6vw;
 	}
 	img.ic {
 		width: 80px;
