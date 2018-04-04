@@ -12,7 +12,7 @@
 
 </head>
 
-<body onLoad="toggleMenuType(MENUTYPE[0]), togglePanelP2(PANELSP2[0]), togglePanelsP2(PANP2[0]), togglePanelzP2(PANZP2[0]), togglePaneledP2(PANDP2[0]), togglePantP2(PANTP2[0]), togglePanelMobileP2(PANELSMP2[0]), togglePanelsMobileP2(PANMP2[0]), togglePanelzMobileP2(PANZMP2[0]), togglePaneledMobileP2(PANDMP2[0]), togglePantMobileP2(PANTMP2[0])">
+<body onLoad="toggleMenuType(MENUTYPE[0]), toggleMenuType2(MENUTYPE2[0]), openPageThree(), openPageOne()">
 <div class="ct" id="t1">
   <div class="ct" id="t2">
     <div class="ct" id="t3">
@@ -28,11 +28,11 @@
 				  <div class="bar3"></div>
 					</label>
 					<ul id="text" class="navBox" style="z-index: 500; padding-top: 100px; display: hidden;" for="myCheck">
-						<a href="#t1"><li href="javascript:toggleMenuType(MENUTYPE[0])" class="icon fa fa-home" style="filter: invert(100); margin-bottom: 10px; transform: scale(1);" id="uno"></li></a>
-						<a href="#t2"><li href="javascript:toggleMenuType(MENUTYPE[1])" class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="dos"></li></a>
-						<a href="#t3"><li href="javascript:toggleMenuType(MENUTYPE[2])" class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="tres"></li></a>
-						<a href="#t4"><li href="javascript:toggleMenuType(MENUTYPE[3])" class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="cuatro"></li></a>
-						<a href="#t5"><li href="javascript:toggleMenuType(MENUTYPE[4])" class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="cinco"></li></a>
+						<a href="#t1" onClick="javascript:toggleMenuType(MENUTYPE[0]), toggleMenuType2(MENUTYPE2[0])"><li class="icon fa fa-home" style="filter: invert(100); margin-bottom: 10px; transform: scale(1);" id="uno"></li></a>
+						<a href="#t2" onClick="javascript:toggleMenuType(MENUTYPE[1]), toggleMenuType2(MENUTYPE2[1])"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="dos"></li></a>
+						<a href="#t3" onClick="javascript:toggleMenuType(MENUTYPE[2]), toggleMenuType2(MENUTYPE2[2])"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="tres"></li></a>
+						<a href="#t4" onClick="javascript:toggleMenuType(MENUTYPE[3]), toggleMenuType2(MENUTYPE2[3])"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="cuatro"></li></a>
+						<a href="#t5" onClick="javascript:toggleMenuType(MENUTYPE[4]), toggleMenuType2(MENUTYPE2[4])"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="cinco"></li></a>
 					  </ul>
 				</div>
 				<div class="bottom-left"><p class="vertical-text">Hoekwater Development - 2018</p></div>
@@ -65,11 +65,11 @@
 						</div>
 			</div>
 			 <div class="sidenavMobile" style="background-color:#E4E4E4; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color="black";">
-			 	<div CLASS="displayMenu" ID="menu_1">
+			 <div CLASS="displayMenu" ID="menu_1">
 				  <div class="centered">
 
 					<h1>
-					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "1Hello.", "This is My Portfolio.", "Art 75.", "Check out my work!" ]'>
+					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "Hello.", "This is My Portfolio.", "Art 75.", "View my Projects." ]'>
 						<span class="wrap"></span>
 					  </a>
 					</h1>
@@ -79,7 +79,7 @@
 				  <div class="centered">
 
 					<h1>
-					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "2Hello.", "This is Project One.", "Art 75.", "Check out my work!" ]'>
+					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "Welcome.", "This is Project One.", "Art 75.", "Check out my work!" ]'>
 						<span class="wrap"></span>
 					  </a>
 					</h1>
@@ -88,7 +88,7 @@
 			 <div CLASS="displayMenu" ID="menu_3">
 				  <div class="centered">
 					<h1>
-					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "3Hello.", "This is Project Two.", "Experimental Narratives.", "Check out my work!" ]'>
+					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "Welcome.", "This is Project Two.", "Experimental Narratives.", "Check out my work!" ]'>
 						<span class="wrap"></span>
 					  </a>
 					</h1>
@@ -98,7 +98,7 @@
 				  <div class="centered">
 
 					<h1>
-					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "4Hello.", "This is Project Three.", "Art 75.", "Check out my work!" ]'>
+					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "Welcome.", "This is Project Three.", "Art 75.", "Check out my work!" ]'>
 						<span class="wrap"></span>
 					  </a>
 					</h1>
@@ -108,7 +108,7 @@
 				  <div class="centered">
 
 					<h1>
-					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "5Hello.", "This is Project Four.", "Art 75.", "Check out my work!" ]'>
+					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "Welcome.", "This is Project Four.", "Art 75.", "Check out my work!" ]'>
 						<span class="wrap"></span>
 					  </a>
 					</h1>
@@ -116,8 +116,270 @@
 			 </div>
 			 </div>
 			 
-          <div class="page" id="p1">
-			  
+          <div class="page" id="p1" onmouseover="closeNav()">
+			  <div class="contentTop"> 
+			 <div CLASS="displayMenu" ID="menu2_1">
+				  <div class="centered">
+
+					<h1>
+					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "Hello.", "This is My Portfolio.", "Art 75.", "View my Projects." ]'>
+						<span class="wrap"></span>
+					  </a>
+					</h1>
+				  </div>			  
+			 </div>
+			 <div CLASS="displayMenu" ID="menu2_2"> 
+				  <div class="centered">
+
+					<h1>
+					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "Welcome.", "This is Project One.", "Art 75.", "Check out my work!" ]'>
+						<span class="wrap"></span>
+					  </a>
+					</h1>
+				  </div>			  
+			 </div>
+			 <div CLASS="displayMenu" ID="menu2_3">
+				  <div class="centered">
+					<h1>
+					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "Welcome.", "This is Project Two.", "Experimental Narratives.", "Check out my work!" ]'>
+						<span class="wrap"></span>
+					  </a>
+					</h1>
+				  </div>			  
+			 </div>
+			 <div CLASS="displayMenu" ID="menu2_4">
+				  <div class="centered">
+
+					<h1>
+					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "Welcome.", "This is Project Three.", "Art 75.", "Check out my work!" ]'>
+						<span class="wrap"></span>
+					  </a>
+					</h1>
+				  </div>				  
+			 </div>
+			 <div CLASS="displayMenu" ID="menu2_5">
+				  <div class="centered">
+
+					<h1>
+					  <a class="typewrite" style="font-size: 5.5vw;" data-period="2000" data-type='[ "Welcome.", "This is Project Four.", "Art 75.", "Check out my work!" ]'>
+						<span class="wrap"></span>
+					  </a>
+					</h1>
+				  </div>				  
+			 </div>
+				<div class="topContain"><video src="video/whiteBG.mp4" autoplay loop class="display" style="position:static;"></video></div>
+			  <div class="top-left"> <img src="images/initials.png" class="ic"> </div>
+			</div>
+			<div class="divide"></div>
+			<div class="contentWhite">
+				<div class="row">
+					<div class="column">
+						<div class="third">						
+							<div class="row">
+								<div class="column card">									
+										<div class="bioImg" style="padding-left: 10px;">
+											<div class="proDisplay">
+												<img src="images/bio2.JPG" class="bio">
+											</div>
+										</div>
+										<div class="bioText">
+											<p style="font-size:1.5vw;">Jordan Hoekwater</p>
+											<p style="font-size:1vw;"><i class="fa fa-book fa-fw w3-margin-right w3-large w3-text-black"></i>San Jose State University</p>
+											<p style="font-size:1vw;"><i class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-black"></i>Art: Concentration in Digital Media</p>
+										</div>									
+								</div>
+								<div class="column card">
+									<div class="bioText">
+										<p style="font-size:1.2vw;">About Me</p>
+										<p style="font-size:.9vw;">"I am an artist. Cinematography has been a huge part of my life ever since I was a kid. I grew up making videos and learning from experiences. Dreams can truly be brought to life, and one day I hope to do just that."</p>
+									</div>
+									<div class="bioImg"  style="padding-right: 10px;">
+										<div class="proDisplay">
+											<img src="images/bio1.JPG" class="bio">
+										</div>
+									</div>
+								</div>
+							</div>
+				</div>
+				<div class="twoThird">
+					<div class="row">
+						<div class="column card">
+							<div CLASS="dispPanel" ID="pn_1">
+							  <div class="contain">
+								  <div class="contain">
+								  <p style="font-size:1.5vw;">Art 75 Course Description</p>
+									<p style="font-size:1vw;">This class focuses on experimentation with digital video techniques and processes informed by digital networks, personal audio/video recording and mobile computing. The course will address development of appropriate conceptual strategies for artistic production. A contemporary critical and theoretical perspective will be stressed. Projects will be presented using the Internet as a primary means of documentation as a rapidly evolving medium of expression</p>
+									<hr>
+								  <div class="pagination">
+									<a href="javascript:togglePanel(PANELS[0])" class="active" style="font-size:1vw;">Course Description</a>
+									<a href="javascript:togglePanel(PANELS[1])" style="font-size:1vw;">Reflection</a>
+								</div>
+							  </div>
+								 </div>
+						  </div>
+							<div CLASS="dispPanel" ID="pn_2">
+							  <div class="contain">
+								<div class="contain">
+								  <p style="font-size:1.5vw;">Portfolio Reflection</p>
+									<p style="font-size:1vw;">During my second semester San Jose State, we developed a portfolio that will highlight all of the great work we did during the year. I've learned a lot from this class and will continue to build on it in the years following. I hope that my work can spark creativity in your life, and to see the world in a new light. I really had a lot of fun developing this website and creating the videos within, it has and continues to be a learning experience and I can't wait to find out what else Digtial Media entails.</p>
+									<hr>
+								  <div class="pagination">
+									<a href="javascript:togglePanel(PANELS[0])" style="font-size:1vw;">Course Description</a>
+									<a href="javascript:togglePanel(PANELS[1])" class="active" style="font-size:1vw;">Reflection</a>
+								</div>
+							  </div>
+          					</div>
+						</div>
+						</div>
+					</div>
+					<div class="column card">
+						<div CLASS="dispPanels" ID="pns_1">
+						  <div class="contained">
+								<div class="half">
+									<div class="contain">
+										<p style="font-size:1.5vw;">Portfolio Projects</p>
+										<hr>
+										<div class="pagination">
+											<a href="javascript:togglePanels(PAN[1])" class="active" style="font-size:1vw;">View options</a>
+										</div>
+									</div>
+								</div>
+							  <div class="half">
+								  <div class="contain">
+									  <p style="font-size:1vw;">Information</p>
+									  <p style="font-size:.8vw;">Press button to open project files. You will be able to look through the context of each project and choose which page you'd like to visit.</p>
+								  </div>
+
+							  </div>
+						  </div>
+					  </div>
+						<div CLASS="dispPanels" ID="pns_2">
+						  <div class="contained">
+								<div class="half">
+									<div class="contain">
+										<p style="font-size:1.5vw;">Portfolio Projects</p>
+										<hr>
+										<div class="pagination">
+											<a href="javascript:togglePanels(PAN[2])" style="font-size:1vw;">One</a>
+											<a href="javascript:togglePanels(PAN[3])" style="font-size:1vw;">Two</a>
+											<a href="javascript:togglePanels(PAN[4])" style="font-size:1vw;">Three</a>
+											<a href="javascript:togglePanels(PAN[5])" style="font-size:1vw;">Four</a>
+										</div>
+									</div>
+								</div>
+							  <div class="half">
+								  <div class="contain">
+									  <p style="font-size:1vw;">Details</p>
+									  <p style="font-size:.8vw;">Throughout the semester we completed four projects, each exploring a different aspect of video art. Click on a project page to view it's context.</p>
+								  </div>
+
+							  </div>
+						  </div>
+					  </div>
+					  <div CLASS="dispPanels" ID="pns_3">
+						  <div class="contained">
+								<div class="half">
+									<div class="contain">
+										<p style="font-size:1.5vw;">Project One</p>
+										<hr>
+										<div class="pagination">
+											<a href="#t2" class="active" style="font-size:1vw;">View Project</a>
+											<a href="javascript:togglePanels(PAN[1])" style="font-size:1vw;">Back</a>
+										</div>
+									</div>
+								</div>
+							  <div class="half">
+								  <div class="contain">
+									  <p style="font-size:1vw;">Non-Narrative Video</p>
+									  <p style="font-size:.8vw;">- Video 1 and 1-1: Teamshoot and Introductions</p>
+									  <p style="font-size:.8vw;">- Video 1-2: Interview</p>
+									  <p style="font-size:.8vw;">- Video 1-3: Action Sequence</p>
+									  <p style="font-size:.8vw;">- Video 1-4: Non-Narrative Transition</p>
+									  <p style="font-size:.8vw;">- Video 1-5: Non-Linear Assemblage</p>
+								  </div>
+
+							  </div>
+						  </div>
+          				</div>
+					<div CLASS="dispPanels" ID="pns_4">
+						  <div class="contained">
+								<div class="half">
+									<div class="contain">
+										<p style="font-size:1.5vw;">Project Two</p>
+										<hr>
+										<div class="pagination">
+											<a href="#t3" class="active" style="font-size:1vw;">View Project</a>
+											<a href="javascript:togglePanels(PAN[1])" style="font-size:1vw;">Back</a>
+										</div>
+									</div>
+								</div>
+							  <div class="half">
+								  <div class="contain">
+									  <p style="font-size:1vw;">Experimental Narratives</p>
+									  <p style="font-size:.8vw;">- Video 2-1: Timelapse</p>
+									  <p style="font-size:.8vw;">- Video 2-2: Where Camera Don't Belong</p>
+									  <p style="font-size:.8vw;">- Video 2-3: Surveillance Phase 1</p>
+									  <p style="font-size:.8vw;">- Video 2-3: Surveillance Phase 2</p>
+								  </div>
+
+							  </div>
+						  </div>
+          				</div>
+					<div CLASS="dispPanels" ID="pns_5">
+						  <div class="contained">
+								<div class="half">
+									<div class="contain">
+										<p style="font-size:1.5vw;">Project Three</p>
+										<hr>
+										<div class="pagination">
+											<a href="#t4" class="active" style="font-size:1vw;">Project Coming Soon</a>
+											<a href="javascript:togglePanels(PAN[1])" style="font-size:1vw;">Back</a>
+										</div>
+									</div>
+								</div>
+							  <div class="half">
+								  <div class="contain">
+									  <p style="font-size:1vw;">Paradox, Simulation, and Net Art</p>
+									  <p style="font-size:.8vw;">- Video 3-1: Keyed Screen Selfie Moment</p>
+									  <p style="font-size:.8vw;">- Video 3-2: Call Outs, Animation and Motion Tracking</p>
+									  <p style="font-size:.8vw;">- Video 3-3: The Endless Loop</p>
+								  </div>
+
+							  </div>
+						  </div>
+          				</div>
+					<div CLASS="dispPanels" ID="pns_6">
+						  <div class="contained">
+								<div class="half">
+									<div class="contain">
+										<p style="font-size:1.5vw;">Project Four</p>
+										<hr>
+										<div class="pagination">
+											<a href="#t5" class="active" style="font-size:1vw;">Project Coming Soon</a>
+											<a href="javascript:togglePanels(PAN[1])" style="font-size:1vw;">Back</a>
+										</div>
+									</div>
+								</div>
+							  <div class="half">
+								  <div class="contain">
+									  <p style="font-size:1vw;">Paradox, Simulation, and Net Art</p>
+									  <p style="font-size:.8vw;">- Video 4-1: Phase 1 Speed Dating for Loglines</p>
+									  <p style="font-size:.8vw;">- Video 4-2: Phase 2 Written Proposal</p>
+									  <p style="font-size:.8vw;">- Video 4-3: Phase 3 Dailies</p>
+									  <p style="font-size:.8vw;">- Video 4-4: Phase 4 Presentation</p>
+								  </div>
+
+							  </div>
+						  </div>
+          				</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="footer">
+		<p style="font-size:0.75vw; text-align: right; color:#E4E4E4;">Version: 2.01</p>
+</div>
 			  
           </div> 
 			 
@@ -127,17 +389,7 @@
 			 
           <div class="page" id="p3" onmouseover="closeNav()">
 			  
-			<div class="contentTop"> 
-				<div class="centered">
-
-				<h1>
-				  <a class="typewrite" data-period="2000" data-type='[ "Hello.", "This is Project Two.", "Experimental Narratives.", "Check out my work!" ]'>
-					<span class="wrap"></span>
-				  </a>
-				</h1>
-			</div>
-				<div class="topContain"><video src="videos/whiteBG.mp4" autoplay loop class="display" style="position:static; z-index: -1;"></video></div>
-			  <div class="top-left"> <img src="images/initials.png" class="ic"> </div>
+			<div class="contentTop" style="height: 200px; background-color: ;"> 
 			</div>
 			  <div class="divide"></div>
 			<div class="contentWhite">
@@ -643,6 +895,7 @@
   </div>
 </body>
 <script language="JavaScript">
+
 function myFunction() {
     var checkBox = document.getElementById("myCheck");
     var text = document.getElementById("text");
@@ -793,10 +1046,42 @@ modals.init({
         css.type = "text/css";
         css.innerHTML = ".typewrite > .wrap {border-right: 0.03em solid black}";
         document.body.appendChild(css);
-
+	
+<!--	
+var OPENP1 = new Array();
+	
+//Menu start
 <!--
 var MENUTYPE = new Array("menu_1", "menu_2", "menu_3", "menu_4", "menu_5");
+<!--
+var MENUTYPE2 = new Array("menu2_1", "menu2_2", "menu2_3", "menu2_4", "menu2_5");
+//menu end
+	
+//page one start
+<!--
+var PANELS = new Array("pn_1", "pn_2");
+<!--
+var PANELSM = new Array("pnm_1", "pnm_2");
+<!--
+var PAN = new Array("pns_1", "pns_2", "pns_3", "pns_4", "pns_5", "pns_6");
+<!--
+var PANM = new Array("pnsm_1", "pnsm_2", "pnsm_3", "pnsm_4", "pnsm_5", "pnsm_6");
+<!--
+var PANZ = new Array("pnz_1", "pnz_2");
+<!--
+var PANZM = new Array("pnzm_1", "pnzm_2");
+<!--
+var PAND = new Array("pnd_1", "pnd_2", "pnd_3");
+<!--
+var PANDM = new Array("pndm_1", "pndm_2", "pndm_3");
+<!--
+var PANT = new Array("pnt_1", "pnt_2");
+<!--
+var PANTM = new Array("pntmp2_1", "pntmp2_2");
 
+//page one end
+	
+//page two start
 <!--
 var PANELSP2 = new Array("pnp2_1", "pnp2_2");
 <!--
@@ -817,15 +1102,117 @@ var PANDMP2 = new Array("pndmp2_1", "pndmp2_2", "pndmp2_3");
 var PANTP2 = new Array("pntp2_1", "pntp2_2");
 <!--
 var PANTMP2 = new Array("pntmp2_1", "pntmp2_2");
+//page two end
 	
+//page three start
+	
+//page three end
+	
+//page four start
+	
+//page four end
+	
+//page five start
+	
+//page five end
+	
+	//menu start
 function toggleMenuType (menu) {
 	for (var m=0; m < MENUTYPE.length; m++) {
 		document.getElementById(MENUTYPE[m]).style.display = (MENUTYPE[m] == menu) ? "block" : "none";
     }
 }
+function toggleMenuType2 (menu2) {
+	for (var mm=0; mm < MENUTYPE2.length; mm++) {
+		document.getElementById(MENUTYPE2[mm]).style.display = (MENUTYPE2[mm] == menu2) ? "block" : "none";
+    }
+}
+	//menu end
+function openPageOne () {
+	togglePanel(PANELS[0]);
+	togglePanels(PAN[0]);
+	togglePanelz(PANZ[0]);
+	togglePaneled(PAND[0]);
+}
+function openPageTwo () {
 	
+}
+function openPageThree () {
+	togglePanelP2(PANELSP2[0]);
+	togglePanelsP2(PANP2[0]);
+	togglePanelzP2(PANZP2[0]);
+	togglePaneledP2(PANDP2[0]);
+	togglePantP2(PANTP2[0]);
+	togglePanelMobileP2(PANELSMP2[0]);
+	togglePanelsMobileP2(PANMP2[0]);
+	togglePanelzMobileP2(PANZMP2[0]);
+	togglePaneledMobileP2(PANDMP2[0]);
+	togglePantMobileP2(PANTMP2[0]);
+}
+function openPageFour () {
 	
-// toggle to one of our panels
+}
+function openPageFive () {
+	
+}
+	//page one start
+function togglePanel (pnl) {
+	for (var p=0; p < PANELS.length; p++) {
+		document.getElementById(PANELS[p]).style.display = (PANELS[p] == pnl) ? "block" : "none";
+    }
+}
+function togglePanelMobile (pnlm) {
+	for (var t=0; t < PANELSM.length; t++) {
+		document.getElementById(PANELSM[t]).style.display = (PANELSM[t] == pnlm) ? "block" : "none";
+    }
+}
+
+function togglePanels (pn) {
+	for (var q=0; q < PAN.length; q++) {
+		document.getElementById(PAN[q]).style.display = (PAN[q] == pn) ? "block" : "none";
+    }
+}
+//function togglePanelsMobile (pnsm) {
+//	for (var r=0; r < PANM.length; r++) {
+//		document.getElementById(PANM[r]).style.display = (PANM[r] == pnsm) ? "block" : "none";
+//    }
+//}
+	
+function togglePanelz (pnz) {
+	for (var i=0; i < PANZ.length; i++) {
+		document.getElementById(PANZ[i]).style.display = (PANZ[i] == pnz) ? "block" : "none";
+    }
+}
+//function togglePanelzMobile (pnzm) {
+//	for (var u=0; u < PANZMP2.length; u++) {
+//		document.getElementById(PANZM[u]).style.display = (PANZM[u] == pnzm) ? "block" : "none";
+//    }
+//}
+	
+function togglePaneled (pnd) {
+	for (var e=0; e < PAND.length; e++) {
+		document.getElementById(PAND[e]).style.display = (PAND[e] == pnd) ? "block" : "none";
+    }
+}
+//function togglePaneledMobile (pndm) {
+//	for (var l=0; l < PANDM.length; l++) {
+//		document.getElementById(PANDM[l]).style.display = (PANDM[l] == pndm) ? "block" : "none";
+//    }
+//}
+	
+function togglePant (pnt) {
+	for (var o=0; o < PANT.length; o++) {
+		document.getElementById(PANT[o]).style.display = (PANT[o] == pnt) ? "block" : "none";
+    }
+}
+//function togglePantMobile (pntm) {
+//	for (var k=0; k < PANTM.length; k++) {
+//		document.getElementById(PANTM[k]).style.display = (PANTM[k] == pntm) ? "block" : "none";
+//    }
+//}
+	//page one end
+	
+	//page two start
 function togglePanelP2 (pnl) {
 	for (var p=0; p < PANELSP2.length; p++) {
 		document.getElementById(PANELSP2[p]).style.display = (PANELSP2[p] == pnl) ? "block" : "none";
@@ -880,5 +1267,6 @@ function togglePantMobileP2 (pntmp2) {
 		document.getElementById(PANTMP2[k]).style.display = (PANTMP2[k] == pntmp2) ? "block" : "none";
     }
 }
+	//page two end
 </script>
 </html>
