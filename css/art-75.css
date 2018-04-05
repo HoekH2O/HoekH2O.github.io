@@ -28,7 +28,7 @@ body{
   position: absolute;
   overflow-x: hidden;
   overflow-y: auto;
-  max-height:1650px;
+  max-height:1500px;
 }
 ::-webkit-scrollbar { 
     display: none; 
