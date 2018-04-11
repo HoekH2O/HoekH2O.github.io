@@ -1,5 +1,4 @@
 // JavaScript Document
-// JavaScript Document
 //Menu start
 
 <!--
