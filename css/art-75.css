@@ -16,6 +16,74 @@ body,
   overflow-x: hidden;
   overflow-y: auto;
 }
+.logo{
+    width: 80px;
+    height: 80px;
+	position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+}
+.logoAni{
+    width: 80px;
+    height: 80px;
+	position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+	animation-timing-function: ease-out;
+    animation: paw 1s infinite linear;
+	-webkit-filter: invert(1);
+    filter: invert(1);
+}
+@-webkit-keyframes paw {
+    0%   {width: 80px; height: 80px;}
+	50%	{width: 85px; height:82px;}
+    100%  {width:80px; height:80px;}
+}
+
+/* Standard syntax */
+@keyframes paw {
+    0%   {width: 80px; height: 80px;}
+	50%	{width: 85px; height:82px;}
+    100%  {width:80px; height:80px;}
+}
+.spinner{
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    border-top:3px solid #191919;
+    border-radius: 100%;
+    
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+    animation-timing-function: ease-out;
+    animation: spin 1s infinite linear;
+}
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+#overlay{
+  height:100%;
+  width:100%;
+  background:#E4E4E4;
+  position:fixed;
+  left:0;
+  top:0;
+  z-index: 1000000;
+ }
 hr{
 	color: #2A2A2A;
 }
@@ -34,6 +102,7 @@ hr{
 #p5 {
   left: 200%;
   height: 100vh;
+  width: 0px;
 }
 
 #p1 {
@@ -52,12 +121,12 @@ hr{
   overflow-y: auto;
 }
 #p4 {
-  background: white;
+  background: ;
   overflow: hidden;
   overflow-y: auto;
 }
 #p5 {
-  background: white;
+  background: ;
   overflow: hidden;
   overflow-y: auto;
 }
@@ -66,6 +135,7 @@ hr{
 #t4:target #p4,
 #t5:target #p5{
 	height: auto;
+	width:100%;
 	transform: translateX(-200%);
   -webkit-transform: translateX(-200%);
   -moz-transform: translateX(-200%);
@@ -81,6 +151,15 @@ hr{
 #t4:target #p1 .card,
 #t5:target #p1 .card {
   -webkit-filter: blur(3px);
+}
+#t2:target #p1,
+#t3:target #p1,
+#t4:target #p1,
+#t5:target #p1 {
+  height: 100vh;
+  width: 100%;
+  overflow:hidden;
+	transition: .4s;
 }
 .icon {
 width:inherit;
