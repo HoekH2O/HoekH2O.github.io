@@ -62,9 +62,9 @@ var PANTMP2 = new Array("pntmp2_1", "pntmp2_2");
 //page three end
 //page four start
 <!--
-var PANELSP3 = new Array("pnp3_1", "pnp3_2");	
+var PANELSP3 = new Array("pnp3_1", "pnp3_2", "pnp3_3");	
 <!--
-var PANELSMP3 = new Array("pnmp3_1", "pnmp3_2");
+var PANELSMP3 = new Array("pnmp3_1", "pnmp3_2", "pnmp3_3");
 <!--
 var PANP3 = new Array("pnsp3_1", "pnsp3_2");
 <!--
