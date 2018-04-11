@@ -1,2182 +1,517 @@
-<html><head>
+<html>
+<head>
 <meta charset="utf-8">
-<title>Art 75 - Portfolio</title>
-<link rel="icon" href="images/logo.png">
-<meta charset="utf-8">
-<link rel="stylesheet" href="css/art-75.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Welcome</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<style>
+body {
+    background: #DDDDDD;
+	font-family: 'Raleway', sans-serif;
+	width: 100%;
+  
+    overflow-x: hidden;
+}
+.logo{
+    width: 80px;
+    height: 80px;
+	position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+}
+.logoAni{
+    width: 80px;
+    height: 80px;
+	position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+	animation-timing-function: ease-out;
+    animation: paw 1s infinite linear;
+}
+@-webkit-keyframes paw {
+    0%   {width: 80px; height: 80px;}
+	50%	{width: 85px; height:85px;}
+    100%  {width:80px; height:80px;}
+}
 
-</head>
-
-<body onLoad="openMobile(), openPageOne() ">
-	<div id="overlay">
-		<div id="overlay">
-			<div class="logoAni"><img src="images/paw button.png" class="logoAni" style="-webkit-filter: invert(0);
-    filter: invert(0);"></div>
-			<div class="spinner"></div> 
-		</div>
-	</div>
-<div class="ct" id="t1">
-  <div class="ct" id="t2">
-    <div class="ct" id="t3">
-      <div class="ct" id="t4">
-         <div class="ct" id="t5">
-		  <input type="checkbox" id="myCheck" style="display: none" onclick="myFunction()">
-		  <div class="sidenav"> 
-				<a href="home.html"><img src="images/paw button.png" class="paw"></a>
-				<div class="content" id="test" style="margin-left:0; height: auto;">
-					<label class="contains" id="text"for="myCheck">
-			      <div class="bar1"></div>
-				  <div class="bar2"></div>
-				  <div class="bar3"></div>
-					</label>
-					<ul id="text" class="navBox" style="z-index: 500; padding-top: 100px; display: hidden;" for="myCheck">
-						<a href="#t1" onClick="javascript:toggleMenuType(MENUTYPE[0]), toggleMenuType2(MENUTYPE2[0])"><li class="icon fa fa-home" style="filter: invert(100); margin-bottom: 10px; transform: scale(1);" id="uno"></li></a>
-						<a href="#t2" onClick="javascript:toggleMenuType(MENUTYPE[1]), toggleMenuType2(MENUTYPE2[1]), openPageTwo()"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="dos"></li></a>
-						<a href="#t3" onClick="javascript:toggleMenuType(MENUTYPE[2]), toggleMenuType2(MENUTYPE2[2]), openPageThree()"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="tres"></li></a>
-						<a href="#t4" onClick="javascript:toggleMenuType(MENUTYPE[3]), toggleMenuType2(MENUTYPE2[3]), openPageFour()"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="cuatro"></li></a>
-						<a href="#t5" onClick="javascript:toggleMenuType(MENUTYPE[4]), toggleMenuType2(MENUTYPE2[4]), openPageFive()"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="cinco"></li></a>
-					  </ul>
-				</div>
-				<div class="bottom-left"><p class="vertical-text">Hoekwater Development - 2018</p></div>
-		   </div>
-		  <div class="sidenavMobile sidenavMobileMenu"> 
-					<div class="top-left">
-						<a href="home.html"><img src="images/paw button.png" class="paw"></a>
-					</div>
-			<div class="contains" id="tests">
-							<label class="top-right" id="texts"for="myCheck" data-modal-close>
-								  <div class="bar4"></div>
-								  <div class="bar5"></div>
-			  					  <div class="bar6"></div>
-							</label>
-
-
-			  <div id="texts" class="btn-group" style="z-index: 500; display: hidden;" for="myCheck">
-				<div class="offCentered mobileNav">
-								  <button class="btn"><a href="#t1" onClick="javascript:toggleMenuType2(MENUTYPE2[0]),toggleMenuType(MENUTYPE[0])"><i class="icon fa fa-home" style="filter: invert(100);transform: scale(.6);"></i></a></button>									
-								  <button class="btn"><a href="#t2" onClick="javascript:toggleMenuType2(MENUTYPE2[1]),toggleMenuType(MENUTYPE[1]), openPageTwo()"><i class="icon fa fa-circle-thin" style="filter: invert(100);transform: scale(.4);"></i></a></button>
-								
-								  <button class="btn"><a href="#t3" onClick="javascript:toggleMenuType2(MENUTYPE2[2]),toggleMenuType(MENUTYPE[2]), openPageThree()"><i class="icon fa fa-circle-thin" style="filter: invert(100);transform: scale(.4);"></i></a></button>
-								 
-							      <button class="btn"><a href="#t4" onClick="javascript:toggleMenuType2(MENUTYPE2[3]),toggleMenuType(MENUTYPE[3]), openPageFour()"><i class="icon fa fa-circle-thin" style="filter: invert(100);transform: scale(.4);"></i></a></button>
-									
-								  <button class="btn"><a href="#t5" onClick="javascript:toggleMenuType2(MENUTYPE2[4]),toggleMenuType(MENUTYPE[4]), openPageFive()"><i class="icon fa fa-circle-thin" style="filter: invert(100);transform: scale(.4);"></i></a></button>
-								  
-								</div>
-							  </div>
-						</div>
-			</div>
-			 <div class="sidenavMobile" style="background-color:#E4E4E4; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color="black";">
-			 <div CLASS="displayMenu" ID="menu_1">
-				  <div class="centered">
-
-					<h1>
-					  <a class="typewrite" style="font-size: 4.48vw; transform:translateX(-5px);" data-period="2000" data-type='[ "Hello.", "This is My Portfolio.", "Art 75.", "View my Projects." ]'>
-						<span class="wrap"></span>
-					  </a>
-					</h1>
-				  </div>			  
-			 </div>
-			 <div CLASS="displayMenu" ID="menu_2"> 
-				  <div class="centered">
-
-					<h1>
-					  <a class="typewrite" style="font-size: 4.48vw; transform:translateX(-5px);"  data-period="2000" data-type='[ "Hello.", "This is Project One.", "Non-Narrative Video.", "Check out my work!" ]'>
-						<span class="wrap"></span>
-					  </a>
-					</h1>
-				  </div>			  
-			 </div>
-			 <div CLASS="displayMenu" ID="menu_3">
-				  <div class="centered">
-					<h1>
-					  <a class="typewrite" style="font-size: 4.48vw; transform:translateX(-5px);" data-period="2000" data-type='[ "Hello.", "This is Project Two.", "Experimental Narratives.", "Check out my work!" ]'>
-						<span class="wrap"></span>
-					  </a>
-					</h1>
-				  </div>			  
-			 </div>
-			 <div CLASS="displayMenu" ID="menu_4">
-				  <div class="centered" >
-
-					<h1>
-					  <a class="typewrite" style="font-size: 4.48vw; transform:translateX(-5px);" data-period="2000" data-type='[ "Hello.", "This is Project Three.", "Paradox, Simulation, and Net Art.", "Check out my work!" ]'>
-						<span class="wrap"></span>
-					  </a>
-					</h1>
-				  </div>				  
-			 </div>
-			 <div CLASS="displayMenu" ID="menu_5">
-				  <div class="centered">
-
-					<h1>
-					  <a class="typewrite" style="font-size: 4.48vw; transform:translateX(-5px);" data-period="2000" data-type='[ "Hello.", "This is Project Four.", "Paradox, Simulation, and Net Art.", "Check out my work!" ]'>
-						<span class="wrap"></span>
-					  </a>
-					</h1>
-				  </div>				  
-			 </div>
-			 </div>
-			 
-          <div class="page" id="p1" onmouseover="closeNav()">
-			  <a name="top"></a>
-			  <div class="contentTop"> 
-			 <div CLASS="displayMenu" ID="menu2_1">
-				  <div class="centered">
-
-					<h1>
-					  <a class="typewrite" data-period="2000" data-type='[ "Hello.", "This is My Portfolio.", "Art 75.", "View my Projects." ]'>
-						<span class="wrap"></span>
-					  </a>
-					</h1>
-				  </div>			  
-			 </div>
-			 <div CLASS="displayMenu" ID="menu2_2"> 
-				  <div class="centered">
-
-					<h1>
-					  <a class="typewrite" data-period="2000" data-type='[ "Hello.", "This is Project One.", "Non-Narrative Video.", "Check out my work!" ]'>
-						<span class="wrap"></span>
-					  </a>
-					</h1>
-				  </div>			  
-			 </div>
-			 <div CLASS="displayMenu" ID="menu2_3">
-				  <div class="centered">
-					<h1>
-					  <a class="typewrite" data-period="2000" data-type='[ "Hello.", "This is Project Two.", "Experimental Narratives.", "Check out my work!" ]'>
-						<span class="wrap"></span>
-					  </a>
-					</h1>
-				  </div>			  
-			 </div>
-			 <div CLASS="displayMenu" ID="menu2_4">
-				  <div class="centered">
-
-					<h1>
-					  <a class="typewrite" data-period="2000" data-type='[ "Hello.", "This is Project Three.", "Paradox, Simulation, and Net Art.", "Check out my work!" ]'>
-						<span class="wrap"></span>
-					  </a>
-					</h1>
-				  </div>				  
-			 </div>
-			 <div CLASS="displayMenu" ID="menu2_5">
-				  <div class="centered">
-
-					<h1>
-					  <a class="typewrite" data-period="2000" data-type='[ "Hello.", "This is Project Four.", "Paradox, Simulation, and Net Art.", "Check out my work!" ]'>
-						<span class="wrap"></span>
-					  </a>
-					</h1>
-				  </div>				  
-			 </div>
-				<div class="topContain"><video src="videos/whiteBG.mp4" autoplay loop class="display" style="position:static;"></video></div>
-			  <div class="top-left"> <img src="images/initials.png" class="ic"> </div>
-			</div>
-			<div class="divide"></div>
-			<div class="contentWhite">
-				<div class="row">
-					<div class="column">
-						<div class="third">						
-									<div class="row">
-										<div class="column card">									
-												<div class="bioImg" style="padding-left: 10px" >
-													<div class="proDisplay">
-														<img src="images/bio2.JPG" style="width: 100%; overflow: hidden;" class="bio">
-													</div>
-												</div>
-												<div class="bioText">
-													<p style="font-size:1.3vw;">Jordan Hoekwater</p>
-													<p style="font-size:1vw;"><i style="transform:scale(.8)"class="fa fa-book fa-fw w3-margin-right w3-large w3-text-black"></i>San Jose State University</p>
-													<p style="font-size:1vw;"><i style="transform:scale(.8)"class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-black"></i>Art: Concentration in Digital Media</p>
-												</div>									
-										</div>
-										<div class="column card">
-											<div class="bioText">
-												<p style="font-size:1.2vw;">About Me</p>
-												<p style="font-size:.8vw;">"I am an artist. Cinematography has been a huge part of my life ever since I was a kid. I grew up making videos and learning from experiences. Dreams can truly be brought to life, and one day I hope to do just that."</p>
-											</div>
-											<div class="bioImg" style="padding-right: 10px" >
-												<div class="proDisplay">
-													<img src="images/bio1.JPG" style="width: 100%; overflow: hidden;" class="bio">
-												</div>
-											</div>
-										</div>
-									</div>
-						</div>
-						<div class="twoThird">
-							<div class="row">
-								<div class="column card">
-									<div CLASS="dispPanelMobile" ID="pnm_1">
-									  <div class="contain">
-										  <div class="contain">
-										  <p style="font-size:1.5vw;">Art 75 Course Description</p>
-											<p style="font-size:1vw;">This class focuses on experimentation with digital video techniques and processes informed by digital networks, personal audio/video recording and mobile computing. The course will address development of appropriate conceptual strategies for artistic production. A contemporary critical and theoretical perspective will be stressed. Projects will be presented using the Internet as a primary means of documentation as a rapidly evolving medium of expression</p>
-											<hr>
-										  <div class="pagination">
-											<a href="javascript:togglePanelMobile(PANELSM[0]),togglePanel(PANELS[0])" class="active" style="font-size:1vw;">Course Description</a>
-											<a href="javascript:togglePanelMobile(PANELSM[1]),togglePanel(PANELS[1])" style="font-size:1vw;">Reflection</a>
-										</div>
-									  </div>
-										 </div>
-								  </div>
-									<div CLASS="dispPanel" ID="pnm_2">
-									  <div class="contain">
-										<div class="contain">
-										  <p style="font-size:1.5vw;">Portfolio Reflection</p>
-											<p style="font-size:1vw;">During my second semester San Jose State, we developed a portfolio that will highlight all of the great work we did during the year. I've learned a lot from this class and will continue to build on it in the years following. I hope that my work can spark creativity in your life, and to see the world in a new light. I really had a lot of fun developing this website and creating the videos within, it has and continues to be a learning experience and I can't wait to find out what else Digtial Media entails.</p>
-											<hr>
-										  <div class="pagination">
-											<a href="javascript:togglePanelMobile(PANELSM[0]),togglePanel(PANELS[0])" style="font-size:1vw;">Course Description</a>
-											<a href="javascript:togglePanelMobile(PANELSM[1]),togglePanel(PANELS[1])" class="active" style="font-size:1vw;">Reflection</a>
-										</div>
-									  </div>
-									</div>
-								</div>
-								</div>
-							</div>
-							<div class="column card">
-								<div CLASS="dispPanels" ID="pnsm_1">
-								  <div class="contained">
-										<div class="half">
-											<div class="contain">
-												<p style="font-size:1.5vw;">Portfolio Projects</p>
-												<hr>
-												<div class="pagination">
-													<a href="javascript:togglePanelsMobile(PANM[1]), togglePanels(PAN[1])" class="active" style="font-size:1vw;">View Options</a>
-												</div>
-											</div>
-										</div>
-									  <div class="half">
-										  <div class="contain">
-											  <p style="font-size:1vw;">Information</p>
-											  <p style="font-size:.8vw;">Press button to open project files. You will be able to look through the context of each project and choose which page you'd like to visit.</p>
-										  </div>
-
-									  </div>
-								  </div>
-							  </div>
-								<div CLASS="dispPanels" ID="pnsm_2">
-								  <div class="contained">
-										<div class="half">
-											<div class="contain">
-												<p style="font-size:1.5vw;">Portfolio Projects</p>
-												<hr>
-												<div class="pagination">
-													<a href="javascript:togglePanelsMobile(PANM[2]),togglePanels(PAN[2])" style="font-size:1vw;">One</a>
-													<a href="javascript:togglePanelsMobile(PANM[3]),togglePanels(PAN[3])" style="font-size:1vw;">Two</a>
-													<a href="javascript:togglePanelsMobile(PANM[4]), togglePanels(PAN[4])" style="font-size:1vw;">Three</a>
-													<a href="javascript:togglePanelsMobile(PANM[5]),togglePanels(PAN[5])" style="font-size:1vw;">Four</a>
-												</div>
-											</div>
-										</div>
-									  <div class="half">
-										  <div class="contain">
-											  <p style="font-size:1vw;">Details</p>
-											  <p style="font-size:.8vw;">Throughout the semester we completed four projects, each exploring a different aspect of video art. Click on a project page to view it's context.</p>
-										  </div>
-
-									  </div>
-								  </div>
-							  </div>
-							<div CLASS="dispPanels" ID="pnsm_3">
-								  <div class="contained">
-										<div class="half">
-											<div class="contain">
-												<p style="font-size:1.5vw;">Project One</p>
-												<hr>
-												<div class="pagination">
-													<a href="#t2" onClick="javascript:toggleMenuType(MENUTYPE[1]),toggleMenuType2(MENUTYPE2[1])" class="active" style="font-size:1vw;">View Project</a>
-													<a href="javascript:togglePanelsMobile(PANM[1]),togglePanels(PAN[1])" style="font-size:1vw;">Back</a>
-												</div>
-											</div>
-										</div>
-									  <div class="half">
-										  <div class="contain">
-											  <p style="font-size:1vw;">Non-Narrative Video</p>
-											  <p style="font-size:.8vw;">- Video 1 and 1-1: Teamshoot and Introductions</p>
-											  <p style="font-size:.8vw;">- Video 1-2: Interview</p>
-											  <p style="font-size:.8vw;">- Video 1-3: Action Sequence</p>
-											  <p style="font-size:.8vw;">- Video 1-4: Non-Narrative Transition</p>
-											  <p style="font-size:.8vw;">- Video 1-5: Non-Linear Assemblage</p>
-										  </div>
-
-									  </div>
-								  </div>
-								</div>
-							<div CLASS="dispPanels" ID="pnsm_4">
-								  <div class="contained">
-										<div class="half">
-											<div class="contain">
-												<p style="font-size:1.5vw;">Project Two</p>
-												<hr>
-												<div class="pagination">
-													<a href="#t3" onClick="javascript:toggleMenuType(MENUTYPE[2]),toggleMenuType2(MENUTYPE2[2])" class="active" style="font-size:1vw;">View Project</a>
-													<a href="javascript:togglePanelsMobile(PANM[1]),togglePanels(PAN[1])" style="font-size:1vw;">Back</a>
-												</div>
-											</div>
-										</div>
-									  <div class="half">
-										  <div class="contain">
-											  <p style="font-size:1vw;">Experimental Narratives</p>
-											  <p style="font-size:.8vw;">- Video 2-1: Timelapse</p>
-											  <p style="font-size:.8vw;">- Video 2-2: Where Camera Don't Belong</p>
-											  <p style="font-size:.8vw;">- Video 2-3: Surveillance Phase 1</p>
-											  <p style="font-size:.8vw;">- Video 2-3: Surveillance Phase 2</p>
-										  </div>
-
-									  </div>
-								  </div>
-								</div>
-							<div CLASS="dispPanels" ID="pnsm_5">
-								  <div class="contained">
-										<div class="half">
-											<div class="contain">
-												<p style="font-size:1.5vw;">Project Three</p>
-												<hr>
-												<div class="pagination">
-													<a href="#t4" onClick="javascript:toggleMenuType(MENUTYPE[3]),toggleMenuType2(MENUTYPE2[3])" class="active" style="font-size:1vw;">View Project</a>
-													<a href="javascript:togglePanelsMobile(PANM[1]),togglePanels(PAN[1])" style="font-size:1vw;">Back</a>
-												</div>
-											</div>
-										</div>
-									  <div class="half">
-										  <div class="contain">
-											  <p style="font-size:1vw;">Paradox, Simulation, and Net Art</p>
-											  <p style="font-size:.8vw;">- Video 3-1: Keyed Screen Selfie Moment</p>
-											  <p style="font-size:.8vw;">- Video 3-2: Call Outs, Animation and Motion Tracking</p>
-											  <p style="font-size:.8vw;">- Video 3-3: The Endless Loop</p>
-										  </div>
-
-									  </div>
-								  </div>
-								</div>
-							<div CLASS="dispPanels" ID="pnsm_6">
-								  <div class="contained">
-										<div class="half">
-											<div class="contain">
-												<p style="font-size:1.5vw;">Project Four</p>
-												<hr>
-												<div class="pagination">
-													<a href="#t5" onClick="javascript:toggleMenuType(MENUTYPE[4]),toggleMenuType2(MENUTYPE2[4])" class="active" style="font-size:1vw;">View Project</a>
-													<a href="javascript:togglePanelsMobile(PANM[1]),togglePanels(PAN[1])" style="font-size:1vw;">Back</a>
-												</div>
-											</div>
-										</div>
-									  <div class="half">
-										  <div class="contain">
-											  <p style="font-size:1vw;">Paradox, Simulation, and Net Art</p>
-											  <p style="font-size:.8vw;">- Video 4-1: Phase 1 Speed Dating for Loglines</p>
-											  <p style="font-size:.8vw;">- Video 4-2: Phase 2 Written Proposal</p>
-											  <p style="font-size:.8vw;">- Video 4-3: Phase 3 Dailies</p>
-											  <p style="font-size:.8vw;">- Video 4-4: Phase 4 Presentation</p>
-										  </div>
-
-									  </div>
-								  </div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="contentBlack" style="padding-top: 50px;">						
-							<div class="row">
-  								<div class="column card">
-									<div class="contain">
-										<div class="half">
-											<div class="proDisplay">
-												<div class="contain" style="padding: 0;  max-height: 250px; overflow: hidden;">
-													<img src="images/bio2.JPG" style="width: 100%; overflow: hidden;">
-												</div>
-											</div>
-											<br>
-										</div>
-										<div class="half">
-											<font>Jordan Hoekwater</font>
-											<br>
-											<p style="font-size: 12px;"><i style="transform: scale(.7)" class="fa fa-book fa-fw w3-margin-right w3-large w3-text-black"></i>San Jose State University</p>
-											<p style="font-size: 12px;"><i style="transform: scale(.7)" class="fa fa-pencil fa-fw w3-margin-right w3-large w3-text-black"></i>Art: Concentration in Digital Media</p>
-										</div>
-									</div>									
-								</div>
-									<div class="column card">
-									<div class="contain">
-										<div class="half">
-											<div class="proDisplay">
-												<div class="contain" style="padding: 0;  max-height: 250px; overflow: hidden;">
-													<img src="images/bio1.JPG" style="width: 100%; overflow: hidden;">
-												</div>
-											</div>
-											<br>
-										</div>
-										<div class="half">
-											<font>About Me</font>
-											<br>
-											<p style="font-size: 12px;">"I am an artist. Cinematography has been a huge part of my life ever since I was a kid. I grew up making videos and learning from experiences. Dreams can truly be brought to life, and one day I hope to do just that."</p>
-										</div>
-									</div>
-								</div>
-								<div class="column card">
-									<div CLASS="dispPanel" ID="pn_1">
-									  <div class="contain">
-										  <div class="pagination">
-														<a style="font-size: 10px;" href="javascript:togglePanel(PANELS[0]), togglePanelMobile(PANELSM[0])" class="active">Course Description</a>
-														<a style="font-size: 10px;" href="javascript:togglePanel(PANELS[1]), togglePanelMobile(PANELSM[1])">Reflection</a>
-													</div>
-											<div class="half">
-												<div class="contain">
-													<font>Art 75 Course Description</font>
-													<p style="font-size:12px">This class focuses on experimentation with digital video techniques and processes informed by digital networks, personal audio/video recording and mobile computing. The course will address development of appropriate conceptual strategies for artistic production. A contemporary critical and theoretical perspective will be stressed. Projects will be presented using the Internet as a primary means of documentation as a rapidly evolving medium of expression</p>
-												</div>
-											</div>
-									  </div>
-								  </div>
-									<div CLASS="dispPanel" ID="pn_2">
-									  <div class="contain">
-										  <div class="pagination">
-														<a style="font-size: 10px;" href="javascript:togglePanel(PANELS[0]), togglePanelMobile(PANELSM[0])">Course Description</a>
-														<a style="font-size: 10px;" href="javascript:togglePanel(PANELS[1]), togglePanelMobile(PANELSM[1])" class="active">Reflection</a>
-													</div>
-											<div class="half">
-												<div class="contain">
-													<font>Portfolio Reflection</font>
-													<p style="font-size:12px">During my second semester San Jose State, we developed a portfolio that will highlight all of the great work we did during the year. I've learned a lot from this class and will continue to build on it in the years following. I hope that my work can spark creativity in your life, and to see the world in a new light. I really had a lot of fun developing this website and creating the videos within, it has and continues to be a learning experience and I can't wait to find out what else Digtial Media entails.</p>
-												</div>
-											</div>
-									  </div>
-								  </div>
-								</div>
-								<div class="column card">
-									<div CLASS="dispPanels" ID="pns_1">
-									  <div class="contain">
-										  <div class="pagination">
-											<a href="javascript:togglePanels(PAN[1]),togglePanelsMobile(PANM[1])"class="active" style="font-size: 10px;">View Options</a>
-										</div>
-											<div class="half">
-												<div class="contain">
-													<font>Information</font>
-									  				<p style="font-size:12px">Press button to view project files. You will be able to look through the context of each project and choose which page you'd like to visit.</p>
-												</div>
-											</div>
-									  </div>
-								  </div>
-									<div CLASS="dispPanels" ID="pns_2">
-										<div class="half">
-											<div class="pagination contain">
-												<a href="javascript:togglePanels(PAN[2]),togglePanelsMobile(PANM[2])" style="font-size:10px;">One</a>
-												<a href="javascript:togglePanels(PAN[3]),togglePanelsMobile(PANM[3])" style="font-size:10px;">Two</a>
-												<a href="javascript:togglePanels(PAN[4]),togglePanelsMobile(PANM[4])" style="font-size:10px;">Three</a>
-												<a href="javascript:togglePanels(PAN[5]),togglePanelsMobile(PANM[5])" style="font-size:10px">Four</a>
-												<div class="half">
-													<div class="contain">
-														<p>Portfolio Projects</p>
-														<p style="font-size:9px">Throughout the semester we completed four projects, each exploring a different aspect of video art. Click on a project page to view it's context.</p>
-													</div>
-												</div>
-											</div>
-										</div>
-								    </div>
-									<div CLASS="dispPanels" ID="pns_3">
-										<div class="pagination contain">
-											<a href="#t2" onClick="javascript:toggleMenuType(MENUTYPE[1]),toggleMenuType2(MENUTYPE2[1])" class="active" style="font-size:10px;">View Project</a>
-											<a href="javascript:togglePanels(PAN[1]),togglePanelsMobile(PANM[1])" style="font-size:10px;">Back</a>
-										</div>
-										<div class="half">
-											<div class="contain" style="padding-left: 20px;">
-												<p style="font-size:12px;">Project One</p>
-												 <p style="font-size:11px;">Non-Narrative Video</p>
-												 <p style="font-size:10px;">- Video 1 and 1-1: Teamshoot and Introductions</p>
-												 <p style="font-size:10px;">- Video 1-2: Interview</p>
-												 <p style="font-size:10px;">- Video 1-3: Action Sequence</p>
-												 <p style="font-size:10px;">- Video 1-4: Non-Narrative Transition</p>
-												 <p style="font-size:10px;">- Video 1-5: Non-Linear Assemblage</p>
-											</div>
-										</div>
-									</div>
-									<div CLASS="dispPanels" ID="pns_4">
-										<div class="pagination contain">
-											<a href="#t3" onClick="javascript:toggleMenuType(MENUTYPE[2]),toggleMenuType2(MENUTYPE2[2])" class="active" style="font-size:10px;">View Project</a>
-											<a href="javascript:togglePanels(PAN[1]),togglePanelsMobile(PANM[1])" style="font-size:10px;">Back</a>
-										</div>
-										<div class="half">
-											<div class="contain" style="padding-left: 20px;">
-												<p style="font-size:12px;">Project Two</p>
-												 <p style="font-size:11px;">Experimental Narratives</p>
-												 <p style="font-size:10px;">- Video 2-1: Timelapse</p>
-												 <p style="font-size:10px;">- Video 2-2: Where Camera Don't Belong</p>
-												 <p style="font-size:10px;">- Video 2-3: Surveillance Phase 1</p>
-												 <p style="font-size:10px;">- Video 2-3: Surveillance Phase 2</p>
-											</div>
-										</div>
-									</div>
-									<div CLASS="dispPanels" ID="pns_5">
-											<div class="pagination contain">
-												<a href="#t4" onClick="javascript:toggleMenuType(MENUTYPE[3]),toggleMenuType2(MENUTYPE2[3])" class="active" style="font-size:10px;">View Project</a>
-												<a href="javascript:togglePanels(PAN[1]),togglePanelsMobile(PANM[1])" style="font-size:10px;">Back</a>
-											</div>
-										  <div class="half">
-											  <div class="contain" style="padding-left: 20px;">
-												  <p style="font-size:12px">Project Three</p>
-												  <p style="font-size:11px;">Paradox, Simulation, and Net Art</p>
-												  <p style="font-size:10px;">- Video 3-1: Keyed Screen Selfie Moment</p>
-												  <p style="font-size:10px;">- Video 3-2: Call Outs, Animation and Motion Tracking</p>
-												  <p style="font-size:10px;">- Video 3-3: The Endless Loop</p>
-											  </div>
-
-										  </div>
-									</div>
-									<div CLASS="dispPanels" ID="pns_6">
-											<div class="pagination contain">
-												<a href="#t5" onClick="javascript:toggleMenuType(MENUTYPE[4]),toggleMenuType2(MENUTYPE2[4])" class="active" style="font-size:10px;">View Project</a>
-												<a href="javascript:togglePanels(PAN[1]),togglePanelsMobile(PANM[1])" style="font-size:10px;">Back</a>
-											</div>
-										  <div class="half">
-											  <div class="contain" style="padding-left: 20px;">
-												  <p style="font-size:12px">Project Four</p>
-												  <p style="font-size:11px;">Paradox, Simulation, and Net Art</p>
-												  <p style="font-size:10px;">- Video 4-1: Phase 1 Speed Dating for Loglines</p>
-												  <p style="font-size:10px;">Video 4-2: Phase 2 Written Proposal</p>
-												  <p style="font-size:10px;">- Video 4-3: Phase 3 Dailies</p>
-												  <p style="font-size:10px;">- Video 4-4: Phase 4 Presentation</p>
-											  </div>
-
-										  </div>
-									</div>
-								</div>
-							</div>
-			</div>
-<div class="footer">
-		<p style="font-size:0.75vw; text-align: right; color:#E4E4E4;">Version: 2.01</p>
-</div>
-			  
-          </div> 
-			 
-		  <div class="page" id="p2"  onmouseover="closeNav()">
-            <div class="contentTop" style="height: 200px; background-color: ;"> 
-			</div>
-			  <div class="divide"></div>
-			<div class="contentWhite">
-			  <div class="row">
-					<div class="column card">
-						<div CLASS="dispPanel" ID="pnp1_1">
-						  <div class="contain">
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										   <style>.embed-container { margin-bottom: 10px;  border-radius: 5;  position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/252566370?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-								  </div>
-
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<font style="font-size:1.5vw;">Video 1: Team Shoot</font><p style="font-size:1vw;">This project was an immersive experience. Give a timesheet we were tasked with following the instructions and making a video in one take. It was interesting to see how much harder it ended up being. Having to constantly follow the timesheet and translate it into video all at the same time was definitelyinteresting. This video was a great start to this class.</p>
-										<hr>
-											<div class="pagination">
-												<a href="javascript:togglePanelP1(PANELSP1[0]),togglePanelMobileP1(PANELSMP1[0])" class="active" style="font-size:1vw;">Team Shoot</a>
-												<a href="javascript:togglePanelP1(PANELSP1[1]),togglePanelMobileP1(PANELSMP1[1])" style="font-size:1vw;">Rough Cut</a>
-												<a href="javascript:togglePanelP1(PANELSP1[2]),togglePanelMobileP1(PANELSMP1[2])" style="font-size:1vw;">Final Cut</a>
-											</div>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanel" ID="pnp1_2">
-						  <div class="contain">
-							  <div class="half">
-								  <div class="contain">
-									<div class="proDisplay">
-										<style>.embed-container {margin-bottom: 10px;border-radius: 5px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/254638899?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									</div>
-								  </div>
-
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 1-1: Introductions Rough Cut</p><p style="font-size:1vw;">This video focused on us. We had to introduce ourselves by conveying four different moods relative to a location that compliments it at the same time. This video was fairly easy but trying to convey different moods was tricky. The rough cut was soley supposed to be our full introductions combined into a video.</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelP1(PANELSP1[0]),togglePanelMobileP1(PANELSMP1[0])" style="font-size:1vw;">Team Shoot</a>
-											<a href="javascript:togglePanelP1(PANELSP1[1]),togglePanelMobileP1(PANELSMP1[1])" class="active" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePanelP1(PANELSP1[2]),togglePanelMobileP1(PANELSMP1[2])" style="font-size:1vw;">Final Cut</a>
-										</div>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanel" ID="pnp1_3">
-						  <div class="contain">
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/254638786?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-								  </div>
-
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 1-1: Introductions Final Cut</p>
-										<p style="font-size:1vw;">Now for the final cut we were asked to breakdown the time to around 10-15 seconds. So during editing, I basically switched between the different locations I filmed at. This video was fun due the the amount of exploration we did to find the locations.</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelP1(PANELSP1[0]),togglePanelMobileP1(PANELSMP1[0])" style="font-size:1vw;">Team Shoot</a>
-											<a href="javascript:togglePanelP1(PANELSP1[1]),togglePanelMobileP1(PANELSMP1[1])" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePanelP1(PANELSP1[2]),togglePanelMobileP1(PANELSMP1[2])" class="active" style="font-size:1vw;">Final Cut</a>
-										</div>
-									</div>
-								</div>
-						  </div>
-					  </div>
-					</div>
-			  </div>
-			</div>
-			<div class="contentWhite">
-			  <div class="row">
-					<div class="column card">	
-					    <div CLASS="dispPanels" ID="pnsp1_1">
-						  <div class="contain">
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 1-2: Interview Rough Cut</p><p style="font-size:1vw;">For this project we were asked to interview someone as they tell us a unique story they experienced. It was great to be able to move out of our confort zone and find an interviewee.</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelsP1(PANP1[0]),togglePanelsMobileP1(PANMP1[0])" class="active" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePanelsP1(PANP1[1]),togglePanelsMobileP1(PANMP1[1])" style="font-size:1vw;">Final Cut</a>
-										</div>
-									</div>
-								</div>
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/255391881?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-								  </div>
-
-							  </div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanels" ID="pnsp1_2">
-						  <div class="contain">
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 1-2: Interview Final Cut</p><p style="font-size:1vw;">The final cut gave us the opportunity to revisit or perhaps reshoot our interview. I gained a lot of feedback during the rough cut critique, and wished I was able to transfer that into a reshoot but unfortunately was unable to schedule a day with my interviewee. The feedback was great and the experience helped.</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelsP1(PANP1[0]),togglePanelsMobileP1(PANMP1[0])" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePanelsP1(PANP1[1]),togglePanelsMobileP1(PANMP1[1])" class="active" style="font-size:1vw;">Final Cut</a>
-										</div>
-									</div>
-								</div>
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/255391881?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-								  </div>
-
-							  </div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>
-			<div class="contentWhite">
-			  <div class="row">
-					<div class="column card">	
-						<div CLASS="dispPanelz" ID="pnzp1_1">
-						  <div class="contain">
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-											<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/255378632?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-										</div>
-
-								  </div>
-
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 1-3: Action Sequence Rough Cut</p><p style="font-size:1vw;">This video was an adventure to make. We came up with this idea while eating dinner and filmed it right afterwards. It took a while to shoot but ended up being my favorite video to film due to the fun we were having while making it.</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelzP1(PANZP1[0]),togglePanelzMobileP1(PANZMP1[0])" class="active" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePanelzP1(PANZP1[1]),togglePanelzMobileP1(PANZMP1[1])" style="font-size:1vw;">Final Cut</a>
-										</div>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanelz" ID="pnzp1_2">
-						  <div class="contain">
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										<style>.embed-container {margin-bottom: 10px; border-radius: 5px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/255378632?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-								  </div>
-
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 1-3: Action Sequence Final Cut</p><p style="font-size:1vw;">We gained a lot of feedback during the critique. I did the best I could at transfering it over to screen while retaining the purity of the roough cut. The video gave me a lot of insight on how much planning goes into making an action movie. It was a great experience.</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelzP1(PANZP1[0]),togglePanelzMobileP1(PANZMP1[0])" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePanelzP1(PANZP1[1]),togglePanelzMobileP1(PANZMP1[1])" class="active" style="font-size:1vw;">Final Cut</a>
-										</div>
-									</div>
-								</div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>
-			<div class="contentWhite">
-			  <div class="row">
-					<div class="column card">	
-						<div CLASS="dispPanelz" ID="pndp1_1">
-						  <div class="contain">
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 1-4: Non-Narrative Transition Rough Cut</p><p style="font-size:1vw;">This video was short and simple. We were tasked with seraching for found footage that we could intertwine with our own footage to make fluent transitions. It was hard finding the footage and planning a way to make them come together, but was fun to film and see it come together in the end.</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePaneledP1(PANDP1[0]),togglePaneledMobileP1(PANDMP1[0])" class="active" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePaneledP1(PANDP1[1]),togglePaneledMobileP1(PANDMP1[1])" style="font-size:1vw;">Final Cut</a>
-										</div>
-									</div>
-								</div>
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-											<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/257635618?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-										</div>
-
-								  </div>
-
-							  </div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanelz" ID="pndp1_2">
-						  <div class="contain">
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 1-4: Non-Narrative Transition Final Cut</p><p style="font-size:1vw;">After the critique, I did some minor changes to how the video switches to each shot. I added some subtle interactivity with the music playing in the backgound. The video was fun to make and was worth seeing how it all came together in the end.</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePaneledP1(PANDP1[0]),togglePaneledMobileP1(PANDMP1[0])" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePaneledP1(PANDP1[1]),togglePaneledMobileP1(PANDMP1[1])" class="active" style="font-size:1vw;">Final Cut</a>
-										</div>
-									</div>
-								</div>
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										<style>.embed-container {margin-bottom: 10px; border-radius: 5px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/257635649?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-								  </div>
-
-							  </div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>
-			<div class="contentWhite">
-				<div class="row">
-					<div class="column card">
-						<div class="half" style="">
-							<div class="pagination" style="margin-left: 5vw"><a href="#" class="active">Launch Assemblage</a></div>
-								
-								
-
-
-
-
-						</div>
-						<div class="half">
-							<p style="font-size:1.5vw;">Project One Assemblage</p><p style="font-size:1vw;">This button opens up my project one video assemblage. It is a showcase of my work in a non-lineaner narrative.</p>
-						</div>
-					</div>
-				</div>	
-			</div>
-			  
-			<div class="contentBlack" style="padding-top: 50px;">
-			  <div class="row">
-					<div class="column card">
-						<div CLASS="dispPanel" ID="pnmp1_1">
-						  <div class="contain">
-							  <div class="pagination">
-									<a href="javascript:togglePanelMobileP1(PANELSMP1[0]),togglePanelP1(PANELSP1[0])" class="active" style="font-size:10px">Team Shoot</a>
-									<a href="javascript:togglePanelMobileP1(PANELSMP1[1]),togglePanelP1(PANELSP1[1])" style="font-size:10px">Rough Cut</a>
-									<a href="javascript:togglePanelMobileP1(PANELSMP1[2]),togglePanelP1(PANELSP1[2])" style="font-size:10px">Final Cut</a>
-								</div>
-							  <div class="half">
-									  <div class="proDisplay">
-										   <style>.embed-container { margin-bottom: 10px;  border-radius: 5;  position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/252566370?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<font>Video 1: Team Shoot</font><p style="font-size:12px">This project was an immersive experience. Give a timesheet we were tasked with following the instructions and making a video in one take. It was interesting to see how much harder it ended up being. Having to constantly follow the timesheet and translate it into video all at the same time was definitelyinteresting. This video was a great start to this class.</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanel" ID="pnmp1_2">
-						  <div class="contain">
-							  <div class="pagination">
-									<a href="javascript:togglePanelMobileP1(PANELSMP1[0]),togglePanelP1(PANELSP1[0])" style="font-size:10px">Team Shoot</a>
-									<a href="javascript:togglePanelMobileP1(PANELSMP1[1]),togglePanelP1(PANELSP1[1])" class="active" style="font-size:10px">Rough Cut</a>
-									<a href="javascript:togglePanelMobileP1(PANELSMP1[2]),togglePanelP1(PANELSP1[2])" style="font-size:10px">Final Cut</a>
-								</div>
-							  <div class="half">
-									<div class="proDisplay">
-										<style>.embed-container {margin-bottom: 10px;border-radius: 5px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/254638899?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									</div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 1-1: Introductions Rough Cut</p><p style="font-size:12px">This video focused on us. We had to introduce ourselves by conveying four different moods relative to a location that compliments it at the same time. This video was fairly easy but trying to convey different moods was tricky. The rough cut was soley supposed to be our full introductions combined into a video.</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanel" ID="pnmp1_3">
-						  <div class="contain">
-							  <div class="pagination">
-									<a href="javascript:togglePanelMobileP1(PANELSMP1[0]),togglePanelP1(PANELSP1[0])" style="font-size:10px">Team Shoot</a>
-									<a href="javascript:togglePanelMobileP1(PANELSMP1[1]),togglePanelP1(PANELSP1[1])" style="font-size:10px">Rough Cut</a>
-									<a href="javascript:togglePanelMobileP1(PANELSMP1[2]),togglePanelP1(PANELSP1[2])" class="active" style="font-size:10px">Final Cut</a>
-								</div>
-							  <div class="half">
-									  <div class="proDisplay">
-										<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/254638786?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 1-1: Introductions Final Cut</p>
-										<p style="font-size:12px">Now for the final cut we were asked to breakdown the time to around 10-15 seconds. So during editing, I basically switched between the different locations I filmed at. This video was fun due the the amount of exploration we did to find the locations.</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-					</div>
-			  </div>
-			</div>
-			<div class="contentBlack">
-			  <div class="row">
-					<div class="column card">	
-					    <div CLASS="dispPanels" ID="pnsmp1_1">
-						  <div class="contain">
-							    <div class="pagination">
-									<a href="javascript:togglePanelsMobileP1(PANMP1[0]),togglePanelsP1(PANP1[0])" class="active" style="font-size:10px">Rough Cut</a>
-									<a href="javascript:togglePanelsMobileP1(PANMP1[1]),togglePanelsP1(PANP1[1])" style="font-size:10px">Final Cut</a>
-								</div>
-							  <div class="half">
-									  <div class="proDisplay">
-										<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/255391881?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 1-2: Interview Rough Cut</p><p style="font-size:12px">For this project we were asked to interview someone as they tell us a unique story they experienced. It was great to be able to move out of our confort zone and find an interviewee.</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanels" ID="pnsmp1_2">
-						  <div class="contain">
-							  <div class="pagination">
-										<a href="javascript:togglePanelsMobileP1(PANMP1[0]),togglePanelsP1(PANP1[0])" style="font-size:10px">Rough Cut</a>
-										<a href="javascript:togglePanelsMobileP1(PANMP1[1]),togglePanelsP1(PANP1[1])" class="active" style="font-size:10px">Final Cut</a>
-								</div>
-							  <div class="half">
-									  <div class="proDisplay">
-										<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/255391881?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 1-2: Interview Final Cut</p><p style="font-size:12px">The final cut gave us the opportunity to revisit or perhaps reshoot our interview. I gained a lot of feedback during the rough cut critique, and wished I was able to transfer that into a reshoot but unfortunately was unable to schedule a day with my interviewee. The feedback was great and the experience helped.</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>
-			<div class="contentBlack">
-			  <div class="row">
-					<div class="column card">	
-						<div CLASS="dispPanelz" ID="pnzmp1_1">
-						  <div class="contain">
-							  <div class="pagination">
-									<a href="javascript:togglePanelzMobileP1(PANZMP1[0]),togglePanelzP1(PANZP1[0])" class="active" style="font-size:10px;">Rough Cut</a>
-									<a href="javascript:togglePanelzMobileP1(PANZMP1[1]),togglePanelzP1(PANZP1[1])" style="font-size:10px;">Final Cut</a>
-							  </div>
-							  <div class="half">
-									  <div class="proDisplay">
-											<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/255378632?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-										</div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 1-3: Action Sequence Rough Cut</p><p style="font-size:12px">This video was an adventure to make. We came up with this idea while eating dinner and filmed it right afterwards. It took a while to shoot but ended up being my favorite video to film due to the fun we were having while making it.</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanelz" ID="pnzmp1_2">
-						  <div class="contain">
-							  <div class="pagination">
-											<a href="javascript:togglePanelzMobileP1(PANZMP1[0]),togglePanelzP1(PANZP1[0])" style="font-size:10px;">Rough Cut</a>
-											<a href="javascript:togglePanelzMobileP1(PANZMP1[1]),togglePanelzP1(PANZP1[1])" class="active" style="font-size:10px;">Final Cut</a>
-										</div>
-							  <div class="half">
-									  <div class="proDisplay">
-										<style>.embed-container {margin-bottom: 10px; border-radius: 5px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/255378632?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 1-3: Action Sequence Final Cut</p><p style="font-size:12px">We gained a lot of feedback during the critique. I did the best I could at transfering it over to screen while retaining the purity of the roough cut. The video gave me a lot of insight on how much planning goes into making an action movie. It was a great experience.</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>
-			<div class="contentBlack">
-			  <div class="row">
-					<div class="column card">	
-						<div CLASS="dispPanelz" ID="pndmp1_1">
-						  <div class="contain">
-							  	<div class="pagination">
-									<a href="javascript:togglePaneledMobileP1(PANDMP1[0]),togglePaneledP1(PANDP1[0])" class="active" style="font-size:10px">Rough Cut</a>
-									<a href="javascript:togglePaneledMobileP1(PANDMP1[1]),togglePaneledP1(PANDP1[1])" style="font-size:10px">Final Cut</a>
-								</div>
-							  	<div class="half">
-									  <div class="proDisplay">
-											<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/257635618?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-										</div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 1-4: Non-Narrative Transition Rough Cut</p><p style="font-size:12px">This video was short and simple. We were tasked with seraching for found footage that we could intertwine with our own footage to make fluent transitions. It was hard finding the footage and planning a way to make them come together, but was fun to film and see it come together in the end.</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanelz" ID="pndmp1_2">
-						  <div class="contain">
-							  	<div class="pagination">
-									<a href="javascript:togglePaneledMobileP1(PANDMP1[0]),togglePaneledP1(PANDP1[0])" style="font-size:10px">Rough Cut</a>
-									<a href="javascript:togglePaneledMobileP1(PANDMP1[1]),togglePaneledP1(PANDP1[1])" class="active" style="font-size:10px">Final Cut</a>
-								</div>
-							  	<div class="half">
-									  <div class="proDisplay">
-										<style>.embed-container {margin-bottom: 10px; border-radius: 5px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/257635649?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 1-4: Non-Narrative Transition Final Cut</p><p style="font-size:12px">After the critique, I did some minor changes to how the video switches to each shot. I added some subtle interactivity with the music playing in the backgound. The video was fun to make and was worth seeing how it all came together in the end.</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>
+/* Standard syntax */
+@keyframes paw {
+    0%   {width: 80px; height: 80px;}
+	50%	{width: 85px; height:85px;}
+    100%  {width:80px; height:80px;}
+}
+	
+.spinner{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #191919;
+    border-top:3px solid #4B95E1;
+    border-radius: 100%;
+    
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+    animation-timing-function: ease-out;
+    animation: spin 1s infinite linear;
+}
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+#overlay{
+  height:100%;
+  width:100%;
+  background:rgba(0, 0, 0, 1);
+  position:fixed;
+  left:0;
+  top:0;
+  z-index: 1001;
+ }
+	
+	
+	
+img {
+    border-radius: 5px 5px 0 0;
+}
+.la {
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: auto;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.la-instagram {
+  color: white;
+}
+.la-facebook {
+  color: white;
+}
+.la-flickr {
+  color: white;
+}
 		
+.headAni {
+	padding: 5px;
+	overflow: hidden;
+	float: bottom;
+	height: 100px;
+	background-color: #363636;
+	left: 0;
+	top: 0;
+	width: 100%;	
+	z-index: 1000;
+    position:absolute;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+	animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+}
+	
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {background-color:black; top:0px; height: 100%;}
+    100%  {background-color:#363636; height:100px;}
+}
 
-			<div class="footer">
-				<p style="font-size:0.75vw; text-align: right; color:#E4E4E4;">Version: 2.01</p>
-			</div>
-          </div>
-			 
-          <div class="page" id="p3" onmouseover="closeNav()">
-			  
-			<div class="contentTop" style="height: 200px; background-color: ;"> 
-			</div>
-			  <div class="divide"></div>
-			<div class="contentWhite">
-						  <div class="row">
-								<div class="column card">
-									<div CLASS="dispPanel" ID="pnp2_1">
-									  <div class="contain">
-										  <div class="half">
-											  <div class="contain">
-												  <div class="proDisplay">
-													   <style>.embed-container { margin-bottom: 0px;  border-radius: 5;  position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/258645629?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-												  </div>
-											  </div>
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:black; top:0px; height: 100%;}
+    100%  {background-color:#363636; height:100px;}
+}
+	
+.header {
+	padding: 5px;
+	overflow: hidden;
+	float: bottom;
+	height: 100px;
+	background-color: #363636;
+	left: 0;
+	top: 0;
+	width: 100%;
+	}
+.headerbase {
+	padding: 5px;
+	overflow: hidden;
+	float: bottom;
+	height: 102px;
+	background-color: white;
+	left: 0;
+	top: 0;
+	width: 100%;
+	box-shadow: 0 12px 20px 0 rgba(0,0,0,0.45);	
+	z-index: 999;
+    position: absolute;
+    -webkit-animation-name: base; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: base;
+	animation-timing-function: ease-in-out;
+    animation-duration: 2.2s;
+}
 
-										  </div>
-											<div class="half">
-												<div class="contain">
-													<font style="font-size:1.5vw;">Video 2-1: Timelapse Rough Cut</font><p style="font-size:1vw;">For this project we had to film two timelapses of the same location. We learned about the different types of timelapses, such as a hyperlapse. I wanted to thake the opportunity to try and film a hyperlapse. This rough cut was only composed of one hyperlapse while I was supposed to film two.</p>
-													<hr>
-														<div class="pagination">
-															<a href="javascript:togglePanelP2(PANELSP2[0]),togglePanelMobileP2(PANELSMP2[0])" class="active" style="font-size:1vw;">Rough Cut</a>
-															<a href="javascript:togglePanelP2(PANELSP2[1]),togglePanelMobileP2(PANELSMP2[1])" style="font-size:1vw;">Final Cut</a>
-														</div>
-												</div>
-											</div>
-									  </div>
-								  </div>
-									<div CLASS="dispPanel" ID="pnp2_2">
-									  <div class="contain">
-										  <div class="half">
-											  <div class="contain">
-												<div class="proDisplay">
-													<style>.embed-container {margin-bottom: 0px;border-radius: 5px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/259715185?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-												</div>
-											  </div>
+	/* Safari 4.0 - 8.0 */
+@-webkit-keyframes base {
+    0%   {background-color:lightgrey; top:0px; height: 100%;}
+    100%  {background-color:white; height:102px;}
+}
 
-										  </div>
-											<div class="half">
-												<div class="contain">
-													<p style="font-size:1.5vw;">Video 2-1: Timelapse Final Cut</p><p style="font-size:1vw;">After the critique, I took my feedback and filmed another hyperlapse over the weekend. It took about two hours to film and forty-five minutes to edit. Although it was a very tedious process, I enjoyed seeing how it all turned out.</p>
-													<hr>
-													<div class="pagination">
-														<a href="javascript:togglePanelP2(PANELSP2[0]),togglePanelMobileP2(PANELSMP2[0])" style="font-size:1vw;">Rough Cut</a>
-														<a href="javascript:togglePanelP2(PANELSP2[1]),togglePanelMobileP2(PANELSMP2[1])" class="active" style="font-size:1vw;">Final Cut</a>
-													</div>
-												</div>
-											</div>
-									  </div>
-								  </div>
-								</div>
-						  </div>
-						</div>
-			<div class="contentWhite">
-			  <div class="row">
-					<div class="column card">	
-					  <div CLASS="dispPanels" ID="pnsp2_1">
-						  <div class="contain">
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 2-2: Where Cameras Don't Belong Rough Cut</p><p style="font-size:1vw;">I like the idea of filming unique points of view. So, for this project I thought what it would be like to film an earbud from its point of view. It took some planning, but I was eventually able to think of a mount that just might work with what I had in mind. Check out the screenshots as well!</p>
-										<hr>
-										<div class="pagination">
-												<a href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])" class="active" style="font-size:1vw;">Rough Cut</a>
-												<a href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])" style="font-size:1vw;">Final Cut</a>
-												<a href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])" style="font-size:1vw;">Mount</a>
-									  </div>
-									</div>
-								</div>
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/259014372?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-								  </div>
+/* Standard syntax */
+@keyframes base {
+    0%   {background-color:lightgrey; top:0px; height: 100%;}
+    100%  {background-color:white; height:102px;}
+}
+	
+.footer {
+	padding: 5px;
+	overflow: hidden;
+	float: bottom;
+	height: 65px;	
+	background-color: #959595;
+	left: 0;
+	width: 100%;
+	box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5);
+}
+	.footertop{
+		height: 2px;
+		background: #FFFFFF;
+	}
+.content {
+    max-width: 1100px;
+	max-height: inherit;
+    margin: auto;
+	padding-top: 20px;
+}
+.contContain {
+	max-width: 90px;
+	margin: auto;
+	outline: #2D86D9;
+}
+.socialContain {
+	margin: auto;
+	outline: #2D86D9;
+}
+.footContain {
+	padding-top: 0;
+	max-width: 100%;
+	margin-left: 5%;
+}
+.contentLogo {
+	max-height: 100%;
+	max-width: auto;
+	border-radius: 50px;
+	outline: #2D86D9;
+}
+	
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.column {
+  display: block;
+  float: left;
+  width: 50%;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+@media (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.colFoot {
+  display: block;
+  float: left;
+  width: 50%;
+	margin-top: 0;
+	max-width: 100%;
+	padding-left: 16px;
+	text-align: left;
+}
+.footDate {
+  display: block;
+  float: right;
+  width: 50%;
+  margin-bottom: 0;
+  text-align: right;
+  padding-right: 16px;
+  max-width: 100%;
+}
+.box {
+	width: 100px;
+	height: 100px;
+	background-color: #363636;
+}
+@media (max-width: 650px) {
+  .colFoot {
+    width: 100%;
+    display: block;
+  }
+.logo{
+    width: 60px;
+    height: 60px;
+	position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+}
+.logoAni{
+    width: 60px;
+    height: 60px;
+	position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+	animation-timing-function: ease-out;
+    animation: paw 1s infinite linear;
+}
+@-webkit-keyframes paw {
+    0%   {width: 80px; height: 60px;}
+	50%	{width: 85px; height:65px;}
+    100%  {width:80px; height:60px;}
+}
 
-							  </div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanels" ID="pnsp2_2">
-						  <div class="contain">
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 2-2: Where Cameras Don't Belong Final Cut</p><p style="font-size:1vw;">So during the critique, it came to my attention that I forgot to put music in the video. Luckily it wasn't too hard to fix. During post I edited an audio clip to make it sound muffled then, when it reaches the ear, it becomes clear. This project was unique. I enjoyed the planning and imagination aspects that went behind this video.</p>
-										<hr>
-										<div class="pagination">
-												<a href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])" style="font-size:1vw;">Rough Cut</a>
-												<a href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])" class="active" style="font-size:1vw;">Final Cut</a>
-												<a href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])" style="font-size:1vw;">Mount</a>
-									  </div>
-									</div>
-								</div>
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/259719910?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-								  </div>
+/* Standard syntax */
+@keyframes paw {
+    0%   {width: 80px; height: 60px;}
+	50%	{width: 85px; height:65px;}
+    100%  {width:80px; height:60px;}
+}
+.headAni {
+	padding: 5px;
+	overflow: hidden;
+	float: bottom;
+	height: 80px;
+	background-color: #363636;
+	left: 0;
+	top: 0;
+	width: 100%;	
+	z-index: 1000;
+    position:absolute;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+	animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+}
+	
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {background-color:black; top:0px; height: 100%;}
+    100%  {background-color:#363636; height:80px;}
+}
 
-							  </div>
-						  </div>
-					  </div>
-					  <div CLASS="dispPanels" ID="pnsp2_3">
-						  <div class="contain">
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 2-2: Where Cameras Don't Belong Mount System</p><p style="font-size:1vw;">This mount took some planning. I started with my camera case. I knew I wanted to use a fish eye lens, so using the camera case was already a final choice. Figuring out how to mount the ear bud was another issue. I ended up using about 10 rubber bands, one paper clip, two pieces of clear tape, and three pens. I created a ledge for the paper clip to rest on with the pens as i taped it down. I eased the earbud on the paper clip concealing the metal behind the chord. Lastly, I squeezed my hand in the rubber bands as they acted as my handle, then with some awkward arms movements, the mount looked somewhat convincing.</p>
-										<hr>
-										<div class="pagination">
-												<a href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])" style="font-size:1vw;">Rough Cut</a>
-												<a href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])" style="font-size:1vw;">Final Cut</a>
-												<a href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])" class="active" style="font-size:1vw;">Mount</a>
-									  </div>
-									</div>
-								</div>
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/260033499?loop=1&title=0&byline=0&portrait=0" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-								  </div>
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:black; top:0px; height: 100%;}
+    100%  {background-color:#363636; height:80px;}
+}
+	
+.header {
+	padding: 5px;
+	overflow: hidden;
+	float: bottom;
+	height: 80px;
+	background-color: #363636;
+	left: 0;
+	top: 0;
+	width: 100%;
+	}
+.headerbase {
+	padding: 5px;
+	overflow: hidden;
+	float: bottom;
+	height: 82px;
+	background-color: white;
+	left: 0;
+	top: 0;
+	width: 100%;
+	box-shadow: 0 12px 20px 0 rgba(0,0,0,0.45);	
+	z-index: 999;
+    position: absolute;
+    -webkit-animation-name: base; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: base;
+	animation-timing-function: ease-in-out;
+    animation-duration: 2.2s;
+}
 
-							  </div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>
-			<div class="contentWhite">
-			  <div class="row">
-					<div class="column card">	
-						<div CLASS="dispPanelz" ID="pnzp2_1">
-						  <div class="contain">
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-											<img src="images/mindmap.png" style="width:100%;">
-									</div>
+	/* Safari 4.0 - 8.0 */
+@-webkit-keyframes base {
+    0%   {background-color:lightgrey; top:0px; height: 100%;}
+    100%  {background-color:white; height:82px;}
+}
 
-								  </div>
+/* Standard syntax */
+@keyframes base {
+    0%   {background-color:lightgrey; top:0px; height: 100%;}
+    100%  {background-color:white; height:82px;}
+}
+	
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+  border-radius: 5px;
+  min-height: 550px;
+  height: inherit;
+  background: #E1E1E1;
+	overflow-y: hidden;
+}
+.cardPic {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+  border-radius: 5px;
+  max-height: 550px;
+  height: auto;
+  background: #E1E1E1;
+	overflow-y: hidden;
+}
+.third {
+	display: block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+  border-radius: 5px;
+  max-width: 33.3%;
+  background: #E1E1E1;
+	overflow-y: hidden;
+}
+.card:hover{
+	box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5);	
+}
+.container {
+  padding: 16px;
+	overflow-y: hidden;
+}
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.title {
+  color: grey;
+}
+.btn {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #363636;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.navbtn {
+  float: right;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 5%;
+  transition: 0.3s;
+  border-radius: 5px;
+  text-decoration: none;	
+}
+.btn:hover {
+  background-color: #B0B0B0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+}
+</style>
+</head>
+<body>
+	
+<div id="overlay">
+	<div id="overlay">
+		<div class="logoAni"><img src="images/paw button.png" class="logoAni"></div>
+		<div class="spinner"></div> 
+	</div>
+</div>
 
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 2-3: Phase 1 - Creative Question and Scouting Mission Mind Map</p><p style="font-size:1vw;">For this part of the assignment we had to, with a partner, come up with a creative question and answer that question through the video. Phase 1 starts out with a mind map where we come up with all of our ideas. Second, we took our test video.</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelzP2(PANZP2[0]), togglePanelzMobileP2(PANZMP2[0])" class="active" style="font-size:1vw;">Mind Map</a>
-											<a href="javascript:togglePanelzP2(PANZP2[1]), togglePanelzMobileP2(PANZMP2[1])" style="font-size:1vw;">Test Footage</a>
-										</div>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanelz" ID="pnzp2_2">
-						  <div class="contain">
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/260066395?title=0&byline=0&portrait=0" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-								  </div>
+<div class="headAni">
+	<div class="logo"><img src="images/paw button.png" class="logo"></div>
+</div>	
+<div class="headerbase"></div>
+<div class="header"></div>
 
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 2-3: Phase 1 - Creative Question and Scouting Mission Test Footage</p><p style="font-size:1vw;">For our test footage we went to the library at San Jose State University and filmed the ground floor as well as the eighth floor. The goal was to find the noise difference between each floor. While for our final video we plan on recording more floors, the test footage was good for us to get an assumption of how our creative question pans out.</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelzP2(PANZP2[0]), togglePanelzMobileP2(PANZMP2[0])" style="font-size:1vw;">Mind Map</a>
-											<a href="javascript:togglePanelzP2(PANZP2[1]), togglePanelzMobileP2(PANZMP2[1])" class="active" style="font-size:1vw;">Test Footage</a>
-										</div>
-									</div>
-								</div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>
-			<div class="contentWhite">
-			  <div class="row">
-					<div class="column card">	
-						<div CLASS="dispPanelz" ID="pndp2_1">
-						  <div class="contain">
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 2-3: Phase 2 - Rough Cut Surveillance Video Presentation</p>
-										<div class="dispPant" ID="pntp2_1">
-											<p style="font-size:1vw;">Artist Statement:</p><p style="font-size:1vw;">How much noise can you hear in the library? We asked this question to understand the different levels within each floor of the library here at SJSU. We are told that each floor is supposed to be more quiet as we reach the top, and we set out to examine how each floor varies in sound. We found that the floors don't necessarily get louder as we go lower, but rather vary due to population and often popularity. The forth floor or "Spartan Floor" has the most students and it is the loudest floor in the library, mostly due to the amount of students and the volume they communicate at... <a href="javascript:togglePantP2(PANTP2[1]),togglePantMobileP2(PANTMP2[1])" class="tab" style="font-size:1vw;color:#898989;">Continue Reading</a>
-											</p>
-										</div>
-										<div class="dispPant" ID="pntp2_2">
-											<p style="font-size:1vw;">Artist Statement:</p><p style="font-size:1vw;">While the students aren't intentionally being loud, the amount of students decides how loud the overall floor becomes. We continue down and come to find that the next floors aren't at all louder in any sense. That the constant traffic of people and movement from one point to the next is the only distinguishing sound. We came to understand the theory of volume controlled floors, ultimately drawing the conclusion that each floor may have a suggested volume, but is inconsistent due to the population of students and the amount of sounds they make during that time of day. <a href="javascript:togglePantP2(PANTP2[0]),togglePantMobileP2(PANTMP2[0])" class="tab" style="font-size:1vw;color:#898989;">Back</a>
-											</p>
-										</div>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePaneledP2(PANDP2[0]), togglePaneledMobileP2(PANDMP2[0])" class="active" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePaneledP2(PANDP2[1]), togglePaneledMobileP2(PANDMP2[1])" style="font-size:1vw;">Final Cut</a>
-											<a href="javascript:togglePaneledP2(PANDP2[2]), togglePaneledMobileP2(PANDMP2[2])" style="font-size:1vw;">Set-Up</a>
-										</div>
-									</div>
-								</div>
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/261066390?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
+<div class="content">
+  <div class="row">
 
-								  </div>
-
-							  </div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanelz" ID="pndp2_2">
-						  <div class="contain">
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 2-3: Phase 2 - Final Cut Surveillance Video Presentation</p><p style="font-size:1vw;">Process:</p><p style="font-size:1vw;">To demonstrate our creative question, we took it upon ourselves to film every floor in the library and record video and audio to ultimately distinguish the audio differences on each floor. We used the elevator shot and numbers to present the floor location, and the "middle" of each room for our main shot. After the critique, we applied the advice of our peers and shortened the clip. It originally stood at around 2:39, I sped up the clips to make more efficient use of the audience's time. Less time in the elevator and more time on the floor.</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePaneledP2(PANDP2[0]), togglePaneledMobileP2(PANDMP2[0])" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePaneledP2(PANDP2[1]), togglePaneledMobileP2(PANDMP2[1])" class="active" style="font-size:1vw;">Final Cut</a>
-											<a href="javascript:togglePaneledP2(PANDP2[2]), togglePaneledMobileP2(PANDMP2[2])" style="font-size:1vw;">Set-Up</a>
-										</div>
-									</div>
-								</div>
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/261105316?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-								  </div>
-
-							  </div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanelz" ID="pndp2_3">
-						  <div class="contain">
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 2-3: Phase 2 - Camera Set-Up</p><p style="font-size:1vw;">We had a basic set-up for the camera. I hooked up my Rode VideoMic Pro and we recorded raw audio to place over each clip. It was composed of quick pans and stationary shots from a student's perspective.</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePaneledP2(PANDP2[0]), togglePaneledMobileP2(PANDMP2[0])" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePaneledP2(PANDP2[1]), togglePaneledMobileP2(PANDMP2[1])" style="font-size:1vw;">Final Cut</a>
-											<a href="javascript:togglePaneledP2(PANDP2[2]), togglePaneledMobileP2(PANDMP2[2])" class="active" style="font-size:1vw;">Set-Up</a>
-										</div>
-									</div>
-								</div>
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										<img src="images/setup.jpg" style="width: 100%">
-									  </div>
-								  </div>
-
-							  </div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>
-
-			<div class="contentBlack" style="padding-top: 50px;">
-			  <div class="row">
-					<div class="column card">
-						<div CLASS="dispPanel" ID="pnmp2_1">
-						  <div class="contain">
-							  <div class="pagination">
-									<a style="font-size: 10px" href="javascript:togglePanelP2(PANELSP2[0]), togglePanelMobileP2(PANELSMP2[0])" class="active">Rough Cut</a>
-									<a style="font-size: 10px" href="javascript:togglePanelP2(PANELSP2[1]), togglePanelMobileP2(PANELSMP2[1])">Final Cut</a>
-							  </div>
-							  <div class="half">
-									<div class="proDisplay">
-										 <style>.embed-container { margin-bottom: 0px;  border-radius: 5;  position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/258645629?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									</div>
-							  </div>
-							  <div class="half">
-								  <div class="contain">
-									  <font>Video 2-1: Timelapse Rough Cut</font><p style="font-size: 12px">For this project we had to film two timelapses of the same location. We learned about the different types of timelapses, such as a hyperlapse. I wanted to thake the opportunity to try and film a hyperlapse. This rough cut was only composed of one hyperlapse while I was supposed to film two.</p>
-								  </div>
-							  </div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanel" ID="pnmp2_2">
-						  <div class="contain">
-							  <div class="pagination">
-											<a style="font-size: 10px" href="javascript:togglePanelP2(PANELSP2[0]), togglePanelMobileP2(PANELSMP2[0])">Rough Cut</a>
-											<a style="font-size: 10px" href="javascript:togglePanelP2(PANELSP2[1]), togglePanelMobileP2(PANELSMP2[1])" class="active">Final Cut</a>
-										</div>
-							  <div class="half">
-									<div class="proDisplay">
-										<style>.embed-container {margin-bottom: 0px;border-radius: 5px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/259715185?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									</div>				  	
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 2-1: Timelapse Final Cut</p><p style="font-size: 12px">After the critique, I took my feedback and filmed another hyperlapse over the weekend. It took about two hours to film and forty-five minutes to edit. Although it was a very tedious process, I enjoyed seeing how it all turned out.</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-					</div>
-			  </div>
-			</div>
-			<div class="contentBlack">
-			  <div class="row">
-					<div class="column card">
-
-						<div CLASS="dispPanel" ID="pnsmp2_1">
-						  <div class="contain">
-							  <div class="pagination">
-												<a style="font-size: 10px" href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])" class="active">Rough Cut</a>
-												<a style="font-size: 10px" href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])">Final Cut</a>
-												<a style="font-size: 10px" href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])">Mount</a>
-											</div>
-							  <div class="half">
-									  <div class="proDisplay">
-										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/259014372?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<font>Video 2-2: Where Cameras Don't Belong Rough Cut</font><p style="font-size: 12px">I like the idea of filming unique points of view. So, for this project I thought what it would be like to film an earbud from its point of view. It took some planning, but I was eventually able to think of a mount that just might work with what I had in mind. Check out the screenshots as well!</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanel" ID="pnsmp2_2">
-						  <div class="contain">
-							  <div class="pagination">
-											<a style="font-size: 10px" href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])">Rough Cut</a>
-											<a style="font-size: 10px" href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])" class="active">Final Cut</a>
-											<a style="font-size: 10px" href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])">Mount</a>
-										</div>
-							  <div class="half">
-									<div class="proDisplay">
-										<style>.embed-container {margin-bottom: 10px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/259719910?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-							    </div>			  	
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 2-2: Where Cameras Don't Belong Final Cut</p><p style="font-size: 12px">So during the critique, it came to my attention that I forgot to put music in the video. Luckily it wasn't too hard to fix. During post I edited an audio clip to make it sound muffled then, when it reaches the ear, it becomes clear. This project was unique. I enjoyed the planning and imagination aspects that went behind this video.</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanel" ID="pnsmp2_3">
-						  <div class="contain">
-							 <div class="pagination">
-											<a style="font-size: 10px" href="javascript:togglePanelsP2(PANP2[0]),togglePanelsMobileP2(PANMP2[0])">Rough Cut</a>
-											<a style="font-size: 10px" href="javascript:togglePanelsP2(PANP2[1]),togglePanelsMobileP2(PANMP2[1])">Final Cut</a>
-											<a style="font-size: 10px" href="javascript:togglePanelsP2(PANP2[2]),togglePanelsMobileP2(PANMP2[2])" class="active">Mount</a>
-										</div>
-							  <div class="half">
-									<div class="proDisplay">
-										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/260033499?loop=1&title=0&byline=0&portrait=0" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-							    </div>		  	
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 2-2: Where Cameras Don't Belong Mount System</p><p style="font-size: 12px">This mount took some planning. I started with my camera case. I knew I wanted to use a fish eye lens, so using the camera case was already a final choice. Figuring out how to mount the ear bud was another issue. I ended up using about 10 rubber bands, one paper clip, two pieces of clear tape, and three pens. I created a ledge for the paper clip to rest on with the pens as i taped it down. I eased the earbud on the paper clip concealing the metal behind the chord. Lastly, I squeezed my hand in the rubber bands as they acted as my handle, then with some awkward arms movements, the mount looked somewhat convincing.</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-					</div>
-			  </div>
-			</div>
-			<div class="contentBlack">
-			  <div class="row">
-					<div class="column card">	
-						<div CLASS="dispPanelz" ID="pnzmp2_1">
-						  <div class="contain">
-							  <div class="pagination">
-											<a style="font-size: 10px" href="javascript:togglePanelzMobileP2(PANZMP2[0])" class="active">Mind Map</a>
-											<a style="font-size: 10px" href="javascript:togglePanelzMobileP2(PANZMP2[1])">Test Footage</a>
-										</div>
-							  <div class="half">
-									  <div class="proDisplay">
-											<img src="images/mindmap.png" style="width:100%;">
-									</div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 2-3: Phase 1 - Creative Question and Scouting Mission Mind Map</p><p style="font-size: 12px">For this part of the assignment we had to, with a partner, come up with a creative question and answer that question through the video. Phase 1 starts out with a mind map where we come up with all of our ideas. Second, we took our test video.</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanelz" ID="pnzmp2_2">
-						  <div class="contain">
-							  <div class="pagination">
-											<a style="font-size: 10px" href="javascript:togglePanelzMobileP2(PANZMP2[0])">Mind Map</a>
-											<a style="font-size: 10px" href="javascript:togglePanelzMobileP2(PANZMP2[1])" class="active">Test Footage</a>
-										</div>
-							  <div class="half">
-									  <div class="proDisplay">
-										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/260066395?title=0&byline=0&portrait=0" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 2-3: Phase 1 - Creative Question and Scouting Mission Test Footage</p><p style="font-size: 12px">For our test footage we went to the library at San Jose State University and filmed the ground floor as well as the eighth floor. The goal was to find the noise difference between each floor. While for our final video we plan on recording more floors, the test footage was good for us to get an assumption of how our creative question pans out.</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>
-			<div class="contentBlack">
-			  <div class="row">
-					<div class="column card">	
-						<div CLASS="dispPanelzMobile" ID="pndmp2_1">
-						  <div class="contain">
-							  <div class="pagination">
-											<a style="font-size: 10px" href="javascript:togglePaneledMobileP2(PANDMP2[0])" class="active">Rough Cut</a>
-											<a style="font-size: 10px"  href="javascript:togglePaneledMobileP2(PANDMP2[1])">Final Cut</a>
-											<a style="font-size: 10px" href="javascript:togglePaneledMobileP2(PANDMP2[2])">Set-Up</a>
-										</div>
-							    <div class="half">
-									  <div class="proDisplay">
-										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/261066390?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 2-3: Phase 2 - Rough Cut Surveillance Video Presentation</p>
-										<div class="dispPant" ID="pntmp2_1">
-											<p>Artist Statement:</p><p style="font-size: 12px">How much noise can you hear in the library? We asked this question to understand the different levels within each floor of the library here at SJSU. We are told that each floor is supposed to be more quiet as we reach the top, and we set out to examine how each floor varies in sound. We found that the floors don't necessarily get louder as we go lower, but rather vary due to population and often popularity. The forth floor or "Spartan Floor" has the most students and it is the loudest floor in the library, mostly due to the amount of students and the volume they communicate at... <br><br><a href="javascript:togglePantMobileP2(PANTMP2[1])"style="color:#898989;">Continue Reading</a>
-											</p>
-										</div>
-										<div class="dispPantMobile" ID="pntmp2_2">
-											<p>Artist Statement:</p><p style="font-size: 12px">While the students aren't intentionally being loud, the amount of students decides how loud the overall floor becomes. We continue down and come to find that the next floors aren't at all louder in any sense. That the constant traffic of people and movement from one point to the next is the only distinguishing sound. We came to understand the theory of volume controlled floors, ultimately drawing the conclusion that each floor may have a suggested volume, but is inconsistent due to the population of students and the amount of sounds they make during that time of day. <br><br><a href="javascript:togglePantMobileP2(PANTMP2[0])" style="color:#898989;">Back</a>
-											</p>
-										</div>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanelzMobile" ID="pndmp2_2">
-						  <div class="contain">
-							  <div class="pagination">
-											<a style="font-size: 10px" href="javascript:togglePaneledMobileP2(PANDMP2[0])">Rough Cut</a>
-											<a style="font-size: 10px" href="javascript:togglePaneledMobileP2(PANDMP2[1])" class="active">Final Cut</a>
-											<a style="font-size: 10px" href="javascript:togglePaneledMobileP2(PANDMP2[2])">Set-Up</a>
-										</div>
-							    <div class="half">
-									  <div class="proDisplay">
-										<style>.embed-container {margin-bottom: 0px; border-radius: 5px;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src="https://player.vimeo.com/video/261105316?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-									  </div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 2-3: Phase 2 - Final Cut Surveillance Video Presentation</p><p style="font-size: 13px">Process:</p><p style="font-size: 12px">To demonstrate our creative question, we took it upon ourselves to film every floor in the library and record video and audio to ultimately distinguish the audio differences on each floor. We used the elevator shot and numbers to present the floor location, and the "middle" of each room for our main shot. After the critique, we applied the advice of our peers and shortened the clip. It originally stood at around 2:39, I sped up the clips to make more efficient use of the audience's time. Less time in the elevator and more time on the floor.</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanelzMobile" ID="pndmp2_3">
-						  <div class="contain">
-							  <div class="pagination">
-											<a style="font-size: 10px" href="javascript:togglePaneledMobileP2(PANDMP2[0])">Rough Cut</a>
-											<a style="font-size: 10px" href="javascript:togglePaneledMobileP2(PANDMP2[1])">Final Cut</a>
-											<a style="font-size: 10px" href="javascript:togglePaneledMobileP2(PANDMP2[2])" class="active">Set-Up</a>
-										</div>
-							    <div class="half">
-									  <div class="proDisplay">
-										<img src="images/setup.jpg" style="width: 100%">
-									  </div>
-							  </div>
-							  <hr>
-								<div class="half">
-									<div class="contain">
-										<p>Video 2-3: Phase 2 - Camera Set-Up</p><p style="font-size: 12px">We had a basic set-up for the camera. I hooked up my Rode VideoMic Pro and we recorded raw audio to place over each clip. It was composed of quick pans and stationary shots from a student's perspective.</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>
-
-			<div class="footer">
-					<p style="font-size:0.75vw; text-align: right; color:#E4E4E4;">Version: 2.50</p>
-			</div>
-          </div>
-			 
-		  <div class="page" id="p4" onmouseover="closeNav()">
-			  <div class="contentTop" style="height: 200px; background-color: ;"> 
-			</div>
-			  <div class="divide"></div>
-            <div class="contentWhite">
-			  <div class="row">
-					<div class="column card">
-						<div CLASS="dispPanel" ID="pnp3_1">
-						  <div class="contain">
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										   <video src="video/coming-soon.gif"></video>
-									  </div>
-								  </div>
-
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<font style="font-size:1.5vw;">Video 3-1: Keyed Screen Selfie Moment Rough Cut</font><p style="font-size:1vw;">(Description Coming Soon)</p>
-										<hr>
-											<div class="pagination">
-												<a href="javascript:togglePanelP3(PANELSP3[0]),togglePanelMobileP3(PANELSMP3[0])" class="active" style="font-size:1vw;">Rough Shoot</a>
-												<a href="javascript:togglePanelP3(PANELSP3[1]),togglePanelMobileP3(PANELSMP3[1])" style="font-size:1vw;">Final Cut</a>
-											</div>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanel" ID="pnp3_2">
-						  <div class="contain">
-							  <div class="half">
-								  <div class="contain">
-									<div class="proDisplay">
-										<video src="video/coming-soon.gif"></video>
-									</div>
-								  </div>
-
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 3-1: Keyed Screen Selfie Moment Final Cut</p><p style="font-size:1vw;">(Description Coming Soon)</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelP3(PANELSP3[0]),togglePanelMobileP3(PANELSMP3[0])" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePanelP3(PANELSP3[1]),togglePanelMobileP3(PANELSMP3[1])" class="active" style="font-size:1vw;">Final Cut</a>
-										</div>
-									</div>
-								</div>
-						  </div>
-					  </div>
-					</div>
-			  </div>
-			</div>
-			<div class="contentWhite">
-			  <div class="row">
-					<div class="column card">	
-					    <div CLASS="dispPanels" ID="pnsp3_1">
-						  <div class="contain">
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 3-2: Call Outs, Animation and Motion Tracking Rough Cut</p><p style="font-size:1vw;">(Description Coming Soon)</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelsP3(PANP3[0]),togglePanelsMobileP3(PANMP3[0])" class="active" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePanelsP3(PANP3[1]),togglePanelsMobileP3(PANMP3[1])" style="font-size:1vw;">Final Cut</a>
-										</div>
-									</div>
-								</div>
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										<video src="video/coming-soon.gif"></video>
-									  </div>
-								  </div>
-
-							  </div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanels" ID="pnsp3_2">
-						  <div class="contain">
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 3-2: Call Outs, Animation and Motion Tracking Final Cut</p><p style="font-size:1vw;">(Description Coming Soon)</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelsP3(PANP3[0]),togglePanelsMobileP3(PANMP3[0])" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePanelsP3(PANP3[1]),togglePanelsMobileP3(PANMP3[1])" class="active" style="font-size:1vw;">Final Cut</a>
-										</div>
-									</div>
-								</div>
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										<video src="video/coming-soon.gif"></video>
-									  </div>
-								  </div>
-
-							  </div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>
-			<div class="contentWhite">
-			  <div class="row">
-					<div class="column card">	
-						<div CLASS="dispPanelz" ID="pnzp3_1">
-						  <div class="contain">
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-											<video src="video/coming-soon.gif"></video>
-										</div>
-
-								  </div>
-
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 3-3: The Endless Loop Rough Cut</p><p style="font-size:1vw;">(Description Coming Soon)</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelzP3(PANZP3[0]),togglePanelzMobileP3(PANZMP3[0])" class="active" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePanelzP3(PANZP3[1]),togglePanelzMobileP3(PANZMP3[1])" style="font-size:1vw;">Final Cut</a>
-										</div>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanelz" ID="pnzp3_2">
-						  <div class="contain">
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										<video src="video/coming-soon.gif"></video>
-									  </div>
-								  </div>
-
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 3-3: The Endless Loop Final Cut</p><p style="font-size:1vw;">(Description Coming Soon)</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelzP3(PANZP3[0]),togglePanelzMobileP3(PANZMP3[0])" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePanelzP3(PANZP3[1]),togglePanelzMobileP3(PANZMP3[1])" class="active" style="font-size:1vw;">Final Cut</a>
-										</div>
-									</div>
-								</div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>
-			  
-			<div class="contentBlack" style="padding-top: 50px;">
-			  <div class="row">
-					<div class="column card">
-						<div CLASS="dispPanel" ID="pnmp3_1">
-						  <div class="contain">
-							  <div class="pagination">
-									<a href="javascript:togglePanelMobileP3(PANELSMP3[0]),togglePanelP3(PANELSP3[0])" class="active" style="font-size:10px">Rough Cut</a>
-									<a href="javascript:togglePanelMobileP3(PANELSMP3[1]),togglePanelP3(PANELSP3[1])" style="font-size:10px">Final Cut</a>
-								</div>
-							  <div class="half">
-									  <div class="proDisplay">
-										   <video src="video/coming-soon.gif"></video>
-									  </div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<font>Video 3-1: Keyed Screen Selfie Moment Rough Cut</font><p style="font-size:12px">(Description Coming Soon)</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanel" ID="pnmp3_2">
-						  <div class="contain">
-							  <div class="pagination">
-									<a href="javascript:togglePanelMobileP3(PANELSMP3[0]),togglePanelP3(PANELSP3[0])" style="font-size:10px">Rough Cut</a>
-									<a href="javascript:togglePanelMobileP3(PANELSMP3[1]),togglePanelP3(PANELSP3[1])" class="active" style="font-size:10px">Final Cut</a>
-								</div>
-							  <div class="half">
-									<div class="proDisplay">
-										<video src="video/coming-soon.gif"></video>
-									</div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 3-1: Keyed Screen Selfie Moment Final Cut</p><p style="font-size:12px">(Description Coming Soon)</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-					</div>
-			  </div>
-			</div>
-			<div class="contentBlack">
-			  <div class="row">
-					<div class="column card">	
-					    <div CLASS="dispPanels" ID="pnsmp3_1">
-						  <div class="contain">
-							    <div class="pagination">
-									<a href="javascript:togglePanelsMobileP3(PANMP3[0]),togglePanelsP3(PANP3[0])" class="active" style="font-size:10px">Rough Cut</a>
-									<a href="javascript:togglePanelsMobileP3(PANMP3[1]),togglePanelsP3(PANP3[1])" style="font-size:10px">Final Cut</a>
-								</div>
-							  <div class="half">
-									  <div class="proDisplay">
-										<video src="video/coming-soon.gif"></video>
-									  </div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 3-2: Call Outs, Animation and Motion Tracking Rough Cut</p><p style="font-size:12px">(Description Coming Soon)</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanels" ID="pnsmp3_2">
-						  <div class="contain">
-							  <div class="pagination">
-										<a href="javascript:togglePanelsMobileP3(PANMP3[0]),togglePanelsP3(PANP3[0])" style="font-size:10px">Rough Cut</a>
-										<a href="javascript:togglePanelsMobileP3(PANMP3[1]),togglePanelsP3(PANP3[1])" class="active" style="font-size:10px">Final Cut</a>
-								</div>
-							  <div class="half">
-									  <div class="proDisplay">
-										<video src="video/coming-soon.gif"></video>
-									  </div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 3-2: Call Outs, Animation and Motion Tracking Final Cut</p><p style="font-size:12px">(Description Coming Soon)</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>
-			<div class="contentBlack">
-			  <div class="row">
-					<div class="column card">	
-						<div CLASS="dispPanelz" ID="pnzmp3_1">
-						  <div class="contain">
-							  <div class="pagination">
-									<a href="javascript:togglePanelzMobileP3(PANZMP3[0]),togglePanelzP3(PANZP3[0])" class="active" style="font-size:10px;">Rough Cut</a>
-									<a href="javascript:togglePanelzMobileP3(PANZMP3[1]),togglePanelzP3(PANZP3[1])" style="font-size:10px;">Final Cut</a>
-							  </div>
-							  <div class="half">
-									  <div class="proDisplay">
-											<video src="video/coming-soon.gif"></video>
-										</div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 3-3: The Endless Loop Rough Cut</p><p style="font-size:12px">(Description Coming Soon)</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanelz" ID="pnzmp3_2">
-						  <div class="contain">
-							  <div class="pagination">
-											<a href="javascript:togglePanelzMobileP3(PANZMP3[0]),togglePanelzP3(PANZP3[0])" style="font-size:10px;">Rough Cut</a>
-											<a href="javascript:togglePanelzMobileP3(PANZMP3[1]),togglePanelzP3(PANZP3[1])" class="active" style="font-size:10px;">Final Cut</a>
-										</div>
-							  <div class="half">
-									  <div class="proDisplay">
-										<video src="video/coming-soon.gif"></video>
-									  </div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 3-3: The Endless Loop Final Cut</p><p style="font-size:12px">(Description Coming Soon)</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>
-			  
-			<div class="footer">
-					<p style="font-size:0.75vw; text-align: right; color:#E4E4E4;">Version: 2.50</p>
-			</div>
-          </div>
-			 
-		  <div class="page" id="p5" onmouseover="closeNav()">
-			  <div class="contentTop" style="height: 200px; background-color: ;"> 
-			</div>
-			  <div class="divide"></div>
-            <div class="contentWhite">
-			  <div class="row">
-					<div class="column card">
-						<div CLASS="dispPanel" ID="pnp4_1">
-						  <div class="contain">
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										   <video src="video/coming-soon.gif"></video>
-									  </div>
-								  </div>
-
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<font style="font-size:1.5vw;">Video 4-1: Phase 1 Speed Dating for Loglines Rough Cut</font><p style="font-size:1vw;">(Description Coming Soon)</p>
-										<hr>
-											<div class="pagination">
-												<a href="javascript:togglePanelP4(PANELSP4[0]),togglePanelMobileP4(PANELSMP4[0])" class="active" style="font-size:1vw;">Rough Shoot</a>
-												<a href="javascript:togglePanelP4(PANELSP4[1]),togglePanelMobileP4(PANELSMP4[1])" style="font-size:1vw;">Final Cut</a>
-											</div>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanel" ID="pnp4_2">
-						  <div class="contain">
-							  <div class="half">
-								  <div class="contain">
-									<div class="proDisplay">
-										<video src="video/coming-soon.gif"></video>
-									</div>
-								  </div>
-
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 4-1: Phase 1 Speed Dating for Loglines Final Cut</p><p style="font-size:1vw;">(Description Coming Soon)</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelP4(PANELSP4[0]),togglePanelMobileP4(PANELSMP4[0])" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePanelP4(PANELSP4[1]),togglePanelMobileP4(PANELSMP4[1])" class="active" style="font-size:1vw;">Final Cut</a>
-										</div>
-									</div>
-								</div>
-						  </div>
-					  </div>
-					</div>
-			  </div>
-			</div>
-			<div class="contentWhite">
-			  <div class="row">
-					<div class="column card">	
-					    <div CLASS="dispPanels" ID="pnsp4_1">
-						  <div class="contain">
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 4-2: Phase 2 Written Proposal Rough Cut</p><p style="font-size:1vw;">(Description Coming Soon)</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelsP4(PANP4[0]),togglePanelsMobileP4(PANMP4[0])" class="active" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePanelsP4(PANP4[1]),togglePanelsMobileP4(PANMP4[1])" style="font-size:1vw;">Final Cut</a>
-										</div>
-									</div>
-								</div>
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										<video src="video/coming-soon.gif"></video>
-									  </div>
-								  </div>
-
-							  </div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanels" ID="pnsp4_2">
-						  <div class="contain">
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 4-2: Phase 2 Written Proposal Final Cut</p><p style="font-size:1vw;">(Description Coming Soon)</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelsP4(PANP4[0]),togglePanelsMobileP4(PANMP4[0])" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePanelsP4(PANP4[1]),togglePanelsMobileP4(PANMP4[1])" class="active" style="font-size:1vw;">Final Cut</a>
-										</div>
-									</div>
-								</div>
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										<video src="video/coming-soon.gif"></video>
-									  </div>
-								  </div>
-
-							  </div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>			  
-			<div class="contentWhite">
-			  <div class="row">
-					<div class="column card">	
-						<div CLASS="dispPant" ID="pndp4_1">
-						  <div class="contain">
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-											<video src="video/coming-soon.gif"></video>
-										</div>
-
-								  </div>
-
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 4-3: Phase 3 Dailies Rough Cut</p><p style="font-size:1vw;">(Description Coming Soon)</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePaneledP4(PANDP4[0]),togglePaneledMobileP4(PANDMP4[0])" class="active" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePaneledP4(PANDP4[1]),togglePaneledMobileP4(PANDMP4[1])" style="font-size:1vw;">Final Cut</a>
-										</div>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanelz" ID="pndp4_2">
-						  <div class="contain">
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										<video src="video/coming-soon.gif"></video>
-									  </div>
-								  </div>
-
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 4-3: Phase 3 Dailies Final Cut</p><p style="font-size:1vw;">(Descriptiono Coming Soon)</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePaneledP4(PANDP4[0]),togglePaneledMobileP4(PANDMP4[0])" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePaneledP4(PANDP4[1]),togglePaneledMobileP4(PANDMP4[1])" class="active" style="font-size:1vw;">Final Cut</a>
-										</div>
-									</div>
-								</div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>			  
-			<div class="contentWhite">
-			  <div class="row">
-					<div class="column card">	
-						<div CLASS="dispPanelz" ID="pnzp4_1">
-						  <div class="contain">				  
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 4-4: Phase 4 Presentation Rough Cut</p><p style="font-size:1vw;">(Description Coming Soon)</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelzP4(PANZP4[0]),togglePanelzMobileP4(PANZMP4[0])" class="active" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePanelzP4(PANZP4[1]),togglePanelzMobileP4(PANZMP4[1])" style="font-size:1vw;">Final Cut</a>
-										</div>
-									</div>
-								</div>
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-											<video src="video/coming-soon.gif"></video>
-										</div>
-
-								  </div>
-
-							  </div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanelz" ID="pnzp4_2">
-						  <div class="contain">  
-								<div class="half">
-									<div class="contain">
-										<p style="font-size:1.5vw;">Video 4-4: Phase 4 Presentation Final Cut</p><p style="font-size:1vw;">(Descriptiono Coming Soon)</p>
-										<hr>
-										<div class="pagination">
-											<a href="javascript:togglePanelzP4(PANZP4[0]),togglePanelzMobileP4(PANZMP4[0])" style="font-size:1vw;">Rough Cut</a>
-											<a href="javascript:togglePanelzP4(PANZP4[1]),togglePanelzMobileP4(PANZMP4[1])" class="active" style="font-size:1vw;">Final Cut</a>
-										</div>
-									</div>
-								</div>
-							  <div class="half">
-								  <div class="contain">
-									  <div class="proDisplay">
-										<video src="video/coming-soon.gif"></video>
-									  </div>
-								  </div>
-
-							  </div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>
-			  
-			
-			  
-			<div class="contentBlack" style="padding-top: 50px;">
-			  <div class="row">
-					<div class="column card">
-						<div CLASS="dispPanel" ID="pnmp4_1">
-						  <div class="contain">
-							  <div class="pagination">
-									<a href="javascript:togglePanelMobileP4(PANELSMP4[0]),togglePanelP4(PANELSP4[0])" class="active" style="font-size:10px">Rough Cut</a>
-									<a href="javascript:togglePanelMobileP4(PANELSMP4[1]),togglePanelP4(PANELSP4[1])" style="font-size:10px">Final Cut</a>
-								</div>
-							  <div class="half">
-									  <div class="proDisplay">
-										   <video src="video/coming-soon.gif"></video>
-									  </div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<font>Video 4-1: Phase 1 Speed Dating for Loglines Rough Cut</font><p style="font-size:12px">(Description Coming Soon)</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanel" ID="pnmp4_2">
-						  <div class="contain">
-							  <div class="pagination">
-									<a href="javascript:togglePanelMobileP4(PANELSMP4[0]),togglePanelP4(PANELSP4[0])" style="font-size:10px">Rough Cut</a>
-									<a href="javascript:togglePanelMobileP4(PANELSMP3[1]),togglePanelP4(PANELSP4[1])" class="active" style="font-size:10px">Final Cut</a>
-								</div>
-							  <div class="half">
-									<div class="proDisplay">
-										<video src="video/coming-soon.gif"></video>
-									</div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 4-1: Phase 1 Speed Dating for Loglines Final Cut</p><p style="font-size:12px">(Description Coming Soon)</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-					</div>
-			  </div>
-			</div>
-			<div class="contentBlack">
-			  <div class="row">
-					<div class="column card">	
-					    <div CLASS="dispPanels" ID="pnsmp4_1">
-						  <div class="contain">
-							  <div class="pagination">
-											<a href="javascript:togglePanelsP4(PANP4[0]),togglePanelsMobileP4(PANMP4[0])" class="active" style="font-size:10px;">Rough Cut</a>
-											<a href="javascript:togglePanelsP4(PANP4[1]),togglePanelsMobileP4(PANMP4[1])" style="font-size:10px;">Final Cut</a>
-										</div>
-								
-							  <div class="half">
-									  <div class="proDisplay">
-										<video src="video/coming-soon.gif"></video>
-									  </div>
-							  </div>
-							  <div class="half">
-									<div class="contain">
-										<p>Video 4-2: Phase 2 Written Proposal Rough Cut</p><p style="font-size:12px;">(Description Coming Soon)</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanels" ID="pnsmp4_2">
-						  <div class="contain">
-							  <div class="pagination">
-											<a href="javascript:togglePanelsP4(PANP4[0]),togglePanelsMobileP4(PANMP4[0])" style="font-size:10px;">Rough Cut</a>
-											<a href="javascript:togglePanelsP4(PANP4[1]),togglePanelsMobileP4(PANMP4[1])" class="active" style="font-size:10px;">Final Cut</a>
-										</div>
-								
-							  <div class="half">
-									  <div class="proDisplay">
-										<video src="video/coming-soon.gif"></video>
-									  </div>
-								  <div class="half">
-									<div class="contain">
-										<p>Video 4-2: Phase 2 Written Proposal Final Cut</p><p style="font-size:12px;">(Description Coming Soon)</p>
-									</div>
-								</div>
-							  </div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>
-			<div class="contentBlack">
-			  <div class="row">
-					<div class="column card">	
-						<div CLASS="dispPanelz" ID="pnzmp4_1">
-						  <div class="contain">
-							  <div class="pagination">
-									<a href="javascript:togglePanelzMobileP4(PANZMP4[0]),togglePanelzP4(PANZP4[0])" class="active" style="font-size:10px;">Rough Cut</a>
-									<a href="javascript:togglePanelzMobileP4(PANZMP4[1]),togglePanelzP4(PANZP4[1])" style="font-size:10px;">Final Cut</a>
-							  </div>
-							  <div class="half">
-									  <div class="proDisplay">
-											<video src="video/coming-soon.gif"></video>
-										</div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 4-3: Phase 3 Dailies Rough Cut</p><p style="font-size:12px">(Description Coming Soon)</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanelz" ID="pnzmp4_2">
-						  <div class="contain">
-							  <div class="pagination">
-											<a href="javascript:togglePanelzMobileP4(PANZMP4[0]),togglePanelzP4(PANZP4[0])" style="font-size:10px;">Rough Cut</a>
-											<a href="javascript:togglePanelzMobileP4(PANZMP4[1]),togglePanelzP4(PANZP4[1])" class="active" style="font-size:10px;">Final Cut</a>
-										</div>
-							  <div class="half">
-									  <div class="proDisplay">
-										<video src="video/coming-soon.gif"></video>
-									  </div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 4-3: Phase 3 Dailies Final Cut</p><p style="font-size:12px">(Description Coming Soon)</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>
-			<div class="contentBlack">
-			  <div class="row">
-					<div class="column card">	
-						<div CLASS="dispPaneled" ID="pndmp4_1">
-						  <div class="contain">
-							  <div class="pagination">
-											<a href="javascript:togglePaneledP4(PANDP4[0]),togglePaneledMobileP4(PANDMP4[0])" class="active" style="font-size:10px">Rough Cut</a>
-											<a href="javascript:togglePaneledP4(PANDP4[1]),togglePaneledMobileP4(PANDMP4[1])" style="font-size:10px">Final Cut</a>
-										</div>
-							  <div class="half">
-									  <div class="proDisplay">
-											<video src="video/coming-soon.gif"></video>
-										</div>
-
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 4-4: Phase 4 Presentation Rough Cut</p><p style="font-size:12px">(Description Coming Soon)</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-						<div CLASS="dispPanelz" ID="pndmp4_2">
-						  <div class="contain">
-							  <div class="pagination">
-											<a href="javascript:togglePaneledP4(PANDP4[0]),togglePaneledMobileP4(PANDMP4[0])" style="font-size:10px">Rough Cut</a>
-											<a href="javascript:togglePaneledP4(PANDP4[1]),togglePaneledMobileP4(PANDMP4[1])" class="active" style="font-size:10px">Final Cut</a>
-										</div>
-							  <div class="half">
-									  <div class="proDisplay">
-										<video src="video/coming-soon.gif"></video>
-									  </div>
-							  </div>
-								<div class="half">
-									<div class="contain">
-										<p>Video 4-4: Phase 4 Presentation Final Cut</p><p style="font-size:12px">(Description Coming Soon)</p>
-									</div>
-								</div>
-						  </div>
-					  </div>
-				</div>
-			  </div>
-			</div>
-			  
-			<div class="footer">
-					<p style="font-size:0.75vw; text-align: right; color:#E4E4E4;">Version: 2.50</p>
-			</div>
-          </div>
-		  </div> 
-        </div>
+  <div class="column">
+    <div class="cardPic">
+      <img src="images/profile.JPG" alt="profile pic" style="width:100%">
+    </div>
+  </div>
+	  
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <font size="6">Hello!</font>
+		  <hr>
+		  <p><font color="#797979">Welcome to my website...</font></p>
+        <p>Hey! My name is Jordan Hoekwater, I am a college student at San Jose State University where I am studying Digital Media Arts. This website was a project that originated in from my Art 74 class during my freshman year where we learned how to code and develop a working website. As I learn more, this website will evolve and change in many ways. Please feel free to explore and click on a couple of buttons, they might do stuff or lead to some of my other work. I hope you enjoy my website as much as I enjoyed developing it.</p>
+		  <hr>
+		  </p>
+		<p><img src="images/initials.png" style="width:80px">Jordan Hoekwater</p>
+		<hr>
+		<p><a class="btn" href="home.html"><i class="fa fa-folder"></i> Visit Portfolio</a></p>
       </div>
     </div>
   </div>
-</body>
-<script src="js/art-75.js"></script>
+</div>
 
+</div>	
+<div class="footertop">
+	
+</div>
+	
+<div class="footer">
+	<div class="socialContain">
+		<a href="#" class="fa fa-male"></a>
+		<a href="#" class="fa fa-camera-retro"></a>
+		<a href="#" class="fa fa-folder-open"></a>
+	</div>
+</div>
+
+	
+<script>
+	var overlay = document.getElementById("overlay");
+window.addEventListener('load', function(){
+  overlay.style.display = 'none';
+})
+</script>
+	
+</body>
 </html>
