@@ -1,3 +1,4 @@
+<!doctype html>
 <html><head>
 <meta charset="utf-8">
 <title>Art 75 - Portfolio</title>
@@ -35,11 +36,11 @@
 				  <div class="bar3"></div>
 					</label>
 					<ul id="text" class="navBox" style="z-index: 500; padding-top: 100px; display: hidden;" for="myCheck">
-						<a href="#t1" onClick="javascript:toggleMenuType(MENUTYPE[0]), toggleMenuType2(MENUTYPE2[0])"><li class="icon fa fa-home" style="filter: invert(100); margin-bottom: 10px; transform: scale(1);" id="uno"></li></a>
-						<a href="#t2" onClick="javascript:toggleMenuType(MENUTYPE[1]), toggleMenuType2(MENUTYPE2[1]), openPageTwo()"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="dos"></li></a>
-						<a href="#t3" onClick="javascript:toggleMenuType(MENUTYPE[2]), toggleMenuType2(MENUTYPE2[2]), openPageThree()"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="tres"></li></a>
-						<a href="#t4" onClick="javascript:toggleMenuType(MENUTYPE[3]), toggleMenuType2(MENUTYPE2[3]), openPageFour()"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="cuatro"></li></a>
-						<a href="#t5" onClick="javascript:toggleMenuType(MENUTYPE[4]), toggleMenuType2(MENUTYPE2[4]), openPageFive()"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="cinco"></li></a>
+						<a href="#t1" onClick="javascript:toggleMenuType(MENUTYPE[0]), toggleMenuType2(MENUTYPE2[0]), togglePanelsMobile(PANM[1]),togglePanels(PAN[1])"><li class="icon fa fa-home" style="filter: invert(100); margin-bottom: 10px; transform: scale(1);" id="uno"></li></a>
+						<a href="#t2" onClick="javascript:toggleMenuType(MENUTYPE[1]), toggleMenuType2(MENUTYPE2[1]), togglePanelsMobile(PANM[2]),togglePanels(PAN[2]), openPageTwo()"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="dos"></li></a>
+						<a href="#t3" onClick="javascript:toggleMenuType(MENUTYPE[2]), toggleMenuType2(MENUTYPE2[2]), togglePanelsMobile(PANM[3]),togglePanels(PAN[3]), openPageThree()"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="tres"></li></a>
+						<a href="#t4" onClick="javascript:toggleMenuType(MENUTYPE[3]), toggleMenuType2(MENUTYPE2[3]), togglePanelsMobile(PANM[4]), togglePanels(PAN[4]), openPageFour()"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="cuatro"></li></a>
+						<a href="#t5" onClick="javascript:toggleMenuType(MENUTYPE[4]), toggleMenuType2(MENUTYPE2[4]), togglePanelsMobile(PANM[5]),togglePanels(PAN[5]), openPageFive()"><li class="icon fa fa-circle-thin" style="filter: invert(100); margin-bottom: 10px; transform: scale(.7);" id="cinco"></li></a>
 					  </ul>
 				</div>
 				<div class="bottom-left"><p class="vertical-text">Hoekwater Development - 2018</p></div>
@@ -58,14 +59,14 @@
 
 			  <div id="texts" class="btn-group" style="z-index: 500; display: hidden;" for="myCheck">
 				<div class="offCentered mobileNav">
-								  <button class="btn"><a href="#t1" onClick="javascript:toggleMenuType2(MENUTYPE2[0]),toggleMenuType(MENUTYPE[0])"><i class="icon fa fa-home" style="filter: invert(100);transform: scale(.6);"></i></a></button>									
-								  <button class="btn"><a href="#t2" onClick="javascript:toggleMenuType2(MENUTYPE2[1]),toggleMenuType(MENUTYPE[1]), openPageTwo()"><i class="icon fa fa-circle-thin" style="filter: invert(100);transform: scale(.4);"></i></a></button>
+								  <button class="btn"><a href="#t1" onClick="javascript:toggleMenuType2(MENUTYPE2[0]),toggleMenuType(MENUTYPE[0]), togglePanelsMobile(PANM[1]),togglePanels(PAN[1])"><i class="icon fa fa-home" style="filter: invert(100);transform: scale(.6);"></i></a></button>									
+								  <button class="btn"><a href="#t2" onClick="javascript:toggleMenuType2(MENUTYPE2[1]),toggleMenuType(MENUTYPE[1]), togglePanelsMobile(PANM[2]),togglePanels(PAN[2]), openPageTwo()"><i class="icon fa fa-circle-thin" style="filter: invert(100);transform: scale(.4);"></i></a></button>
 								
-								  <button class="btn"><a href="#t3" onClick="javascript:toggleMenuType2(MENUTYPE2[2]),toggleMenuType(MENUTYPE[2]), openPageThree()"><i class="icon fa fa-circle-thin" style="filter: invert(100);transform: scale(.4);"></i></a></button>
+								  <button class="btn"><a href="#t3" onClick="javascript:toggleMenuType2(MENUTYPE2[2]),toggleMenuType(MENUTYPE[2]), togglePanelsMobile(PANM[3]),togglePanels(PAN[3]), openPageThree()"><i class="icon fa fa-circle-thin" style="filter: invert(100);transform: scale(.4);"></i></a></button>
 								 
-							      <button class="btn"><a href="#t4" onClick="javascript:toggleMenuType2(MENUTYPE2[3]),toggleMenuType(MENUTYPE[3]), openPageFour()"><i class="icon fa fa-circle-thin" style="filter: invert(100);transform: scale(.4);"></i></a></button>
+							      <button class="btn"><a href="#t4" onClick="javascript:toggleMenuType2(MENUTYPE2[3]),toggleMenuType(MENUTYPE[3]), togglePanelsMobile(PANM[4]), togglePanels(PAN[4]), openPageFour()"><i class="icon fa fa-circle-thin" style="filter: invert(100);transform: scale(.4);"></i></a></button>
 									
-								  <button class="btn"><a href="#t5" onClick="javascript:toggleMenuType2(MENUTYPE2[4]),toggleMenuType(MENUTYPE[4]), openPageFive()"><i class="icon fa fa-circle-thin" style="filter: invert(100);transform: scale(.4);"></i></a></button>
+								  <button class="btn"><a href="#t5" onClick="javascript:toggleMenuType2(MENUTYPE2[4]),toggleMenuType(MENUTYPE[4]), togglePanelsMobile(PANM[5]),togglePanels(PAN[5]), openPageFive()"><i class="icon fa fa-circle-thin" style="filter: invert(100);transform: scale(.4);"></i></a></button>
 								  
 								</div>
 							  </div>
