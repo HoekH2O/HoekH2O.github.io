@@ -1,6 +1,7 @@
 // JavaScript Document
 // JavaScript Document
 //Menu start
+
 <!--
 var MENUTYPE = new Array("menu_1", "menu_2", "menu_3", "menu_4", "menu_5");
 <!--
@@ -59,16 +60,41 @@ var PANTP2 = new Array("pntp2_1", "pntp2_2");
 <!--
 var PANTMP2 = new Array("pntmp2_1", "pntmp2_2");
 //page three end
-	
-//page three start
-	
-//page three end
-	
 //page four start
-	
+<!--
+var PANELSP3 = new Array("pnp3_1", "pnp3_2");	
+<!--
+var PANELSMP3 = new Array("pnmp3_1", "pnmp3_2");
+<!--
+var PANP3 = new Array("pnsp3_1", "pnsp3_2");
+<!--
+var PANMP3 = new Array("pnsmp3_1", "pnsmp3_2");
+<!--
+var PANZP3 = new Array("pnzp3_1", "pnzp3_2");
+<!--
+var PANZMP3 = new Array("pnzmp3_1", "pnzmp3_2");
+<!--
+var PANDP3 = new Array("pndp3_1", "pndp3_2");
+<!--
+var PANDMP3 = new Array("pndmp3_1", "pndmp3_2");
 //page four end
-	
 //page five start
+<!--
+var PANELSP4 = new Array("pnp4_1", "pnp4_2");	
+<!--
+var PANELSMP4 = new Array("pnmp4_1", "pnmp4_2");
+<!--
+var PANP4 = new Array("pnsp4_1", "pnsp4_2");
+<!--
+var PANMP4 = new Array("pnsmp4_1", "pnsmp4_2");
+<!--
+var PANZP4 = new Array("pnzp4_1", "pnzp4_2");
+<!--
+var PANZMP4 = new Array("pnzmp4_1", "pnzmp4_2");
+<!--
+var PANDP4 = new Array("pndp4_1", "pndp4_2");
+<!--
+var PANDMP4 = new Array("pndmp4_1", "pndmp4_2");
 	
 //page five end
 	
@@ -84,37 +110,38 @@ function toggleMenuType2 (menu2) {
     }
 }
 	//menu end
-function openDesktop () {
-	openPageOne();
-	openType();
-	openPageThree();
-	openPageTwo();
-}
-function openMobile () {
-	openTypeMobile();
-	openPageOneMobile();
-	openPageThreeMobile();
-	openPageTwoMobile();
+function openMobile () {	
+	openPageOneMobile();	
+	openPageThreeMobile();	
+	openPageTwoMobile();	
+	openPageFiveMobile();
+	openpageFourMobile();
 }
 
 
 function openType () {
-	toggleMenuType(MENUTYPE[0]);
+	toggleMenuType2(MENUTYPE2[0]); 
+	
+	
 }
 function openTypeMobile () {
-	toggleMenuType2(MENUTYPE2[0]); 
+	
 }
 
 
 function openPageOne () {
+	openType();
+	togglePanelsMobile(PANM[0]);
+	togglePanels(PAN[0]);
+	
+}
+function openPageOneMobile () {
+	toggleMenuType(MENUTYPE[0]);
 	togglePanelsMobile(PANM[0]);
 	togglePanelMobile(PANELSM[0]);
 	togglePanels(PAN[0]);
-}
-function openPageOneMobile () {
-	togglePanelsMobile(PANM[0]);
-	togglePanelMobile(PANELSM[0]);
 	togglePanel(PANELS[0]);
+	toggleMenuType2(MENUTYPE2[0]); 
 }
 
 
@@ -131,6 +158,8 @@ function openPageTwoMobile () {
 	togglePanelsMobileP1(PANMP1[0]);
 	togglePanelzMobileP1(PANZMP1[0]);
 	togglePaneledMobileP1(PANDMP1[0]);
+	
+	
 }
 
 
@@ -140,6 +169,7 @@ function openPageThree () {
 	togglePanelzP2(PANZP2[0]);
 	togglePaneledP2(PANDP2[0]);
 	togglePantP2(PANTP2[0]);
+	
 }
 function openPageThreeMobile () {
 	togglePanelMobileP2(PANELSMP2[0]);
@@ -149,11 +179,33 @@ function openPageThreeMobile () {
 	togglePantMobileP2(PANTMP2[0]);
 }
 function openPageFour () {
+	togglePanelP3(PANELSP3[0]);
+	togglePanelsP3(PANP3[0]);
+	togglePanelzP3(PANZP3[0]);
+	togglePanelMobileP3(PANELSMP3[0]);
+	togglePanelzMobileP3(PANZMP3[0]);
+	togglePanelsMobileP3(PANMP3[0]);
+	
+}
+
+function openPageFourMobile() {
 	
 }
 function openPageFive () {
 	
+	togglePanelP4(PANELSP4[0]);
+	togglePaneledP4(PANDP4[0]);
+	togglePanelzP4(PANZP4[0]);	
+	togglePanelsP4(PANP4[0]);
 }
+function openPageFiveMobile () {
+	
+	togglePanelMobileP4(PANELSMP4[0]);
+	togglePaneledMobileP4(PANDMP4[0]);
+	togglePanelzMobileP4(PANZMP4[0]);
+	togglePanelsMobileP4(PANMP4[0]);
+}
+
 	//page one start
 function togglePanel (pnl) {
 	for (var p=0; p < PANELS.length; p++) {
@@ -325,8 +377,96 @@ function togglePantMobileP2 (pntmp2) {
 }
 	//page three end
 
+	//page four start
+function togglePanelP3 (pnp3) {
+	for (var ppp=0; ppp < PANELSP3.length; ppp++) {
+		document.getElementById(PANELSP3[ppp]).style.display = (PANELSP3[ppp] == pnp3) ? "block" : "none";
+    }
+}
+function togglePanelMobileP3 (pnmp3) {
+	for (var tott=0; tott < PANELSMP3.length; tott++) {
+		document.getElementById(PANELSMP3[tott]).style.display = (PANELSMP3[tott] == pnmp3) ? "block" : "none";
+    }
+}
 
+function togglePanelsP3 (pnsp3) {
+	for (var qqtq=0; qqtq < PANP3.length; qqtq++) {
+		document.getElementById(PANP3[qqtq]).style.display = (PANP3[qqtq] == pnsp3) ? "block" : "none";
+    }
+}
+function togglePanelsMobileP3 (pnsmp3) {
+	for (var rrr=0; rrr < PANMP3.length; rrr++) {
+		document.getElementById(PANMP3[rrr]).style.display = (PANMP3[rrr] == pnsmp3) ? "block" : "none";
+    }
+}
+	
+function togglePanelzP3 (pnzp3) {
+	for (var mi=0; mi < PANZP3.length; mi++) {
+		document.getElementById(PANZP3[mi]).style.display = (PANZP3[mi] == pnzp3) ? "block" : "none";
+    }
+}
+function togglePanelzMobileP3 (pnzmp3) {
+	for (var uuu=0; uuu < PANZMP3.length; uuu++) {
+		document.getElementById(PANZMP3[uuu]).style.display = (PANZMP3[uuu] == pnzmp3) ? "block" : "none";
+    }
+}
 
+function togglePaneledP3 (pndp3) {
+	for (var vvv=0; vvv < PANDP3.length; vvv++) {
+		document.getElementById(PANDP3[vvv]).style.display = (PANDP3[vvv] == pndp3) ? "block" : "none";
+    }
+}
+function togglePaneledMobileP3 (pndmp3) {
+	for (var ggg=0; ggg < PANDMP3.length; ggg++) {
+		document.getElementById(PANDMP3[ggg]).style.display = (PANDMP3[ggg] == pndmp3) ? "block" : "none";
+    }
+}
+	//page four end
+	//page five start
+function togglePanelP4 (pnp4) {
+	for (var pppp=0; pppp < PANELSP4.length; pppp++) {
+		document.getElementById(PANELSP4[pppp]).style.display = (PANELSP4[pppp] == pnp4) ? "block" : "none";
+    }
+}
+function togglePanelMobileP4 (pnmp4) {
+	for (var tottt=0; tottt < PANELSMP4.length; tottt++) {
+		document.getElementById(PANELSMP4[tottt]).style.display = (PANELSMP4[tottt] == pnmp4) ? "block" : "none";
+    }
+}
+
+function togglePanelsP4 (pnsp4) {
+	for (var qqqq=0; qqqq < PANP4.length; qqqq++) {
+		document.getElementById(PANP4[qqqq]).style.display = (PANP4[qqqq] == pnsp4) ? "block" : "none";
+    }
+}
+function togglePanelsMobileP4 (pnsmp4) {
+	for (var rerr=0; rerr < PANMP4.length; rerr++) {
+		document.getElementById(PANMP4[rerr]).style.display = (PANMP4[rerr] == pnsmp4) ? "block" : "none";
+    }
+}
+	
+function togglePanelzP4 (pnzp4) {
+	for (var min=0; min < PANZP4.length; min++) {
+		document.getElementById(PANZP4[min]).style.display = (PANZP4[min] == pnzp4) ? "block" : "none";
+    }
+}
+function togglePanelzMobileP4 (pnzmp4) {
+	for (var uuuu=0; uuuu < PANZMP4.length; uuuu++) {
+		document.getElementById(PANZMP4[uuuu]).style.display = (PANZMP4[uuuu] == pnzmp4) ? "block" : "none";
+    }
+}
+
+function togglePaneledP4 (pndp4) {
+	for (var vvvv=0; vvvv < PANDP4.length; vvvv++) {
+		document.getElementById(PANDP4[vvvv]).style.display = (PANDP4[vvvv] == pndp4) ? "block" : "none";
+    }
+}
+function togglePaneledMobileP4 (pndmp4) {
+	for (var gggg=0; gggg < PANDMP4.length; gggg++) {
+		document.getElementById(PANDMP4[gggg]).style.display = (PANDMP4[gggg] == pndmp4) ? "block" : "none";
+    }
+}
+	//page five end
 
 function myFunction() {
     var checkBox = document.getElementById("myCheck");
@@ -478,5 +618,9 @@ modals.init({
         css.type = "text/css";
         css.innerHTML = ".typewrite > .wrap {border-right: 0.03em solid black}";
         document.body.appendChild(css);
-	
-	
+
+var overlay = document.getElementById("overlay");
+window.addEventListener('load', function(){
+  overlay.style.transition = '1s';
+  overlay.style.transform = 'translateY(-200%)';
+})
