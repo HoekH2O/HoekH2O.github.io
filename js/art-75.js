@@ -69,9 +69,9 @@ var PANP3 = new Array("pnsp3_1", "pnsp3_2");
 <!--
 var PANMP3 = new Array("pnsmp3_1", "pnsmp3_2");
 <!--
-var PANZP3 = new Array("pnzp3_1", "pnzp3_2");
+var PANZP3 = new Array("pnzp3_1", "pnzp3_2", "pnzp3_3", "pnzp3_4", "pnzp3_5", "pnzp3_6");
 <!--
-var PANZMP3 = new Array("pnzmp3_1", "pnzmp3_2");
+var PANZMP3 = new Array("pnzmp3_1", "pnzmp3_2", "pnzmp3_3", "pnzmp3_4", "pnzmp3_5", "pnzmp3_6");
 <!--
 var PANDP3 = new Array("pndp3_1", "pndp3_2");
 <!--
